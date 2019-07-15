@@ -1,6 +1,5 @@
-<?php include_once("header.php"); ?>
-<main >
-
-
-</main>
-<?php include_once("footer.php"); ?>
+<html>
+    <body>
+        <h1>הרשמה</h1>
+    </body>
+</html>
