@@ -21,6 +21,9 @@
           <a class="nav-link navA" href="index.php">דף הבית</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link navA" href="#">הוספת פרויקט</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link navA" href="#">הפרויקטים שלי</a>
         </li>
         <li class="nav-item">
