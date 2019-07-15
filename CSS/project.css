@@ -8,12 +8,12 @@
 	text-align: right;
 }
 
-.navDiv{
+.navButtons{
 	float:left;
 	direction: ltr;
 	list-style-type: none;
 	text-align: left;
-	color:black;
+	color:white;
 	font-size:18px;
 	font-weight: bold;
 }
@@ -21,6 +21,7 @@
 .loginMobile{
 	display: none;
 }
+
 @media only screen and (max-width: 991px) {
 	.loginMobile2{
 		display:none;
@@ -29,6 +30,7 @@
 		display:block;
 	}
 }
+
 .loginMobile2{
 	border:2px solid #1AA0BA;
 	background-color:#1AA0BA;
@@ -40,24 +42,21 @@
 }
 
 a:hover{
-	color:black;
+	color:white;
 }
 body{
 	text-align:right;
 }
 
-.row
-{
+.row{
 	padding-top: 10%;
 }
 
-.container
-{
+.container{
 	max-width: 1300px;
 }
 
-.actionButton
-{
+.actionButton{
 	border:2px solid #1AA0BA;
 	background-color:#1AA0BA;
 	border-radius: 50px;
@@ -68,8 +67,6 @@ body{
 	padding-right:40px;
 	padding-top:10px;
 	padding-bottom: 30px;
-
-	
 }
 
 p{
