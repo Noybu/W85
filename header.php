@@ -40,10 +40,10 @@
     </div>
     <div>
       <button class="loginMobile2">    
-          <a class="nav-link navDiv" href="login\signIn.php">התחברות</a>
+          <a class="nav-link navButtons" href="login\signIn.php">התחברות</a>
       </button>
       <button class="loginMobile2">
-          <a class="nav-link navDiv" href="login\signUp.php">הרשמה</a>
+          <a class="nav-link navButtons" href="login\signUp.php">הרשמה</a>
       </button>
     </div>
    
