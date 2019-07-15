@@ -1,7 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+*{
+	box-sizing: border-box;
+	font-family: "Rubik";
+}
 .navA{
 	text-align: right;
 }
 
 .navDiv{
+	float:left;
+	direction: ltr;
+	list-style-type: none;
 	text-align: left;
+	color:black;
+}
+
+.loginMobile{
+	display: none;
+}
+@media only screen and (max-width: 991px) {
+	.loginMobile2{
+		display:none;
+	}
+	.loginMobile{
+		display:block;
+	}
+}
+.loginMobile2{
+	border:2px solid #1AA0BA;
+	background-color:#1AA0BA;
+	border-radius: 10%;
+}
+
+.loginMobile2:hover{
+	background-color: #938E8E;
+}
+
+a:hover{
+	color:black;
+}
+body{
+	text-align:right;
 }

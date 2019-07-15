@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="CSS\project.css">
 </head>
   <body >
@@ -26,22 +26,21 @@
         <li class="nav-item">
           <a class="nav-link navA" href="#">כל הפרויקטים</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link navA loginMobile" href="#">התחברות</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navA loginMobile" href="#">הרשמה</a>
+        </li>
       </ul>
     </div>
     <div>
-      <li class="nav-item">
-        <button>
+      <button class="loginMobile2">    
           <a class="nav-link navDiv" href="#">התחברות</a>
-        </button>
-        </li>
-        <li class="nav-item">
-        <button>
+      </button>
+      <button class="loginMobile2">
           <a class="nav-link navDiv" href="#">הרשמה</a>
-        </button>
-        </li>
+      </button>
     </div>
+   
   </nav>
-  </body>
-
-
-</html>
