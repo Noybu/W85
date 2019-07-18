@@ -121,3 +121,43 @@ clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
 	color:#fff;
     float: right;
 }
+
+.card{
+	border:1px solid black;
+	height:450px;
+	box-shadow: 5px 5px rgb(147, 142, 142,0.4);
+	margin-bottom: 20px;
+}
+
+.pictureCard{
+	background-position: cover;
+	background-repeat: no-repeat;
+	height:40%;
+	width:100%;
+	margin-top:10px;
+	
+}
+
+.card:hover{
+	background-color:  rgb(147, 142, 142,0.1);
+	cursor: pointer;
+}
+
+.descCard{
+	position: relative;
+}
+
+.bar{
+	position:absolute;
+	bottom: 15px;
+	width: 90%;
+}
+
+#mainBar{
+	width:90%;
+	background-color: rgb(147, 142, 142,0.5);
+	border-radius: 20px;
+	margin:0 auto;
+	direction: ltr;
+	
+}
