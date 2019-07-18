@@ -7,13 +7,13 @@ require_once 'DAL.php';
 
 
 
-function addProject($userID , $categoryID, $videoTitle, $description, $link) {
+function addProject($userID , $projectType, $description, $locCity, $locStreet, $locNum) {
 //    if (isset($_GET['addVideo'])) {
 //        $name = $_POST['name'];
 //        $color = $_POST['color'];
 //        $age = $_POST['age'];
 
-    $sql = "INSERT INTO `videos` (`userID`,`categoryID`, `videoTitle` , `description`, `link`) VALUES ('$userID', '$categoryID','$videoTitle', '$description', '$link')";
+    $sql = "INSERT INTO `project` (`userID`,`projectType`, `description` , `locCity`, `locStreet` , `locNum`) VALUES ('$userID', '$categoryID','$videoTitle', '$description', '$link')";
     insert($sql);
 }
 
