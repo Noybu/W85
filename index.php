@@ -56,7 +56,7 @@
             <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
-                    <div>
+                    <div class="descCard">
                         <h3>פרויקט1</h3>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
                         <div class="bar">
@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
-                    <div>
+                    <div class="descCard">
                         <h3>פרויקט1</h3>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
                         <div class="bar">
@@ -86,7 +86,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
-                    <div>
+                    <div class="descCard">
                         <h3>פרויקט1</h3>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
                         <div class="bar">
