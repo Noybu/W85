@@ -1,44 +1,49 @@
 <?php include_once("header.php"); ?>
 <link rel="stylesheet" type="text/css" href="CSS\newProject.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="JS\newProject.js"></script>
+
 <section>
-    <h3>יזמים? גייסו השקעה ! </h3>
-    <p>דרך המערכת תוכלו לגייס כסף עבור כל פרויקט עירוני.</p>
-    <p>כל שתצטרך לעשות הוא לפתוח את הפנייה עכשיו, לחכות לאישורה,</p>
-    <p>וכל הכבוד! הצלחת לשפר את פני העיר</p>
+    <div>
+        <h3>יזמים? גייסו השקעה ! </h3>
+        <p>דרך המערכת תוכלו לגייס כסף עבור כל פרויקט עירוני.</p>
+        <p>כל שתצטרך לעשות הוא לפתוח את הפנייה עכשיו, לחכות לאישורה,</p>
+        <p>וכל הכבוד! הצלחת לשפר את פני העיר 🏆</p>
+    </div>
 </section>
 <main >
 	<div id="mainDiv">
-        <form>
-            <div id="divForm">
-                <p class="textForm"><i class="fas fa-signature"></i><label>שם פרטי </label></p>
-                <p><input type="text" name="fname" maxlength="20" autocomplete="on"></p>
-                <p class="textForm"><i class="fas fa-signature"></i><label>שם משפחה </label></p>		
-                <p><input type="text" name="lname" maxlength="20" autocomplete="on"></p>
-                <p class="textForm"><i class="fas fa-question"></i><label>מה תרצו לחדש </label>
-                    <p>   
-                        <select name="whatNew">
-                            <option value="1">ספסל</option>
-                            <option value="2">פחי אשפה</option>
-                            <option value="3">שבילי אופניים</option>
-                            <option value="4">גני שעשועים</option>
-                            <option value="5">תאורה</option>
-                        </select>
-                    </p>
-                </p>
-                <p class="textForm"><i class="fas fa-info"></i><label>תאור הדרישה </label></p>
-                <p><textarea name="description"></textarea></p>
-                <p class="textForm"><i class="fas fa-thumbtack"></i><label>מיקום</label></p>
-                <p>
-                    <input type="text" name="locationCity" autocomplete="on" placeholder="עיר">
-                    <input type="text" name="locationStreet" autocomplete="on" placeholder="רחוב">
-                    <input type="text" name="locationNumber" autocomplete="on"placeholder="מספר">
-            
-                </p>
-                <p>
-                    <input type="submit" name="sent" id="send" value="שלח"> <input type="reset" name="zero" value="איפוס" id="zero">
-                </p>
+        <div id="form">
+                <div class="form-item">
+                <p class="formLabel formTop">נושא הדרישה</p>
+                <select required class="form-style" name="projectType">
+                    <option value="1">ספסל</option>
+                    <option value="2">גני שעשועים</option>
+                    <option value="3">פחי אשפה</option>
+                    <option value="4">אופניים</option>
+                    <option value="5">תאורה</option>
+                </select>
             </div>
-        </form>
+            <div class="form-item">
+                <p class="formLabel">תאור הדרישה</p>
+                <textarea required name="description" class="form-style"></textarea>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">עיר</p>
+                <input required type="text" name="locCity" class="form-style"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">רחוב</p>
+                <input required type="text" name="locStrret" class="form-style"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">מספר</p>
+                <input required type="text" name="locNum" class="form-style"/>
+            </div>
+            <div class="form-item">
+                <input type="submit" class="login pull-right" value="שלח">
+            </div>
+        </div>
 	</div>
 
 </main>
