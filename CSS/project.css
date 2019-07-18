@@ -130,9 +130,9 @@ clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
 }
 
 .pictureCard{
-	background-position: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
-	height:40%;
+	height:66%;
 	width:100%;
 	margin-top:10px;
 	
@@ -145,11 +145,12 @@ clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
 
 .descCard{
 	position: relative;
+	height:100%;
 }
 
 .bar{
 	position:absolute;
-	bottom: 15px;
+	bottom: 5%;
 	width: 90%;
 }
 
