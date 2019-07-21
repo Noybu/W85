@@ -63,6 +63,12 @@
                     <div class="descCard">
                         <h3>פרויקט1</h3>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
+                        
+                        <div class="poly status-c">ממתין לאישור</div>
+                       <div class="poly status-b">ממתין למכרז</div>
+                       <div class="poly status-a">ממתין למימון</div>
+                       <div class="poly status-short status-a ">בביצוע</div>
+                      <div class="poly status-short status-a">הושלם</div>
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
                             <div id="mainBar"> 

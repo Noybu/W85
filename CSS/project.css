@@ -80,7 +80,7 @@ a:hover{
 }
 
 .container{
-	max-width: 1300px;
+	max-width: 1900px;
 }
 
 .actionButton{
@@ -112,14 +112,47 @@ p{
 
 .poly
 {
-	-webkit-clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
-	clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
-	background-color: red;
+-webkit-clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
+clip-path: polygon(100% 25%, 82% 50%,100% 75%, 20% 75%, 0 50%, 17% 25%);
+  background-color:red;
+  width:20%;
+  height:100px;
+  float:RIGHT;
+  font-size: 19px;
+  padding-top: 20px;
+  padding-right: 18px;
+
 }
+
+.status-a
+{
+	background-color:#cecbcb;
+}
+
+.status-b
+{
+	background-color:#f3f56f;
+}
+
+.status-c
+{
+	background-color:#9fef9d;
+}
+
+.status-short
+{
+
+    padding-top: 35px;
+
+}
+
+
+
+
 
 .card{
 	border:1px solid black;
-	height:450px;
+	height:600px;
 	box-shadow: 5px 5px rgb(147, 142, 142,0.4);
 	margin-bottom: 20px;
 }
