@@ -2,7 +2,7 @@
 
 <main>
 
-    <div class="container">
+    <div class="container m-0">
         <section>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
@@ -57,7 +57,7 @@
              <div class="row">
                 <h1>פרויקטים אחרונים</h1>
             </div>
-            <div class="row sm">
+            <div class="row sm m-0">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
                     <div class="descCard">

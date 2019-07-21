@@ -79,10 +79,7 @@ a:hover{
 	padding-top:1%;
 }
 
-.container{
-	width: 100% !important;
-	max-width: unset;
-}
+
 
 .actionButton{
 	border:2px solid #1AA0BA;
