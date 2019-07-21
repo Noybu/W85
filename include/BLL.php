@@ -13,7 +13,7 @@ function addProject($userID , $projectType, $description, $locCity, $locStreet, 
 //        $color = $_POST['color'];
 //        $age = $_POST['age'];
 
-    $sql = "INSERT INTO `project` (`userID`,`projectType`, `description` , `locCity`, `locStreet` , `locNum`) VALUES ('$userID', '$categoryID','$videoTitle', '$description', '$link')";
+    $sql = "INSERT INTO `project` (`userID`,`projectType`, `description` , `locCity`, `locStreet` , `locNum`) VALUES ('$userID','$projectType', '$description', '$link')";
     insert($sql);
 }
 
@@ -115,28 +115,27 @@ function register($id, $firstName, $lastName, $userName, $password, $type, $file
 
 
 //מכניס משתמש רגיל למערכת 
-function registerUser($id, $firstName, $lastName, $userName, $password, $type) {
+function registerUser($id, $firstName, $lastName,$email, $password, $type) {
 	
     $firstName = addslashes($firstName);
     $lastName = addslashes($lastName);
-    $userName = addslashes($userName);
     $password = addslashes($password);
     $type = addslashes($type);
     $id = addslashes($id);
+    $email = addslashes($email);
     
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "insert into users(id, firstName, lastName, userName, password, type) values( '$id','$firstName','$lastName', '$userName','$password' ,'$type')";
+    $sql = "insert into users(id, firstName, lastName, password, email, type) values( '$id','$firstName','$lastName','$password', '$email','$type')";
     insert($sql);
 }
 
 //מכניס נותן שירות למערכת
-function registerServiceMan($id, $firstName, $lastName, $userName, $password, $type, $file, $idPhoto) {
+function registerServiceMan($id, $firstName, $lastName,  $password, $type, $file, $idPhoto) {
 	
     $firstName = addslashes($firstName);
     $lastName = addslashes($lastName);
-    $userName = addslashes($userName);
     $password = addslashes($password);
     $type = addslashes($type);
     $id = addslashes($id);
@@ -146,7 +145,7 @@ function registerServiceMan($id, $firstName, $lastName, $userName, $password, $t
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "insert into users(id, firstName, lastName, userName, password, type, file, idPhoto) values('$id','$firstName','$lastName', '$userName','$password' ,'$type' ,'$file','$idPhoto')";
+    $sql = "insert into users(id, firstName, lastName, password, type, file, idPhoto) values('$id','$firstName','$lastName','$password' ,'$type' ,'$file','$idPhoto')";
     insert($sql);
 }
 
