@@ -96,7 +96,7 @@
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
                             <div id="mainBar"> 
-                                <div style="width:40%;background-color:red;border-radius: 20px; ">
+                                <div style="width:40%;background-color:#3d8caf;border-radius: 20px; ">
                                     40
                                 </div>
                             </div>

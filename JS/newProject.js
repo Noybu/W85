@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var formInputs = $('input[type=text], textarea, select');
+    var formInputs = $('input[type=text], textarea, select, input[type=password],input[type=email]');
 	formInputs.focus(function() {
        $(this).parent().children('.formLabel').addClass('formTop');
 	});

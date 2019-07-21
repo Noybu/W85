@@ -102,3 +102,13 @@ textarea{
 .login:focus{
 	outline: none;
 }
+
+#headerLogin{
+	text-align: right;
+}
+
+#selectUser{
+	width:80%;
+
+	
+}
