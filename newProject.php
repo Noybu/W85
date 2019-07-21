@@ -14,7 +14,7 @@
 <main >
 	<div id="mainDiv">
         <div id="form">
-                <div class="form-item">
+            <div class="form-item">
                 <p class="formLabel formTop">נושא הדרישה</p>
                 <select required class="form-style" name="projectType">
                     <option value="1">ספסל</option>
@@ -41,7 +41,7 @@
                 <input required type="text" name="locNum" class="form-style"/>
             </div>
             <div class="form-item">
-                <input type="submit" class="login pull-right" value="שלח">
+                <input type="submit" class="login" value="שלח">
             </div>
         </div>
 	</div>

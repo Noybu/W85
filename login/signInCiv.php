@@ -60,7 +60,7 @@
                     <input type="hidden" name="type" value="1"/>
                 </div>
                 <div class="form-item">
-                    <input type="submit" class="login pull-right" value="שלח">
+                    <input type="submit" class="login" value="שלח">
                 </div>
             </div>
       </div>

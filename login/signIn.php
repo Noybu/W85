@@ -45,7 +45,7 @@
                     <input required type="password" name="password" class="form-style"/>
                 </div>
                 <div class="form-item">
-                    <input type="submit" class="login pull-right" value="שלח">
+                    <input type="submit" class="login" value="שלח">
                 </div>
             </div>
       </div>

@@ -46,7 +46,7 @@
             </div>
             <div class="row center sm">
                 <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10 mx-auto center">
-                    <button class="actionButton">התחילו עכשיו</button>
+                    <a href="newProject.php"><button class="actionButton">התחילו עכשיו</button><a>
                 </div>
 
             </div>
@@ -92,6 +92,8 @@
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
                     <div class="descCard">
                         <h3>פרויקט1</h3>
+                        <div class="poly">aaaaaa
+                        </div>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>

@@ -1,26 +1,99 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="en">
-
 <head>
-	<title>Urban Re-Development</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="..\CSS\project.css">
-</head>
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right">
-    <a class="navbar-brand" href="..\index.php"><img src="..\images\logo.png"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav ">
-        <li class="nav-item active">
-          <a class="nav-link navA" href="..\index.php">דף הבית</a>
-        </li>
-    </div>
-    
-   
-  </nav>
+  <link rel="stylesheet" type="text/css" href="..\CSS\newProject.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="..\JS\newProject.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Urban Re-Development</title>
+        
+    </head>
+      <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right">
+        <a class="navbar-brand" href="..\index.php"><img src="..\images\logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ">
+            <li class="nav-item active">
+              <a class="nav-link navA" href="..\index.php">דף הבית</a>
+            </li>
+        </div>   
+      </nav>
+  <main>
+    <section>
+      <div id="headerLogin">
+          <h3>הרשמה למערכת - נותן שירות</h3>
+          <p>עשרות נותני שירות לקחו חלק בפרויקטים השונים ! </p>
+          <p>הצטרפו גם אתם למהפיכת העיר</p>
+          <p>כל שתצטרכו לעשות הוא להזין את הפרטים המופיעים בטופס</p>
+      </div>
+     </section>
+      <div class="mainDiv MainDivService">
+        <h3>פרטים אישיים</h3>
+        <div id="form">
+            <div class="form-item">
+                <p class="formLabel">תעודת זהות</p>
+                <input required type="text" name="id" class="form-style" maxlength="9"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">שם פרטי</p>
+                <input required type="text" name="firstName" class="form-style"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">שם משפחה</p>
+                <input required type="text" name="lastName" class="form-style"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">סיסמא</p>
+                <input required type="password" name="password" class="form-style"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">אימייל</p>
+                <input required type="email" name="email" class="form-style"/>
+            </div>
+            <div class="form-item">
+                <input type="hidden" name="type" value="1"/>
+            </div>
+        </div>
+      </div>
+      <div class="mainDiv MainDivService">
+          <h3>פרטים מקצועיים</h3>
+          <div id="form">
+            <div class="form-item">
+                <p class="formLabel">מספר ח"פ</p>
+                <input required type="text" name="idService" class="form-style" maxlength="9"/>
+            </div>
+            <div class="form-item">
+            <p class="formLabel formTop">מקצוע</p>
+            <select required class="form-style" name="ProfType">
+                <option value="1">ספסל</option>
+                <option value="2">גני שעשועים</option>
+                <option value="3">פחי אשפה</option>
+                <option value="4">אופניים</option>
+                <option value="5">תאורה</option>
+            </select>
+            </div>
+            <div class="form-item">
+                <p class="formLabel">ותק</p>
+                <input required type="text" name="numOfYears" class="form-style" maxlength="2"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel formTop">העלאת תעודת זהות</p>
+                <input required type="file" name="idFile" class="form-style fileStyle"/>
+            </div>
+            <div class="form-item">
+                <p class="formLabel formTop">העלאת תעודת עוסק</p>
+                <input required type="file" name="profFile" class="form-style fileStyle"/>
+            </div>
+            <div>
+                <input type="submit" class="login" value="שלח">
+            </div>
+        </div>
+      </div>
+</main>
+<?php include_once("../footer.php"); ?>
