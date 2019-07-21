@@ -107,8 +107,7 @@ textarea{
 	text-align: right;
 }
 
-#selectUser{
-	width:80%;
-
-	
+.center
+{
+	text-align:center;
 }

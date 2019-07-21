@@ -32,11 +32,16 @@
             <p>יזם/משקיע או נותן שירות?</p>
         </div>
     </section>
-  
-    <div id="selectUser">
-      <a href="signInService.php"><img src="..\images\undercons.png"></a>
-      <a href="signInCiv.php"><img src="..\images\undercons.png"></a>
-    </div>
+  <div class="container">
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto center">
+    <a href="signInService.php"><img src="..\images\worker.png" width="50%"></a>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mx-auto center">
+    <a href="signInCiv.php"><img src="..\images\user.png" width="50%"></a>
+  </div>
+</div>
+</div>
 
     
 </main>
