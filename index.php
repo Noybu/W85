@@ -5,14 +5,14 @@
     <div class="container">
         <section>
             <div class="row sm">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto">
+                <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                     <h1 class="title">מימון המונים לתשתיות עירוניות</h1>
                     <p class="subtitle">ברוכים הבאים למיזם שיחולל מהפכה בתחום התשתיות העירוניות</p>
                     <p class="subtitle">חולמים על ספסל ברחוב? רוצים מגרש ציבורי חדש?</p>
                     <p class="subtitle">מהיום זה אפשרי! </p>
                     <button class="actionButton">התחילו להשפיע על העיר שלכם</button>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto">
+                <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                     <img src="images/undraw_having_fun_iais.svg" alt="" width="100%">
                 </div>
             </div>
@@ -23,33 +23,29 @@
                 <h1>איך זה עובד?</h1>
             </div>
             <div class="row sm">
-                <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto center works">
-                    <h1 class="right level">1</h1>
+                <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8 mx-auto center works">
                     <img src="images\plus.png" alt="">
                     <h2>שלב 1</h2>
                     <p>מעלים רעיון חדש באתר</p>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto center works">
-                    <h1 class="right level">2</h1>
+                <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8 mx-auto center works">
                     <img src="images\credit.png" alt="">
                     <h2>שלב 2</h2>
                     <p>מחכים לגיוס הכסף הנדרש עבור הפרוייקט</p>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto center works">
-                    <h1 class="right level">3</h1>
+                <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8 mx-auto center works">
                     <img src="images\undercons.png" alt="">
                     <h2>שלב 3</h2>
                     <p>הרעיון מתחיל להתבצע בשטח</p>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-10 col-xs-10 mx-auto center works">
-                    <h1 class="right level">4</h1>
+                <div class="col-lg-2 col-md-2 col-sm-8 col-xs-8 mx-auto center works">
                     <img src="images\party.png" alt="">
                     <h2>שלב 4</h2>
                     <p>מזל טוב ! יש תשתית חדשה בזכותך !</p>
                 </div>
             </div>
             <div class="row center sm">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto center">
+                <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10 mx-auto center">
                     <button class="actionButton">התחילו עכשיו</button>
                 </div>
 

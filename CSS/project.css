@@ -34,7 +34,14 @@ body{
 	.loginMobile{
 		display:block;
 	}
+	.works{
+		width:50%;
+	}
+	.card{
+		width:70%;
+	}
 }
+	
 
 .loginMobile2{
 	border:2px solid #1AA0BA;
@@ -107,19 +114,6 @@ p{
 {
 -webkit-clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
 clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
-}
-
-/* מספרי השלבים בעמוד הראשי */
-.level
-{
-	border:1px solid black;
-	border-radius: 500px;
-	
-	font-size: 26px;
-	background-color:#1aa0ba;
-	padding: 13px 21px;
-	color:#fff;
-    float: right;
 }
 
 .card{
