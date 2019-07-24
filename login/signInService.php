@@ -19,7 +19,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ">
-            <li class="nav-item active">
+            <li class="nav-item active" style="text-align:right;">
               <a class="nav-link navA" href="..\index.php">דף הבית</a>
             </li>
         </div>   
@@ -34,7 +34,7 @@
       </div>
      </section>
       <div class="mainDiv MainDivService">
-        <h3>פרטים אישיים</h3>
+        <h3 style="margin-right:5%;">פרטים אישיים</h3>
         <div class="formService">
             <div class="form-item">
                 <p class="formLabel">תעודת זהות</p>
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="mainDiv MainDivService">
-          <h3>פרטים מקצועיים</h3>
+          <h3 style="margin-right:5%;">פרטים מקצועיים</h3>
           <div class="formService">
             <div class="form-item">
                 <p class="formLabel">מספר ח"פ</p>

@@ -19,7 +19,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ">
-            <li class="nav-item active">
+            <li class="nav-item active" style="text-align:right;">
               <a class="nav-link navA" href="..\index.php">דף הבית</a>
             </li>
         </div>   

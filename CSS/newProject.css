@@ -27,14 +27,6 @@ section{
 	margin:auto;
 }
 
-@media only screen and (max-width: 991px) {
-	#form{
-		width: 80%;
-		padding-top:5%;
-		padding-bottom:5%;
-	}
-}
-
 .form-item{
 	position: relative; 
 	display: block; 
@@ -134,6 +126,35 @@ textarea{
 
  h3{
 	text-align: right;
-	margin-right: 5%;
 }
 
+@media only screen and (max-width: 991px) {
+	#form{
+		width: 80%;
+		padding-top:5%;
+		padding-bottom:5%;
+	}
+	section{
+        padding-right:3%;
+    }
+    #headerLogin h3{
+        font-size:24px;
+	}
+	.MainDivService{
+		width: 93%;
+	}
+	.formService {
+		width: 80%;
+	}
+	.navbar-brand{
+		width:75%;
+		float: right
+	}
+	.navbar-brand img{
+		width:80%;
+	}
+	.navbar-toggler{
+		width:15%;
+		float: right;
+	}
+}

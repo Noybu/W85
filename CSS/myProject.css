@@ -122,7 +122,9 @@ a{
 	.poly{
 		font-size: 14px ;
 		padding-top: 28px ;
-		padding-right: 12px;
+        padding-right: 12px;
+        margin-left: 5px;
+        
     }
     #statusBar{
         clear: both;
@@ -131,7 +133,7 @@ a{
         height:40%;
     }
     #allStatus{
-        width:100%;
+        width:90%;
         float: right;
         margin-right: -113px;
         position: absolute;
@@ -142,5 +144,11 @@ a{
         position: relative;
         top:113px;
         right:-100px;
+    }
+    section{
+        padding-right:3%;
+    }
+    #headerLogin h3{
+        font-size:24px;
     }
 }
