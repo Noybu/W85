@@ -126,7 +126,6 @@ body
      */    
 .container{
     width:80%;
-    border:1px solid black;
 }       
 .tabs-page{
     clear: both;
@@ -174,8 +173,6 @@ body
     width:50%;
     float: right;
     height:100%;
-    border:1px solid red;
-
 }
 .bar2{
     width: 80%;
@@ -192,14 +189,36 @@ body
 }
 
 .pictureCard2{
-	background-size: cover;
-	background-repeat: no-repeat;
-	height:100px;
-	width:20%;
     float:right;
-    border:1px solid black;
-   
+    margin-top:1vh;
 }
+
+.pictureCard2 img{
+    width:70%;
+}
+
+.pictureCard2 p{
+    margin-right:1vw;
+}
+
+#buttonFund{
+    padding: 10px;
+    border: 2px solid #1AA0BA;
+    background-color: #1AA0BA;
+    border-radius: 10px;
+    font-size:18px;
+	font-weight: bold;
+}
+#buttonFund a{
+    text-decoration: none;
+    color:white;
+}
+
+#subMain{
+    border:1px solid black;
+    background-color: red;
+}
+
 @media only screen and (max-width: 991px) {
 
     
