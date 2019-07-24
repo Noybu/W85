@@ -27,8 +27,16 @@
             </div>
             <div id="cardFooter">
                 <p id="share">שיתוף:</p>
-                <p class="icon" id="whatsapp"><i class="fab fa-whatsapp"></i></p>
-                <p class="icon" id="facebook"><i class="fab fa-facebook-square"></i></p>
+                <a href="https://api.whatsapp.com/send?text=https://noybu.mtacloud.co.il/W85/">
+                    <p class="icon" id="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    </p>
+                </a>
+                <a href="http://www.facebook.com/sharer.php?u=http://www.google.com">
+                    <p class="icon" id="facebook">
+                    <i class="fab fa-facebook-square"></i>
+                    </p>
+                </a>
                 <p id="view">לצפייה<i class="far fa-eye"></i></p>
             </div>
         </div>

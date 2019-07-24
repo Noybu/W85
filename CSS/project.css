@@ -99,19 +99,7 @@ p{
 	text-align: right;
 }
 
-.poly
-{
--webkit-clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
-clip-path: polygon(100% 25%, 82% 50%,100% 75%, 20% 75%, 0 50%, 17% 25%);
 
-  width:20%;
-  height:100px;
-  float:RIGHT;
-  font-size: 19px;
-  padding-top: 20px;
-  padding-right: 18px;
-
-}
 
 .status{
 	border-radius:27px; 
@@ -141,10 +129,6 @@ clip-path: polygon(100% 25%, 82% 50%,100% 75%, 20% 75%, 0 50%, 17% 25%);
     padding-top: 35px;
 
 }
-
-
-
-
 
 .card{
 	border:1px solid black;
@@ -206,13 +190,6 @@ clip-path: polygon(100% 25%, 82% 50%,100% 75%, 20% 75%, 0 50%, 17% 25%);
 	.card{
 		width:80%;
 	}
-
-	.poly{
-		font-size: 14px ;
-		padding-top: 28px ;
-		padding-right: 12px;
-	}
-
 	.status-short
 {
 	padding-top: 40px;
