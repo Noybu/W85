@@ -51,14 +51,15 @@
 
             </div>
         </section>
-
+</div>
+<div class="container-fluid">
 
         <section>
              <div class="row">
-                <h1>פרויקטים אחרונים</h1>
+                <h1 style="margin-right: 4%;">פרויקטים אחרונים</h1>
             </div>
             <div class="row sm">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
+            <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
                     <div class="descCard">
                         <h3>פרויקט1</h3>
@@ -79,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
+                <div class=" offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
 
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
                     <div class="descCard">
@@ -95,7 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
+                <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
                     <div class="descCard">
                         <h3>פרויקט1</h3>
