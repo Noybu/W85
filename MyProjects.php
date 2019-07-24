@@ -9,21 +9,23 @@
             <div class="descCard2">
                 <h3>פרויקט1</h3>
                 <p class="loc">מיקום: רחוב עזה תל אביב-יפו</p>
-                <div id="allStatus">
-                    <div class="poly status-c">ממתין לאישור</div>
-                    <div class="poly status-b">ממתין למכרז</div>
-                    <div class="poly status-a">ממתין למימון</div>
-                    <div class="poly status-short status-a ">בביצוע</div>
-                    <div class="poly status-short status-a">הושלם</div>
-                </div>
-                <div class="bar2">
-                    <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
-                    <div id="mainBar2">
-                        <div style="width:40%;background-color:red;border-radius: 20px; ">
-                            40
+                <div id="statusBar">
+                    <div id="allStatus">
+                        <div class="poly status-c">ממתין לאישור</div>
+                        <div class="poly status-b">ממתין למכרז</div>
+                        <div class="poly status-a">ממתין למימון</div>
+                        <div class="poly status-short status-a ">בביצוע</div>
+                        <div class="poly status-short status-a">הושלם</div>
+                    </div>
+                    <div class="bar2">
+                        <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
+                        <div id="mainBar2">
+                            <div style="width:40%;background-color:red;border-radius: 20px; ">
+                                40
+                            </div>
                         </div>
                     </div>
-                </div>
+            </div>
             </div>
             <div id="cardFooter">
                 <p id="share">שיתוף:</p>

@@ -74,17 +74,6 @@
     margin-top:10px;
 }
 
-@media only screen and (max-width: 991px) {
-	.card2{
-		width:80%;
-	}
-	.poly{
-		font-size: 14px ;
-		padding-top: 28px ;
-		padding-right: 12px;
-	}
-}
-
 #cardFooter{
     font-size: 20px;
     width: 100%;
@@ -122,4 +111,36 @@
 }
 a{
     text-decoration: none;
+}
+
+
+@media only screen and (max-width: 991px) {
+	.card2{
+        width:90%;
+        margin:0 auto;
+	}
+	.poly{
+		font-size: 14px ;
+		padding-top: 28px ;
+		padding-right: 12px;
+    }
+    #statusBar{
+        clear: both;
+    }
+    .pictureCard2{
+        height:40%;
+    }
+    #allStatus{
+        width:100%;
+        float: right;
+        margin-right: -113px;
+        position: absolute;
+    }
+    .bar2{
+        width:134%;
+        margin:0 auto;
+        position: relative;
+        top:113px;
+        right:-100px;
+    }
 }
