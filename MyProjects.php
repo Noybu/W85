@@ -32,7 +32,7 @@
                     <i class="fab fa-whatsapp"></i>
                     </p>
                 </a>
-                <a href="http://www.facebook.com/sharer.php?u=http://www.google.com">
+                <a href="http://www.facebook.com/sharer.php?u=https://noybu.mtacloud.co.il/W85/">
                     <p class="icon" id="facebook">
                     <i class="fab fa-facebook-square"></i>
                     </p>
