@@ -24,32 +24,43 @@
                 </div>
             </div>
         </div>
-        <div class="pictureCard2" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>
-        <div class="pictureCard2" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>
-        <div class="tabs-page">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="page1" aria-controls="home" role="tab" data-toggle="tab">פרטים נוספים
-                <li role="presentation"><a href="#page2" aria-controls="profile" role="tab" data-toggle="tab">עדכונים שוטפים
-                <li role="presentation"><a href="#page3" aria-controls="messages" role="tab" data-toggle="tab">דירוג הפרויקט</a></li>
-                <li role="presentation"><a href="#page4" aria-controls="settings" role="tab" data-toggle="tab">תמונות מהשטח</a></li>
-            </ul>	
+        <div class="pictureCard2">
+            <img src="images/donate_count.png">
+            <p>100 אנשים</p>
         </div>
-        <div class="tabs-page">
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="page1">
-                            עדכונים נוספים
-                </div>
-                <div role="tabpanel" class="tab-pane" id="page2">
-                        עדכונים שוטפים
-                </div>
-                <div role="tabpanel" class="tab-pane" id="page3">
-                    דירוג הפרויקט
-                </div>
-                <div role="tabpanel" class="tab-pane" id="page4">
-                    תמונות מהשטח
-                </div>
-            </div>		
+        <div class="pictureCard2">
+            <img src="images/count_price.png">
+            <p>100 ש"ח</p>
+        </div>
+        <div style="clear:both;">
+            <button id="buttonFund"><a href=#>להשקעה</a></button>
+        </div>
+        <div id="subMain">
+            <div class="tabs-page">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="page1" aria-controls="home" role="tab" data-toggle="tab">פרטים נוספים
+                    <li role="presentation"><a href="#page2" aria-controls="profile" role="tab" data-toggle="tab">עדכונים שוטפים
+                    <li role="presentation"><a href="#page3" aria-controls="messages" role="tab" data-toggle="tab">דירוג הפרויקט</a></li>
+                    <li role="presentation"><a href="#page4" aria-controls="settings" role="tab" data-toggle="tab">תמונות מהשטח</a></li>
+                </ul>	
+            </div>
+            <div class="tabs-page">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="page1">
+                                עדכונים נוספים
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="page2">
+                            עדכונים שוטפים
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="page3">
+                        דירוג הפרויקט
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="page4">
+                        תמונות מהשטח
+                    </div>
+                </div>		
+            </div>
         </div>
     </div>
     
