@@ -1,22 +1,4 @@
-<?php include_once("header.php"); ?>
-
-
-<main >
-<section >
-<div id="map" style="width:100vw; height:100vh; margin: 0 auto;"></div>
-</section>
-</main>
-
-
-
-    
-   
-    
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&callback=initiateMap"
-async defer></script>
-
-<script>
-    function initiateMap() {
+function initiateMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 0, lng: 0},
         zoom: 8
@@ -74,8 +56,3 @@ async defer></script>
         map.fitBounds(bounds);
         map.setZoom(map.getZoom()-1);
 };
-    </script>
-        
-
-
-<?php include_once("footer.php"); ?>
