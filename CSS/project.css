@@ -113,7 +113,12 @@ clip-path: polygon(100% 25%, 82% 50%,100% 75%, 20% 75%, 0 50%, 17% 25%);
 
 }
 
-
+.status{
+	border-radius:27px; 
+	font-size:18px; 
+	font-weight:bold; 
+	text-align:center;
+}
 
 .status-a
 {

@@ -35,7 +35,7 @@
      </section>
       <div class="mainDiv MainDivService">
         <h3>פרטים אישיים</h3>
-        <div id="form">
+        <div class="formService">
             <div class="form-item">
                 <p class="formLabel">תעודת זהות</p>
                 <input required type="text" name="id" class="form-style" maxlength="9"/>
@@ -63,7 +63,7 @@
       </div>
       <div class="mainDiv MainDivService">
           <h3>פרטים מקצועיים</h3>
-          <div id="form">
+          <div class="formService">
             <div class="form-item">
                 <p class="formLabel">מספר ח"פ</p>
                 <input required type="text" name="idService" class="form-style" maxlength="9"/>

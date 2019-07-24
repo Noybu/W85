@@ -22,6 +22,11 @@ section{
 	margin:auto;
 }
 
+.formService{
+	width:45%;
+	margin:auto;
+}
+
 @media only screen and (max-width: 991px) {
 	#form{
 		width: 80%;
