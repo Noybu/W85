@@ -5,7 +5,7 @@
 <section>
     <div class="row">
         <div class="card2">
-            <div class="pictureCard2" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>
+            <div class="pictureCard2" style="background-image:url('images/project_types/4_s.png');"></div>
             <div class="descCard2">
                 <h3>פרויקט1</h3>
                 <p class="loc">מיקום: רחוב עזה תל אביב-יפו</p>

@@ -60,7 +60,7 @@
             </div>
             <div class="row sm">
             <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
-                    <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
+                    <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
                     <div class="descCard">
                         <h3>פרויקט1</h3>
                         <div class="status-c status">הושלם</div>
@@ -78,7 +78,7 @@
                 </div>
                 <div class=" offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
 
-                    <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
+                    <div class="pictureCard" style="background-image:url('images/project_types/2.png');"></div>      
                     <div class="descCard">
                         <h3>פרויקט1</h3>
                         <div class="status-b status">בביצוע</div>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
-                    <div class="pictureCard" style="background-image:url('https://idona.mtacloud.co.il/Includes/img/box2.jpg');"></div>      
+                    <div class="pictureCard" style="background-image:url('images/project_types/3.png');"></div>      
                     <div class="descCard">
                         <h3>פרויקט1</h3>
                         <div class="status-b status">ממתין למכרז</div>
