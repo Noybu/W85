@@ -1,0 +1,213 @@
+/*
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+
+$background-light: #F3F4F8;
+$border-light: darken($background-light, 2%);
+$default: #BDC4D0;
+$active: #0075AD;
+
+
+$font-family: "Open Sans", Helvetica, Arial, sans-serif
+
+// Set HTML Font Size for REM's useage
+\:root
+	font-size: 16px
+
+// Assign all elements new font
+*
+	font-family: $font-family
+
+body
+	height: 100vh
+	background: $background-light
+
+.tabs-page
+	position: relative
+
+	//Bootstrap .nav-tabs direct descendant styles
+	> .nav-tabs
+		position: relative
+		min-height: 50px
+		margin: 0
+		padding-left: 15px
+		text-align: left
+		cursor: auto
+		border: none
+		z-index: 1
+
+		li[role="presentation"]
+			display: inline-block
+			height: 50px
+			border: none
+
+			&:not(:last-child)
+				padding-right: 22px
+
+			//Default styles
+			a[role="tab"]
+				height: 50px
+				margin: 0
+				padding: 0px
+				font:
+					size: 0.875rem
+					weight: 700
+				text:
+					transform: none
+					align: center
+				letter-spacing: 0.25px
+				color: $default
+				background: none
+				border: none
+				line-height: 50px
+				transition: color 0.3s ease, box-shadow 0.2s ease
+
+				//Hover state
+				&:hover
+					color: $active
+
+			//Active class assigned via Bootstrap click method
+			&.active
+
+				//Active styles
+				a
+					color: $active
+					box-shadow: inset 0 -2px 0 $active
+					background: none
+
+					&:hover, &:focus
+						background: none
+						border: none
+
+	//Bootstrap .tab-content direct descendant styles
+	> .tab-content
+		position: relative
+		min-height: 500px
+		margin: 0
+		padding: 0
+		background: white
+		border-top: 1px solid $border-light
+		border-bottom: 1px solid $border-light
+	
+.tabs-secondary
+	position: relative
+	text-align: center
+
+	//Bootstrap .nav-tabs direct descendant styles
+	> .nav-tabs	
+		display: inline-block
+		margin: 0 auto 15px
+		border-bottom: 1px solid $border-light
+
+		li[role="presentation"]
+			&:not(:last-child)
+				margin-right: 20px
+
+			a[role="tab"]
+				padding: 12px 0
+				font:
+					size: 0.6875rem
+					weight: 700
+				text:
+					transform: uppercase
+				letter-spacing: 0.02rem
+				color: $default
+				border: none !important
+				background: none !important
+		
+				&:hover
+					color: $active
+
+		li.active
+			a[role="tab"]
+				color: $active
+				background: none
+                box-shadow: inset 0 -2px 0 0 $active	
+     */    
+.container{
+    width:80%;
+    border:1px solid black;
+}       
+.tabs-page{
+    clear: both;
+}
+#allStatus2{
+    margin-top:15px;
+    float: right;
+    width:100%;
+}
+.poly2{
+    -webkit-clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
+    clip-path: polygon(100% 25%, 82% 50%,100% 75%, 20% 75%, 0 50%, 17% 25%);
+    width: 18%;
+    height: 110px;
+    float: right;
+    font-size: 1.5vw;
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+.status-a{
+    background-color:#cecbcb;
+}
+
+.status-b{
+    background-color:#f3f56f;
+}
+
+.status-c{
+    background-color:#9fef9d;
+}
+
+.status-short{
+    padding-top: 40px;
+    padding-right: 50px;
+}
+              
+#map{
+    float:left;
+    width:30%;
+    height: 100%;
+}
+
+#desc{
+    width:50%;
+    float: right;
+    height:100%;
+    border:1px solid red;
+
+}
+.bar2{
+    width: 80%;
+    margin:0 auto;
+    padding-top: 5vh;
+}
+
+#mainBar2{
+	width:80%;
+	background-color: rgb(147, 142, 142,0.5);
+	border-radius: 20px;
+	margin:0 auto;
+	direction: ltr;	
+}
+
+.pictureCard2{
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:100px;
+	width:20%;
+    float:right;
+    border:1px solid black;
+   
+}
+@media only screen and (max-width: 991px) {
+
+    
+   
+}
+
+
+@media only screen and (max-width: 370px){
+    
+}
+
