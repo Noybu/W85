@@ -137,7 +137,8 @@ p{
 }
 
 .pictureCard{
-	background-size: cover;
+	background-size: contain;
+    background-position: center;
 	background-repeat: no-repeat;
 	height:66%;
 	width:100%;

@@ -35,14 +35,15 @@
     width:50%;
 }
 .pictureCard2{
-	background-size: cover;
+	background-size: contain;
+    background-position: center;
 	background-repeat: no-repeat;
 	height:80%;
 	width:30%;
     margin-top:4px;
     margin-right:4px;
     float:right;
-    border:2px solid black;
+    
 }
 
 .card2:hover{
