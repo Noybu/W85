@@ -2,8 +2,13 @@
 
 
 <main >
-<section >
-<div id="map" style="width:100vw; height:100vh; margin: 0 auto;"></div>
+<section>
+<div class="row" style="padding-top:unset; width:100vw; height:10vh;">
+    <div style="width:50%;margin: 0 auto; font-size: 14px; color:#4fa1ba;">שינוי תצוגה:
+        <a href="AllProjectList.php" id="list"><i class="fas fa-list-ul fa-rotate-180" style="color:#4fa1ba; margin-right:14px;font-size:36px; vertical-align: middle;"></i></a>  
+    </div>
+</div>
+<div id="map" style="width:100vw; height:73vh; margin: 0 auto;"></div>
 </section>
 </main>
 
