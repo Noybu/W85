@@ -2,6 +2,19 @@
 .container{
     width:80%;
 }       
+
+
+
+a{
+    text-decoration: none;
+    color:#1AA0BA;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#1AA0BA;
+    font-weight: bold;
+}
 .tabs-page{
     clear: both;
 }
@@ -15,10 +28,10 @@
     -webkit-clip-path: polygon(100% 25%, 75% 50%, 100% 75%, 20% 75%, 0 50%, 17% 25%);
     clip-path: polygon(100% 25%, 82% 50%,100% 75%, 20% 75%, 0 50%, 17% 25%);
     width: 18%;
-    height: 110px;
+    height: 150px;
     float: right;
     font-size: 1.5vw;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-right: 40px;
 }
 
@@ -35,7 +48,7 @@
 }
 
 .status-short{
-    padding-top: 40px;
+    padding-top: 50px;
     padding-right: 50px;
 }
               
@@ -84,26 +97,95 @@
     background-color: #1AA0BA;
     border-radius: 10px;
     font-size:18px;
-	font-weight: bold;
+    font-weight: bold;
+    margin-bottom: 44px;
 }
 #buttonFund a{
     text-decoration: none;
     color:white;
 }
 
+
+
 #subMain{
     border:1px solid black;
     margin-top:15px;
 }
 
+
+.tabs
+{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:100%
+}
+
+.nav-tabs .nav-link.active
+{
+    background-color: rgb(147, 142, 142,0.2);
+}
+
+.fade
+{
+    background-color: rgb(147, 142, 142,0.2); 
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.nav-tabs
+{
+    border:unset;
+}
+
 @media only screen and (max-width: 991px) {
 
+    .poly2{
+		font-size: 14px ;
+		padding-top: 50px ;
+        padding-right: 12px;
+        margin-left: 5px;
+        font-weight: bold;
+        
+    }
+
+    #allStatus{
+        width:90%;
+        float: right;
+        margin-right: -113px;
+        position: absolute;
+    }
+
+    .status-short {
+        padding-top: 62px;
+        padding-right: 14px;
+        font-weight: bold;
+    }
+    .container {
+        width: 100%;
+    }
+
+    .bar2 {
+        width: 100%;
+    }
+
+    #mainBar2 {
+        width: 100%;
+    }
     
+    .pictureCard2 img {
+        width: 53%;
+    }
    
 }
 
 
 @media only screen and (max-width: 370px){
-    
+    #allStatus {
+        width: 88%;
+        float: right;
+        margin-right: -105px;
+        position: absolute;
+        margin-top: -12px;
+    }
 }
 
