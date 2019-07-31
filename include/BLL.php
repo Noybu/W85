@@ -104,17 +104,18 @@ function is_username_exist($userName) {
 //מכניס משתמש רגיל למערכת 
 function registerUser($id, $firstName, $lastName,$password, $email, $type) {
 	
-    $firstName = addslashes($firstName);
-    $lastName = addslashes($lastName);
-    $password = addslashes($password);
-    $type = addslashes($type);
-    $id = addslashes($id);
-    $email = addslashes($email);
+    $firstName = $firstName;
+    $lastName = $lastName;
+    $password = $password;
+    $type = $type;
+    $id = $id;
+    $email = $email;
     
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "insert into users(id, firstName, lastName, password, email, type) values( `$id`,`$firstName`,`$lastName`,`$password`,`$email`,`$type`)";
+    $sql = "insert into users(id, firstName, lastName, password, email, type) values( '$id','$firstName','$lastName','$password', '$email','$type')";
+    
     insert($sql);
 }
 
