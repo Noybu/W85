@@ -3,7 +3,7 @@
 <?php
   if(isset($_GET['logout']))
   {
-    if($_GET('logout')=='yes')
+    if($_GET['logout']=='yes')
     {
       session_destroy();
     } 
