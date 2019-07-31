@@ -136,7 +136,7 @@ function registerServiceMan($id, $firstName, $lastName,  $password, $email, $ids
     $proftype = $proftype;
     $numofyears = $numofyears;
     $idfile = $idfile;
-    $proffile = $idfile;
+    $proffile = $proffile;
 
 
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
