@@ -67,7 +67,7 @@
           }
           else {
             ?>
-            <div style="background-color:"red;>
+            <div style="display:inline-block; font-weight:bold;font-size:16px;">
               <?php
                 echo "שלום ".$_SESSION["firstName"];
               ?>
