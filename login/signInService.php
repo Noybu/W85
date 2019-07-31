@@ -57,7 +57,7 @@
                 <input required type="email" name="email" class="form-style"/>
             </div>
             <div class="form-item">
-                <input type="hidden" name="type" value="1"/>
+                <input type="hidden" name="type" value="2"/>
             </div>
         </div>
       </div>
