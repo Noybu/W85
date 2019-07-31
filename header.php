@@ -74,7 +74,7 @@
           }
           else {
             ?>
-            <div class="loginMobile2" style="display:inline-block; font-weight:bold;font-size:20px;">
+            <div style="display:inline-block; font-weight:bold;font-size:20px;">
               <a class="nav-link navButtons"><?php echo "שלום ".$_SESSION["firstName"]; ?></a>
           </div>
             <button class="loginMobile2">
