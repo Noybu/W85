@@ -35,7 +35,7 @@ switch ($command) {
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
 
-        move_uploaded_file($_FILES["idFile"]["name"], $target_dir);
+        move_uploaded_file($_FILES["idFile"]["tmp_name"], $target_dir);
 
         registerServiceMan(
             $_POST["id"],
