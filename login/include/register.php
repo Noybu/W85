@@ -31,11 +31,14 @@ switch ($command) {
         // הרשמה נותן שירות
         $target_dir = "../uploadFiles/";
         $target_file = $target_dir . basename($_FILES["idFile"]["name"]);
-      
+        $file_tmp = $_FILES['idFile']['tmp_name'];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
 
-        move_uploaded_file($_FILES["idFile"]["tmp_name"], $target_file);
+        //move_uploaded_file($_FILES["idFile"]["tmp_name"], $target_file);
+
+            move_uploaded_file($file_tmp,"uploadFiles/".$_FILES['idFile']['name']);
+   
 
         registerServiceMan(
             $_POST["id"],
