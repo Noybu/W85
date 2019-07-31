@@ -19,12 +19,17 @@
       echo "yesssssssssssssss";
     }*/
     if(isset($_POST['submit'])){
-      if(is_user_exist($_POST["userID"],$_POST["password"])>0)
+      $count=is_user_exist($_POST["userID"],$_POST["password"]);
+      echo "$count";
+      if($count>0)
       {
         echo "Exist";
         $_SESSION["userID"]=$_POST["userID"];
         header("Location: ../index.php");
       }     
+    }
+    else{
+      echo "else";
     }
    ?>
 
