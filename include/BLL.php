@@ -7,23 +7,25 @@ require_once 'DAL.php';
 
 
 
-function addProject($userID , $projectType, $description, $locCity, $locStreet, $locNum) {
-//    if (isset($_GET['addVideo'])) {
-//        $name = $_POST['name'];
-//        $color = $_POST['color'];
-//        $age = $_POST['age'];
+function addProject($userID, $projectType, $description, $locCity, $locStreet, $locNum)
+{
+    //    if (isset($_GET['addVideo'])) {
+    //        $name = $_POST['name'];
+    //        $color = $_POST['color'];
+    //        $age = $_POST['age'];
 
     $sql = "INSERT INTO `project` (`userID`,`projectType`, `description` , `locCity`, `locStreet` , `locNum`) VALUES ('$userID','$projectType', '$description', '$link')";
     insert($sql);
 }
 
 // Show all Videos:
-function getAllVideos() {
-//    $userName = $_SESSION["userName"];
+function getAllVideos()
+{
+    //    $userName = $_SESSION["userName"];
     $sql = "SELECT c.videoID, c.videoTitle, o.categoryName, c.description, c.link FROM videos c JOIN categories o ON c.categoryID = o.categoryID ";
     $dbVideos = select($sql);
-    
-    
+
+
     foreach ($dbVideos as $V) {
         $oopVideos[] = new Videos($V->videoID, $V->videoTitle, $V->categoryName, $V->description, $V->link);
     }
@@ -32,13 +34,14 @@ function getAllVideos() {
 }
 
 // Show all Videos by ID:
-function getVideosByUser($userID) {
-    
+function getVideosByUser($userID)
+{
+
     $sql = "SELECT videoID, videoTitle, categoryName, description, link FROM videos V JOIN categories C ON V.categoryID = C.categoryID where userID = '$userID' ";
-    echo $sql ;
-    
+    echo $sql;
+
     $dbVideos = select($sql);
-    
+
     foreach ($dbVideos as $V) {
         $oopVideos[] = new Videos($V->videoID, $V->videoTitle, $V->categoryName, $V->description, $V->link);
     }
@@ -54,103 +57,111 @@ function getVideosByUser($userID) {
 //    return $video;
 //}
 
-    
+
 
 // Delete Video:
-function deleteVideo($videoID) {
-    
-    
+function deleteVideo($videoID)
+{
+
+
     $sql = "delete from videos where videoID = " . "$videoID";
     delete($sql);
 }
 
 
-function editVideo($videoID, $categoryID, $videoTitle, $description, $link) {
+function editVideo($videoID, $categoryID, $videoTitle, $description, $link)
+{
     if (isset($_GET['edit'])) {
         $videoID = $_GET['edit'];
         $update = true;
-        
-       $result = "SELECT * FROM videos WHERE videoID=$videoID";
-        
+
+        $result = "SELECT * FROM videos WHERE videoID=$videoID";
     }
     $sql = "UPDATE Videos SET videoTitle='$videoTitle',categoryID='$categoryID', description='$description', link='$link' where videoID ='$videoID'";
     update($sql);
 }
 
 //מקבל את ה ID של המשתמש 
-function get_user_id($userName) {
-	$userName = addslashes($userName);
-	$sql = "select id from users where userName = '$userName'";
-	return get_object($sql)->id;
+function get_user_id($userName)
+{
+    $userName = addslashes($userName);
+    $sql = "select id from users where userName = '$userName'";
+    return get_object($sql)->id;
 }
 
 //מקבל את שם משתמש של המשתמש
-function get_user_name($id) {
-	$id = addslashes($id);
-	$sql = "select firstName,lastname from users where id = '$id'";
-	return get_object($sql)->name;
+function get_user_name($id)
+{
+    $id = addslashes($id);
+    $sql = "select firstName,lastname from users where id = '$id'";
+    return get_object($sql)->name;
 }
 
 
 //בודק אם משתמש קיים כבר במערכת
-function is_username_exist($userName) {
-	$userName = addslashes($userName);
-	$sql = "select count(*) as total_rows from users where userName = '$userName'";
-	$count = get_object($sql)->total_rows;
-	return $count > 0;
+function is_username_exist($userName)
+{
+    $userName = addslashes($userName);
+    $sql = "select count(*) as total_rows from users where userName = '$userName'";
+    $count = get_object($sql)->total_rows;
+    return $count > 0;
 }
 
 
 //מכניס משתמש רגיל למערכת 
-function registerUser($id, $firstName, $lastName,$password, $email, $type) {
-	
+function registerUser($id, $firstName, $lastName, $password, $email, $type)
+{
+
     $firstName = $firstName;
     $lastName = $lastName;
     $password = $password;
     $type = $type;
     $id = $id;
     $email = $email;
-    
+
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
     $sql = "insert into users(id, firstName, lastName, password, email, type) values( '$id','$firstName','$lastName','$password', '$email','$type')";
-    
+
     insert($sql);
 }
 
 //מכניס נותן שירות למערכת
-function registerServiceMan($id, $firstName, $lastName,  $password, $type, $file, $idPhoto) {
-	
+function registerServiceMan($id, $firstName, $lastName,  $password, $email, $idservice, $proftype, $numofyears, $idfile, $proffile, $type)
+{
+
     $firstName = $firstName;
     $lastName = $lastName;
     $password = $password;
     $type = $type;
     $id = $id;
-    $file = $idPhoto;
-    $idPhoto = $idPhoto;
-    
+    $email = $email;
+    $idservice = $idservice;
+    $proftype = $proftype;
+    $numofyears = $numofyears;
+    $idfile = $idfile;
+    $proffile = $idfile;
+
+
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "insert into users(id, firstName, lastName, password, type, file, idPhoto) values('$id','$firstName','$lastName','$password' ,'$type' ,'$file','$idPhoto')";
+    $sql = "insert into users(id, firstName, lastName, password, email, idservice,proftype,numofyears, idfile,proffile, type) values('$id','$firstName','$lastName','$password' ,'$email','$idservice', '$proftype', '$numofyears', '$idfile','$proffile' ,'$type')";
     insert($sql);
 }
 
 
 //בודק אם משתמש קיים במערכת 
-function is_user_exist($userName, $password ) {
+function is_user_exist($userName, $password)
+{
     $userName = addslashes($userName);
     $password = addslashes($password);
 
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
-    
+
     $sql = "select count(*) as total_rows from users where userName = '$userName' and password = '$password'";
     $count = get_object($sql)->total_rows;
-    return $count > 0;	
+    return $count > 0;
 }
-
-
-
-
