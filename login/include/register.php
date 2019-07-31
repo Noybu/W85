@@ -23,7 +23,7 @@ switch ($command) {
             $_POST["email"],
             $_POST["type"]
         );
-        header("Location: index.php");
+        header("Location: ../../index.php");
 
         break;
 
@@ -42,7 +42,7 @@ switch ($command) {
             $_POST["profFile"],
             $_POST["type"]
         );
-        header("Location: index.php");
+        header("Location: ../../index.phpindex.php");
 
         break;
 

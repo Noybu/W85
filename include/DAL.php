@@ -3,12 +3,14 @@
 // Open connection: 
 function connect() {
     $connection = mysqli_connect("localhost", "noybu_urban", "Urban123", "noybu_urban");
+    $connection->set_charset('utf8');
     return $connection;
 }
 
 // Insert: 
 function insert($sql) {
     $connection = connect();
+   
     mysqli_query($connection, $sql);
     mysqli_close($connection);
 }
