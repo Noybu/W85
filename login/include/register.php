@@ -48,7 +48,7 @@ switch ($command) {
             }
             
             if(empty($errors)==true) {
-               move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_idFile");
+               move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_idFile". $file_type);
                echo "Success";
             }else{
                print_r($errors);
@@ -75,7 +75,7 @@ switch ($command) {
             }
             
             if(empty($errors)==true) {
-               move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_profFile");
+               move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_profFile". $file_type);
                echo "Success";
             }else{
                print_r($errors);
