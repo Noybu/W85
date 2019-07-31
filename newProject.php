@@ -4,8 +4,11 @@
 <script src="JS\newProject.js"></script>
 <?php
     require_once'include/BLL.php';
-    addProject($_POST["userID"],$_POST["projectType"],$_POST["description"],$_POST["locCity"],$_POST["locStreet"],$_POST["locNum"]);
-    echo "הפרויקט עלה בהצלחה";
+    if(isset($_POST['submit'])){
+        addProject($_POST["userID"],$_POST["projectType"],$_POST["description"],$_POST["locCity"],$_POST["locStreet"],$_POST["locNum"]);
+        echo "הפרויקט עלה בהצלחה";
+    }
+    
 ?>
 
 
