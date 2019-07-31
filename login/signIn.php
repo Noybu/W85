@@ -12,18 +12,14 @@
     <?php
     require_once'../include/BLL.php';
     session_start();
-    /*if(!isset($_SESSION["userID"])){
-      echo "NOOOOOOOOOOOOoooo";
-    }
-    else {
-      echo "yesssssssssssssss";
-    }*/
     if(isset($_POST['submit'])){
       $count=is_user_exist($_POST["userID"],$_POST["password"]);
       echo "$count";
       if($count>0)
       {
         $_SESSION["userID"]=$_POST["userID"];
+        $_SESSION["firstName"]=get_user_name($_POST["userID"]);
+        $_SESSION["type"]=get_user_type($_POST["userID"]);
         header("Location: ../index.php");
       }     
     }

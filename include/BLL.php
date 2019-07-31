@@ -87,11 +87,16 @@ function get_user_id($userName)
 //מקבל את שם משתמש של המשתמש
 function get_user_name($id)
 {
-    $id = addslashes($id);
-    $sql = "select firstName,lastname from users where id = '$id'";
-    return get_object($sql)->name;
+    $sql = "select firstname from users where id = '$id'";
+    return get_object($sql)->firstname;
 }
 
+//מקבל את הסוג של המשתמש
+function get_user_type($id)
+{
+    $sql = "select type from users where id = '$id'";
+    return get_object($sql)->type;
+}
 
 //בודק אם משתמש קיים כבר במערכת
 function is_username_exist($userName)
