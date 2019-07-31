@@ -37,7 +37,7 @@ switch ($command) {
 
         //move_uploaded_file($_FILES["idFile"]["tmp_name"], $target_file);
 
-            move_uploaded_file($file_tmp,"uploadFiles/".$_FILES['idFile']['name']);
+            move_uploaded_file($file_tmp,"../uploadFiles/".$_FILES['idFile']['name']);
    
 
         registerServiceMan(

@@ -35,7 +35,7 @@
       </div>
     </section>
     <div id="mainDiv">
-      <form action="include/register.php" method="post">
+      <form action="include/register.php" method="post" enctype = "multipart/form-data">
         <div id="form">
 
           <div class="form-item">
