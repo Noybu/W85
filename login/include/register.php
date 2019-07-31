@@ -17,8 +17,8 @@ switch ($command) {
 
         registerUser(
             $_POST["id"],
-            $_POST["firstName"] ,
-             $_POST["lastName"],
+            $_POST["firstName"],
+            $_POST["lastName"],
             $_POST["password"],
             $_POST["email"],
             $_POST["type"]
@@ -29,20 +29,31 @@ switch ($command) {
 
     case "2":
         // הרשמה נותן שירות
+        $target_dir = "uploadFiles/";
+        $target_file = $target_dir . basename($_FILES["idFile"]["name"]);
+      
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        
+
+
+
+
+
+
         registerServiceMan(
             $_POST["id"],
-            $_POST["firstName"] ,
-             $_POST["lastName"],
+            $_POST["firstName"],
+            $_POST["lastName"],
             $_POST["password"],
             $_POST["email"],
             $_POST["idService"],
             $_POST["profType"],
             $_POST["numOfYears"],
-            $_POST["idFile"],
+            $_FILES["idFile"]["name"],
             $_POST["profFile"],
             $_POST["type"]
         );
-        header("Location: ../../index.phpindex.php");
+        header("Location: ../../index.php");
 
         break;
 
