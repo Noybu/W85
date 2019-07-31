@@ -65,7 +65,7 @@ switch ($command) {
             $_POST["idService"],
             $_POST["profType"],
             $_POST["numOfYears"],
-            $_FILES["idFile"]["name"],
+            $_FILES['idFile']['name'],
             $_POST["profFile"],
             $_POST["type"]
         );
