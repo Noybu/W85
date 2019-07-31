@@ -58,11 +58,23 @@
              <div class="row">
                 <h1 style="margin-right: 4%;">פרויקטים אחרונים</h1>
             </div>
+
             <div class="row sm">
+
+
+
+
+
+
+
+
             <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
                     <div class="descCard">
-                        <h3>פרויקט1</h3>
+                        <h3><?php
+$arrProjects[] = getAllProjects();
+echo $arrProjects[0]->projecttype;
+?></h3>
                         <div class="status-c status">הושלם</div>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
                         

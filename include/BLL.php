@@ -1,6 +1,7 @@
 <?php
 
 require_once 'DAL.php';
+require_once 'Project.php';
 
 
 //session_start();
@@ -13,19 +14,19 @@ function addProject($userID, $projectType, $description, $locCity, $locStreet, $
     insert($sql);
 }
 
-// Show all Videos:
-function getAllVideos()
+
+function getAllProjects()
 {
-    //    $userName = $_SESSION["userName"];
-    $sql = "SELECT c.videoID, c.videoTitle, o.categoryName, c.description, c.link FROM videos c JOIN categories o ON c.categoryID = o.categoryID ";
-    $dbVideos = select($sql);
+    
+    $sql = "SELECT * FROM projects (projecttype, description , loccity, locstreet , locnum, projectstatus, projectcurrentprice, userid)";
+    $dbProjects = select($sql);
 
 
-    foreach ($dbVideos as $V) {
-        $oopVideos[] = new Videos($V->videoID, $V->videoTitle, $V->categoryName, $V->description, $V->link);
+    foreach ($dbProjects as $P) {
+        $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcurrentprice, $P->userid);
     }
 
-    return $oopVideos;
+    return $oopProjects;
 }
 
 // Show all Videos by ID:
