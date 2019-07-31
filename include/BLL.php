@@ -101,21 +101,8 @@ function is_username_exist($userName) {
 }
 
 
-//בודק אם זה סוג משתמש רגיל או נותן שירות ומפעיל פונקצית הוספה בהתאם
-function register($id, $firstName, $lastName, $userName, $password, $type, $file, $idPhoto)
-{
-    if($type==1)
-    {
-        registerUser($id, $firstName, $lastName, $userName, $password, $type);
-    }
-    else{
-        registerServiceMan($id, $firstName, $lastName, $userName, $password, $type, $file, $idPhoto);
-    }
-}
-
-
 //מכניס משתמש רגיל למערכת 
-function registerUser($id, $firstName, $lastName,$email, $password, $type) {
+function registerUser($id, $firstName, $lastName,$password, $email, $type) {
 	
     $firstName = addslashes($firstName);
     $lastName = addslashes($lastName);
@@ -127,7 +114,7 @@ function registerUser($id, $firstName, $lastName,$email, $password, $type) {
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "insert into users(id, firstName, lastName, password, email, type) values( '$id','$firstName','$lastName','$password', '$email','$type')";
+    $sql = "insert into users(id, firstName, lastName, password, email, type) values( `$id`,`$firstName`,`$lastName`,`$password`,`$email`,`$type`)";
     insert($sql);
 }
 
