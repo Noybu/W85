@@ -9,12 +9,7 @@ require_once 'DAL.php';
 
 function addProject($userID, $projectType, $description, $locCity, $locStreet, $locNum)
 {
-    //    if (isset($_GET['addVideo'])) {
-    //        $name = $_POST['name'];
-    //        $color = $_POST['color'];
-    //        $age = $_POST['age'];
-
-    $sql = "INSERT INTO `project` (`userID`,`projectType`, `description` , `locCity`, `locStreet` , `locNum`) VALUES ('$userID','$projectType', '$description', '$link')";
+    $sql = "INSERT INTO `projects` (`projecttype`, `description` , `loccity`, `locstreet` , `locnum`, 'projectstatus','projectcurrentprice','userid') VALUES ('$projectType', '$description', '$locCity','$locStreet','$locNum','0','0','$userID')";
     insert($sql);
 }
 
