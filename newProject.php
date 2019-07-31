@@ -11,9 +11,6 @@
     
 ?>
 
-
-
-
 <section>
     <div>
         <h3>יזמים? גייסו השקעה ! </h3>
@@ -56,7 +53,7 @@
                     <input type="hidden" name="userID" value="1111"/>
                 </div>
                 <div class="form-item">
-                    <input type="submit" class="login" value="שלח">
+                    <input type="submit" class="login" name="submit" value="שלח">
                 </div>
             </div>
         </form>
