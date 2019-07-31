@@ -10,7 +10,7 @@ function connect() {
 // Insert: 
 function insert($sql) {
     $connection = connect();
-   
+   echo $sql;
     mysqli_query($connection, $sql);
     mysqli_close($connection);
 }
