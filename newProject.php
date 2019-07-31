@@ -8,7 +8,6 @@
         addProject($_POST["userID"],$_POST["projectType"],$_POST["description"],$_POST["locCity"],$_POST["locStreet"],$_POST["locNum"]);
         echo "הפרויקט עלה בהצלחה";
     }
-    
 ?>
 
 <section>

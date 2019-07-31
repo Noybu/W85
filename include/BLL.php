@@ -148,15 +148,12 @@ function registerServiceMan($id, $firstName, $lastName,  $password, $email, $ids
 
 
 //בודק אם משתמש קיים במערכת 
-function is_user_exist($userName, $password)
+function is_user_exist($userID, $password)
 {
-    $userName = addslashes($userName);
-    $password = addslashes($password);
-
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "select count(*) as total_rows from users where userName = '$userName' and password = '$password'";
+    $sql = "select count(*) as total_rows from users where id = '$userID' and password = '$password'";
     $count = get_object($sql)->total_rows;
     return $count > 0;
 }
