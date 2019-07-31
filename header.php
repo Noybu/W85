@@ -45,21 +45,34 @@
           else {
             ?>
             <li class="nav-item">
-            <a class="nav-link navA loginMobile" href="login\signin.php?logout=yes">התנתקות</a>
+            <a class="nav-link navA loginMobile" href="login\signIn.php?logout=yes">התנתקות</a>
            </li>
            <?php
           }
         ?>
-       
       </ul>
     </div>
     <div>
-      <button class="loginMobile2">    
-          <a class="nav-link navButtons" href="login\signIn.php">התחברות</a>
-      </button>
-      <button class="loginMobile2">
-          <a class="nav-link navButtons" href="login\signUp.php">הרשמה</a>
-      </button>
+    <?php
+          session_start();
+          if(!isset($_SESSION["userID"])){
+            ?>
+            <button class="loginMobile2">    
+              <a class="nav-link navButtons" href="login\signIn.php">התחברות</a>
+           </button>
+          <button class="loginMobile2">
+              <a class="nav-link navButtons" href="login\signUp.php">הרשמה</a>
+          </button>
+          <?php
+          }
+          else {
+            ?>
+            <button class="loginMobile2">
+              <a class="nav-link navButtons" href="login\signIn.php">התנתקות</a>
+          </button>
+           <?php
+          }
+        ?>
     </div>
    
   </nav>
