@@ -16,7 +16,7 @@
       echo "NOOOOOOOOOOOOoooo";
     }
     if(isset($_POST['submit'])){
-      if(is_user_exist($_POST["userID"],$_POST["password"])>1)
+      if(is_user_exist($_POST["userID"],$_POST["password"])>0)
       {
         echo "Exist";
         $_SESSION["userID"]=$_POST["userID"];

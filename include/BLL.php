@@ -155,5 +155,5 @@ function is_user_exist($userID, $password)
 
     $sql = "select count(*) as total_rows from users where id = '$userID' and password = '$password'";
     $count = get_object($sql)->total_rows;
-    return $count > 0;
+    return $count;
 }
