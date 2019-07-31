@@ -32,9 +32,7 @@ switch ($command) {
         if(isset($_FILES['idFile'])){
             $errors= array();
             $file_name = $_FILES['idFile']['name'];
-            $file_size = $_FILES['idFile']['size'];
             $file_tmp = $_FILES['idFile']['tmp_name'];
-            $file_type = $_FILES['idFile']['type'];
             $file_ext=strtolower(end(explode('.',$_FILES['idFile']['name'])));
             
             $extensions= array("jpeg","jpg","png","gif");
@@ -42,10 +40,7 @@ switch ($command) {
             if(in_array($file_ext,$extensions)=== false){
                $errors[]="extension not allowed, please choose a JPEG or PNG file.";
             }
-            
-            if($file_size > 2097152) {
-               $errors[]='File size must be excately 2 MB';
-            }
+
             
             if(empty($errors)==true) {
                move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_idFile.". $file_ext);
@@ -59,9 +54,7 @@ switch ($command) {
          if(isset($_FILES['profFile'])){
             $errors= array();
             $file_name = $_FILES['profFile']['name'];
-            $file_size = $_FILES['profFile']['size'];
             $file_tmp = $_FILES['profFile']['tmp_name'];
-            $file_type = $_FILES['profFile']['type'];
             $file_ext=strtolower(end(explode('.',$_FILES['profFile']['name'])));
             
             $extensions= array("jpeg","jpg","png","gif");
@@ -69,10 +62,7 @@ switch ($command) {
             if(in_array($file_ext,$extensions)=== false){
                $errors[]="extension not allowed, please choose a JPEG or PNG file.";
             }
-            
-            if($file_size > 2097152) {
-               $errors[]='File size must be excately 2 MB';
-            }
+
             
             if(empty($errors)==true) {
                move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_profFile.". $file_ext);
