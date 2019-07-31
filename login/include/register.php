@@ -1,7 +1,7 @@
 <?php
 
 //require_once 'DAL.php';
-require_once 'BLL.php';
+require_once '../../include/BLL.php';
 
 session_start();
 
@@ -15,7 +15,7 @@ switch ($command) {
         // הרשמה יזם משקיע
 
 
-        register(
+        registerUser(
             $_POST["id"],
             $_POST["firstName"] ,
              $_POST["lastName"],
@@ -29,7 +29,7 @@ switch ($command) {
 
     case "2":
         // הרשמה נותן שירות
-        register(
+        registerServiceMan(
             $_POST["id"],
             $_POST["firstName"] ,
              $_POST["lastName"],
