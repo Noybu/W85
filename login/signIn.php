@@ -12,6 +12,9 @@
     <?php
     require_once'include/BLL.php';
     session_start();
+    if(!isset($_SESSION["userID"])){
+      echo "NOOOOOOOOOOOOoooo";
+    }
     if(isset($_POST['submit'])){
       if(is_user_exist($_POST["userID"],$_POST["password"]))
       {
