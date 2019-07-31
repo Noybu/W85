@@ -122,11 +122,11 @@ function registerUser($id, $firstName, $lastName,$password, $email, $type) {
 //מכניס נותן שירות למערכת
 function registerServiceMan($id, $firstName, $lastName,  $password, $type, $file, $idPhoto) {
 	
-    $firstName = addslashes($firstName);
-    $lastName = addslashes($lastName);
-    $password = addslashes($password);
-    $type = addslashes($type);
-    $id = addslashes($id);
+    $firstName = $firstName;
+    $lastName = $lastName;
+    $password = $password;
+    $type = $type;
+    $id = $id;
     $file = $idPhoto;
     $idPhoto = $idPhoto;
     
