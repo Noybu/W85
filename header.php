@@ -30,12 +30,27 @@
         <li class="nav-item">
           <a class="nav-link navA" href="AllProjectList.php">כל הפרויקטים</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link navA loginMobile" href="login\signIn.php">התחברות</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link navA loginMobile" href="login\signUp.php">הרשמה</a>
-        </li>
+        <?php
+          session_start();
+          if(!isset($_SESSION["userID"])){
+            ?>
+            <li class="nav-item">
+            <a class="nav-link navA loginMobile" href="login\signIn.php">התחברות</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navA loginMobile" href="login\signUp.php">הרשמה</a>
+          </li>
+          <?php
+          }
+          else {
+            ?>
+            <li class="nav-item">
+            <a class="nav-link navA loginMobile" href="login\signin.php?logout=yes">התנתקות</a>
+           </li>
+           <?php
+          }
+        ?>
+       
       </ul>
     </div>
     <div>

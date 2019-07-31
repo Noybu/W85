@@ -23,7 +23,6 @@
       echo "$count";
       if($count>0)
       {
-        echo "Exist";
         $_SESSION["userID"]=$_POST["userID"];
         header("Location: ../index.php");
       }     
