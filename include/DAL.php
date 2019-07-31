@@ -2,7 +2,7 @@
 
 // Open connection: 
 function connect() {
-    $connection = mysqli_connect("192.116.98.101", "noybu_urban", "Urban123", "noybu_urban");
+    $connection = mysqli_connect("localhost", "noybu_urban", "Urban123", "noybu_urban");
     return $connection;
 }
 
