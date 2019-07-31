@@ -1,7 +1,7 @@
 <?php
 
 require_once 'DAL.php';
-require_once 'Project.php';
+require_once 'project.php';
 
 
 //session_start();
