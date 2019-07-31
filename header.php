@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="en">
-
+<?php
+  if(isset($_GET['logout']))
+  {
+    if($_GET('logout')=='yes')
+    {
+      session_destroy();
+    } 
+  }
+?>
 <head>
 	<title>Urban Re-Development</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -71,7 +79,7 @@
               <a class="nav-link navButtons"><?php echo "שלום ".$_SESSION["firstName"]; ?></a>
           </div>
             <button class="loginMobile2">
-              <a class="nav-link navButtons" href="login\signIn.php">התנתקות</a>
+              <a class="nav-link navButtons" href="index.php?logout=yes">התנתקות</a>
             </button>
            <?php
           }
