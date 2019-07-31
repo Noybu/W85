@@ -117,7 +117,7 @@ function registerUser($id, $firstName, $lastName, $password, $email, $type)
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "insert into users(id, firstName, lastName, password, email, type) values( '$id','$firstName','$lastName','$password', '$email','$type')";
+    $sql = "insert into users(id, firstName, lastName, password, email, type, approved) values( '$id','$firstName','$lastName','$password', '$email','$type','1')";
 
     insert($sql);
 }
@@ -142,7 +142,7 @@ function registerServiceMan($id, $firstName, $lastName,  $password, $email, $ids
     $password = crypt($password, "Assaf Ido Noy"); // Salt the password.
     $password = sha1($password);
 
-    $sql = "insert into users(id, firstName, lastName, password, email, idservice,proftype,numofyears, idfile,proffile, type) values('$id','$firstName','$lastName','$password' ,'$email','$idservice', '$proftype', '$numofyears', '$idfile','$proffile' ,'$type')";
+    $sql = "insert into users(id, firstName, lastName, password, email, idservice,proftype,numofyears, idfile,proffile, type, approved) values('$id','$firstName','$lastName','$password' ,'$email','$idservice', '$proftype', '$numofyears', '$idfile','$proffile' ,'$type','0')";
     insert($sql);
 }
 

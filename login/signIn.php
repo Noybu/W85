@@ -9,7 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Urban Re-Development</title>
-        
+    <?php
+    require_once'include/BLL.php';
+    session_start();
+    if(isset($_POST['submit'])){
+      if(is_user_exist($_POST["userID"],$_POST["password"]))
+      {
+        $_SESSION["userID"]=$_POST["userID"];
+        header("Location: ../index.php");
+      }     
+    }
+   ?>
+
     </head>
       <body>
       <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right">
@@ -45,7 +56,7 @@
                     <input required type="password" name="password" class="form-style"/>
                 </div>
                 <div class="form-item">
-                    <input type="submit" class="login" value="שלח">
+                    <input type="submit" class="login" value="שלח" name="submit">
                 </div>
             </div>
       </div>
