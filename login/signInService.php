@@ -35,7 +35,7 @@
       </div>
     </section>
     <div class="mainDiv MainDivService">
-      <form action="include/register.php" method="post">
+      <form action="include/register.php" method="post" enctype = "multipart/form-data">
         <h3 style="margin-right:5%;">פרטים אישיים</h3>
         <div class="formService">
           <div class="form-item">
