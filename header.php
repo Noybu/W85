@@ -67,6 +67,11 @@
           }
           else {
             ?>
+            <div style="background-color:"red;>
+              <?php
+                echo "שלום ".$_SESSION["firstName"];
+              ?>
+            </div>
             <button class="loginMobile2">
               <a class="nav-link navButtons" href="login\signIn.php">התנתקות</a>
           </button>
