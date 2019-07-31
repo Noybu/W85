@@ -25,4 +25,9 @@ class Project
         $this->projectcurrentprice = $projectcurrentprice;
         $this->userid = $userid;
     }
+
+    public function get_des()
+    {
+        return $this->description;
+    }
 }
