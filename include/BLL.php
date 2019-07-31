@@ -18,15 +18,20 @@ function addProject($userID, $projectType, $description, $locCity, $locStreet, $
 function getAllProjects()
 {
     
-    $sql = "SELECT * FROM projects (projecttype, description , loccity, locstreet , locnum, projectstatus, projectcurrentprice, userid)";
+    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus, projectcurrentprice, userid FROM projects";
     $dbProjects = select($sql);
-
-
-    foreach ($dbProjects as $P) {
-        $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcurrentprice, $P->userid);
+    $rows = [];
+    while($row = mysqli_fetch_array($dbProjects))
+    {
+        $rows[] = $row;
     }
 
-    return $oopProjects;
+
+   // foreach ($dbProjects as $P) {
+     //   $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcurrentprice, $P->userid);
+  //  }
+
+    return $rows;
 }
 
 // Show all Videos by ID:

@@ -73,7 +73,7 @@
                     <div class="descCard">
                         <h3><?php
 $arrProjects = getAllProjects();
-echo $arrProjects['projecttype'];
+echo $arrProjects;
 ?></h3>
                         <div class="status-c status">הושלם</div>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
