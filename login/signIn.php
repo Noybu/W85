@@ -28,9 +28,7 @@
         header("Location: ../index.php");
       }     
     }
-    else{
-      echo "else";
-    }
+  
    ?>
 
     </head>
@@ -57,6 +55,7 @@
         </div>
     </section>
       <div id="mainDiv">
+        <form action="" method="POST">
             <div id="form">
                     
                 <div class="form-item">
@@ -71,6 +70,7 @@
                     <input type="submit" class="login" value="שלח" name="submit">
                 </div>
             </div>
+          </form>
       </div>
 </main>
 <?php include_once("../footer.php"); ?>
