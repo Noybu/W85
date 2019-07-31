@@ -9,7 +9,7 @@ require_once 'DAL.php';
 
 function addProject($userID, $projectType, $description, $locCity, $locStreet, $locNum)
 {
-    $sql = "INSERT INTO `projects` (`projecttype`, `description` , `loccity`, `locstreet` , `locnum`, 'projectstatus','projectcurrentprice','userid') VALUES ('$projectType', '$description', '$locCity','$locStreet','$locNum','0','0','$userID')";
+    $sql = "INSERT INTO projects (projecttype, description , loccity, locstreet , locnum, projectstatus, projectcurrentprice, userid) VALUES ('$projectType', '$description', '$locCity','$locStreet','$locNum','0','0','$userID')";
     insert($sql);
 }
 
