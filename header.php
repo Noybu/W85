@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="en">
 <?php
+  session_start();
   if(isset($_GET['logout']))
   {
     if($_GET['logout']=='yes')
@@ -39,7 +40,6 @@
           <a class="nav-link navA" href="AllProjectList.php">כל הפרויקטים</a>
         </li>
         <?php
-          session_start();
           if(!isset($_SESSION["userID"])){
             ?>
             <li class="nav-item">
@@ -62,7 +62,6 @@
     </div>
     <div>
     <?php
-          session_start();
           if(!isset($_SESSION["userID"])){
             ?>
             <button class="loginMobile2">    
