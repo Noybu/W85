@@ -29,15 +29,31 @@ switch ($command) {
 
     case "2":
         // הרשמה נותן שירות
-        $target_dir = "../uploadFiles/";
-        $target_file = $target_dir . basename($_FILES["idFile"]["name"]);
-        $file_tmp = $_FILES['idFile']['tmp_name'];
-        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-
-        //move_uploaded_file($_FILES["idFile"]["tmp_name"], $target_file);
-
-            move_uploaded_file($file_tmp,"../uploadFiles/".$_FILES['idFile']['name']);
+        if(isset($_FILES['idFile'])){
+            $errors= array();
+            $file_name = $_FILES['idFile']['name'];
+            $file_size = $_FILES['idFile']['size'];
+            $file_tmp = $_FILES['idFile']['tmp_name'];
+            $file_type = $_FILES['idFile']['type'];
+            $file_ext=strtolower(end(explode('.',$_FILES['idFile']['name'])));
+            
+            $extensions= array("jpeg","jpg","png","gif");
+            
+            if(in_array($file_ext,$extensions)=== false){
+               $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+            }
+            
+            if($file_size > 2097152) {
+               $errors[]='File size must be excately 2 MB';
+            }
+            
+            if(empty($errors)==true) {
+               move_uploaded_file($file_tmp,"../uploadFiles/".$file_name);
+               echo "Success";
+            }else{
+               print_r($errors);
+            }
+         }
    
 
         registerServiceMan(
