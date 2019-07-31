@@ -29,13 +29,13 @@ switch ($command) {
 
     case "2":
         // הרשמה נותן שירות
-        $target_dir = "uploadFiles/";
+        $target_dir = "../uploadFiles/";
         $target_file = $target_dir . basename($_FILES["idFile"]["name"]);
       
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
 
-        move_uploaded_file($_FILES["idFile"]["tmp_name"], $target_dir);
+        move_uploaded_file($_FILES["idFile"]["tmp_name"], $target_file);
 
         registerServiceMan(
             $_POST["id"],
