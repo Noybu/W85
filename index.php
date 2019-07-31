@@ -72,8 +72,8 @@
                     <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
                     <div class="descCard">
                         <h3><?php
-$arrProjects[] = getAllProjects();
-echo $arrProjects[0]->projecttype;
+$arrProjects = getAllProjects();
+echo $arrProjects['projecttype'];
 ?></h3>
                         <div class="status-c status">הושלם</div>
                         <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
