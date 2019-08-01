@@ -66,26 +66,24 @@
 
             <?php include_once("include/BLL.php"); ?>
 
+            <?php
 
+$arrProjects = Array();
+$arrProjects = getAllProjects();
+ ?>
 
             <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
                     <div class="descCard">
-                        <h3><?php
-
-$arrProjects = Array();
-$arrProjects = getAllProjects();
-echo $arrProjects[0]->description;
-
-?></h3>
-                        <div class="status-c status">הושלם</div>
-                        <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
+                        <h3><?php echo $arrProjects[0]->projecttype; ?></h3>
+                        <div class="status-c status"><?php echo $arrProjects[0]->projectstatus; ?></div>
+                        <p><?php echo $arrProjects[0]->description; ?></p>
                         
                         <div class="bar">
-                            <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
+                            <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost; ?><i class="fas fa-shekel-sign"></i></p>
                             <div id="mainBar"> 
                                 <div style="width:40%;background-color:red;border-radius: 20px; ">
-                                    40
+                                <?php echo $arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost; ?>
                                 </div>
                             </div>
                         </div>

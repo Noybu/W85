@@ -18,7 +18,7 @@ function addProject($userID, $projectType, $description, $locCity, $locStreet, $
 function getAllProjects()
 {
     
-    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectprice, projectcurrentprice, userid FROM projects";
+    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid FROM projects";
     $dbProjects = select($sql);
   //  $rows = [];
   //  while($row = mysqli_fetch_array($dbProjects))
