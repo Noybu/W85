@@ -75,7 +75,7 @@
 
 $arrProjects = Array();
 $arrProjects = getAllProjects();
-echo '<pre>'; print_r($arrProjects[0]); echo '</pre>';
+echo $arrProjects[0]->description;
 
 ?></h3>
                         <div class="status-c status">הושלם</div>
