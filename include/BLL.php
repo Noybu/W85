@@ -28,7 +28,7 @@ function getAllProjects()
 
 
    foreach ($dbProjects as $P) {
-       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcurrentprice, $P->userid);
+       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid);
    }
 
     return $oopProjects;
