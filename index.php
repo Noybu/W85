@@ -72,7 +72,9 @@
                     <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
                     <div class="descCard">
                         <h3><?php
-$arrProjects[] = getAllProjects();
+
+$arrProjects = Array();
+$arrProjects = getAllProjects();
 echo '<pre>'; print_r($arrProjects[0]); echo '</pre>';
 
 ?></h3>
