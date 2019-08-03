@@ -122,6 +122,10 @@ p{
 	background-color:#9fef9d;
 }
 
+#grad {
+	background-image: linear-gradient(to right, red , green);
+  }
+
 .status-short
 {
 
