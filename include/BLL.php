@@ -17,15 +17,9 @@ function addProject($userID, $projectType, $description, $locCity, $locStreet, $
 
 function getAllProjects()
 {
-    
+   
     $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid FROM projects";
     $dbProjects = select($sql);
-  //  $rows = [];
-  //  while($row = mysqli_fetch_array($dbProjects))
-   // {
-     //   $rows[] = $row;
-  //  }
-
 
    foreach ($dbProjects as $P) {
        $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid);
@@ -33,6 +27,60 @@ function getAllProjects()
 
     return $oopProjects;
 }
+
+function getProjectType($num)
+{
+    switch($num)
+    {
+        case 1:
+        {
+            return "ספסל";
+        }
+        case 2:
+        {
+            return "גן-שעשועים";
+        }
+        case 3:
+        {
+            return "פח אשפה";
+        }
+        case 4:
+        {
+            return "שביל אופניים";
+        }
+        case 5:
+        {
+            return "תאורה";
+        }
+    }
+}
+function getProjectStatus($num)
+{
+    switch($num)
+    {
+        case 0:
+        {
+            return "ממתין לאישור";
+        }
+        case 1:
+        {
+            return "ממתין למכרז"
+        }
+        case 2:
+        {
+            return "ממתין למימון";
+        }
+        case 3:
+        {
+            return "בביצוע";
+        }
+        case 4:
+        {
+            return "הושלם";
+        }
+    }
+}
+
 
 // Show all Videos by ID:
 function getVideosByUser($userID)

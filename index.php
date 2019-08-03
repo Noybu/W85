@@ -74,10 +74,10 @@
             {
                 ?>
                 <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
-                    <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
+                    <div class="pictureCard" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype;?>.png');"></div>      
                     <div class="descCard">
-                        <h3><?php echo $arrProjects[$i]->projecttype;?></h3>
-                        <div class="status-c status"><?php echo $arrProjects[$i]->projectstatus; ?></div>
+                        <h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>
+                        <div class="status-c status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
                         <p><?php echo $arrProjects[$i]->description; ?></p>
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
