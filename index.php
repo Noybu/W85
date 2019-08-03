@@ -82,8 +82,8 @@
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                             <div id="mainBar"> 
-                                <div style="width:40%;background-color:red;border-radius: 20px; ">
-                                <?php echo $arrProjects[$i]->projectcurrentprice/$arrProjects[$i]->projectcost; ?>
+                                <div style="width:<?php echo ($arrProjects[$i]->projectcurrentprice/$arrProjects[$i]->projectcost)*100;?>%;background-color:red;border-radius: 20px; ">
+                                <?php echo $arrProjects[$i]->projectcurrentprice?>
                                 </div>
                             </div>
                         </div>
