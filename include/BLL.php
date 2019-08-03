@@ -64,7 +64,7 @@ function getProjectStatus($num)
         }
         case 1:
         {
-            return "ממתין למכרז"
+            return "ממתין למכרז";
         }
         case 2:
         {
