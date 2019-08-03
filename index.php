@@ -53,16 +53,12 @@
         </section>
 </div>
 <div class="container-fluid">
-
         <section>
              <div class="row">
                 <h1 style="margin-right: 4%;">פרויקטים אחרונים</h1>
             </div>
-
             <div class="row sm">
-
             <?php include_once("include/BLL.php"); ?>
-
             <?php
             $arrProjects = Array();
             $arrProjects = getAllProjects();
@@ -90,10 +86,6 @@
             <?php
             }
             ?>
-
-            
-               
-                
                
             </div>
     </section>
