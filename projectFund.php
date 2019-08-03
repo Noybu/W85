@@ -5,8 +5,8 @@
     if($_GET['projectid'])
     {
         $projectid=$_GET['projectid'];
-        $project=Array();
-        $project=getProjectById($projectid);
+        $arrProjects=Array();
+        $arrProjects=getProjectById($projectid);
     }
 ?>
 
