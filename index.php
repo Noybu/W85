@@ -77,7 +77,7 @@
                     <div class="pictureCard" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype;?>.png');"></div>      
                     <div class="descCard">
                         <h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>
-                        <div class="status-c status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
+                        <div class="<?php echo getStatusColor($arrProjects[$i]->projectstatus);?> status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
                         <p><?php echo $arrProjects[$i]->description; ?></p>
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost;?><i class="fas fa-shekel-sign"></i></p>

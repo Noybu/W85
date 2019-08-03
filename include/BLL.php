@@ -81,6 +81,13 @@ function getProjectStatus($num)
     }
 }
 
+function getStatusColor($num){
+    if($num==4)
+        return "status-c";
+    else{
+        return "status-b";
+    }
+}
 
 // Show all Videos by ID:
 function getVideosByUser($userID)
