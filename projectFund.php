@@ -1,5 +1,6 @@
 <?php include_once("header.php"); ?>
 <link rel="stylesheet" type="text/css" href="CSS\projectFund.css">
+<?php include_once("include/BLL.php"); ?>
 <?php
     if($_GET['projectid'])
     {
