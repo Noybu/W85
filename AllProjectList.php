@@ -1,12 +1,11 @@
 <?php include_once("header.php"); ?>
 <?php include_once("include/BLL.php"); ?>
 <?php
-    if($_GET['projectid'])
-    {
-        $projectid=$_GET['projectid'];
-        $arrProjects=Array();
-        $arrProjects=getProjectById($projectid);
-    }
+   
+       
+    $arrProjects=Array();
+    $arrProjects=getAllProjects();
+    
 ?>
 <link rel="stylesheet" type="text/css" href="CSS\myProject.css">
 <main>
@@ -25,19 +24,19 @@
         <div class="card2">
             <div class="pictureCard2" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype; ?>_s.png');"></div>
             <div class="descCard2">
-                <h3><?php echo getProjectType($arrProjects[0]->projecttype);?></h3>
+                <h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>
                 <p class="loc">מיקום: רחוב
-                    <?php echo $arrProjects[0]->loccity." ".$arrProjects[0]->locstreet." ".$arrProjects[0]->locnum;?>
+                    <?php echo $arrProjects[$i]->loccity." ".$arrProjects[$i]->locstreet." ".$arrProjects[$i]->locnum;?>
                 </p>
                 <div id="statusBar">
                     <div id="allStatus">
-                        <?php echo getStatusBarColors($arrProjects[0]->projectstatus);?>
+                        <?php echo getStatusBarColors($arrProjects[$i]->projectstatus);?>
                     </div>
                     <div class="bar2">
-                        <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
+                        <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                         <div id="mainBar2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost)*100;?>%;border-radius: 20px; ">
-                                <?php echo $arrProjects[0]->projectcurrentprice?>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[$i]->projectcurrentprice/$arrProjects[$i]->projectcost)*100;?>%;border-radius: 20px; ">
+                                <?php echo $arrProjects[$i]->projectcurrentprice?>
                             </div>
                         </div>
                     </div>
