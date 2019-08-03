@@ -15,11 +15,7 @@
 
         <div class="row sm">
             <div id="allStatus2">
-                <div class="poly2 status-c">ממתין לאישור</div>
-                <div class="poly2 status-b">ממתין למכרז</div>
-                <div class="poly2 status-a">ממתין למימון</div>
-                <div class="poly2 status-short status-a ">בביצוע</div>
-                <div class="poly2 status-short status-a">הושלם</div>
+                <?php echo getStatusBarColors($arrProjects[0]->$projectid);?>
             </div>
 
         </div>
@@ -32,7 +28,7 @@
                     <div class="bar2">
                         <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                         <div id="mainBar2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost)*100;?>%;background-color:red;border-radius: 20px; ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost)*100;?>%;border-radius: 20px; ">
                                 <?php echo $arrProjects[0]->projectcurrentprice?>
                             </div>
                         </div>
@@ -50,7 +46,7 @@
                         <b>
                             <p>כמה נשאר?</p>
                         </b>
-                        <p style="margin-top: -17px;"><?php echo $arrProjects[0]->projectcost-$arrProjects[0]->projectcurrentprice?></p>
+                        <p style="margin-top: -17px;"><?php echo $arrProjects[0]->projectcost-$arrProjects[0]->projectcurrentprice?><i class="fas fa-shekel-sign"></i></p>
                     </div>
 
                     <div style="clear:both;">
