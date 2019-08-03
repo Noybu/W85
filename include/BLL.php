@@ -93,8 +93,7 @@ function getProjectById($id)
 {
     $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectid='$id'";
     $P = select($sql);
-    $oopProjects= new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
-    return $oopProjects;
+    return (new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid));
 }
 
 
