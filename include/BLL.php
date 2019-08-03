@@ -100,8 +100,8 @@ function getProjectById($id)
    return $oopProject;
 }
 
-function getColors($id){
-    switch($id){
+function getStatusBarColors($status){
+    switch($status){
         case 0:
         {   return "
                 <div class='poly2 status-b'>ממתין לאישור</div>
@@ -142,6 +142,8 @@ function getColors($id){
                 <div class='poly2 status-short status-c'>בביצוע</div>
                 <div class='poly2 status-short status-c'>הושלם</div>";
         }
+        default:
+            return "no found";
     }
 }
 
