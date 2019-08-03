@@ -28,7 +28,7 @@
         <section>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
-                    <?php echo $project; ?>
+                    <?php print_r ($project); ?>
                     <h3><?php echo $project->projecttype;?></h3>
                     <p>jhhhhhhjhjhfdsjdsf dfjdshfjdsfhjdshf dfhjdsfhjdsf hjfhdsjf dsjfhjdfhjh</p>
                     <div class="bar2">
