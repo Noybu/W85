@@ -5,6 +5,7 @@
     if($_GET['projectid'])
     {
         $projectid=$_GET['projectid'];
+        $project=Array();
         $project=getProjectById($projectid);
     }
 ?>
@@ -28,8 +29,8 @@
         <section>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
-                    <?php print_r ($project); ?>
-                    <h3><?php echo $project->projecttype;?></h3>
+                    <?php print_r ($project[0]); ?>
+                    <h3><?php echo $project[0]->projecttype;?></h3>
                     <p>jhhhhhhjhjhfdsjdsf dfjdshfjdsfhjdshf dfhjdsfhjdsf hjfhdsjf dsjfhjdfhjh</p>
                     <div class="bar2">
                         <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>

@@ -92,8 +92,12 @@ function getStatusColor($num){
 function getProjectById($id)
 {
     $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectid='$id'";
-    $P = select($sql);
-    return (new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid));
+    $dbProjects = select($sql);
+
+   foreach ($dbProjects as $P) {
+    $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+   }
+   return $oopProject;
 }
 
 
