@@ -67,11 +67,22 @@
             <?php include_once("include/BLL.php"); ?>
 
             <?php
+            $arrProjects = Array();
+            $arrProjects = getAllProjects();
+              //  $rows = [];
+  //  while($row = mysqli_fetch_array($dbProjects))
+   // {
+     //   $rows[] = $row;
+  //  }
 
-$arrProjects = Array();
-$arrProjects = getAllProjects();
- ?>
+                for($i=0; $i<3; $i++)
+                {
+                    $row = mysqli_fetch_assoc($arrProjects);
+                   echo $row['projecttype'];
+                }
+                ?>
 
+            }
             <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
                     <div class="descCard">
