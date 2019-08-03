@@ -72,61 +72,31 @@
 
             for($i=0; $i<3; $i++)
             {
-                $row =$arrProjects[i];
-                echo $row->projecttype;
-            }
-            ?>
-
-            <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
+                ?>
+                <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('images/project_types/1.png');"></div>      
                     <div class="descCard">
-                        <h3><?php echo $arrProjects[0]->projecttype; ?></h3>
+                        <h3><?php echo $arrProjects[i]->projecttype; ?></h3>
                         <div class="status-c status"><?php echo $arrProjects[0]->projectstatus; ?></div>
-                        <p><?php echo $arrProjects[0]->description; ?></p>
+                        <p><?php echo $arrProjects[i]->description; ?></p>
                         
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost; ?><i class="fas fa-shekel-sign"></i></p>
                             <div id="mainBar"> 
                                 <div style="width:40%;background-color:red;border-radius: 20px; ">
-                                <?php echo $arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost; ?>
+                                <?php echo $arrProjects[i]->projectcurrentprice/$arrProjects[i]->projectcost; ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class=" offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
+            <?php
+            }
+            ?>
 
-                    <div class="pictureCard" style="background-image:url('images/project_types/2.png');"></div>      
-                    <div class="descCard">
-                        <h3>פרויקט1</h3>
-                        <div class="status-b status">בביצוע</div>
-                        <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
-                        <div class="bar">
-                            <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
-                            <div id="mainBar"> 
-                                <div style="width:40%;background-color:red;border-radius: 20px; ">
-                                    40
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
-                    <div class="pictureCard" style="background-image:url('images/project_types/3.png');"></div>      
-                    <div class="descCard">
-                        <h3>פרויקט1</h3>
-                        <div class="status-b status">ממתין למכרז</div>
-                        <p>1234kjkfjfkgjfkgkfdjkfdgjkfdjgkfdkgjfdkgjfdkgjdjkg fdjsk fkjg jkgds jkgdsn klfjsd56</p>
-                        <div class="bar">
-                            <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
-                            <div id="mainBar"> 
-                                <div style="width:40%;background-color:#3d8caf;border-radius: 20px; ">
-                                    40
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+               
+                
                
             </div>
     </section>
