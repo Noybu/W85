@@ -61,9 +61,6 @@
 
             <div class="row sm">
 
-
-
-
             <?php include_once("include/BLL.php"); ?>
 
             <?php
@@ -88,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid;?>">לצפייה</a>
+                    <div><a href="projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid;?>">לצפייה</a></div>
                 </div>
             <?php
             }
