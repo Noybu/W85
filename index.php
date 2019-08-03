@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div><a href="projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid;?>">לצפייה</a></div>
+                    
                 </div>
             <?php
             }
