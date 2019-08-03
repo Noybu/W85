@@ -100,50 +100,48 @@ function getProjectById($id)
    return $oopProject;
 }
 
-function getStatusBarColors($status){
+function getStatusBarColors($status , $num){
     switch($status){
         case 0:
         {   return "
-                <div class='poly2 status-b'>ממתין לאישור</div>
-                <div class='poly2 status-a'>ממתין למכרז</div>
-                <div class='poly2 status-a'>ממתין למימון</div>
-                <div class='poly2 status-short status-a'>בביצוע</div>
-                <div class='poly2 status-short status-a'>הושלם</div>";
+                <div class='poly".$num." status-b'>ממתין לאישור</div>
+                <div class='poly".$num." status-a'>ממתין למכרז</div>
+                <div class='poly".$num." status-a'>ממתין למימון</div>
+                <div class='poly".$num." status-short status-a'>בביצוע</div>
+                <div class='poly".$num." status-short status-a'>הושלם</div>";
         }
         case 1:
         {   return "
-                <div class='poly2 status-c'>ממתין לאישור</div>
-                <div class='poly2 status-b'>ממתין למכרז</div>
-                <div class='poly2 status-a'>ממתין למימון</div>
-                <div class='poly2 status-short status-a'>בביצוע</div>
-                <div class='poly2 status-short status-a'>הושלם</div>";
+                <div class='poly".$num." status-c'>ממתין לאישור</div>
+                <div class='poly".$num." status-b'>ממתין למכרז</div>
+                <div class='poly".$num." status-a'>ממתין למימון</div>
+                <div class='poly".$num." status-short status-a'>בביצוע</div>
+                <div class='poly".$num." status-short status-a'>הושלם</div>";
         }
         case 2:
         {   return "
-                <div class='poly2 status-c'>ממתין לאישור</div>
-                <div class='poly2 status-c'>ממתין למכרז</div>
-                <div class='poly2 status-b'>ממתין למימון</div>
-                <div class='poly2 status-short status-a'>בביצוע</div>
-                <div class='poly2 status-short status-a'>הושלם</div>";
+                <div class='poly".$num." status-c'>ממתין לאישור</div>
+                <div class='poly".$num." status-c'>ממתין למכרז</div>
+                <div class='poly".$num." status-b'>ממתין למימון</div>
+                <div class='poly".$num." status-short status-a'>בביצוע</div>
+                <div class='poly".$num." status-short status-a'>הושלם</div>";
         }
         case 3:
         {   return "
-                <div class='poly2 status-c'>ממתין לאישור</div>
-                <div class='poly2 status-c'>ממתין למכרז</div>
-                <div class='poly2 status-c'>ממתין למימון</div>
-                <div class='poly2 status-short status-b'>בביצוע</div>
-                <div class='poly2 status-short status-a'>הושלם</div>";
+                <div class='poly".$num." status-c'>ממתין לאישור</div>
+                <div class='poly".$num." status-c'>ממתין למכרז</div>
+                <div class='poly".$num." status-c'>ממתין למימון</div>
+                <div class='poly".$num." status-short status-b'>בביצוע</div>
+                <div class='poly".$num." status-short status-a'>הושלם</div>";
         }
         case 4:
         {   return "
-                <div class='poly2 status-c'>ממתין לאישור</div>
-                <div class='poly2 status-c'>ממתין למכרז</div>
-                <div class='poly2 status-c'>ממתין למימון</div>
-                <div class='poly2 status-short status-c'>בביצוע</div>
-                <div class='poly2 status-short status-c'>הושלם</div>";
+                <div class='poly".$num." status-c'>ממתין לאישור</div>
+                <div class='poly".$num." status-c'>ממתין למכרז</div>
+                <div class='poly".$num." status-c'>ממתין למימון</div>
+                <div class='poly".$num." status-short status-c'>בביצוע</div>
+                <div class='poly".$num." status-short status-c'>הושלם</div>";
         }
-        default:
-            return "no found";
     }
 }
 

@@ -15,7 +15,7 @@
 
         <div class="row sm">
             <div id="allStatus2">
-                <?php echo getStatusBarColors($arrProjects[0]->projectstatus);?>
+                <?php echo getStatusBarColors($arrProjects[0]->projectstatus,2);?>
             </div>
 
         </div>

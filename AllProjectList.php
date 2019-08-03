@@ -30,7 +30,7 @@
                 </p>
                 <div id="statusBar">
                     <div id="allStatus">
-                        <?php echo getStatusBarColors($arrProjects[$i]->projectstatus);?>
+                        <?php echo getStatusBarColors($arrProjects[$i]->projectstatus,1);?>
                     </div>
                     <div class="bar2">
                         <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
