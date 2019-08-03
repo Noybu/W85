@@ -11,8 +11,6 @@
 ?>
 
 <main>
-
-
     <div class="container">
 
         <div class="row sm">
@@ -29,14 +27,13 @@
         <section>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
-                    <?php print_r ($project[0]); ?>
-                    <h3><?php echo $project[0]->projecttype;?></h3>
-                    <p>jhhhhhhjhjhfdsjdsf dfjdshfjdsfhjdshf dfhjdsfhjdsf hjfhdsjf dsjfhjdfhjh</p>
+                    <h3><?php echo getProjectType($arrProjects[0]->projecttype);?></h3>
+                    <p><?php echo $arrProjects[0]->description; ?></p>
                     <div class="bar2">
-                        <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
+                        <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                         <div id="mainBar2">
-                            <div style="width:40%;background-color:red;border-radius: 20px; ">
-                                40
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost)*100;?>%;background-color:red;border-radius: 20px; ">
+                                <?php echo $arrProjects[0]->projectcurrentprice?>
                             </div>
                         </div>
                     </div>
@@ -53,7 +50,7 @@
                         <b>
                             <p>כמה נשאר?</p>
                         </b>
-                        <p style="margin-top: -17px;">100 ש"ח</p>
+                        <p style="margin-top: -17px;"><?php echo $arrProjects[0]->projectcost-$arrProjects[0]->projectcurrentprice?></p>
                     </div>
 
                     <div style="clear:both;">
