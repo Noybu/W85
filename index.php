@@ -73,7 +73,7 @@
                         <div class="<?php echo getStatusColor($arrProjects[$i]->projectstatus);?> status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
                         <p><?php echo $arrProjects[$i]->description; ?></p>
                         <?php $id = $arrProjects[$i]->projectid;?>
-                        <a href="projectFund.php?projectid=<?php echo $id;?>"><button>לצפייה</button></a>
+                        <a href="projectFund.php?projectid=0"><button>לצפייה</button></a>
                         <div class="bar">
                             <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                             <div id="mainBar"> 
