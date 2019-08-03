@@ -1,27 +1,37 @@
 <?php include_once("header.php"); ?>
+<?php include_once("include/BLL.php"); ?>
+<?php
+   
+    session_start();   
+    $arrProjects=Array();
+    $arrProjects=getProjectByUser( $_SESSION["userID"]);
+    
+?>
 <link rel="stylesheet" type="text/css" href="CSS\myProject.css">
 <main>
 
 <section>
     <div class="row">
+        <?php
+        for($i=0;$i<sizeof($arrProjects);$i++)
+        {
+            ?>
         <div class="card2">
-            <div class="pictureCard2" style="background-image:url('images/project_types/4_s.png');"></div>
+            <div class="pictureCard2" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype; ?>_s.png');"></div>
             <div class="descCard2">
-                <h3>פרויקט1</h3>
-                <p class="loc">מיקום: רחוב עזה תל אביב-יפו</p>
+                <h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>
+                <p class="loc">מיקום: רחוב
+                    <?php echo $arrProjects[$i]->loccity." ".$arrProjects[$i]->locstreet." ".$arrProjects[$i]->locnum;?>
+                </p>
                 <div id="statusBar">
                     <div id="allStatus">
-                        <div class="poly status-c">ממתין לאישור</div>
-                        <div class="poly status-b">ממתין למכרז</div>
-                        <div class="poly status-a">ממתין למימון</div>
-                        <div class="poly status-short status-a ">בביצוע</div>
-                        <div class="poly status-short status-a">הושלם</div>
+                        <?php echo getStatusBarColors($arrProjects[$i]->projectstatus,1);?>
                     </div>
                     <div class="bar2">
-                        <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f">1000<i class="fas fa-shekel-sign"></i></p>
+                        <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                         <div id="mainBar2">
-                            <div style="width:40%;background-color:red;border-radius: 20px; ">
-                                40
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[$i]->projectcurrentprice/$arrProjects[$i]->projectcost)*100;?>%;border-radius: 20px; ">
+                                <?php echo $arrProjects[$i]->projectcurrentprice?>
                             </div>
                         </div>
                     </div>
@@ -29,20 +39,23 @@
             </div>
             <div id="cardFooter">
                 <p id="share">שיתוף:</p>
-                <a href="https://api.whatsapp.com/send?text=https://noybu.mtacloud.co.il/W85/">
+                <a href="https://api.whatsapp.com/send?text=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid=<?php echo $arrProjects[$i]->projectid; ?>">
                     <p class="icon" id="whatsapp">
                     <i class="fab fa-whatsapp"></i>
                     </p>
                 </a>
-                <a href="http://www.facebook.com/sharer.php?u=https://noybu.mtacloud.co.il/W85/">
+                <a href="http://www.facebook.com/sharer.php?u=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid=<?php echo $arrProjects[$i]->projectid; ?>">
                     <p class="icon" id="facebook">
                     <i class="fab fa-facebook-square"></i>
                     </p>
                 </a>
-                <p id="view">לצפייה<i class="far fa-eye"></i></p>
+                <a href="projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>" style="color:black;"><p id="view">לצפייה<i class="far fa-eye"></i></p></a>
             </div>
         </div>
     </div>
+         <?php
+        }
+          ?>
 </section>
 
 

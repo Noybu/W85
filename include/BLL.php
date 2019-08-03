@@ -100,6 +100,17 @@ function getProjectById($id)
    return $oopProject;
 }
 
+function getProjectByUser($id)
+{
+    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE userid='$id'";
+    $dbProjects = select($sql);
+
+   foreach ($dbProjects as $P) {
+    $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+   }
+   return $oopProject;
+}
+
 function getStatusBarColors($status , $num){
     switch($status){
         case 0:
