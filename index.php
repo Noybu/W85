@@ -73,7 +73,7 @@
             for($i=0; $i<3; $i++)
             {
                 ?>
-                <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
+                <a href="projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid;?>"><div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                     <div class="pictureCard" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype;?>.png');"></div>      
                     <div class="descCard">
                         <h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>
@@ -89,6 +89,7 @@
                         </div>
                     </div>
                 </div>
+              </a>
             <?php
             }
             ?>

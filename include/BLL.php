@@ -89,6 +89,16 @@ function getStatusColor($num){
     }
 }
 
+function getProjectById($id)
+{
+    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid FROM projects WHERE projectid='$id'";
+    $P = select($sql);
+    $oopProjects= new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid);
+    return $oopProjects;
+}
+
+
+
 // Show all Videos by ID:
 function getVideosByUser($userID)
 {
