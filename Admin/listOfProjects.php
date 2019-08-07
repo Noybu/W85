@@ -31,21 +31,33 @@
     <main>
         <h1>פרויקטים שמחכים לאישור</h1>
         <table>
+        <?php include_once("../include/BLL.php"); ?>
+                <?php
+                $arrProjects = array();
+                $arrProjects = getAllNewProjects();
+                ?>
             <tr id="firstLine">
-                <td class="tdFirstLine" style="width:20%";>שם הפרויקט</td>
+                <td class="tdFirstLine" style="width:15%";>שם הפרויקט</td>
                 <td class="tdFirstLine" style="width:40%";>תאור</td>
-                <td class="tdFirstLine" style="width:25%";>מיקום</td>
+                <td class="tdFirstLine" style="width:30%";>מיקום</td>
                 <td class="tdFirstLine" style="width:15%";>אישור / דחייה</td>
             </tr>
+            <?php
+             for ($i =0; $i< sizeof($arrProjects);$i++)
+             {
+                 ?>
             <tr class="trRow">
-                <td>tttttt</td>
-                <td>tttttt</td>
-                <td>tttttt</td>
+                <td><?php echo getProjectType($arrProjects[$i]->projecttype); ?></td>
+                <td><?php echo $arrProjects[$i]->description; ?></td>
+                <td><?php echo $arrProjects[$i]->loccity." ".$arrProjects[$i]->locstreet." ".$arrProjects[$i]->locnum;?></td>
                 <td style="text-align:center;">  
                     <button style="color:green;"><i class="far fa-thumbs-up"></i></button>
                     <button style="color:red;"><i class="far fa-window-close"></i></button>
                 </td>
             </tr>
+            <?php
+             }
+             ?>
         </table>
 
     </main>

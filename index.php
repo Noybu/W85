@@ -63,7 +63,7 @@
                 $arrProjects = array();
                 $arrProjects = getAllProjects();
 
-                for ($i = 0; $i < 3; $i++) {
+                for ($i = sizeof($arrProjects)-1; $i > sizeof($arrProjects)-3; $i--) {
                     ?>
                     <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                         <div class="pictureCard" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype; ?>.png');"></div>

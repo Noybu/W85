@@ -1,6 +1,6 @@
 <?php
 //$id, $firstName, $lastName, $email, $idservice, $proftype, $numofyears, $idfile, $proffile, $type
-class ServiceMan
+class serviceMan
 {
 
     public $id;
@@ -20,17 +20,17 @@ class ServiceMan
 
     public function __construct($id, $firstName, $lastName, $email, $idservice, $proftype, $numofyears, $idfile, $proffile, $type, $approved)
     {
-        $this->id -> $id;
-        $this->firstName->$firstName;
-        $this->lastName->$lastName;
-        $this->email->$email;
-        $this->idservice->$idservice;
-        $this->proftype->$proftype;
-        $this->numofyears->$numofyears;
-        $this->idfile->$idfile;
-        $this->proffile->$proffile;
-        $this->type->$type;
-        $this->approved->$approved;
+        $this->id= $id;
+        $this->firstName=$firstName;
+        $this->lastName=$lastName;
+        $this->email=$email;
+        $this->idservice=$idservice;
+        $this->proftype=$proftype;
+        $this->numofyears=$numofyears;
+        $this->idfile=$idfile;
+        $this->proffile=$proffile;
+        $this->type=$type;
+        $this->approved=$approved;
 
     }
 
