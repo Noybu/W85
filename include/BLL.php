@@ -2,7 +2,7 @@
 
 require_once 'DAL.php';
 require_once 'project.php';
-
+require_once 'serviceMan.php';
 
 //session_start();
 
@@ -19,6 +19,19 @@ function getAllProjects()
 {
    
     $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects";
+    $dbProjects = select($sql);
+
+   foreach ($dbProjects as $P) {
+       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+   }
+
+    return $oopProjects;
+}
+
+function getAllNewProjects()
+{
+   
+    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectstatus=0";
     $dbProjects = select($sql);
 
    foreach ($dbProjects as $P) {
@@ -261,6 +274,19 @@ function registerServiceMan($id, $firstName, $lastName,  $password, $email, $ids
 
     $sql = "insert into users(id, firstName, lastName, password, email, idservice,proftype,numofyears, idfile,proffile, type, approved) values('$id','$firstName','$lastName','$password' ,'$email','$idservice', '$proftype', '$numofyears', '$idfile','$proffile' ,'$type','0')";
     insert($sql);
+}
+
+function getAllServiceManNotApproved()
+{
+   
+    $sql = "SELECT id, firstName, lastName, email, idservice,proftype,numofyears, idfile,proffile, type, approved FROM users WHERE type=2 AND approved=0";
+    $dbServiceMan = select($sql);
+
+   foreach ($dbServiceMan as $S) {
+       $oopServiceMan[] = new Project($S->id,$S->firstName,$S->lastName,$S->email,$S->idservice,$S->proftype,$S->numofyears,$S->idfile,$S->proffile,$S->type,$S->approved);
+   }
+
+    return $oopServiceMan;
 }
 
 
