@@ -86,8 +86,8 @@ switch ($command) {
             $_POST["idService"],
             $_POST["profType"],
             $_POST["numOfYears"],
-            $_POST["id"]."_idFile",
-            $_POST["id"]."_profFile",
+            $_POST["id"]."_idFile.". $file_ext,
+            $_POST["id"]."_profFile.". $file_ext,
             $_POST["type"]
         );
         header("Location: ../../index.php");
