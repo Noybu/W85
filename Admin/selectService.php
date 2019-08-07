@@ -31,9 +31,9 @@
     <main>
     <?php include_once("../include/BLL.php"); ?>
     <?php
-    if($_GET['projectid'])
+    if($_GET['id'])
     {
-        $projectid=$_GET['projectid'];
+        $projectid=$_GET['id'];
         $arrProjects=Array();
         $arrProjects=getProjectById($projectid);
         $arrBids=Array();
