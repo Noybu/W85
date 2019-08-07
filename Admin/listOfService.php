@@ -38,19 +38,31 @@
                 <td class="tdFirstLine" style="width:20%;">מסמכים שצורפו</td>
                 <td class="tdFirstLine" style="width:15%;">אישור / דחייה</td>
             </tr>
+            <?php include_once("include/BLL.php"); ?>
+                <?php
+                $arrServiceMan = array();
+                $arrServiceMan = getAllServiceManNotApproved();
+                ?>
+                 <?php
+             for ($i =0; $i< sizeof($arrServiceMan);$i++)
+             {
+                 ?>
             <tr class="trRow">
-                <td>tttttt</td>
-                <td>tttttt</td>
-                <td>tttttt</td>
+                <td><?php echo $arrServiceMan[$i]->firstName." ".$arrServiceMan[$i]->lastName; ?></td>
+                <td><?php echo $arrServiceMan[$i]->proftype; ?></td>
+                <td><?php echo $arrServiceMan[$i]->numofyears;?></td>
                 <td style="text-align:center;">  
-                    <button>ת.ז</button>
-                    <button>ת.עוסק</button>
+                    <button onclick="window.location.href='<?php echo $arrServiceMan[$i]->idfile;?>'">ת.ז</button>
+                    <button onclick="window.location.href='<?php echo $arrServiceMan[$i]->proffile;?>'">ת.עוסק</button>
                 </td>
                 <td style="text-align:center;">  
                     <button style="color:green;"><i class="far fa-thumbs-up"></i></button>
                     <button style="color:red;"><i class="far fa-window-close"></i></button>
                 </td>
             </tr>
+            <?php
+             }
+             ?>
         </table>
 
     </main>
