@@ -37,9 +37,9 @@
                 $arrProjects = getAllNewProjects();
                 ?>
             <tr id="firstLine">
-                <td class="tdFirstLine" style="width:20%";>שם הפרויקט</td>
+                <td class="tdFirstLine" style="width:15%";>שם הפרויקט</td>
                 <td class="tdFirstLine" style="width:40%";>תאור</td>
-                <td class="tdFirstLine" style="width:25%";>מיקום</td>
+                <td class="tdFirstLine" style="width:30%";>מיקום</td>
                 <td class="tdFirstLine" style="width:15%";>אישור / דחייה</td>
             </tr>
             <?php
