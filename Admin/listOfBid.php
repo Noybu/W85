@@ -31,21 +31,32 @@
     <main>
         <h1>מכרזים פתוחים</h1>
         <table>
+        <?php include_once("../include/BLL.php"); ?>
+                <?php
+                $arrProjects = array();
+                $arrProjects = getAllBidProjects();
+                ?>
             <tr id="firstLine">
                 <td class="tdFirstLine" style="width: 20%;">המכרז</td>
                 <td class="tdFirstLine" style="width: 20%;">תאור</td>
                 <td class="tdFirstLine" style="width: 20%;">מיקום</td>
-                <td class="tdFirstLine" style="width: 20%;">bbb</td>
+                <td class="tdFirstLine" style="width: 20%;">עדכון הזוכה</td>
             </tr>
+            <?php
+             for ($i =0; $i< sizeof($arrProjects);$i++)
+             {
+                 ?>
             <tr class="trRow">
-                <td>tttttt</td>
-                <td>tttttt</td>
-                <td>tttttt</td>
+                <td><?php echo getProjectType($arrProjects[$i]->projecttype); ?></td>
+                <td><?php echo $arrProjects[$i]->description; ?></td>
+                <td><?php echo $arrProjects[$i]->loccity." ".$arrProjects[$i]->locstreet." ".$arrProjects[$i]->locnum;?></td>
                 <td style="text-align:center;">  
-                    <p>לצפייה</p>
+                    <button onclick="window.location.href='selectService.php?id=<?php echo $arrProjects[$i]->projectid;?>'">להחלטה</button>
                 </td>
             </tr>
-
+            <?php
+             }
+             ?>
         </table>
 
     </main>
