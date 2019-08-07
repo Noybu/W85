@@ -3,7 +3,7 @@
 require_once 'DAL.php';
 require_once 'project.php';
 require_once 'serviceMan.php';
-
+require_once 'bid.php';
 //session_start();
 
 
