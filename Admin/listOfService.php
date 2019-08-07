@@ -52,8 +52,8 @@
                 <td><?php echo $arrServiceMan[$i]->proftype; ?></td>
                 <td><?php echo $arrServiceMan[$i]->numofyears;?></td>
                 <td style="text-align:center;">  
-                    <button onclick="window.location.href='<?php echo $arrServiceMan[$i]->idfile;?>'">ת.ז</button>
-                    <button onclick="window.location.href='<?php echo $arrServiceMan[$i]->proffile;?>'">ת.עוסק</button>
+                    <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->idfile;?>'">ת.ז</button>
+                    <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->proffile;?>'">ת.עוסק</button>
                 </td>
                 <td style="text-align:center;">  
                     <button style="color:green;"><i class="far fa-thumbs-up"></i></button>
