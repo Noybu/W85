@@ -52,7 +52,7 @@
                 <td class="tdFirstLine" style="width: 20%;">אישור / דחייה</td>
             </tr>
             <?php
-             for ($i =0; $i< sizeof($arrProjects);$i++)
+             for ($i =0; $i< sizeof($arrBids);$i++)
              {
                  ?>
             <tr class="trRow">
