@@ -205,6 +205,21 @@ function editVideo($videoID, $categoryID, $videoTitle, $description, $link)
     update($sql);
 }
 
+
+function getAllBids($projectId)
+{
+    //$id, $projectid, $serviceid, $offerprice, $offerdate, $win,$proftype,$numofyears,$firstname,$lastname
+   
+    $sql = "SELECT * FROM bids AS b inner join users As u WHERE b.serviceid=u.id AND b.projectid=$projectId";
+    $dbBids = select($sql);
+
+   foreach ($dbBids as $B) {
+       $oopBids[] = new Bids($B->userid, $B->projectid,$B->serviceid,$B->offerprice,$B->offerdate,$B->win,$B->proftype,$B->numofyears,$B->firstname,$B->lastname);
+   }
+
+    return $oopBids;
+}
+
 //מקבל את ה ID של המשתמש 
 function get_user_id($userName)
 {
