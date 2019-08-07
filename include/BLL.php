@@ -41,6 +41,19 @@ function getAllNewProjects()
     return $oopProjects;
 }
 
+function getAllBidProjects()
+{
+   
+    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectstatus=1";
+    $dbProjects = select($sql);
+
+   foreach ($dbProjects as $P) {
+       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+   }
+
+    return $oopProjects;
+}
+
 function getProjectType($num)
 {
     switch($num)
@@ -168,15 +181,6 @@ function getStatusBarColors($status , $num){
         }
     }
 }
-
-//function getVideosByID($videoID) {
-//    $sql = "SELECT videoTitle, categoryID, description, link FROM videos WHERE VideoID = '$videoID'";
-//
-//    $video = get_object($sql);
-//
-//    return $video;
-//}
-
 
 
 // Delete Video:
