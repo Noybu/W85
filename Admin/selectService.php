@@ -29,7 +29,7 @@
       </div>
     </aside>  
     <main>
-    <?php include_once("include/BLL.php"); ?>
+    <?php include_once("../include/BLL.php"); ?>
     <?php
     if($_GET['projectid'])
     {
