@@ -38,7 +38,7 @@
                 <td class="tdFirstLine" style="width:20%;">מסמכים שצורפו</td>
                 <td class="tdFirstLine" style="width:15%;">אישור / דחייה</td>
             </tr>
-            <?php include_once("include/BLL.php"); ?>
+            <?php include_once("../include/BLL.php"); ?>
                 <?php
                 $arrServiceMan = array();
                 $arrServiceMan = getAllServiceManNotApproved();

@@ -31,7 +31,7 @@
     <main>
         <h1>פרויקטים שמחכים לאישור</h1>
         <table>
-        <?php include_once("include/BLL.php"); ?>
+        <?php include_once("../include/BLL.php"); ?>
                 <?php
                 $arrProjects = array();
                 $arrProjects = getAllNewProjects();
