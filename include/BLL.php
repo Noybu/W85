@@ -283,7 +283,7 @@ function getAllServiceManNotApproved()
     $dbServiceMan = select($sql);
 
    foreach ($dbServiceMan as $S) {
-       $oopServiceMan[] = new Project($S->id,$S->firstName,$S->lastName,$S->email,$S->idservice,$S->proftype,$S->numofyears,$S->idfile,$S->proffile,$S->type,$S->approved);
+       $oopServiceMan[] = new serviceMan($S->id,$S->firstName,$S->lastName,$S->email,$S->idservice,$S->proftype,$S->numofyears,$S->idfile,$S->proffile,$S->type,$S->approved);
    }
 
     return $oopServiceMan;
