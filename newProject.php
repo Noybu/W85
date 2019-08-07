@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
         var send = document.getElementById("send");
 
         if (street_num || street || city) {
-            alert("Empty fields");
+          
             return false;
         }
 
