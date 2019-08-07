@@ -44,15 +44,15 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-item">
                     <p class="formLabel formTop">עיר</p>
-                    <input required type="text" name="locCity" class="form-style" id="locality" disabled="true" />
+                    <input required type="text" name="locCity" class="form-style" id="locality" />
                 </div>
                 <div class="form-item">
                     <p class="formLabel formTop">רחוב</p>
-                    <input required type="text" name="locStreet" class="form-style" id="route" disabled="true" />
+                    <input required type="text" name="locStreet" class="form-style" id="route"  />
                 </div>
                 <div class="form-item">
                     <p class="formLabel formTop">מספר</p>
-                    <input required type="text" name="locNum" class="form-style" id="street_number" disabled="true" />
+                    <input required type="text" name="locNum" class="form-style" id="street_number" />
                 </div>
                 <div class="form-item">
                     <input type="hidden" name="userID" value="1111" />
