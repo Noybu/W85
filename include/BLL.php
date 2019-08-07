@@ -214,7 +214,7 @@ function getAllBids($projectId)
     $dbBids = select($sql);
 
    foreach ($dbBids as $B) {
-       $oopBids[] = new Bids($B->userid, $B->projectid,$B->serviceid,$B->offerprice,$B->offerdate,$B->win,$B->proftype,$B->numofyears,$B->firstname,$B->lastname);
+       $oopBids[] = new bids($B->userid, $B->projectid,$B->serviceid,$B->offerprice,$B->offerdate,$B->win,$B->proftype,$B->numofyears,$B->firstname,$B->lastname);
    }
 
     return $oopBids;
