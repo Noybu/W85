@@ -3,11 +3,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="JS\newProject.js"></script>
 <?php
-    require_once'include/BLL.php';
-    if(isset($_POST['submit'])){
-        addProject($_POST["userID"],$_POST["projectType"],$_POST["description"],$_POST["locCity"],$_POST["locStreet"],$_POST["locNum"]);
-        echo "הפרויקט עלה בהצלחה";
-    }
+require_once 'include/BLL.php';
+if (isset($_POST['submit'])) {
+    addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
+    echo "הפרויקט עלה בהצלחה";
+}
 ?>
 
 <section>
@@ -18,9 +18,9 @@
         <p>וכל הכבוד! הצלחת לשפר את פני העיר 🏆</p>
     </div>
 </section>
-<main >
-	<div id="mainDiv">
-        <form action="" method="POST"> 
+<main>
+    <div id="mainDiv">
+        <form action="" method="POST">
             <div id="form">
                 <div class="form-item">
                     <p class="formLabel formTop">נושא הדרישה</p>
@@ -36,34 +36,39 @@
                     <p class="formLabel">תאור הדרישה</p>
                     <textarea required name="description" class="form-style"></textarea>
                 </div>
-                <div class="form-item">
-                    <p class="formLabel">עיר</p>
-                    <input required type="text" name="locCity" class="form-style" id="autocomplete" onFocus="geolocate()"/>
+                <div id="locationField">
+                    <div class="form-item">
+                        <p class="formLabel formTop">כתובת מלאה</p>
+                        <input required type="text" name="longloc" class="form-style" id="autocomplete" onFocus="geolocate()" />
+                    </div>
                 </div>
                 <div class="form-item">
-                    <p class="formLabel">רחוב</p>
-                    <input required type="text" name="locStreet" class="form-style"/>
+                    <p class="formLabel formTop">עיר</p>
+                    <input required type="text" name="locCity" class="form-style" id="locality" disabled="false" />
                 </div>
                 <div class="form-item">
-                    <p class="formLabel">מספר</p>
-                    <input required type="text" name="locNum" class="form-style"/>
+                    <p class="formLabel formTop">רחוב</p>
+                    <input required type="text" name="locStreet" class="form-style" id="route" disabled="false" />
                 </div>
                 <div class="form-item">
-                    <input type="hidden" name="userID" value="1111"/>
+                    <p class="formLabel formTop">מספר</p>
+                    <input required type="text" name="locNum" class="form-style" id="street_number" disabled="false" />
+                </div>
+                <div class="form-item">
+                    <input type="hidden" name="userID" value="1111" />
                 </div>
                 <div class="form-item">
                     <input type="submit" class="login" name="submit" value="שלח">
                 </div>
             </div>
         </form>
-	</div>
+    </div>
 
 
 </main>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&&libraries=places&callback=initAutocomplete"
-        async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&&libraries=places&callback=initAutocomplete" async defer></script>
 <script>
-    // This sample uses the Autocomplete widget to help the user select a
+// This sample uses the Autocomplete widget to help the user select a
 // place, then it retrieves the address components associated with that
 // place, and then it populates the form fields with those details.
 // This sample requires the Places library. Include the libraries=places
@@ -101,10 +106,7 @@ function fillInAddress() {
   // Get the place details from the autocomplete object.
   var place = autocomplete.getPlace();
 
-  for (var component in componentForm) {
-    document.getElementById(component).value = '';
-    document.getElementById(component).disabled = false;
-  }
+
 
   // Get each component of the address from the place details,
   // and then fill-in the corresponding field on the form.
