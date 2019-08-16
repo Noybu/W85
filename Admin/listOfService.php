@@ -10,24 +10,7 @@
    
   </head> 
   <body>
-    <aside>
-      <div id="logo">
-        <img src="..\images\logo.png">
-      </div>
-      <div id="AdminLogin">
-        <p>ברוך הבא</p>
-        <button>התנתק</button>
-      </div>
-      <div class="component">
-        <a href="listOfService.php" id="active">נותני שירות שממתינים לאישור</a>
-      </div>
-      <div class="component">
-        <a href="listOfProjects.php">פרוייקטים שמחכים לאישור</a>
-      </div>
-      <div class="component">
-        <a href="listOfBid.php">מכרזים פתוחים</a>
-      </div>
-    </aside>  
+  <?php include_once("side-bar.php"); ?> 
     <main>
         <h1>נותני שירות שמחכים לאישור</h1>
             <?php include_once("../include/BLL.php"); ?>
