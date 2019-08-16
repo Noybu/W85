@@ -226,6 +226,11 @@ function deleteVideo($videoID)
 }
 
 
+function addNewBidOffer($date, $price, $projectID, $servicemanID){
+    $sql="INSERT INTO bids (projectid, serviceid, offerprice, offerdate) VALUES ('$projectID','$servicemanID','$price','$date')";
+    update($sql);
+}
+
 function updateServiceManApproved($serviceID, $status)
 {
 
