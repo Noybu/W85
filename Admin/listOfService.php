@@ -56,8 +56,8 @@
                     <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->proffile;?>'">ת.עוסק</button>
                 </td>
                 <td style="text-align:center;">  
-                    <button style="color:green;"><i class="far fa-thumbs-up"></i></button>
-                    <button style="color:red;"><i class="far fa-window-close"></i></button>
+                    <button onclick="window.location.href='../include/update.php?type=serviceman&serviceid=<?php $arrServiceMan[$i]->$id;?>&status=1' style="color:green;"><i class="far fa-thumbs-up"></i></button>
+                    <button onclick="window.location.href='../include/update.php?type=serviceman&serviceid=<?php $arrServiceMan[$i]->$id;?>&status=2' style="color:red;"><i class="far fa-window-close"></i></button>
                 </td>
             </tr>
             <?php
