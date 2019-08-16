@@ -254,7 +254,7 @@ function updateProjectStatus($projectID, $status)
 
 function updateCurrentPrice($projectID, $price)
 {
-    $sql1="SELECT projectcurrentprice FROM projects WHERE projectid='projectID'";
+    $sql1="SELECT projectcurrentprice FROM projects WHERE projectid='$projectID'";
     $getCurrentPrice=select($sql1);
     $getCurrentPrice=$getCurrentPrice+$price;
    
