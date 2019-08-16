@@ -96,15 +96,15 @@
                             <div>
                                 <input type="submit"  name="submit" value="שלח">
                             </div>
-                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>/>
-                            <input type="hidden" name="service" value=<?php echo $_SESSION["userID"];?>/>
+                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
+                            <input type="hidden" name="service" value=<?php echo $_SESSION["userID"];?>>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
                         <form action="" method="POST">
                             <div>
                                 <p>סכום להשקעה</p>
-                                <input type="text" required name="price"/>
+                                <input type="text" required name="price">
                             </div>
                             <div>
                                 <input type="submit"  name="submit" value="שלח">
