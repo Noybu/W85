@@ -11,7 +11,7 @@ switch ($type) {
     case "serviceman":
         {
             updateServiceManApproved($_GET['serviceid'],$_GET['status']);
-            header("Location: Admin/listOfService.php");
+            header("Location: ../Admin/listOfService.php");
             break;
         }
     case "project":
