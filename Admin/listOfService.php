@@ -49,7 +49,7 @@
                  ?>
             <tr class="trRow">
                 <td><?php echo $arrServiceMan[$i]->firstName." ".$arrServiceMan[$i]->lastName; ?></td>
-                <td><?php echo $arrServiceMan[$i]->proftype; ?></td>
+                <td><?php echo getProfType($arrBids[$i]->proftype); ?></td>
                 <td><?php echo $arrServiceMan[$i]->numofyears;?></td>
                 <td style="text-align:center;">  
                     <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->idfile;?>'">ת.ז</button>

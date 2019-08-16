@@ -73,11 +73,11 @@
         <div class="form-item">
           <p class="formLabel formTop">מקצוע</p>
           <select required class="form-style" name="profType">
-            <option value="1">ספסל</option>
-            <option value="2">גני שעשועים</option>
-            <option value="3">פחי אשפה</option>
-            <option value="4">אופניים</option>
-            <option value="5">תאורה</option>
+            <option value="1">גנן</option>
+            <option value="2">נגר</option>
+            <option value="3">חשמלאי</option>
+            <option value="4">רתך</option>
+            <option value="5">בנאי</option>
           </select>
         </div>
         <div class="form-item">

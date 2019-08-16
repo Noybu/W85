@@ -80,6 +80,34 @@ function getProjectType($num)
         }
     }
 }
+
+function getProfType($num)
+{
+    switch($num)
+    {
+        case 1:
+        {
+            return "גנן";
+        }
+        case 2:
+        {
+            return "נגר";
+        }
+        case 3:
+        {
+            return "חשמלאי";
+        }
+        case 4:
+        {
+            return "רתך";
+        }
+        case 5:
+        {
+            return "בנאי";
+        }
+    }
+}
+
 function getProjectStatus($num)
 {
     switch($num)

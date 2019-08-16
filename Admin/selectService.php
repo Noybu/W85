@@ -59,7 +59,7 @@
                 <td><?php echo $arrBids[$i]->firstname." ".$arrBids[$i]->lastname;?></td>
                 <td><?php echo $arrBids[$i]->offerprice;?></td>
                 <td><?php echo $arrBids[$i]->offerdate;?></td>
-                <td><?php echo $arrBids[$i]->proftype;?></td>
+                <td><?php echo getProfType($arrBids[$i]->proftype);?></td>
                 <td><?php echo $arrBids[$i]->numofyears;?></td>
                 <td style="text-align:center;">  
                     <button style="color:green;"><i class="far fa-thumbs-up"></i></button>
