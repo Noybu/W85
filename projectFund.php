@@ -1,5 +1,7 @@
 <?php include_once("header.php"); ?>
 <link rel="stylesheet" type="text/css" href="CSS\projectFund.css">
+<link rel="stylesheet" type="text/css" href="CSS\newProject.css">
+<script src="JS\newProject.js"></script>
 <?php include_once("include/BLL.php"); ?>
 <?php
     if($_GET['projectid'])
@@ -97,11 +99,10 @@
                                 <div class="form-item">
                                     <input type="submit" class="loginoff" id="send" name="submit" value="שלח" disabled>
                                 </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-                    </div>
-
-                    </div>
+                </div>
                     <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
                         <p>222222</p>
                         <p>dgfdgdgdgdg dfdfd dfdf </p>
