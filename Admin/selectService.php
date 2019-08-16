@@ -49,7 +49,7 @@
                 <td class="tdFirstLine" style="width: 15%;">הצעת תאריך סיום</td>
                 <td class="tdFirstLine" style="width: 15%;">תחום עיסוק</td>
                 <td class="tdFirstLine" style="width: 15%;">ותק</td>
-                <td class="tdFirstLine" style="width: 20%;">אישור / דחייה</td>
+                <td class="tdFirstLine" style="width: 20%;">בחירת נותן שירות</td>
             </tr>
             <?php
              for ($i =0; $i< sizeof($arrBids);$i++)
@@ -63,7 +63,6 @@
                 <td><?php echo $arrBids[$i]->numofyears;?></td>
                 <td style="text-align:center;">  
                     <button style="color:green;"><i class="far fa-thumbs-up"></i></button>
-                    <button style="color:red;"><i class="far fa-window-close"></i></button>
                 </td>
             </tr>
             <?php
