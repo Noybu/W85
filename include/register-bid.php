@@ -9,5 +9,5 @@ $projectid =  $_POST['projectid'];
 $servicemanid = $_POST['service'];
 
 addNewBidOffer($offerprice,$offerdate,$projectid,$servicemanid);
-header("Location: ../projectFund?projectid=$projectid");
+header("Location: ../projectFund.php?projectid=$projectid");
  ?>
