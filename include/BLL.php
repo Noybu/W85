@@ -324,6 +324,10 @@ function getAllServiceManNotApproved()
     $sql = "SELECT id, firstName, lastName, email, idservice,proftype,numofyears, idfile,proffile, type, approved FROM users WHERE type=2 AND approved=0";
     $dbServiceMan = select($sql);
 
+    if($dbServiceMan==null){
+        return "אין נותני שירות שמחכים לאישור";
+    }
+
    foreach ($dbServiceMan as $S) {
        $oopServiceMan[] = new serviceMan($S->id,$S->firstName,$S->lastName,$S->email,$S->idservice,$S->proftype,$S->numofyears,$S->idfile,$S->proffile,$S->type,$S->approved);
    }
