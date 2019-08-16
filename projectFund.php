@@ -101,7 +101,7 @@
                         </form>
                     </div>
                     <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
-                        <form action="" method="POST">
+                        <form action="include/addPayment.php" method="POST">
                             <div>
                                 <p>סכום להשקעה</p>
                                 <input type="text" required name="price">
@@ -109,6 +109,7 @@
                             <div>
                                 <input type="submit"  name="submit" value="שלח">
                             </div>
+                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
