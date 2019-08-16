@@ -44,24 +44,32 @@
                 $arrServiceMan = getAllServiceManNotApproved();
                 ?>
                  <?php
-             for ($i =0; $i< sizeof($arrServiceMan);$i++)
-             {
-                 ?>
-            <tr class="trRow">
-                <td><?php echo $arrServiceMan[$i]->firstName." ".$arrServiceMan[$i]->lastName; ?></td>
-                <td><?php echo getProfType($arrServiceMan[$i]->proftype); ?></td>
-                <td><?php echo $arrServiceMan[$i]->numofyears;?></td>
-                <td style="text-align:center;">  
-                    <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->idfile;?>'">ת.ז</button>
-                    <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->proffile;?>'">ת.עוסק</button>
-                </td>
-                <td style="text-align:center;">  
-                    <button onclick="window.location.href='../include/update.php?type=serviceman&serviceid=<?php echo $arrServiceMan[$i]->id; ?>&status=1'" style="color:green;"><i class="far fa-thumbs-up"></i></button>
-                    <button onclick="window.location.href='../include/update.php?type=serviceman&serviceid=<?php echo $arrServiceMan[$i]->id; ?>&status=2'" style="color:red;"><i class="far fa-window-close"></i></button>
-                </td>
-            </tr>
-            <?php
-             }
+                 if($arrServiceMan==null)
+                 {
+                   ?>
+                   <p>אין נותני שירות שמחכים לאישור</p>
+                  <?php
+                 }
+                 else{
+                  for ($i =0; $i< sizeof($arrServiceMan);$i++)
+                  {
+                      ?>
+                  <tr class="trRow">
+                      <td><?php echo $arrServiceMan[$i]->firstName." ".$arrServiceMan[$i]->lastName; ?></td>
+                      <td><?php echo getProfType($arrServiceMan[$i]->proftype); ?></td>
+                      <td><?php echo $arrServiceMan[$i]->numofyears;?></td>
+                      <td style="text-align:center;">  
+                          <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->idfile;?>'">ת.ז</button>
+                          <button onclick="window.location.href='../login/uploadFiles/<?php echo $arrServiceMan[$i]->proffile;?>'">ת.עוסק</button>
+                      </td>
+                      <td style="text-align:center;">  
+                          <button onclick="window.location.href='../include/update.php?type=serviceman&serviceid=<?php echo $arrServiceMan[$i]->id; ?>&status=1'" style="color:green;"><i class="far fa-thumbs-up"></i></button>
+                          <button onclick="window.location.href='../include/update.php?type=serviceman&serviceid=<?php echo $arrServiceMan[$i]->id; ?>&status=2'" style="color:red;"><i class="far fa-window-close"></i></button>
+                      </td>
+                  </tr>
+                <?php 
+                }
+              }
              ?>
         </table>
 

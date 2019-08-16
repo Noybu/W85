@@ -325,7 +325,7 @@ function getAllServiceManNotApproved()
     $dbServiceMan = select($sql);
 
     if($dbServiceMan==null){
-        return "אין נותני שירות שמחכים לאישור";
+        return null;
     }
 
    foreach ($dbServiceMan as $S) {
