@@ -1,3 +1,4 @@
+
 <aside>
       <div id="logo">
         <img src="..\images\logo.png">
@@ -10,9 +11,9 @@
         <a href="listOfService.php">נותני שירות שממתינים לאישור</a>
       </div>
       <div class="component">
-        <a href="listOfProjects.php">פרוייקטים שמחכים לאישור</a>
+        <a href="listOfProjects.php" >פרוייקטים שמחכים לאישור</a>
       </div>
       <div class="component">
-        <a href="listOfBid.php" id="active">מכרזים פתוחים</a>
+        <a href="listOfBid.php" >מכרזים פתוחים</a>
       </div>
     </aside>  
