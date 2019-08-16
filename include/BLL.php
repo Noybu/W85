@@ -233,6 +233,13 @@ function updateServiceManApproved($serviceID, $status)
     update($sql);
 }
 
+function updateServiceManBid($serviceID, $status, $projectID)
+{
+
+    $sql = "UPDATE bids SET win='$status' where serviceid ='$serviceID' AND projectid='$projectID'";
+    update($sql);
+}
+
 function updateProjectStatus($projectID, $status)
 {
 
@@ -246,6 +253,9 @@ function getAllBids($projectId)
    
     $sql = "SELECT * FROM bids AS b inner join users As u WHERE b.serviceid=u.id AND b.projectid=$projectId";
     $dbBids = select($sql);
+
+    if($dbBids==null)
+        return null;
 
    foreach ($dbBids as $B) {
        $oopBids[] = new Bid($B->userid, $B->projectid,$B->serviceid,$B->offerprice,$B->offerdate,$B->win,$B->proftype,$B->numofyears,$B->firstname,$B->lastname);
