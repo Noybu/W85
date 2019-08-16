@@ -10,7 +10,7 @@
    
   </head> 
   <body>
-  <?php include_once("side-bar.php"); ?> 
+  <?php include_once("side-bar.php?active=service"); ?> 
     <main>
         <h1>נותני שירות שמחכים לאישור</h1>
             <?php include_once("../include/BLL.php"); ?>

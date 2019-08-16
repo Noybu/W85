@@ -10,7 +10,7 @@
    
   </head> 
   <body>
-  <?php include_once("side-bar.php"); ?>
+  <?php include_once("side-bar.php?active=bids"); ?>
     <main>
         <h1>מכרזים פתוחים</h1>
         <table>
