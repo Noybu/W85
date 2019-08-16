@@ -7,6 +7,6 @@ $price = $_POST['price'];
 $projectid =  $_POST['projectid'];
 
 
-updateCurrentPrice($projectid,intval($price));
+updateCurrentPrice($projectid,$price);
 header("Location: ../projectFund.php?projectid=$projectid");
  ?>
