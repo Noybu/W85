@@ -221,15 +221,10 @@ function deleteVideo($videoID)
 }
 
 
-function editVideo($videoID, $categoryID, $videoTitle, $description, $link)
+function updateServiceManApproved($serviceID, $status)
 {
-    if (isset($_GET['edit'])) {
-        $videoID = $_GET['edit'];
-        $update = true;
 
-        $result = "SELECT * FROM videos WHERE videoID=$videoID";
-    }
-    $sql = "UPDATE Videos SET videoTitle='$videoTitle',categoryID='$categoryID', description='$description', link='$link' where videoID ='$videoID'";
+    $sql = "UPDATE users SET approved='$status' where id ='$serviceID'";
     update($sql);
 }
 
