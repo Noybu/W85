@@ -1,6 +1,5 @@
 <?php include_once("header.php"); ?>
 <link rel="stylesheet" type="text/css" href="CSS\projectFund.css">
-
 <?php include_once("include/BLL.php"); ?>
 <?php
     if($_GET['projectid'])
@@ -77,8 +76,8 @@
 
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">הרשמה למכרז</a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="false">להשקעה</a>
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">הרשמה</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="false">עדכונים שוטפים</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">דירוג הפרויקט</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
                     </div>
@@ -86,30 +85,29 @@
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
                         <form action="" method="POST">
-                            <div id="form">
-                                <div class="form-item">
-                                    <p class="formLabel formTop">סכום כספי</p>
-                                    <input required type="text" name="offerprice" class="form-style" />
-                                </div>
-                                <div class="form-item">
-                                    <p class="formLabel formTop">תאריך אחרון עד לביצוע</p>
-                                    <input required type="text" name="offerdate" class="form-style" />
-                                </div>
-                                <div class="form-item">
-                                    <input type="submit" class="loginoff" id="send" name="submit" value="שלח" disabled>
-                                </div>
+                            <div>
+                                <p>הצעת מחיר</p>
+                                <input type="text" required name="offerprice"/>
+                            </div>
+                            <div>
+                                <p>תארין אחרון לביצוע</p>
+                                <input type="date" required name="offerdate"/>
+                            </div>
+                            <div>
+                                <input type="submit"  name="submit" value="שלח">
                             </div>
                         </form>
                     </div>
-                </div>
                     <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
-                        <p>222222</p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
+                        <form action="" method="POST">
+                            <div>
+                                <p>סכום להשקעה</p>
+                                <input type="text" required name="price"/>
+                            </div>
+                            <div>
+                                <input type="submit"  name="submit" value="שלח">
+                            </div>
+                        </form>
                     </div>
                     <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
                         <p>33333</p>
