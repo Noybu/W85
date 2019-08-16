@@ -30,14 +30,6 @@
     </aside>  
     <main>
         <h1>נותני שירות שמחכים לאישור</h1>
-        <table>
-            <tr id="firstLine">
-                <td class="tdFirstLine" style="width: 20%;">שם מלא</td>
-                <td class="tdFirstLine" style="width:30%;">תחום עיסוק</td>
-                <td class="tdFirstLine" style="width:15%;">ותק</td>
-                <td class="tdFirstLine" style="width:20%;">מסמכים שצורפו</td>
-                <td class="tdFirstLine" style="width:15%;">אישור / דחייה</td>
-            </tr>
             <?php include_once("../include/BLL.php"); ?>
                 <?php
                 $arrServiceMan = array();
@@ -54,6 +46,14 @@
                   for ($i =0; $i< sizeof($arrServiceMan);$i++)
                   {
                       ?>
+                      <table>
+                  <tr id="firstLine">
+                      <td class="tdFirstLine" style="width: 20%;">שם מלא</td>
+                      <td class="tdFirstLine" style="width:30%;">תחום עיסוק</td>
+                      <td class="tdFirstLine" style="width:15%;">ותק</td>
+                      <td class="tdFirstLine" style="width:20%;">מסמכים שצורפו</td>
+                      <td class="tdFirstLine" style="width:15%;">אישור / דחייה</td>
+                  </tr>
                   <tr class="trRow">
                       <td><?php echo $arrServiceMan[$i]->firstName." ".$arrServiceMan[$i]->lastName; ?></td>
                       <td><?php echo getProfType($arrServiceMan[$i]->proftype); ?></td>
