@@ -254,10 +254,10 @@ function updateProjectStatus($projectID, $status)
 
 function updateCurrentPrice($projectID, $price)
 {
-    $sql1="SELECT projectcurrentprice FROM projects WHERE projectid='$projectID'";
-    $getCurrentPrice=select($sql1);
+    $sqlSel="SELECT projectcurrentprice FROM projects WHERE projectid='$projectID'";
+    $getCurrentPrice=select($sqlSel);
 
-    $finalPrice=(integer)$getCurrentPrice+(integer)$price;
+    $finalPrice=(integer)$getCurrentPrice + (integer)$price;
    
     $sql = "UPDATE projects SET projectcurrentprice='$finalPrice' where projectid ='$projectID'";
     update($sql);
