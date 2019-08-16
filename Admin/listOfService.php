@@ -43,10 +43,8 @@
                   <?php
                  }
                  else{
-                  for ($i =0; $i< sizeof($arrServiceMan);$i++)
-                  {
-                      ?>
-                      <table>
+                   ?>
+                   <table>
                   <tr id="firstLine">
                       <td class="tdFirstLine" style="width: 20%;">שם מלא</td>
                       <td class="tdFirstLine" style="width:30%;">תחום עיסוק</td>
@@ -54,6 +52,11 @@
                       <td class="tdFirstLine" style="width:20%;">מסמכים שצורפו</td>
                       <td class="tdFirstLine" style="width:15%;">אישור / דחייה</td>
                   </tr>
+                  <?php
+                  for ($i =0; $i< sizeof($arrServiceMan);$i++)
+                  {
+                      ?>
+                  
                   <tr class="trRow">
                       <td><?php echo $arrServiceMan[$i]->firstName." ".$arrServiceMan[$i]->lastName; ?></td>
                       <td><?php echo getProfType($arrServiceMan[$i]->proftype); ?></td>

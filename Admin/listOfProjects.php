@@ -30,7 +30,6 @@
     </aside>  
     <main>
         <h1>פרויקטים שמחכים לאישור</h1>
-        <table>
         <?php include_once("../include/BLL.php"); ?>
                 <?php
                 $arrProjects = array();
@@ -43,15 +42,18 @@
               <?php
             }
             else{
-              for ($i =0; $i< sizeof($arrProjects);$i++)
-              {
-                  ?>
-              <tr id="firstLine">
+              ?>
+               <table>
+               <tr id="firstLine">
                  <td class="tdFirstLine" style="width:15%";>שם הפרויקט</td>
                  <td class="tdFirstLine" style="width:40%";>תאור</td>
                  <td class="tdFirstLine" style="width:30%";>מיקום</td>
                  <td class="tdFirstLine" style="width:15%";>אישור / דחייה</td>
              </tr>
+             <?php
+              for ($i =0; $i< sizeof($arrProjects);$i++)
+              {
+                  ?>
              <tr class="trRow">
                  <td><?php echo getProjectType($arrProjects[$i]->projecttype); ?></td>
                  <td><?php echo $arrProjects[$i]->description; ?></td>
