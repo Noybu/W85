@@ -16,7 +16,8 @@ switch ($type) {
         }
     case "project":
         {
-            
+            updateProjectStatus($_GET['id'],$_GET['status']);
+            header("Location: ../Admin/listOfProjects.php");
             break;
         }
     case "winbid":

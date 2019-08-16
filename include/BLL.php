@@ -33,6 +33,11 @@ function getAllNewProjects()
    
     $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectstatus=0";
     $dbProjects = select($sql);
+    
+    if ($dbProjects==null)
+        {
+            return null;
+        }
 
    foreach ($dbProjects as $P) {
        $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
@@ -228,6 +233,12 @@ function updateServiceManApproved($serviceID, $status)
     update($sql);
 }
 
+function updateProjectStatus($projectID, $status)
+{
+
+    $sql = "UPDATE projects SET projectstatus='$status' where projectid ='$projectID'";
+    update($sql);
+}
 
 function getAllBids($projectId)
 {
