@@ -104,7 +104,7 @@
                         <form action="include/addPayment.php" method="POST">
                             <div>
                                 <p>סכום להשקעה</p>
-                                <input type="text" required name="price">
+                                <input type="number" required name="price">
                             </div>
                             <div>
                                 <input type="submit"  name="submit" value="שלח">
