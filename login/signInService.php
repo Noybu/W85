@@ -72,7 +72,7 @@
         </div>
         <div class="form-item">
           <p class="formLabel formTop">מקצוע</p>
-          <select required class="form-style" name="ProfType">
+          <select required class="form-style" name="profType">
             <option value="1">ספסל</option>
             <option value="2">גני שעשועים</option>
             <option value="3">פחי אשפה</option>
