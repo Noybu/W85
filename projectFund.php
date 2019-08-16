@@ -1,7 +1,5 @@
 <?php include_once("header.php"); ?>
 <link rel="stylesheet" type="text/css" href="CSS\projectFund.css">
-<link rel="stylesheet" type="text/css" href="CSS\newProject.css">
-<script src="JS\newProject.js"></script>
 <?php include_once("include/BLL.php"); ?>
 <?php
     if($_GET['projectid'])
@@ -84,55 +82,50 @@
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
                     </div>
                 </nav>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
-                        <form action="" method="POST">
-                            <div id="form">
-                                <div class="form-item">
-                                    <p class="formLabel formTop">סכום כספי</p>
-                                    <input required type="text" name="offerprice" class="form-style" />
-                                </div>
-                                <div class="form-item">
-                                    <p class="formLabel formTop">תאריך אחרון עד לביצוע</p>
-                                    <input required type="text" name="offerdate" class="form-style" />
-                                </div>
-                                <div class="form-item">
-                                    <input type="submit" class="loginoff" id="send" name="submit" value="שלח" disabled>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-updates-tab">
+                    <form action="" method="POST">
+                        <div>
+                            <p>סכום כספי</p>
+                            <input required type="text" name="offerprice"/>
+                        </div>
+                        <div class="form-item">
+                            <p>תאריך אחרון עד לביצוע</p>
+                            <input required type="text" name="offerdate"/>
+                        </div>
+                        <div>
+                            <input type="submit" name="submit" value="שלח" disabled>
+                        </div>
+                    </form>
                 </div>
-                    <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
-                        <p>222222</p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                    </div>
-                    <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
-                        <p>33333</p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                    </div>
-                    <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
-                        <p>4444444 </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                    </div>
+                <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
+                    <form action="" method="POST">
+                        <div>
+                            <p>סכום כספי להשקעה</p>
+                            <input required type="text" name="offerprice"/>
+                        </div>
+                        <div>
+                            <input type="submit" name="submit" value="שלח" disabled>
+                        </div>
+                    </form>
                 </div>
-
-
+                <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+                    <p>33333</p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                </div>
+                <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
+                    <p>4444444 </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <p>dgfdgdgdgdg dfdfd dfdf </p>
+                </div>
             </section>
         </div>
     </div>
