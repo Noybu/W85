@@ -23,6 +23,7 @@ switch ($type) {
     case "winbid":
         {
             updateServiceManBid($_GET['serviceid'],$_GET['status'],$_GET['projectid']);
+            updateServiceManApproved($_GET['serviceid'],2);
             header("Location: ../Admin/listOfBid.php");
             break;
         }
