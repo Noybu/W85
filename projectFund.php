@@ -84,7 +84,7 @@
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
-                        <form action="" method="POST">
+                        <form action="include/register-bid.php" method="POST">
                             <div>
                                 <p>הצעת מחיר</p>
                                 <input type="text" required name="offerprice"/>
@@ -96,6 +96,8 @@
                             <div>
                                 <input type="submit"  name="submit" value="שלח">
                             </div>
+                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>/>
+                            <input type="hidden" name="service" value=<?php echo $_SESSION["userID"];?>/>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
