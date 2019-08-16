@@ -10,7 +10,7 @@
    
   </head> 
   <body>
-  <?php include_once("side-bar.php?active=project"); ?>
+  <?php include_once("side-bar.php"); ?>
     <main>
         <h1>פרויקטים שמחכים לאישור</h1>
         <?php include_once("../include/BLL.php"); ?>
