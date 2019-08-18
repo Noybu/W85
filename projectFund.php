@@ -71,6 +71,7 @@
             <section class="tabs">
                 <nav>
                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="true">השקעה בפרויקט</a>
                     <?php
                      $type=get_user_type($_SESSION["userID"]);
                      if($type==2)
@@ -79,17 +80,28 @@
                          if($approved==1)
                          {
                              ?>
-                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">הרשמה למכרז</a>
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">הרשמה למכרז</a>
                         <?php
                          }
                      }
                          ?>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="false">השקעה בפרויקט</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">דירוג הפרויקט</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
+                        <form action="include/addPayment.php" method="POST">
+                            <div>
+                                <p>סכום להשקעה</p>
+                                <input type="number" required name="price">
+                            </div>
+                            <div>
+                                <input type="submit"  name="submit" value="שלח">
+                            </div>
+                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
+                        </form>
+                    </div>
                 <?php
                         if($approved==1)
                         {
@@ -114,18 +126,7 @@
                         <?php
                         }
                    ?>
-                    <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
-                        <form action="include/addPayment.php" method="POST">
-                            <div>
-                                <p>סכום להשקעה</p>
-                                <input type="number" required name="price">
-                            </div>
-                            <div>
-                                <input type="submit"  name="submit" value="שלח">
-                            </div>
-                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
-                        </form>
-                    </div>
+                    
                     <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
                         <p>33333</p>
                         <p>dgfdgdgdgdg dfdfd dfdf </p>
