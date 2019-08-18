@@ -20,7 +20,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=client_credentials");
 $response = curl_exec($ch);
 curl_close($ch);
 
-file_put_contents("log.txt",$response->access_token);
+file_put_contents("log.txt",$response['access_token']);
 
 if($response=="VERIFIED")
 {
