@@ -48,11 +48,16 @@
                         </b>
                         <p style="margin-top: -17px;"><?php echo $arrProjects[0]->projectcost-$arrProjects[0]->projectcurrentprice?><i class="fas fa-shekel-sign"></i></p>
                     </div>
+                    <?php
+                      if(isset($_SESSION["userID"])){
 
+                    ?>
                     <div style="clear:both;">
                         <button id="buttonFund"><a href=#>להשקעה</a></button>
                     </div>
-
+                    <?php
+                    }
+                    ?>
 
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
