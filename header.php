@@ -34,6 +34,12 @@
         <li class="nav-item">
           <a class="nav-link navA" href="AllProjectList.php">כל הפרויקטים</a>
         </li>
+        <li class="nav-item">
+              <a class="nav-link navA" href="newProject.php">הוספת פרויקט</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navA" href="MyProjects.php">הפרויקטים שלי</a>
+            </li>
         <?php
           if(!isset($_SESSION["userID"])){
             ?>
@@ -47,12 +53,6 @@
           }
           else {
             ?>
-            <li class="nav-item">
-              <a class="nav-link navA" href="newProject.php">הוספת פרויקט</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navA" href="MyProjects.php">הפרויקטים שלי</a>
-            </li>
             <li class="nav-item">
             <a class="nav-link navA loginMobile" href="login\signIn.php?logout=yes">התנתקות</a>
            </li>

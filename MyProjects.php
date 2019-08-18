@@ -1,7 +1,9 @@
 <?php include_once("header.php"); ?>
 <?php include_once("include/BLL.php"); ?>
 <?php
-   
+   if(!isset($_SESSION["userID"])){
+    header("Location:login/signIn.php");
+}
     session_start();   
     $arrProjects=Array();
     $arrProjects=getProjectByUser( $_SESSION["userID"]);
