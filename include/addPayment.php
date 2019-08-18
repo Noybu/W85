@@ -1,5 +1,7 @@
 <?php
-
+    require_once 'DAL.php';
+    require_once 'BLL.php';
+    
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -27,6 +29,7 @@ if($response=="VERIFIED")
 
     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price );
 
+
     updateCurrentPrice($projectid,$price);
 
 }
@@ -34,8 +37,7 @@ if($response=="VERIFIED")
 
 
 
-// //require_once 'DAL.php';
-// require_once 'BLL.php';
+
 
 
 // //$price = $_POST['price'];
