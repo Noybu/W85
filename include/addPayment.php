@@ -20,11 +20,12 @@ if($response=="VERIFIED")
 
 //         fclose($handel);
 
- //  $price = $_POST['mc_gross'];
+  $price = $_POST['mc_gross'];
+  $projectid =  $_POST['projectid'];
+  $userid =  $_POST['userid'];
 
 
-
-    //file_put_contents("log.txt","userid:" . $_POST['user_id] . " project:" . $_POST['projectid] . " price:" . $_POST['mc_gross']);
+    file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price );
 
     updateCurrentPrice($projectid,$price);
 
