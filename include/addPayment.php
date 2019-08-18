@@ -6,15 +6,21 @@
     require "mailer/Exception.php";
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,'https://noybu.mtacloud.co.il/W85/projectFund.php?projectid=3');
+
+$clientId = "AdFIOOghKH7yHwoLS6g6JeZAczNBeNkUbt_hyMcLL0g6w5dfIUscHFhv-0IhxE6Y6IYaFEOUDi9voT_C";
+$secret = "EHkHKQVIZtdF2B2KbjwInXFR67pdq5jlRNiRnQLUhrF1mLmorokJYQU4qdyfwLh7BwRh1Rq3iYfuiTfk";
+
+curl_setopt($ch, CURLOPT_URL,'https://api.sandbox.paypal.com/v1/oauth2/token');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,0);
+curl_setopt($ch, CURLOPT_USERPWD, $clientId.":".$secret);
+
 curl_setopt($ch, CURLOPT_POSTFIELDS,"cmd=_notify-validate&".http_build_query($_POST));
 $response = curl_exec($ch);
 curl_close($ch);
 
-//file_put_contents("log.txt",$_SERVER['REQUEST_METHOD']);
+file_put_contents("log.txt",$response);
 
 if($response=="VERIFIED")
 {
