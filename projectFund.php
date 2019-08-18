@@ -71,7 +71,7 @@
             <section class="tabs">
                 <nav>
                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="true">השקעה בפרויקט</a>
+                 <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="true">השקעה בפרויקט</a>
                     <?php
                      $type=get_user_type($_SESSION["userID"]);
                      if($type==2)
@@ -80,7 +80,7 @@
                          if($approved==1)
                          {
                              ?>
-                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">הרשמה למכרז</a>
+                            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">הרשמה למכרז</a>
                         <?php
                          }
                      }
