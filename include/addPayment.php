@@ -3,7 +3,7 @@
 require_once 'BLL.php';
 
 
-$price = $_POST['price'];
+//$price = $_POST['price'];
 $projectid =  $_POST['projectid'];
 
 
