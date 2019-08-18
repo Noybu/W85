@@ -6,7 +6,7 @@
     require "mailer/Exception.php";
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr');
+curl_setopt($ch, CURLOPT_URL,'https://noybu.mtacloud.co.il/W85/projectFund.php?projectid=3');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,0);
