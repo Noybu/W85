@@ -1,7 +1,10 @@
 <?php
     require_once 'DAL.php';
     require_once 'BLL.php';
-    
+    use PHPMailer\PHPMailer\PHPMailer;
+    require "mailer/PHPMailer.php";
+    require "mailer/Exception.php";
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -25,9 +28,32 @@ if($response=="VERIFIED")
   $price = $_POST['mc_gross'];
   $projectid =  $_POST['projectid'];
   $userid =  $_POST['userid'];
+  $name =  $_POST['first_name'] . " " . $_POST['last_name'];
+  $email = get_user_email($userid);
 
 
     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price );
+
+    $mail = new PHPMailer();
+    $mail ->getFrom("urbanfund85@gmail.com","URBAN FUND");
+    $mail->addAddress($email, $name);
+    $mail->isHTML(true);
+    $mail->Subject = "תודה, תרומך לפרויקט התקבלה בהצלחה";
+    $mail->Body = "
+    <h1>תודה " . $name ."</h1>
+    <BR>
+    <p> תרומתך על סך: " . $price . " התקבלה בהצלחה
+    <BR>
+    תודה,
+    <BR>
+    URBAN FUND
+    ";
+    $mail->send();
+    
+
+
+
+    
 
 
     updateCurrentPrice($projectid,$price);
