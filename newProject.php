@@ -4,11 +4,15 @@
 <script src="JS\newProject.js"></script>
 <?php
 require_once 'include/BLL.php';
+if(!isset($_SESSION["userID"])){
+    header("Location:login/signIn.php");
+}
 if (isset($_POST['submit'])) {
     addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
     echo "הפרויקט עלה בהצלחה";
 }
 ?>
+
 
 <section>
     <div>
