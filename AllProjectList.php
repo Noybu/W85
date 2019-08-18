@@ -44,12 +44,12 @@
             </div>
             <div id="cardFooter">
                 <p id="share">שיתוף:</p>
-                <a href="https://api.whatsapp.com/send?text=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid=<?php echo $arrProjects[$i]->projectid; ?>">
+                <a href="https://api.whatsapp.com/send?text=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid%3D<?php echo $arrProjects[$i]->projectid; ?>">
                     <p class="icon" id="whatsapp">
                     <i class="fab fa-whatsapp"></i>
                     </p>
                 </a>
-                <a href="http://www.facebook.com/sharer.php?u=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid=<?php echo $arrProjects[$i]->projectid; ?>">
+                <a href="http://www.facebook.com/sharer.php?u=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid%3D<?php echo $arrProjects[$i]->projectid; ?>">
                     <p class="icon" id="facebook">
                     <i class="fab fa-facebook-square"></i>
                     </p>
