@@ -22,7 +22,17 @@ section{
 	margin:auto;
 }
 
+.signUpClass{
+	text-decoration:none; 
+	color:white;
+	font-size:18px;
+}
 
+.signUpClass a:hover{
+	text-decoration: none;
+	color:white;
+	font-size:22px;
+}
 
 .formService{
 	width:45%;
