@@ -90,7 +90,7 @@
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
+                <div class="tab-pane fade show active" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
                         <form action="include/addPayment.php" method="POST">
                             <div>
                                 <p>סכום להשקעה</p>
@@ -106,7 +106,7 @@
                         if($approved==1)
                         {
                             ?>
-                            <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                            <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
                             <form action="include/register-bid.php" method="POST">
                                 <div>
                                     <p>הצעת מחיר</p>
