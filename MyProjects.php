@@ -16,7 +16,18 @@
         for($i=0;$i<sizeof($arrProjects);$i++)
         {
             ?>
-        <div class="card2">
+        <div class="card2"> 
+            <?php
+            if($arrProjects[$i]->projectstatus==10)
+            {
+                ?>
+                <div class="notapprovedtext">הפרויקט לא מאושר</div>
+                    <div class="notapprovedcard"> </div>
+                <?php
+            } 
+            ?>
+
+         
             <div class="pictureCard2" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype; ?>_s.png');"></div>
             <div class="descCard2">
                 <h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>
