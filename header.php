@@ -7,6 +7,7 @@
     if($_GET['logout']=='yes')
     {
       session_destroy();
+      header("Location: index.php");
     } 
   }
 ?>
