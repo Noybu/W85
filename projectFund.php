@@ -28,7 +28,7 @@
                     <div class="bar2">
                         <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                         <div id="mainBar2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost)*100;?>%;border-radius: 20px; ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; width:<?php echo ($arrProjects[0]->projectcurrentprice/$arrProjects[0]->projectcost)*100;?>%;border-radius: 20px; ">
                                 <?php echo $arrProjects[0]->projectcurrentprice?>
                             </div>
                         </div>
@@ -59,47 +59,61 @@
 
                     <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=tel%20aviv&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
-
-
-
-
-
                 </div>
             </div>
         </section>
 
+        <?php
+        if(isset($_SESSION["userID"])){
 
-
+            ?>
         <div class="row sm">
             <section class="tabs">
-
-
                 <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">הרשמה למכרז</a>
+                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <?php
+                     $type=get_user_type($_SESSION["userID"]);
+                     if($type==2)
+                     {
+                         $approved=getServiceApproved($_SESSION["userID"]);
+                         if($approved==1)
+                         {
+                             ?>
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="true">הרשמה למכרז</a>
+                        <?php
+                         }
+                     }
+                         ?>
                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="false">השקעה בפרויקט</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">דירוג הפרויקט</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
-                        <form action="include/register-bid.php" method="POST">
-                            <div>
-                                <p>הצעת מחיר</p>
-                                <input type="text" required name="offerprice"/>
-                            </div>
-                            <div>
-                                <p>תארין אחרון לביצוע</p>
-                                <input type="date" required name="offerdate"/>
-                            </div>
-                            <div>
-                                <input type="submit"  name="submit" value="שלח">
-                            </div>
-                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
-                            <input type="hidden" name="service" value=<?php echo $_SESSION["userID"];?>>
-                        </form>
-                    </div>
+                <?php
+                        if($approved==1)
+                        {
+                            ?>
+                            <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                            <form action="include/register-bid.php" method="POST">
+                                <div>
+                                    <p>הצעת מחיר</p>
+                                    <input type="text" required name="offerprice"/>
+                                </div>
+                                <div>
+                                    <p>תארין אחרון לביצוע</p>
+                                    <input type="date" required name="offerdate"/>
+                                </div>
+                                <div>
+                                    <input type="submit"  name="submit" value="שלח">
+                                </div>
+                                <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
+                                <input type="hidden" name="service" value=<?php echo $_SESSION["userID"];?>>
+                            </form>
+                        </div>
+                        <?php
+                        }
+                   ?>
                     <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
                         <form action="include/addPayment.php" method="POST">
                             <div>
@@ -131,10 +145,11 @@
                         <p>dgfdgdgdgdg dfdfd dfdf </p>
                     </div>
                 </div>
-
-
             </section>
         </div>
+    <?php    
+    }
+    ?>
     </div>
 
 

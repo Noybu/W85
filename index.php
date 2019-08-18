@@ -76,7 +76,7 @@
                             <div class="bar">
                                 <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost; ?><i class="fas fa-shekel-sign"></i></p>
                                 <div id="mainBar">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:<?php echo ($arrProjects[$i]->projectcurrentprice / $arrProjects[$i]->projectcost) * 100; ?>%;border-radius: 20px;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; width:<?php echo ($arrProjects[$i]->projectcurrentprice / $arrProjects[$i]->projectcost) * 100; ?>%;border-radius: 20px;">
                                         <?php echo $arrProjects[$i]->projectcurrentprice ?>
                                     </div>
                                 </div>
