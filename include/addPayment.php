@@ -9,7 +9,17 @@ curl_setopt($ch, CURLOPT_POSTFIELDS,"cmd=_notify-validate&".http_build_query($_P
 $response = curl_exec($ch);
 curl_close($ch);
 
-file_put_contents("log.txt",$response);
+file_put_contents("log.txt",$_SERVER['REQUEST_METHOD']);
+
+if($response=="VERIFIED")
+{
+    $price = $_POST['mc_gross'];
+
+    $user_id =  $GET['userid'];
+    $projectid =  $GET['projectid'];
+    updateCurrentPrice($projectid,$price);
+
+}
 
 
 
