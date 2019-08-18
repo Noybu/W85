@@ -303,6 +303,13 @@ function get_user_type($id)
     return get_object($sql)->type;
 }
 
+//מקבל אם משתמש מאושר
+function getServiceApproved($id)
+{
+    $sql = "select approved from users where id = '$id'";
+    return get_object($sql)->type;
+}
+
 //בודק אם משתמש קיים כבר במערכת
 function is_username_exist($userName)
 {
