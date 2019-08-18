@@ -26,9 +26,10 @@ section{
 	text-decoration:none; 
 	color:white;
 	font-size:18px;
+	font-weight: bold;
 }
 
-.signUpClass a:hover{
+.signUpClass:hover{
 	text-decoration: none;
 	color:white;
 	font-size:22px;
