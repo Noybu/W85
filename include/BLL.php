@@ -307,7 +307,7 @@ function get_user_type($id)
 function getServiceApproved($id)
 {
     $sql = "select approved from users where id = '$id'";
-    return get_object($sql)->type;
+    return get_object($sql)->approved;
 }
 
 //בודק אם משתמש קיים כבר במערכת
