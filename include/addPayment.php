@@ -13,14 +13,20 @@ curl_close($ch);
 
 if($response=="VERIFIED")
 {
-    $price = $_POST['mc_gross'];
+$handel = fopen("log.txt","w");
 
-    $user_id =  $GET['userid'];
-    $projectid =  $GET['projectid'];
+    foreach($_POST as $key => $value)
+        fwrite($handel,"$key => $value \r\n");
 
-    file_put_contents("log.txt","userid:" . $user_id . " project:" . $projectid . " price:" . $price);
-    
-    updateCurrentPrice($projectid,$price);
+        fclose($handel);
+
+  //  $price = $_POST['mc_gross'];
+
+
+
+    //file_put_contents("log.txt","userid:" . $user_id . " project:" . $projectid . " price:" . $price);
+
+   // updateCurrentPrice($projectid,$price);
 
 }
 
