@@ -47,7 +47,7 @@
             <p>נא להזין תעודת זהות המכילה 9 ספרות
             וסיסמא כפי שנמסרו בעת הרישום</p>
             <p>אלפי פרויקטים מחכים לכם במערכת !!!</p>
-            <a href="signUp.php"><h3>אתה עוד לא רשום?? לחץ כאן כדי להרשם</h3></a>
+            <a href="signUp.php"><h4 style=" text-decoration:none; color:white;">אתה עוד לא רשום?? לחץ כאן כדי להרשם</h4></a>
         </div>
     </section>
       <div id="mainDiv">
