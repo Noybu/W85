@@ -34,6 +34,22 @@
     margin: 0 auto;
     width:50%;
 }
+
+.notapprovedtext
+{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    z-index: 99999;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    opacity: 1;
+
+}
 .notapprovedcard
 {
     width: 50%;

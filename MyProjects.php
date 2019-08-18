@@ -21,7 +21,8 @@
             if($arrProjects[$i]->projectstatus==10)
             {
                 ?>
-                    <div class="notapprovedcard">הפרויקט לא מאושר</div>
+                <div class="notapprovedtext">הפרויקט לא מאושר</div>
+                    <div class="notapprovedcard"> </div>
                 <?php
             } 
             ?>
