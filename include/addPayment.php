@@ -15,8 +15,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,0);
 curl_setopt($ch, CURLOPT_USERPWD, $clientId.":".$secret);
-
-curl_setopt($ch, CURLOPT_POSTFIELDS,"cmd=_notify-validate&".http_build_query($_POST));
+curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=client_credentials");
+//curl_setopt($ch, CURLOPT_POSTFIELDS,"cmd=_notify-validate&".http_build_query($_POST));
 $response = curl_exec($ch);
 curl_close($ch);
 
