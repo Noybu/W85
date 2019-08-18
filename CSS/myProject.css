@@ -34,6 +34,21 @@
     margin: 0 auto;
     width:50%;
 }
+.notapprovedcard
+{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    z-index: 9999;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    background-color: #6d6767;
+    opacity: 0.6;
+}
 .pictureCard2{
 	background-size: contain;
     background-position: center;
