@@ -126,28 +126,7 @@ include_once("header.php"); ?>
                 <img alt="" border="0" src="https://www.paypalobjects.com/he_IL/i/scr/pixel.gif" width="1" height="1">
                 </form>
 
-
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="3YME47AUPJNWN">
-<input type="hidden" name="lc" value="IL">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="1">
-<input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="currency_code" value="ILS">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
-<table>
-<tr><td><input type="hidden" name="on0" value="projectid">projectid</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-<tr><td><input type="hidden" name="on1" value="userid">userid</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
-</table>
-<input type="image" src="https://www.paypalobjects.com/he_IL/IL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - הדרך הקלה והבטוחה יותר לשלם באינטרנט!">
-<img alt="" border="0" src="https://www.paypalobjects.com/he_IL/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-                
-                
-                
-                
+ 
                 
                 <form action="include/addPayment.php" method="POST">
                             <div>
