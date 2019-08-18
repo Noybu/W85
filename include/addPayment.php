@@ -18,9 +18,20 @@ curl_setopt($ch, CURLOPT_USERPWD, $clientId.":".$secret);
 curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=client_credentials");
 //curl_setopt($ch, CURLOPT_POSTFIELDS,"cmd=_notify-validate&".http_build_query($_POST));
 $response = curl_exec($ch);
+
+
+if(empty($response))die("Error: No response.");
+else
+{
+    $json = json_decode($response);
+   
+    file_put_contents("log.txt",$json->access_token);
+}
+
+
 curl_close($ch);
 
-file_put_contents("log.txt",$response['access_token']);
+
 
 if($response=="VERIFIED")
 {
