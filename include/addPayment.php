@@ -7,15 +7,15 @@
 
 
 $postdata = '';
-// $post_json = [];
-// foreach($_POST as $key => $value) {
-//     $postdata .= $key . '=' . urlencode($value) . '&';
-// }
+$post_json = [];
+foreach($_POST as $key => $value) {
+    $postdata .= $key . '=' . urlencode($value) . '&';
+}
 
-foreach($_POST as $keyPost => $valuePost)
+/* foreach($_POST as $keyPost => $valuePost)
 { 
     $postdata .=$keyPost." => ". urlencode($valuePost) . '&';
-}
+} */
 
 $postdata .= 'cmd=_notify-validate';
 
@@ -32,7 +32,7 @@ curl_setopt ($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST,0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,0);
-curl_setopt ($curl, CURLOPT_POSTFIELDS, $postdata);
+curl_setopt ($ch, CURLOPT_POSTFIELDS, $postdata);
 //curl_setopt($ch, CURLOPT_USERPWD, $clientId.":".$secret);
 //curl_setopt($ch, CURLOPT_POSTFIELDS, "grant_type=client_credentials");
 //curl_setopt($ch, CURLOPT_POSTFIELDS,"cmd=_notify-validate&".http_build_query($_POST));
