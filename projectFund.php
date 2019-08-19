@@ -1,4 +1,6 @@
 <?php
+require_once("addPayment.php");
+$paypal = new paypal();
 
 use NSL\Persistent\Storage\Session;
 
@@ -101,7 +103,7 @@ include_once("header.php"); ?>
                 <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
                         
-
+                
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                <input type="text" name="amount" value="60.00">
                 <input type="hidden" name="cmd" value="_xclick">
@@ -124,6 +126,7 @@ include_once("header.php"); ?>
                 <input type="hidden" name="notify_url" value="https://noybu.mtacloud.co.il/W85/include/addPayment.php">
                 <input type="image" src="https://www.paypalobjects.com/he_IL/IL/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - הדרך הקלה והבטוחה יותר לשלם באינטרנט!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/he_IL/i/scr/pixel.gif" width="1" height="1">
+                
                 </form>
 
  
