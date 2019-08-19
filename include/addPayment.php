@@ -40,6 +40,9 @@ $response = curl_exec($ch);
 
 if($response == 'VERIFIED') {
     file_put_contents('log.txt', $response. "\n", FILE_APPEND);
+    
+    foreach($_POST as $key => $value)
+         file_put_contents('log.txt', "$key => $value \r\n", FILE_APPEND);
 }
 
 
