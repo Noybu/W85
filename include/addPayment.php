@@ -7,10 +7,16 @@
 
 
 $postdata = '';
-$post_json = [];
-foreach($_POST as $key => $value) {
-    $postdata .= $key . '=' . urlencode($value) . '&';
+// $post_json = [];
+// foreach($_POST as $key => $value) {
+//     $postdata .= $key . '=' . urlencode($value) . '&';
+// }
+
+foreach($_POST as $keyPost => $valuePost)
+{ 
+    $postdata .=$keyPost." => ". urlencode($valuePost) . '&';
 }
+
 $postdata .= 'cmd=_notify-validate';
 
 
