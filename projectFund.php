@@ -1,8 +1,8 @@
 <?php
-require_once("addPayment.php");
-$paypal = new paypal();
+//require_once("/include/addPayment.php");
+//$paypal = new paypal();
 
-use NSL\Persistent\Storage\Session;
+//use NSL\Persistent\Storage\Session;
 
 include_once("header.php"); ?>
 <link rel="stylesheet" type="text/css" href="CSS\projectFund.css">
