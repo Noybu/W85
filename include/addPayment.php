@@ -39,7 +39,7 @@ curl_setopt ($ch, CURLOPT_POSTFIELDS, $postdata);
 $response = curl_exec($ch);
 
 if($response == 'VERIFIED') {
-    file_put_contents('log.txt', $_POST['txn_id']. '\n', FILE_APPEND);
+    file_put_contents('log.txt', $_POST['mc_gros']. '\r\n', FILE_APPEND);
 }
 
 
