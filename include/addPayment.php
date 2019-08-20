@@ -2,6 +2,7 @@
     require_once 'DAL.php';
     require_once 'BLL.php';
     use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
     require "mailer/PHPMailer.php";
     require "mailer/Exception.php";
 
@@ -62,9 +63,14 @@ if($response=="VERIFIED")
   $email = get_user_email($userid);
 
 
-    file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price );
+    file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price  ."\r\n\r\n", FILE_APPEND);
+    updateCurrentPrice($projectid,$price);
 
-    $mail = new PHPMailer();
+    $mail = new PHPMailer(true);
+
+    try{
+
+    
     $mail ->getFrom("urbanfund85@gmail.com","URBAN FUND");
     $mail->addAddress($email, $name);
     $mail->isHTML(true);
@@ -82,14 +88,14 @@ if($response=="VERIFIED")
     URBAN FUND
     ";
     $mail->send();
+   
+    file_put_contents('log.txt', 'Message has been sent' . '\r\n', FILE_APPEND);
+} catch (Exception $e) {
+    $errormailer =  "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    file_put_contents('log.txt', "$errormailer \r\n", FILE_APPEND);
+}
     
-
-
-
-    
-
-
-    updateCurrentPrice($projectid,$price);
+ 
 
 }
 
