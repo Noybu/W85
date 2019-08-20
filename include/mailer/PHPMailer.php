@@ -1,3 +1,4 @@
+<?php header('Content-Type: charset=utf-8'); ?>
 <?php
 /**
  * PHPMailer - PHP email creation and transport class.

@@ -1,3 +1,4 @@
+<?php header('Content-Type: charset=utf-8'); ?>
 <?php
     require_once 'DAL.php';
     require_once 'BLL.php';
@@ -40,6 +41,7 @@ curl_setopt ($ch, CURLOPT_POSTFIELDS, $postdata);
 $response = curl_exec($ch);
 
 if($response == 'VERIFIED') {
+    file_put_contents("log.txt", "-----------------NEW REQUEST-----------------"  ."\r\n\r\n", FILE_APPEND);
     file_put_contents('log.txt', $response. "\n", FILE_APPEND);
 
     foreach($_POST as $key => $value)
@@ -61,8 +63,9 @@ if($response=='VERIFIED' && $_POST['payment_status']== 'Completed')
     $userid =  $_POST['option_selection2'];
     $name =  $_POST['first_name'] . " " . $_POST['last_name'];
     $email = get_user_email($userid);
+    $currency= $_POST['mc_currency'];
 
-    file_put_contents("log.txt", "--------------NEW PAYMENT--------------"  ."\r\n\r\n", FILE_APPEND);
+    file_put_contents("log.txt", "------NEW PAYMENT------"  ."\r\n\r\n", FILE_APPEND);
     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price  ."\r\n\r\n", FILE_APPEND);
     updateCurrentPrice($projectid,$price);
 
@@ -74,7 +77,7 @@ if($response=='VERIFIED' && $_POST['payment_status']== 'Completed')
     $mail->Body = "
     <h1>תודה " . $name ."</h1>
     <BR>
-    <p> תרומתך על סך: " . $price . " התקבלה בהצלחה
+    <p> תרומתך על סך: " . $price . $currency. " התקבלה בהצלחה
     <BR>
     <BR>
     <img src='https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif'>
