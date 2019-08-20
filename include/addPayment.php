@@ -25,7 +25,7 @@ $postdata .= 'cmd=_notify-validate';
 // $clientId = "AdFIOOghKH7yHwoLS6g6JeZAczNBeNkUbt_hyMcLL0g6w5dfIUscHFhv-0IhxE6Y6IYaFEOUDi9voT_C";
 // $secret = "EHkHKQVIZtdF2B2KbjwInXFR67pdq5jlRNiRnQLUhrF1mLmorokJYQU4qdyfwLh7BwRh1Rq3iYfuiTfk";
 
-$ch = curl_init('https://www.sandbox.paypal.com/cgi-bin/webscr');
+$ch = curl_init('https://www.paypal.com/cgi-bin/webscr');
 //curl_setopt($ch, CURLOPT_URL,'https://api.sandbox.paypal.com/v1/oauth2/token');
 curl_setopt ($ch, CURLOPT_HEADER, 0);
 curl_setopt ($ch, CURLOPT_POST, 1);
@@ -40,7 +40,7 @@ $response = curl_exec($ch);
 
 if($response == 'VERIFIED') {
     file_put_contents('log.txt', $response. "\n", FILE_APPEND);
-    
+
     foreach($_POST as $key => $value)
          file_put_contents('log.txt', "$key => $value \r\n", FILE_APPEND);
 }
