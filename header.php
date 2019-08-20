@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="en">
 <?php
+include_once("include/BLL.php");
   session_start();
   if(isset($_GET['logout']))
   {
