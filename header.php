@@ -40,17 +40,20 @@
         <li class="nav-item">
           <a class="nav-link navA" href="MyProjects.php">הפרויקטים שלי</a>
         </li>
-        // <?php
-       //   $userType=get_user_type($_SESSION["userID"]);
-      //    $userApproves=getServiceApproved($_SESSION["userID"]);
-     //     if( isset($_SESSION["userID"]) &&  $userType== 2 &&  $userApproves== 1)
-    //      {
-     //  ?> 
-        <li class="nav-item">
-          <a class="nav-link navA" href="MyFunds.php">המכרזים שלי</a>
-        </li>
+         <?php
+            if(isset($_SESSION["userID"]))
+            {
+              $userType=get_user_type($_SESSION["userID"]);
+              $userApproves=getServiceApproved($_SESSION["userID"]);
+              if($userType== 2 &&  $userApproves== 1)
+                {
+              ?> 
+                  <li class="nav-item">
+                    <a class="nav-link navA" href="MyFunds.php">המכרזים שלי</a>
+                  </li>
         <?php
-        //  }
+                }
+          }
           if(!isset($_SESSION["userID"])){
             ?>
             <li class="nav-item">
