@@ -88,10 +88,6 @@
     ?>
       <link rel="stylesheet" type="text/css" href="CSS\myProject.css">
 
-      
-      <?php
-    }
-?>
 
 
 </main>
