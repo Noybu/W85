@@ -1,8 +1,8 @@
 <?php
     require_once 'DAL.php';
     require_once 'BLL.php';
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
+    use mailer\PHPMailer\PHPMailer;
+    use mailer\PHPMailer\Exception;
     require "mailer/PHPMailer.php";
     require "mailer/Exception.php";
 
