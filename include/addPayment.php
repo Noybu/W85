@@ -41,7 +41,6 @@ curl_setopt ($ch, CURLOPT_POSTFIELDS, $postdata);
 $response = curl_exec($ch);
 
 if($response == 'VERIFIED') {
-    file_put_contents("log.txt", "-----------------NEW REQUEST-----------------"  ."\r\n\r\n", FILE_APPEND);
     file_put_contents('log.txt', $response. "\n", FILE_APPEND);
 
     foreach($_POST as $key => $value)
