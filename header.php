@@ -41,7 +41,7 @@
           <a class="nav-link navA" href="MyProjects.php">הפרויקטים שלי</a>
         </li>
         <?php
-          if(isset($_SESSION["userID"]) && get_user_type($_SESSION["userID"]) == 2 && getServiceApproved($_SESSION["userID"] == 1))
+          if(isset($_SESSION["userID"]) && get_user_type($_SESSION["userID"]) == 2 && getServiceApproved($_SESSION["userID"]) == 1)
           {
             ?>
         <li class="nav-item">
