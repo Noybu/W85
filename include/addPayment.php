@@ -1,8 +1,8 @@
 <?php
     require_once 'DAL.php';
     require_once 'BLL.php';
-    use mailer\PHPMailer\PHPMailer;
-    use mailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
     require "mailer/PHPMailer.php";
     require "mailer/Exception.php";
 
@@ -68,10 +68,7 @@ if($response=="VERIFIED")
 
     $mail = new PHPMailer(true);
 
-    try{
-
-    
-    $mail ->getFrom("urbanfund85@gmail.com","URBAN FUND");
+    $mail ->addrAppend("urbanfund85@gmail.com","URBAN FUND");
     $mail->addAddress($email, $name);
     $mail->isHTML(true);
     $mail->Subject = "תודה, תרומך לפרויקט התקבלה בהצלחה";
@@ -90,11 +87,7 @@ if($response=="VERIFIED")
     $mail->send();
    
     file_put_contents('log.txt', 'Message has been sent' . '\r\n', FILE_APPEND);
-} catch (Exception $e) {
-    $errormailer =  "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    file_put_contents('log.txt', "$errormailer \r\n", FILE_APPEND);
-}
-    
+
  
 
 }
