@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="CSS\myProject.css">
 <?php include_once("header.php"); ?>
 <?php include_once("include/BLL.php"); ?>
 <?php
@@ -7,11 +8,16 @@
     session_start();   
     $arrProjects=Array();
     $arrProjects=getProjectByUser( $_SESSION["userID"]);
-    
-?>
-<link rel="stylesheet" type="text/css" href="CSS\myProject.css">
+    if($arrProjects==null)
+    {
+        ?>
+            <p>עדין לא פתחת פרויקט</p>
+        <?php
+    }
+    else{
+        ?>
+            
 <main>
-
 <section>
     <div class="row">
         <?php
@@ -73,4 +79,8 @@
 
 
 </main>
+        <?php
+    }
+?>
+
 <?php include_once("footer.php"); ?>
