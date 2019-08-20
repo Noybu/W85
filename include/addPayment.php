@@ -1,5 +1,5 @@
-<?php header('Content-Type: charset=utf-8'); ?>
 <?php
+header('Content-Type: charset=utf-8');
     require_once 'DAL.php';
     require_once 'BLL.php';
     use PHPMailer\PHPMailer\PHPMailer;
@@ -53,9 +53,8 @@ if($response == 'VERIFIED') {
 curl_close($ch);
 
 
-if($response=='VERIFIED' && $_POST['payment_status']== 'Completed')
+if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
 {
-
 
     $price = $_POST['mc_gross'];
     $projectid =  $_POST['option_selection1'];

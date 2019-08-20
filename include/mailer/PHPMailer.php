@@ -1,5 +1,5 @@
-<?php header('Content-Type: charset=utf-8'); ?>
 <?php
+header('Content-Type: charset=utf-8');
 /**
  * PHPMailer - PHP email creation and transport class.
  * PHP Version 5.5.
