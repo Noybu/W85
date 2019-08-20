@@ -1,5 +1,4 @@
 <?php
-//header('Content-Type: charset=utf-8');
 /**
  * PHPMailer - PHP email creation and transport class.
  * PHP Version 5.5.
@@ -61,7 +60,7 @@ class PHPMailer
      *
      * @var string
      */
-    public $CharSet = self::CHARSET_ISO88591;
+    public $CharSet = self::CHARSET_UTF8;
 
     /**
      * The MIME Content-type of the message.
