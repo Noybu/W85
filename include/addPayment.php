@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: charset=utf-8');
+//header('Content-Type: charset=utf-8');
     require_once 'DAL.php';
     require_once 'BLL.php';
     use PHPMailer\PHPMailer\PHPMailer;
