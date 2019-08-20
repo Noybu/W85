@@ -50,50 +50,38 @@ if($response == 'VERIFIED') {
 
 curl_close($ch);
 
-// if(empty($response))die("Error: No response.");
-// else
-// {
-//     $json = json_decode($response);
-   
-//     file_put_contents("log.txt",$json->access_token);
-// }
+
+if($response=="VERIFIED")
+{
 
 
+  $price = $_POST['mc_gross'];
+  $projectid =  $_POST['option_selection1'];
+  $userid =  $_POST['option_selection2'];
+  $name =  $_POST['first_name'] . " " . $_POST['last_name'];
+  $email = get_user_email($userid);
 
 
-// if($response=="VERIFIED")
-// {
-// $handel = fopen("log.txt","w");
+    file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price );
 
-//     foreach($_POST as $key => $value)
-//         fwrite($handel,"$key => $value \r\n");
-
-//         fclose($handel);
-
-//   $price = $_POST['mc_gross'];
-//   $projectid =  $_POST['projectid'];
-//   $userid =  $_POST['userid'];
-//   $name =  $_POST['first_name'] . " " . $_POST['last_name'];
-//   $email = get_user_email($userid);
-
-
-//     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price );
-
-//     $mail = new PHPMailer();
-//     $mail ->getFrom("urbanfund85@gmail.com","URBAN FUND");
-//     $mail->addAddress($email, $name);
-//     $mail->isHTML(true);
-//     $mail->Subject = "תודה, תרומך לפרויקט התקבלה בהצלחה";
-//     $mail->Body = "
-//     <h1>תודה " . $name ."</h1>
-//     <BR>
-//     <p> תרומתך על סך: " . $price . " התקבלה בהצלחה
-//     <BR>
-//     תודה,
-//     <BR>
-//     URBAN FUND
-//     ";
-//     $mail->send();
+    $mail = new PHPMailer();
+    $mail ->getFrom("urbanfund85@gmail.com","URBAN FUND");
+    $mail->addAddress($email, $name);
+    $mail->isHTML(true);
+    $mail->Subject = "תודה, תרומך לפרויקט התקבלה בהצלחה";
+    $mail->Body = "
+    <h1>תודה " . $name ."</h1>
+    <BR>
+    <p> תרומתך על סך: " . $price . " התקבלה בהצלחה
+    <BR>
+    <BR>
+    <img src='https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif'>
+    <BR>
+    תודה,
+    <BR>
+    URBAN FUND
+    ";
+    $mail->send();
     
 
 
@@ -101,9 +89,9 @@ curl_close($ch);
     
 
 
-//     updateCurrentPrice($projectid,$price);
+    updateCurrentPrice($projectid,$price);
 
-// }
+}
 
 
 
