@@ -52,23 +52,22 @@ if($response == 'VERIFIED') {
 curl_close($ch);
 
 
-if($response=="VERIFIED")
+if($response=='VERIFIED' && $_POST['payment_status']== 'Completed')
 {
 
 
-  $price = $_POST['mc_gross'];
-  $projectid =  $_POST['option_selection1'];
-  $userid =  $_POST['option_selection2'];
-  $name =  $_POST['first_name'] . " " . $_POST['last_name'];
-  $email = get_user_email($userid);
+    $price = $_POST['mc_gross'];
+    $projectid =  $_POST['option_selection1'];
+    $userid =  $_POST['option_selection2'];
+    $name =  $_POST['first_name'] . " " . $_POST['last_name'];
+    $email = get_user_email($userid);
 
-
+    file_put_contents("log.txt", "--------------NEW PAYMENT--------------"  ."\r\n\r\n", FILE_APPEND);
     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price  ."\r\n\r\n", FILE_APPEND);
     updateCurrentPrice($projectid,$price);
 
-    $mail = new PHPMailer(true);
-
-    $mail ->addrAppend("urbanfund85@gmail.com","URBAN FUND");
+    $mail = new PHPMailer();
+    $mail->setFrom("urbanfund85@gmail.com","URBAN FUND");
     $mail->addAddress($email, $name);
     $mail->isHTML(true);
     $mail->Subject = "תודה, תרומך לפרויקט התקבלה בהצלחה";
@@ -86,7 +85,7 @@ if($response=="VERIFIED")
     ";
     $mail->send();
    
-    file_put_contents('log.txt', 'Message has been sent' . '\r\n', FILE_APPEND);
+    file_put_contents('log.txt', '*****Message has been sent*****' . '\r\n', FILE_APPEND);
 
  
 
