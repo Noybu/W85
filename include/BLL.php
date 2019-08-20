@@ -170,6 +170,19 @@ function getProjectByUser($id)
    return $oopProject;
 }
 
+function getFundsByUser($id){
+    $sql= "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects as p INNER JOIN bids as b WHERE b.serviceid=$id AND b.win=1 ";
+    $dbFunds = select($sql);
+    if($dbFunds==null)
+    {
+        return null;
+    }
+    foreach ($dbFunds as $P) {
+        $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+       }
+       return $oopProject;
+}
+
 function getStatusBarColors($status , $num){
     switch($status){
         case 0:

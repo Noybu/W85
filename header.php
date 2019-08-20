@@ -36,11 +36,19 @@
         </li>
         <li class="nav-item">
               <a class="nav-link navA" href="newProject.php">הוספת פרויקט</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link navA" href="MyProjects.php">הפרויקטים שלי</a>
-            </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navA" href="MyProjects.php">הפרויקטים שלי</a>
+        </li>
         <?php
+          if(isset($_SESSION["userID"]) && get_user_type($_SESSION["userID"]) == 2 && getServiceApproved($_SESSION["userID"] == 1))
+          {
+            ?>
+        <li class="nav-item">
+          <a class="nav-link navA" href="MyFunds.php">המכרזים שלי</a>
+        </li>
+        <?php
+          }
           if(!isset($_SESSION["userID"])){
             ?>
             <li class="nav-item">
