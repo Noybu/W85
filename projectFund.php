@@ -242,8 +242,11 @@ include_once("header.php"); ?>
 
                     <script>
                         $(':radio').change(function() {
-                            <?php $star = "<script>document.write(this.value)</script>"?>  
-                            <?php insertRate($projectid,$userid, $star);?>
+                            $star=0;
+                            <?php $star = "<script>document.write(this.value)</script>" ;
+                            if($star!=0){
+                                insertRate($projectid,$userid, $star);?>
+                            }
                     });
                         </script>
                     </div>
