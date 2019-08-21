@@ -69,17 +69,7 @@ include_once("header.php"); ?>
 
                     ?>
                     <div style="clear:both;">
-                    <?php
-                     if($arrProjects[0]->projectstatus == 2)
-                     {
-                         ?>
-
-                        <button id="buttonFund"><a href=#>להשקעה</a></button>
-
-                        <?php
-                     }
-                     ?>
-
+                   
                     </div>
                     <?php
                     }
