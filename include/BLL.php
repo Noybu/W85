@@ -18,11 +18,11 @@ function addProject($userID, $projectType, $description, $locCity, $locStreet, $
 function getAllProjects()
 {
    
-    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectstatus<>'10'";
+    $sql = "SELECT * FROM projects WHERE projectstatus<>'10'";
     $dbProjects = select($sql);
 
    foreach ($dbProjects as $P) {
-       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid );
+       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid, $P->peoples );
    }
 
     return $oopProjects;
@@ -49,7 +49,7 @@ function getAllNewProjects()
 function getAllBidProjects()
 {
    
-    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectstatus=1";
+    $sql = "SELECT * FROM projects WHERE projectstatus=1";
     $dbProjects = select($sql);
 
     if($dbProjects==null)
@@ -58,7 +58,7 @@ function getAllBidProjects()
     }
 
    foreach ($dbProjects as $P) {
-       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+       $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid, $P->peoples);
    }
 
     return $oopProjects;
@@ -155,24 +155,24 @@ function getStatusColor($num){
 
 function getProjectById($id)
 {
-    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectid='$id'";
+    $sql = "SELECT * FROM projects WHERE projectid='$id'";
     $dbProjects = select($sql);
 
    foreach ($dbProjects as $P) {
-    $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+    $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid, $P->peoples);
    }
    return $oopProject;
 }
 
 function getProjectByUser($id)
 {
-    $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE userid='$id'";
+    $sql = "SELECT * FROM projects WHERE userid='$id'";
     $dbProjects = select($sql);
     if($dbProjects == null)
         return null;
 
    foreach ($dbProjects as $P) {
-    $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+    $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid, $P->peoples);
    }
    return $oopProject;
 }
@@ -185,10 +185,27 @@ function getFundsByUser($id){
         return null;
     }
     foreach ($dbFunds as $P) {
-        $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
+        $oopProject[]=new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid, $P->peoples);
     }
     return $oopProject;
 }
+
+function checkIfFundDone($projectId)
+{
+    $sql = "SELECT * FROM projects WHERE projectid='$projectId'";
+    $dbProjects = select($sql);
+
+    $left = $dbProjects[0]->projectcost-$dbProjects[0]->projectcurrentprice;
+
+    if($left<=0)
+    {
+        updateProjectStatus($projectId,3);
+
+    }
+
+}
+
+
 
 function getStatusBarColors($status , $num){
     switch($status){
@@ -270,6 +287,20 @@ function updateProjectStatus($projectID, $status)
 
     $sql = "UPDATE projects SET projectstatus='$status' where projectid ='$projectID'";
     update($sql);
+}
+
+function updateNumOfFundPeople($projectId)
+{
+    $sql = "SELECT peoples FROM projects WHERE projectid='$projectId'";
+    $dbProjects = select($sql);
+
+    $count = $dbProjects[0]->peoples;
+    $count=$count+1;
+
+    $sql2 = "UPDATE projects SET peoples='$count' where projectid ='$projectId'";
+    update($sql2);
+
+
 }
 
 function updateCurrentPrice($projectID, $price)

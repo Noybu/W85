@@ -13,10 +13,11 @@ class Project
     public $projectcurrentprice;
     public $userid;
     public $projectid;
+    public $peoples;
 
 
 
-    public function __construct($projecttype, $description, $loccity, $locstreet, $locnum, $projectstatus,$projectcost, $projectcurrentprice, $userid, $projectid)
+    public function __construct($projecttype, $description, $loccity, $locstreet, $locnum, $projectstatus,$projectcost, $projectcurrentprice, $userid, $projectid, $peoples)
     {
         $this->projecttype = $projecttype;
         $this->description = $description;
@@ -28,6 +29,7 @@ class Project
         $this->projectcurrentprice = $projectcurrentprice;
         $this->userid = $userid;
         $this->projectid=$projectid;
+       $this->peoples=$peoples;
     }
 
 

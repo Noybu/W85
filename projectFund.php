@@ -45,14 +45,21 @@ include_once("header.php"); ?>
                         <b>
                             <p>כמה כבר תרמו?</p>
                         </b>
-                        <p style="margin-top: -17px;">100 אנשים</p>
+                        <p style="margin-top: -17px;"><?php echo $arrProjects[0]->peoples; ?> אנשים</p>
                     </div>
                     <div class="pictureCard2">
                         <img src="images/count_price.png">
                         <b>
                             <p>כמה נשאר?</p>
                         </b>
-                        <p style="margin-top: -17px;"><?php echo $arrProjects[0]->projectcost-$arrProjects[0]->projectcurrentprice?><i class="fas fa-shekel-sign"></i></p>
+                        <?php
+                            $left = $arrProjects[0]->projectcost-$arrProjects[0]->projectcurrentprice;
+
+                            if($left<0)
+                                 $left=0;
+                        ?>
+
+                        <p style="margin-top: -17px;"><?php echo $left; ?><i class="fas fa-shekel-sign"></i></p>
                     </div>
                     <?php
                       if(isset($_SESSION["userID"])){

@@ -66,6 +66,8 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
 
     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price  ."\r\n\r\n", FILE_APPEND);
     updateCurrentPrice($projectid,$price);
+    checkIfFundDone($projectid);
+    updateNumOfFundPeople($projectid);
 
     $mail = new PHPMailer();
     $mail->setFrom("urbanfund85@gmail.com","URBAN FUND");
