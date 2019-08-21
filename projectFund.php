@@ -1,8 +1,4 @@
 <?php
-//require_once("/include/addPayment.php");
-//$paypal = new paypal();
-
-//use NSL\Persistent\Storage\Session;
 
 include_once("header.php"); ?>
 <link rel="stylesheet" type="text/css" href="CSS\projectFund.css">
@@ -207,13 +203,14 @@ include_once("header.php"); ?>
                                 else
                                 {
                                     ?>
-                                    <p>הדירוג הממוצע עד כה :</p>
+                                    <p>הדירוג הממוצע עד כה :
                                     <?php
                                     for($i=0; $i<$avg;$i++){
 
                                     
                                 ?>
                                     <span class="icon" style="color:red;">★</span>  
+                                    </p>
                                 <?php
                                     }
                                 }

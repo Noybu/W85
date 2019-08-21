@@ -14,9 +14,15 @@ function addProject($userID, $projectType, $description, $locCity, $locStreet, $
     insert($sql);
 }
 
-function insertRate($projectid, $userid,$rate){
-    $sql = "INSERT INTO rates (rate, projectid, userid) VALUES ('$rate', '$projectid','$userid')";
-    insert($sql);
+function insertRate($projectid, $userid,$rate)
+{
+    $ifUserRate=checkIfUserRate($userid,$projectid);
+    if($ifUserRate==0){
+        $sql = "INSERT INTO rates (rate, projectid, userid) VALUES ('$rate', '$projectid','$userid')";
+        insert($sql);
+    }
+
+    
 }
 
 function getAvgRate($projectid){
