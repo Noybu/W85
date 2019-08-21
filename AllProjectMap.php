@@ -78,7 +78,7 @@
                         var marker = new google.maps.Marker({
                         map: resultsMap,
                         position: results[0].geometry.location,
-                        icon: icons["t1"].icon
+                        icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon
                         });
 
                         
