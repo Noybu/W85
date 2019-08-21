@@ -52,6 +52,11 @@ function getAllBidProjects()
     $sql = "SELECT projecttype, description , loccity, locstreet , locnum, projectstatus,projectcost, projectcurrentprice, userid, projectid FROM projects WHERE projectstatus=1";
     $dbProjects = select($sql);
 
+    if($dbProjects==null)
+    {
+        return null;
+    }
+
    foreach ($dbProjects as $P) {
        $oopProjects[] = new Project($P->projecttype, $P->description , $P->loccity, $P->locstreet , $P->locnum, $P->projectstatus, $P->projectcost, $P->projectcurrentprice, $P->userid, $P->projectid);
    }
