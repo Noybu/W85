@@ -59,10 +59,12 @@ function getUserRate($userid,$projectid){
 
 function getAddress($projectid)
 {
+    
     $sql="SELECT loccity, locstreet, locnum FROM projects WHERE projectid='$projectid'";
-    $arrProjects=select($sql);
+   
+    $dba=select($sql);
 
-    return $arrProjects[0]->loccity;
+    return $dba[0]->loccity;
     //.','.$arrProjects[0]->locstreet.' '.$arrProjects[0]->locnum;
 
   
