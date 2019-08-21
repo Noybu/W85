@@ -11,25 +11,7 @@
 <div id="map" style="width:100vw; height:73vh; margin: 0 auto;"></div>
 </section>
 </main>
-
-
-<script>alert(addressToLocation('תל-אביב')); </script>
-    
-   
-    
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&callback=initiateMap"
-async defer></script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&callback=initiateMap"
-async defer></script>
-
 <script>
-    function initiateMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 0, lng: 0},
-        zoom: 8
-    });
-//    
 
 function addressToLocation(address) {
 
@@ -75,6 +57,28 @@ geocoder.geocode(
 );
 
 }
+
+</script>
+
+<script>
+alert(addressToLocation('תל+אביב,רוטשילד+,ישראל'));
+ </script>
+    
+   
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&callback=initiateMap"
+async defer></script>
+
+
+<script>
+    function initiateMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 0, lng: 0},
+        zoom: 8
+    });
+//    
+
+
 
     var locations = [
                         [, 74.3572],
