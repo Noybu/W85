@@ -44,6 +44,23 @@
         var geocoder = new google.maps.Geocoder();
 
         
+        var icons={
+          1:{
+              icon:'https://img.icons8.com/ios-filled/50/000000/city-bench.png'
+          },
+          2:{
+              icon:'https://img.icons8.com/ios/50/000000/playground.png'
+          },
+          3:{
+              icon:'https://img.icons8.com/wired/64/000000/trash.png'
+          },
+          4:{
+              icon:'https://img.icons8.com/material/24/000000/bike-path--v2.png'
+          },
+          5:{
+              icon:'https://img.icons8.com/ios-filled/50/000000/street-lamp.png'
+          }
+        };
           geocodeAddress(geocoder, map);
      
     }
@@ -51,9 +68,6 @@
       function geocodeAddress(geocoder, resultsMap) {
         //document.getElementById('address').value;
         //var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
-
-
-
             <?php
                 for($j=0;$j<sizeof($address);$j++)
                 {
@@ -64,14 +78,11 @@
                         resultsMap.setCenter(results[0].geometry.location);
                         var marker = new google.maps.Marker({
                         map: resultsMap,
-                        position: results[0].geometry.location
+                        position: results[0].geometry.location,
+                        icon: icons[<?php echo $arrProjects[$j]->projecttype;?>].icon;
                         });
 
-
-
-                        //console.log(results[0].geometry.location.lat());
-                    // console.log(results[0].geometry.location.lng());
-                    } 
+                        
                     
                     else 
                     {
