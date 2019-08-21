@@ -52,34 +52,34 @@
         //document.getElementById('address').value;
         //var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
 
-        alert(<?php echo $address[0]; ?>);
+        alert(<?php echo $GLOBALS['address']; ?>);
 
 
             <?php
                 for($j=0;$j<sizeof($address);$j++)
                 {
            ?>
-            geocoder.geocode({'address': <?php echo$address[$j]; ?>}, function(results, status) {
-            if (status === 'OK') {
-                resultsMap.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                map: resultsMap,
-                position: results[0].geometry.location
-                });
+                    geocoder.geocode({'address': <?php echo $address[$j]; ?>}, function(results, status) {
+                    if (status === 'OK') {
+                        resultsMap.setCenter(results[0].geometry.location);
+                        var marker = new google.maps.Marker({
+                        map: resultsMap,
+                        position: results[0].geometry.location
+                        });
 
 
 
-                //console.log(results[0].geometry.location.lat());
-            // console.log(results[0].geometry.location.lng());
-            } 
-            
-            else 
-            {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
-            });
-            <?php
-        }
+                        //console.log(results[0].geometry.location.lat());
+                    // console.log(results[0].geometry.location.lng());
+                    } 
+                    
+                    else 
+                    {
+                        alert('Geocode was not successful for the following reason: ' + status);
+                    }
+                    });
+                    <?php
+                  }
         ?>
       }
     </script>
