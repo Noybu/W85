@@ -12,7 +12,7 @@ function geocode($address){
     $address = urlencode($address);
      
     // google map geocode api url
-    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$address}&key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE";
+    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={". $address ."}&key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE";
  
     // get the json response
     $resp_json = file_get_contents($url);
