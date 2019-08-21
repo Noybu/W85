@@ -45,19 +45,19 @@
 
         
         var icons={
-          1:{
+          t1 : {
               icon:'https://img.icons8.com/ios-filled/50/000000/city-bench.png'
           },
-          2:{
+          t2 : { 
               icon:'https://img.icons8.com/ios/50/000000/playground.png'
           },
-          3:{
+          t3 : {
               icon:'https://img.icons8.com/wired/64/000000/trash.png'
           },
-          4:{
+          t4 : {
               icon:'https://img.icons8.com/material/24/000000/bike-path--v2.png'
           },
-          5:{
+          t5 : {
               icon:'https://img.icons8.com/ios-filled/50/000000/street-lamp.png'
           }
         };
@@ -79,7 +79,7 @@
                         var marker = new google.maps.Marker({
                         map: resultsMap,
                         position: results[0].geometry.location,
-                        icon: icons[<?php echo $arrProjects[$j]->projecttype;?>].icon
+                        icon: icons[1].icon
                         });
 
                         
@@ -99,9 +99,4 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&callback=initiateMap"
 async defer></script>
-
-
-        
-
-
 <?php include_once("footer.php"); ?>
