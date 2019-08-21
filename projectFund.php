@@ -125,8 +125,15 @@ include_once("header.php"); ?>
                         <?php
                          }
                      }
+                     if($arrProjects[0]->projectstatus == 2){
                          ?>
-                        <a class="nav-item nav-link <?php if($flag==0){ echo 'active';} ?>" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="<?php if($flag==0){ echo 'true';}else {echo 'false';} ?>">דירוג הפרויקט</a>
+                         
+                         
+                            <a class="nav-item nav-link <?php if($flag==0){ echo 'active';} ?>" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="<?php if($flag==0){ echo 'true';}else {echo 'false';} ?>">דירוג הפרויקט</a>
+                            <?php
+                        }
+                         ?>
+                        
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
                     </div>
                 </nav>
