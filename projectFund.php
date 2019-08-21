@@ -77,40 +77,53 @@ include_once("header.php"); ?>
         <?php
         if(isset($_SESSION["userID"])){
 
+            $flag=0;
+
             ?>
         <div class="row sm">
             <section class="tabs">
                 <nav>
                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                     <?php
+                 if($arrProjects[0]->projectstatus == 2)
+                         {
+                            $flag=1;
+                             ?>
                  <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-updates" role="tab" aria-controls="nav-updates" aria-selected="true">השקעה בפרויקט</a>
-                    <?php
+                   <?php
+                    }
+                    ?>
+                   <?php
                      $type=get_user_type($_SESSION["userID"]);
                      if($type==2)
                      {
                          $approved=getServiceApproved($_SESSION["userID"]);
-                         if($approved==1)
+                         if($approved==1 && $arrProjects[0]->projectstatus == 1)
                          {
+                            $flag=1;
                              ?>
                             <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">הרשמה למכרז</a>
                         <?php
                          }
                      }
                          ?>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">דירוג הפרויקט</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="<?php if($flag==0){ echo 'true';}else {echo 'false';} ?>">דירוג הפרויקט</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
+
+                <?php
+                 if($arrProjects[0]->projectstatus == 2)
+                         {
+                             ?>
                 <div class="tab-pane fade show active" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab">
-                        
-                
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                <input type="text" name="amount" value="60.00">
                 <input type="hidden" name="cmd" value="_xclick">
                 <input type="hidden" name="business" value="3YME47AUPJNWN">
                 <input type="hidden" name="lc" value="IL">
-                <input type="hidden" name="item_name" value="URBANF">
-               
+                <input type="hidden" name="item_name" value="URBANF"> 
                 <input type="hidden" name="currency_code" value="ILS">
                 <input type="hidden" name="button_subtype" value="services">
                 <input type="hidden" name="no_note" value="1">
@@ -128,23 +141,13 @@ include_once("header.php"); ?>
                 <img alt="" border="0" src="https://www.paypalobjects.com/he_IL/i/scr/pixel.gif" width="1" height="1">
                 
                 </form>
+                </div>
 
- 
-                
-                <form action="include/addPayment.php" method="POST">
-                            <div>
-                                <p>סכום להשקעה</p>
-                                <input type="number" required name="price">
-                            </div>
-                            <div>
-                                <input type="submit"  name="submit" value="שלח">
-                            </div>
-                            <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
-                        </form>
-
-                    </div>
                 <?php
-                        if($approved==1)
+                         }
+                         ?>
+                <?php
+                        if($approved==1 && $arrProjects[0]->projectstatus == 1)
                         {
                             ?>
                             <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
@@ -168,23 +171,51 @@ include_once("header.php"); ?>
                         }
                    ?>
                     
-                    <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
-                        <p>33333</p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
+                    <div class="tab-pane fade <?php if($flag==0){ echo 'show active';} ?>" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+                        <p>דרגו את הפרויקט לפי שביעות רצונכם</p>
+                        <form class="rating">
+                            <label>
+                                <input type="radio" name="stars" value="1" />
+                                <span class="icon">★</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="stars" value="2" />
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="stars" value="3" />
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>   
+                            </label>
+                            <label>
+                                <input type="radio" name="stars" value="4" />
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="stars" value="5" />
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                                <span class="icon">★</span>
+                            </label>
+                            </form>
+
+                    <script>
+                        jQuery(':radio').change(function() {
+                    console.log('New star rating: ' + this.value);
+                    });
+                        </script>
                     </div>
                     <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
-                        <p>4444444 </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
-                        <p>dgfdgdgdgdg dfdfd dfdf </p>
+                        <p>צילמתם תמונות של הפרויקט ? מוזמנים לשתף </p>
+                        
+
                     </div>
                 </div>
             </section>
