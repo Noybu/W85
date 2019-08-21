@@ -245,6 +245,7 @@ include_once("header.php"); ?>
                             <?php $star = "<script>document.write(this.value)</script>" ;
                             insertRate($projectid,$userid, 4);
                             ?>
+                            console.log(this.value);
                     });
                     </script>
                     </div>
