@@ -9,7 +9,8 @@
     <?php
     require_once'../include/BLL.php';
     session_start();
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit']))
+    {
       $count=is_user_exist($_POST["userID"],$_POST["password"]);
       if($count>0)
       {
@@ -21,9 +22,10 @@
             
         else{
             ?>
-
-                <p style="font-size:18px; font-weight:bold;"> אין לך הרשאה להכנס למערכת</p>
-                <a href="http://noybu.mtacloud.co.il/W85/">לחץ כאן לחזור למערכת</a>
+                <div style="text-align:right;">
+                    <p style="font-size:18px; font-weight:bold;"> אין לך הרשאה להכנס למערכת</p>
+                    <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור למערכת</a>
+                </div>
             <?php
 
         }
@@ -33,7 +35,7 @@
    ?>
     
   </head> 
-  <body>
+  <body style="background-size:cover; background-image:url('images/bgadmin.jpg');">
     <main id="mainLogin">
         <div>
             <div>
