@@ -12,8 +12,9 @@
 
 for($i=0;$i<sizeof($arrProjects);$i++)
 {
-    $arrAddress[$i]=getAddress($arrProjects[$i]);
-    echo $arrAddress[$i];
+    
+    array_push($arrAddress,getAddress($arrProjects[$i]));
+    echo $arrAddress;
 }
 
 
