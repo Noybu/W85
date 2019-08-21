@@ -8,7 +8,7 @@ aside .component{
     height:12%;
     padding-top:7%;
 }
-main{
+.main{
     width:78%;
     height: 100vh;
     float:right;
@@ -109,7 +109,6 @@ table button{
 }
 
 #mainLogin{
-    background-color: #f5f5f5;
     direction: rtl;
     width: 100%;
     

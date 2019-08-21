@@ -11,7 +11,7 @@
   </head> 
   <body>
   <?php include_once("side-bar.php"); ?>
-    <main>
+    <main class="main">
         <p>ברוך הבא לאתר!!!!!</p>
     </main>
     

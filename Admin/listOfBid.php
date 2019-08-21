@@ -11,7 +11,7 @@
   </head> 
   <body>
   <?php include_once("side-bar.php"); ?>
-    <main>
+    <main class="main">
         <h1>מכרזים פתוחים</h1>
         <?php include_once("../include/BLL.php"); ?>
                 <?php
