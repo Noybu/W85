@@ -206,6 +206,9 @@ include_once("header.php"); ?>
                                 }
                                 else
                                 {
+                                    ?>
+                                    <p>הדירוג הממוצע עד כה :</p>
+                                    <?php
                                     for($i=0; $i<$avg;$i++){
 
                                     
@@ -215,12 +218,12 @@ include_once("header.php"); ?>
                                     }
                                 }
                                 $user=checkIfUserRate($userid,$projectid);
-                                if($user>0){
+                                if($user==1){
                                     ?>
                                     <p>הדירוג שלך לפרויקט זה הוא : <?php echo getUserRate($userid,$projectid);?></p>
                                 <?php
                                 }
-                                else{
+                                if($user==0){
                                 ?>
                                      <form class="rating" method="GET" action="projectFund.php">
                             <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
