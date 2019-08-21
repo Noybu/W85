@@ -15,6 +15,7 @@
       if($count>0)
       {
         $_SESSION["userID"]=$_POST["userID"];
+        $_SESSION["firstName"]=get_user_name($_POST["userID"]);
         $_SESSION["type"]=get_user_type($_POST["userID"]);
         if($_SESSION["type"] == 3){
             header("Location:index.php");
