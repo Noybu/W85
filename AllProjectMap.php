@@ -5,11 +5,18 @@
        
     $arrProjects=Array();
     $arrProjects=getAllProjects();
+    $address = Array();
+    for($i=0;$i<sizeof($arrProjects);$i++)
+    {
+        $tempAdress=$arrProjects[$i]->loccity. ',' . $arrProjects[$i]->locstreet .' ' . $arrProjects[$i]->locnum;
+        array_push($address,$tempAdress);
 
 
+    }
+
+    print_r($address);
 
 
-    print_r($arrProjects);
 
 
 
