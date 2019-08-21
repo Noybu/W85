@@ -52,6 +52,8 @@
         //document.getElementById('address').value;
         //var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
 
+        alert(<?php echo $address[0]; ?>);
+
 
             <?php
                 for($j=0;$j<sizeof($address);$j++)
