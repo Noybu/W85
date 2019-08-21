@@ -48,7 +48,7 @@
     }
 
       function geocodeAddress(geocoder, resultsMap) {
-        var icons={
+        var icons=[
           t1 : {
               icon:'https://img.icons8.com/ios-filled/50/000000/city-bench.png'
           },
@@ -64,7 +64,7 @@
           t5 : {
               icon:'https://img.icons8.com/ios-filled/50/000000/street-lamp.png'
           }
-        };
+        ];
         //document.getElementById('address').value;
         //var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
             <?php
@@ -78,7 +78,7 @@
                         var marker = new google.maps.Marker({
                         map: resultsMap,
                         position: results[0].geometry.location,
-                        icon: 'https://img.icons8.com/ios-filled/50/000000/street-lamp.png'
+                        icon: icons[1].icon;
                         });
 
                         
