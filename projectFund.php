@@ -206,9 +206,13 @@ include_once("header.php"); ?>
                                 }
                                 else
                                 {
+                                    for($i=0; $i<$avg;$i++){
+
+                                    
                                 ?>
-                                  <p><?php echo $avg; ?></p>  
+                                  <p style="color:yellow;"><i class="fas fa-star"></i></p>  
                                 <?php
+                                    }
                                 }
                             ?>
                         </p>

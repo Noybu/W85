@@ -32,7 +32,7 @@ function getAvgRate($projectid){
        $sum =+ $dbRates[$i]->rate;
     }
     $avg=$sum/$countPeoples;
-    return $avg;
+    return ceil($avg);
 }
 
 function getAllProjects()
