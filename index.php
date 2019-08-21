@@ -71,8 +71,10 @@
                             <h3><?php echo getProjectType($arrProjects[$i]->projecttype); ?></h3>
                             <div class="<?php echo getStatusColor($arrProjects[$i]->projectstatus); ?> status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
                             <p><?php echo $arrProjects[$i]->description; ?></p>
+                            <p><?php echo 'עיר: ' .$arrProjects[$i]->loccity; ?></p>
+                            <p><?php echo 'רחוב: ' .$arrProjects[$i]->locstreet; ?></p>
                             <?php $id = $arrProjects[$i]->projectid; ?>
-                            <button onclick="window.location.assign('projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>')">לצפייה</button>
+                            <button class="actionButton" onclick="window.location.assign('projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>')">לצפייה בפרויקט</button>
                             <div class="bar">
                                 <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost; ?><i class="fas fa-shekel-sign"></i></p>
                                 <div id="mainBar">
