@@ -14,7 +14,6 @@
     session_start();
     if(isset($_POST['submit'])){
       $count=is_user_exist($_POST["userID"],$_POST["password"]);
-      echo "$count";
       if($count>0)
       {
         $_SESSION["userID"]=$_POST["userID"];
