@@ -79,7 +79,7 @@
                         map: resultsMap,
                         position: results[0].geometry.location,
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
-                        title: <?php echo getProjectType($arrProjects[$j]->projecttype); ?>
+                        title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
 
                         
