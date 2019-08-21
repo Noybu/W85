@@ -8,14 +8,9 @@
 
 
 
-    $arrAddress=Array();
 
-for($i=0;$i<sizeof($arrProjects);$i++)
-{
-    
-    array_push($arrAddress,getAddress($arrProjects[$i]));
-    echo $arrAddress;
-}
+    print_r($arrProjects);
+
 
 
     
