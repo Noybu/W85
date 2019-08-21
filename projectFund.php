@@ -210,13 +210,18 @@ include_once("header.php"); ?>
 
                                     
                                 ?>
-                                  <p style="color:yellow;"><i class="fas fa-star"></i></p>  
+                                    <span class="icon" style="color:yellow;">★</span>  
                                 <?php
                                     }
                                 }
-                            ?>
-                        </p>
-                        <form class="rating" method="GET" action="projectFund.php">
+                                if(checkIfUserRate($userid,$projectid)>0){
+                                    ?>
+                                    <p>הדירוג שלך לפרויקט זה הוא : <?php echo getUserRate($userid,$projectid);?></p>
+                                <?php
+                                }
+                                else{
+                                ?>
+                                     <form class="rating" method="GET" action="projectFund.php">
                             <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
                             <label>
                                 <input type="radio" name="stars" value="1" onchange="this.form.submit()"/>
@@ -249,6 +254,11 @@ include_once("header.php"); ?>
                                 <span class="icon">★</span>
                             </label>
                             </form>
+                                    <?php
+                                }
+                            ?>
+
+                       
                     </div>
                     <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
                         <p>צילמתם תמונות של הפרויקט ? מוזמנים לשתף </p>
