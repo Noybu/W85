@@ -72,6 +72,7 @@
                         {
                             ?>
                             <p>ממתין למימון</p>
+                        <?php
                         }
                        ?>
                         <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;width:50%;"><p>לצפייה<i class="far fa-eye"></i></p></a>
