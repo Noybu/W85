@@ -9,24 +9,29 @@ $type = $_REQUEST["type"];
 switch ($type) {
 
     case "serviceman":
-        {
-            updateServiceManApproved($_GET['serviceid'],$_GET['status']);
-            header("Location: ../Admin/listOfService.php");
-            break;
-        }
+    {
+        updateServiceManApproved($_GET['serviceid'],$_GET['status']);
+        header("Location: ../Admin/listOfService.php");
+        break;
+    }
     case "project":
-        {
-            updateProjectStatus($_GET['id'],$_GET['status']);
-            header("Location: ../Admin/listOfProjects.php");
-            break;
-        }
+    {
+        updateProjectStatus($_GET['id'],$_GET['status']);
+        header("Location: ../Admin/listOfProjects.php");
+        break;
+    }
     case "winbid":
-        {
-            updateServiceManBid($_GET['serviceid'],$_GET['status'],$_GET['projectid']);
-            updateProjectStatus($_GET['projectid'],2);
-            header("Location: ../Admin/listOfBid.php");
-            break;
-        }
+    {
+        updateServiceManBid($_GET['serviceid'],$_GET['status'],$_GET['projectid']);
+        updateProjectStatus($_GET['projectid'],2);
+        header("Location: ../Admin/listOfBid.php");
+        break;
+    }
+    case "doneProject":
+    {
+        updateProjectStatus($_GET['projectid'],4);
+        header("Location:myBids.php.php");
+    }
         
 
 

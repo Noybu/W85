@@ -50,7 +50,7 @@ include_once("include/BLL.php");
                 {
               ?> 
                   <li class="nav-item">
-                    <a class="nav-link navA" href="MyFunds.php">המכרזים שלי</a>
+                    <a class="nav-link navA" href="myBids.php">המכרזים שלי</a>
                   </li>
         <?php
                 }
