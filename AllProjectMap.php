@@ -14,7 +14,6 @@
 
     }
 
-    print_r($address);
 
 
 
@@ -51,13 +50,14 @@
 
       function geocodeAddress(geocoder, resultsMap) {
         //document.getElementById('address').value;
-        var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
+        //var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
 
 
-
-        for(var i=0;i<2;i++)
-        {
-            geocoder.geocode({'address': address[i]}, function(results, status) {
+            <?php
+                for($j=0;$j<sizeof($address);$j++)
+                {
+           ?>
+            geocoder.geocode({'address': <?php echo$address[$j]; ?>}, function(results, status) {
             if (status === 'OK') {
                 resultsMap.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
@@ -76,7 +76,9 @@
                 alert('Geocode was not successful for the following reason: ' + status);
             }
             });
+            <?php
         }
+        ?>
       }
     </script>
 
