@@ -21,7 +21,9 @@
             
         else{
             ?>
-                <p> אין לך הרשאה להכנס למערכת</p>
+
+                <p style="font-size:18px; font-weight:bold;"> אין לך הרשאה להכנס למערכת</p>
+                <a href="http://noybu.mtacloud.co.il/W85/">לחץ כאן לחזור למערכת</a>
             <?php
 
         }
