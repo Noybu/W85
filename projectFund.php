@@ -241,8 +241,9 @@ include_once("header.php"); ?>
                             </form>
 
                     <script>
+                        <?php $stars=this.value?>
                         $(':radio').change(function() {
-                            insertRate($projectid,$userid, this.value);
+                            <?php insertRate($projectid,$userid, $stars);?>
                     });
                         </script>
                     </div>
