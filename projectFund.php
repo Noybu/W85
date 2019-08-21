@@ -100,14 +100,14 @@ include_once("header.php"); ?>
                          $approved=getServiceApproved($_SESSION["userID"]);
                          if($approved==1 && $arrProjects[0]->projectstatus == 1)
                          {
-                            $flag=1;
+                            $flag=2;
                              ?>
-                            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">הרשמה למכרז</a>
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">הרשמה למכרז</a>
                         <?php
                          }
                      }
                          ?>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="<?php if($flag==0){ echo 'true';}else {echo 'false';} ?>">דירוג הפרויקט</a>
+                        <a class="nav-item nav-link <?php if($flag==0){ echo 'active';} ?>" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="<?php if($flag==0){ echo 'true';}else {echo 'false';} ?>">דירוג הפרויקט</a>
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
                     </div>
                 </nav>
@@ -150,7 +150,7 @@ include_once("header.php"); ?>
                         if($approved==1 && $arrProjects[0]->projectstatus == 1)
                         {
                             ?>
-                            <div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                            <div class="tab-pane fade <?php if($flag==2){ echo 'show active';} ?>" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
                             <form action="include/register-bid.php" method="POST">
                                 <div>
                                     <p>הצעת מחיר</p>
