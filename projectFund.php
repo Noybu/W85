@@ -14,7 +14,12 @@ include_once("header.php"); ?>
         $arrProjects=Array();
         $arrProjects=getProjectById($projectid);
         $userid=$_GET['projectid'];
+        if($_GET['stars'])
+        {
+            insertRate($projectid,$userid, $_GET['stars']);
+        }
     }
+    
 ?>
 
 <main>
@@ -207,31 +212,31 @@ include_once("header.php"); ?>
                                 }
                             ?>
                         </p>
-                        <form class="rating">
+                        <form class="rating" method="GET" action="">
                             <label>
-                                <input type="radio" name="stars" value="1" />
+                                <input type="radio" name="stars" value="1" onchange="this.form.submit()"/>
                                 <span class="icon">★</span>
                             </label>
                             <label>
-                                <input type="radio" name="stars" value="2" />
+                                <input type="radio" name="stars" value="2" onchange="this.form.submit()"/>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                             </label>
                             <label>
-                                <input type="radio" name="stars" value="3" />
+                                <input type="radio" name="stars" value="3" onchange="this.form.submit()"/>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>   
                             </label>
                             <label>
-                                <input type="radio" name="stars" value="4" />
+                                <input type="radio" name="stars" value="4" onchange="this.form.submit()"/>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                             </label>
                             <label>
-                                <input type="radio" name="stars" value="5" />
+                                <input type="radio" name="stars" value="5" onchange="this.form.submit()"/>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
@@ -239,16 +244,6 @@ include_once("header.php"); ?>
                                 <span class="icon">★</span>
                             </label>
                             </form>
-
-                    <script>
-                        $(':radio').change(function() {
-                            console.log(this.value);
-                            <?php echo "<script>document.write(this.value)</script>" ;
-                           // insertRate($projectid,$userid, 4);
-                            ?>
-                           
-                        });
-                    </script>
                     </div>
                     <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
                         <p>צילמתם תמונות של הפרויקט ? מוזמנים לשתף </p>
