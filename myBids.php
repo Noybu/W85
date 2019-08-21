@@ -59,22 +59,11 @@
                     </div>
                     </div>
                     <div id="cardFooter">
-                        <p id="share">שיתוף:</p>
-                        <a href="https://api.whatsapp.com/send?text=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid%3D<?php echo $arrProjects[$i]->projectid; ?>">
-                            <p class="icon" id="whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            </p>
-                        </a>
-                        <a href="http://www.facebook.com/sharer.php?u=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid%3D<?php echo $arrProjects[$i]->projectid; ?>">
-                            <p class="icon" id="facebook">
-                            <i class="fab fa-facebook-square"></i>
-                            </p>
-                        </a>
                         
-                        <button class="icon" onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrProjects[$i]->projectid; ?>" style="color:green; width:20%;"><i class="far fa-thumbs-up"></i>
+                        <button class="icon" onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrProjects[$i]->projectid; ?>" style="color:green; width:50%; height:10%;"><i class="far fa-thumbs-up"></i>
                             לאישור ביצוע
                         </button>
-                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;width:40%;"><p id="view">לצפייה<i class="far fa-eye"></i></p></a>
+                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;width:50%;"><p id="view">לצפייה<i class="far fa-eye"></i></p></a>
                     </div>
                 </div>
             </div>
