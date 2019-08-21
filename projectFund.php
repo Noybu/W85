@@ -125,7 +125,7 @@ include_once("header.php"); ?>
                         <?php
                          }
                      }
-                     if($arrProjects[0]->projectstatus == 2){
+                     if($arrProjects[0]->projectstatus == 4){
                          ?>
                          
                          
