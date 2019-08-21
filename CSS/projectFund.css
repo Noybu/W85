@@ -78,6 +78,11 @@ a:hover{
 	direction: ltr;	
 }
 
+.descriptionproject
+{
+    min-height: 150px;
+}
+
 .pictureCard2{
     float:right;
     margin-top:1vh;
@@ -122,14 +127,27 @@ a:hover{
 
 .nav-tabs .nav-link.active
 {
-    background-color: rgb(147, 142, 142,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
 }
+
+.nav-tabs .nav-link:hover
+{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+}
+
 
 .fade
 {
-    background-color: rgb(147, 142, 142,0.2); 
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 50px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
 }
 
 .nav-tabs

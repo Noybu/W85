@@ -30,7 +30,7 @@ include_once("header.php"); ?>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                     <h3><?php echo getProjectType($arrProjects[0]->projecttype);?></h3>
-                    <p><?php echo $arrProjects[0]->description; ?></p>
+                    <p class="descriptionproject"><?php echo $arrProjects[0]->description; ?></p>
                     <div class="bar2">
                         <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                         <div id="mainBar2">
