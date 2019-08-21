@@ -209,18 +209,20 @@ include_once("header.php"); ?>
 
                                     
                                 ?>
-                                    <span class="icon" style="color:red;">★</span>  
+                                    <span class="icon" style="color:red;font-size:50px;">★</span>  
                                     </p>
                                 <?php
                                     }
                                 }
                                 $user=checkIfUserRate($userid,$projectid);
-                                if($user==1){
-                                    ?>
+                                if($user==1)
+                                {
+                                ?>
                                     <p>הדירוג שלך לפרויקט זה הוא : <?php echo getUserRate($userid,$projectid);?></p>
                                 <?php
                                 }
-                                if($user==0){
+                                else
+                                {
                                 ?>
                                      <form class="rating" method="GET" action="projectFund.php">
                             <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>

@@ -45,10 +45,7 @@ function checkIfUserRate($userid,$projectid){
         $sql="SELECT count(*) as total_row FROM rates WHERE userid='$userid' AND projectid='$projectid' ";
         $count = get_object($sql)->total_rows;
 
-        if($count>0)
-            return 1;
-        else
-            return 0;
+        return $count;
 
     }
 
