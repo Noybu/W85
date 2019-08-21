@@ -13,7 +13,7 @@ include_once("header.php"); ?>
         $projectid=$_GET['projectid'];
         $arrProjects=Array();
         $arrProjects=getProjectById($projectid);
-        $userid=$_GET['projectid'];
+        $userid=$_SESSION["userID"];
         if($_GET['stars'])
         {
             insertRate($projectid,$userid, $_GET['stars']);
@@ -212,7 +212,7 @@ include_once("header.php"); ?>
                                 }
                             ?>
                         </p>
-                        <form class="rating" method="GET" action="">
+                        <form class="rating" method="GET" action="projectFund.php?projectid=<?php echo $projectid?>">
                             <label>
                                 <input type="radio" name="stars" value="1" onchange="this.form.submit()"/>
                                 <span class="icon">★</span>
