@@ -243,10 +243,10 @@ include_once("header.php"); ?>
                     <script>
                         $(':radio').change(function() {
                             <?php $star = "<script>document.write(this.value)</script>" ;
-                            insertRate($projectid,$userid, (int)$star);
+                            insertRate($projectid,$userid, 4);
                             ?>
                     });
-                        </script>
+                    </script>
                     </div>
                     <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
                         <p>צילמתם תמונות של הפרויקט ? מוזמנים לשתף </p>
