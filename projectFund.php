@@ -210,11 +210,12 @@ include_once("header.php"); ?>
 
                                     
                                 ?>
-                                    <span class="icon" style="color:yellow;">★</span>  
+                                    <span class="icon" style="color:red;">★</span>  
                                 <?php
                                     }
                                 }
-                                if(checkIfUserRate($userid,$projectid)>0){
+                                $user=checkIfUserRate($userid,$projectid);
+                                if($user>0){
                                     ?>
                                     <p>הדירוג שלך לפרויקט זה הוא : <?php echo getUserRate($userid,$projectid);?></p>
                                 <?php
