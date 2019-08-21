@@ -215,6 +215,7 @@ include_once("header.php"); ?>
                                     }
                                 }
                                 $user=checkIfUserRate($userid,$projectid);
+                                echo $user;
                                 if($user==1)
                                 {
                                 ?>
