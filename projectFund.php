@@ -188,8 +188,10 @@ include_once("header.php"); ?>
                         </div>
                         <?php
                         }
-                   ?>
-                    
+                   
+                     if($arrProjects[0]->projectstatus == 4){
+                         $flag=4;
+                     ?>
                     <div class="tab-pane fade <?php if($flag==0){ echo 'show active';} ?>" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
                         <p>דרגו את הפרויקט לפי שביעות רצונכם</p>
                             <?php
@@ -261,6 +263,7 @@ include_once("header.php"); ?>
                             </form>
                                     <?php
                                 }
+                            }
                             ?>
 
                        
