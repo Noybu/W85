@@ -10,7 +10,7 @@
                     <p class="subtitle">ברוכים הבאים למיזם שיחולל מהפכה בתחום התשתיות העירוניות</p>
                     <p class="subtitle">חולמים על ספסל ברחוב? רוצים מגרש ציבורי חדש?</p>
                     <p class="subtitle">מהיום זה אפשרי! </p>
-                    <a href="newProject.php"><button class="actionButton">התחילו להשפיע על העיר שלכם</button></a>
+                   
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                     <img src="images/undraw_having_fun_iais.svg" alt="" width="100%">
