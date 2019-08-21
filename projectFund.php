@@ -32,6 +32,7 @@ include_once("header.php"); ?>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                     <h3><?php echo getProjectType($arrProjects[0]->projecttype);?></h3>
+                    <p>מיקום: <?php echo $arrProjects[0]->loccity.','.$arrProjects[0]->locstreet . ','.$arrProjects[0]->locnum; ?></p>
                     <p class="descriptionproject"><?php echo $arrProjects[0]->description; ?></p>
                     <div class="bar2">
                         <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
@@ -87,7 +88,7 @@ include_once("header.php"); ?>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
 
-                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $arrProjects[0]->loccity.','.$arrProjects[0]->locstreet.','.$arrProjects[0]->locnum; ?>&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $arrProjects[0]->loccity.','.$arrProjects[0]->locstreet.','.$arrProjects[0]->locnum; ?>&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
                 </div>
             </div>
@@ -129,7 +130,7 @@ include_once("header.php"); ?>
                          ?>
                          
                          
-                            <a class="nav-item nav-link <?php if($flag==0){ echo 'active';} ?>" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="<?php if($flag==0){ echo 'true';}else {echo 'false';} ?>">דירוג הפרויקט</a>
+                            <a class="nav-item nav-link active" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="true">דירוג הפרויקט</a>
                             <?php
                         }
                          ?>
@@ -196,10 +197,11 @@ include_once("header.php"); ?>
                         <?php
                         }
                    
-                     if($arrProjects[0]->projectstatus == 4){
-                         $flag=4;
+                     if($arrProjects[0]->projectstatus == 4)
+                     {
+                        
                      ?>
-                    <div class="tab-pane fade <?php if($flag==0){ echo 'show active';} ?>" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+                    <div class="tab-pane fade show active" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
                         <p>דרגו את הפרויקט לפי שביעות רצונכם</p>
                             <?php
                                 $avg=getAvgRate($projectid);
@@ -235,7 +237,7 @@ include_once("header.php"); ?>
                                 else
                                 {
                                 ?>
-                                     <form class="rating" method="GET" action="projectFund.php">
+                            <form class="rating" method="GET" action="projectFund.php">
                             <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
                             <label>
                                 <input type="radio" name="stars" value="1" onchange="this.form.submit()"/>
@@ -280,6 +282,9 @@ include_once("header.php"); ?>
                         
 
                     </div>
+                    <?php
+                        }
+                    ?>
                 </div>
             </section>
         </div>
