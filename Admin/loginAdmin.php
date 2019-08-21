@@ -22,9 +22,9 @@
             
         else{
             ?>
-                <div style="text-align:right;">
-                    <p style="font-size:18px; font-weight:bold;"> אין לך הרשאה להכנס למערכת</p>
-                    <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור למערכת</a>
+                <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;">
+                    <p style="font-size:18px;font-weight:bold;display: inline;"> אין לך הרשאה להכנס למערכת</p>
+                    <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור לדף הבית</a>
                 </div>
             <?php
 
