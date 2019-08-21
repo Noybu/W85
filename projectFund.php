@@ -243,11 +243,11 @@ include_once("header.php"); ?>
                     <script>
                         $(':radio').change(function() {
                             console.log(this.value);
-                            <?php $star = "<script>document.write(this.value)</script>" ;
+                            <?php echo "<script>document.write(this.value)</script>" ;
                             insertRate($projectid,$userid, 4);
                             ?>
                            
-                    });
+                        });
                     </script>
                     </div>
                     <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
