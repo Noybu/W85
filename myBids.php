@@ -71,10 +71,10 @@
                             </p>
                         </a>
                         
-                        <button onclick="window.location.href='../include/update.php?type=doneProject&id=<?php echo $arrProjects[$i]->projectid; ?>" style="color:green; width:10%;"><i class="far fa-thumbs-up"></i>
+                        <button class="icon" onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrProjects[$i]->projectid; ?>" style="color:green; width:20%;"><i class="far fa-thumbs-up"></i>
                             לאישור ביצוע
                         </button>
-                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;"><p id="view">לצפייה<i class="far fa-eye"></i></p></a>
+                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;width:40%;"><p id="view">לצפייה<i class="far fa-eye"></i></p></a>
                     </div>
                 </div>
             </div>
