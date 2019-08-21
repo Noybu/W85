@@ -29,7 +29,7 @@ switch ($type) {
     }
     case "doneProject":
     {
-        updateProjectStatus($_GET['projectid'],4);
+        updateProjectStatus($_GET['id'],4);
         header("Location:../myBids.php");
         break;
     }
