@@ -288,9 +288,6 @@ include_once("header.php"); ?>
                 </div>
             </section>
         </div>
-    <?php    
-    }
-    ?>
     </div>
 
 
