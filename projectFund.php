@@ -244,7 +244,7 @@ include_once("header.php"); ?>
                         $(':radio').change(function() {
                             console.log(this.value);
                             <?php echo "<script>document.write(this.value)</script>" ;
-                            insertRate($projectid,$userid, 4);
+                           // insertRate($projectid,$userid, 4);
                             ?>
                            
                         });
