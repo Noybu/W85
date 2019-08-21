@@ -58,7 +58,7 @@
                 for($j=0;$j<sizeof($address);$j++)
                 {
            ?>
-                    var x= <?php echo $address[$j]; ?>;
+                    var x= "<?php echo $address[$j]; ?>";
                     geocoder.geocode({'address': x}, function(results, status) {
                     if (status === 'OK') {
                         resultsMap.setCenter(results[0].geometry.location);
