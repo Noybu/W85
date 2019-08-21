@@ -13,6 +13,7 @@ include_once("header.php"); ?>
         $projectid=$_GET['projectid'];
         $arrProjects=Array();
         $arrProjects=getProjectById($projectid);
+        $userid=$_GET['projectid'];
     }
 ?>
 
@@ -180,6 +181,22 @@ include_once("header.php"); ?>
                     
                     <div class="tab-pane fade <?php if($flag==0){ echo 'show active';} ?>" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
                         <p>דרגו את הפרויקט לפי שביעות רצונכם</p>
+                            <?php
+                                $avg=getAvgRate($projectid);
+                                if($avg==null)
+                                {
+                                    ?>
+                                    <p>עדין מחכים לדירוג שלכם!! מהרו להצביע</p>
+                                    <?php
+                                }
+                                else
+                                {
+                                ?>
+                                  <p><?php echo $avg; ?></p>  
+                                <?php
+                                }
+                            ?>
+                        </p>
                         <form class="rating">
                             <label>
                                 <input type="radio" name="stars" value="1" />
@@ -214,8 +231,8 @@ include_once("header.php"); ?>
                             </form>
 
                     <script>
-                        jQuery(':radio').change(function() {
-                    console.log('New star rating: ' + this.value);
+                        $(':radio').change(function() {
+                            insertRate($projectid,$userid, this.value);
                     });
                         </script>
                     </div>

@@ -14,6 +14,26 @@ function addProject($userID, $projectType, $description, $locCity, $locStreet, $
     insert($sql);
 }
 
+function insertRate($projectid, $userid,$rate){
+    $sql = "INSERT INTO rates (rate, projectid, userid) VALUES ('$rate', '$projectid','$userid')";
+    insert($sql);
+}
+
+function getAvgRate($projectid){
+    $sql = "SELECT count(*) as total_row FROM rates WHERE projectid='$projectid'";
+    $countPeoples= get_object($sql)->total_row;
+    if($countPeoples==0)
+        return null;
+
+    $sql2="SELECT rate FROM rates WHERE projectid='$projectid'";
+    $dbRates=select($sql2);
+    $sum=0;
+    for($i=0; $i<$countPeoples; $i++){
+       $sum =+ $dbRates[$i]->rate;
+    }
+    $avg=$sum/$countPeoples;
+    return $avg;
+}
 
 function getAllProjects()
 {
@@ -314,6 +334,7 @@ function updateCurrentPrice($projectID, $price)
     $sql = "UPDATE projects SET projectcurrentprice=$finalPrice where projectid ='$projectID'";
     update($sql);
 }
+
 
 function getAllBids($projectId)
 {
