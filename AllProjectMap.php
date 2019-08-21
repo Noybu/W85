@@ -50,19 +50,19 @@
       function geocodeAddress(geocoder, resultsMap) {
         var icons={
           t1 : {
-              icon:'https://img.icons8.com/ios-filled/32/000000/city-bench.png'
+              icon:'https://img.icons8.com/material/48/000000/city-bench.png'
           },
           t2 : { 
-              icon:'https://img.icons8.com/ios/32/000000/playground.png'
+              icon:'https://img.icons8.com/material/48/000000/playground.png'
           },
           t3 : {
-              icon:'https://img.icons8.com/wired/32/000000/trash.png'
+              icon:'https://img.icons8.com/material/48/000000/trash.png'
           },
           t4 : {
-              icon:'https://img.icons8.com/material/32/000000/bike-path--v2.png'
+              icon:'https://img.icons8.com/material/48/000000/bike-path--v2.png'
           },
           t5 : {
-              icon:'https://img.icons8.com/ios-filled/32/000000/street-lamp.png'
+              icon:'https://img.icons8.com/material/48/000000/street-lamp.png'
           }
         };
         //document.getElementById('address').value;
