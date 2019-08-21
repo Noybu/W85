@@ -131,11 +131,13 @@ include_once("header.php"); ?>
                          
                          
                             <a class="nav-item nav-link active" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="true">דירוג הפרויקט</a>
-                            <?php
-                        }
-                         ?>
+                 
                         
                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
+                        <?php
+                        }
+                         ?>
+                   
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
