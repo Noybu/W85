@@ -31,11 +31,9 @@ switch ($type) {
     {
         updateProjectStatus($_GET['projectid'],4);
         header("Location:myBids.php.php");
+        break;
     }
-        
-
-
-
+    
 
 }
 ?>
