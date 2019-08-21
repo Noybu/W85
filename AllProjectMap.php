@@ -13,11 +13,14 @@
 </main>
 
 
-
+<script>alert(addressToLocation('תל-אביב')); </script>
     
    
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&callback=initiateMap"
+async defer></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1iswODlN7nZQbJTB2viQH03KTUomNiE&callback=initiateMap"
 async defer></script>
 
 <script>
@@ -27,8 +30,54 @@ async defer></script>
         zoom: 8
     });
 //    
+
+function addressToLocation(address) {
+
+var geocoder = new google.maps.Geocoder();
+geocoder.geocode(
+    {
+        address: address
+    }, 
+    function(results, status) {
+        
+        var resultLocations = [];
+        
+        if(status == google.maps.GeocoderStatus.OK) {
+            if(results) {
+                var numOfResults = results.length;
+                for(var i=0; i<numOfResults; i++) {
+                    var result = results[i];
+
+                    resultLocations.push(
+                        {
+                            text:result.formatted_address,
+                            addressStr:result.formatted_address,
+                            location:result.geometry.location
+                        }
+                    );
+                };
+            }
+    var x1=results[0].geometry.location.lat();
+        document.getElementById("lat").value=x1;
+    var x2=results[0].geometry.location.lng();
+        document.getElementById("lng").value=x2;
+        } 
+        else if(status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+            // address not found
+        }
+        
+        /*if(resultLocations.length > 0) {
+            callback(resultLocations);
+        } else {
+            callback(null);
+        }*/
+    }
+);
+
+}
+
     var locations = [
-                        [31.5546, 74.3572],
+                        [, 74.3572],
                         [34.0150, 71.5805],
                         [30.1830, 66.9987],
                         [33.7294, 73.0931],
