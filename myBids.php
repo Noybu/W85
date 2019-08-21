@@ -70,6 +70,12 @@
                             <i class="fab fa-facebook-square"></i>
                             </p>
                         </a>
+                        
+                        <button onclick="window.location.href='../include/update.php?type=doneProject&id=<?php echo $arrProjects[$i]->projectid; ?>" style="color:green;"><i class="far fa-thumbs-up"></i>
+                            <p class="icon">
+                                לאישור ביצוע
+                            </p>
+                        </button>
                         <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;"><p id="view">לצפייה<i class="far fa-eye"></i></p></a>
                     </div>
                 </div>
