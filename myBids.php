@@ -63,10 +63,9 @@
                         if($arrFunds[$i]->projectstatus==3)
                         {
                         ?>
-                            <p id="share">
                             <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'" style="color:green; width:50%; height:10%;float:right"><i class="far fa-thumbs-up"></i>
                                 לאישור ביצוע
-                            </button></p>
+                            </button>
                         <?php
                         }
                         else if($arrFunds[$i]->projectstatus==2)
