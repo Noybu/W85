@@ -212,7 +212,8 @@ include_once("header.php"); ?>
                                 }
                             ?>
                         </p>
-                        <form class="rating" method="GET" action="projectFund.php?projectid=<?php echo $projectid;?>&">
+                        <form class="rating" method="GET" action="projectFund.php">
+                            <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
                             <label>
                                 <input type="radio" name="stars" value="1" onchange="this.form.submit()"/>
                                 <span class="icon">★</span>
