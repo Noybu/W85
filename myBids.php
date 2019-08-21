@@ -59,10 +59,21 @@
                     </div>
                     </div>
                     <div id="cardFooter">
-                        
-                        <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrProjects[$i]->projectid; ?>'" style="color:green; width:50%; height:10%;float:right"><i class="far fa-thumbs-up"></i>
-                            לאישור ביצוע
-                        </button>
+                        <?php
+                        if($arrFunds[$i]->projectstatus==3)
+                        {
+                        ?>
+                            <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrProjects[$i]->projectid; ?>'" style="color:green; width:50%; height:10%;float:right"><i class="far fa-thumbs-up"></i>
+                                לאישור ביצוע
+                            </button>
+                        <?php
+                        }
+                        else
+                        {
+                            ?>
+                            <p>ממתין למימון</p>
+                        }
+                       ?>
                         <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;width:50%;"><p>לצפייה<i class="far fa-eye"></i></p></a>
                     </div>
                 </div>
