@@ -78,7 +78,7 @@
                         var marker = new google.maps.Marker({
                         map: resultsMap,
                         position: results[0].geometry.location,
-                        icon: icons[1].icon;
+                        icon: icons[1].icon
                         });
 
                         
