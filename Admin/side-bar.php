@@ -8,6 +8,9 @@ session_start();
       header("Location: loginAdmin.php");
     } 
   }
+  if($_SESSION["type"] != 3){
+    header("Location: loginAdmin.php");
+}
   ?>
 <aside>
       <div id="logo">
