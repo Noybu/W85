@@ -43,7 +43,11 @@
         });
         var geocoder = new google.maps.Geocoder();
 
-        
+          geocodeAddress(geocoder, map);
+     
+    }
+
+      function geocodeAddress(geocoder, resultsMap) {
         var icons={
           t1 : {
               icon:'https://img.icons8.com/ios-filled/50/000000/city-bench.png'
@@ -61,11 +65,6 @@
               icon:'https://img.icons8.com/ios-filled/50/000000/street-lamp.png'
           }
         };
-          geocodeAddress(geocoder, map);
-     
-    }
-
-      function geocodeAddress(geocoder, resultsMap) {
         //document.getElementById('address').value;
         //var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
             <?php
