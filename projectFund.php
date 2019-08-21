@@ -197,7 +197,7 @@ include_once("header.php"); ?>
                                 if($avg==null)
                                 {
                                     ?>
-                                    <p>עדין מחכים לדירוג שלכם!! מהרו להצביע</p>
+                                    <p>עדין מחכים לדירוג !! מהרו להצביע</p>
                                     <?php
                                 }
                                 else
@@ -209,17 +209,18 @@ include_once("header.php"); ?>
 
                                     
                                 ?>
-                                    <span class="icon" style="color:red;font-size:50px;">★</span>  
-                                    </p>
+                                    <span class="icon" style="color:yellow;font-size:50px;">★</span>  
                                 <?php
                                     }
+                                    ?>
+                                    </p>
+                                    <?php
                                 }
                                 $user=checkIfUserRate($userid,$projectid);
-                                echo $user;
                                 if($user==1)
                                 {
                                 ?>
-                                    <p>הדירוג שלך לפרויקט זה הוא : <?php echo getUserRate($userid,$projectid);?></p>
+                                    <p>הדירוג שלך לפרויקט זה הוא : <span style="font-size:50px;color:green; "><?php echo getUserRate($userid,$projectid);?></span></p>
                                 <?php
                                 }
                                 else

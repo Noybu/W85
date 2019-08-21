@@ -53,7 +53,7 @@ function getUserRate($userid,$projectid){
     $sql="SELECT rate FROM rates WHERE userid='$userid' AND projectid='$projectid'";
     $rate=select($sql);
 
-    return $rate->rate;
+    return $rate[0]->rate;
 
 }
 
