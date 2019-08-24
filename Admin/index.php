@@ -85,7 +85,7 @@
           [' כסף שגויס עד כה', <?php echo $sumOfPrice;?>]
         ]);
         
-        data3.setValue(<?php echo $currentPrice;?>);
+        
 
         var options3 = {
           min: 0, max: <?php echo $sumOfPrice;?>,
@@ -97,7 +97,7 @@
         };
 
         var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
-          
+        data3.setValue(<?php echo $currentPrice;?>);
         chart3.draw(data3, options);
       }
 
