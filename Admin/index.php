@@ -81,17 +81,17 @@
         var current= <?php echo $currentPrice;?> ;
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['מתוך :'+'<?php echo $sumOfPrice;?>', current]
+          ['מתוך :'+ sum, current]
         ]);
         
        
         
         var options3 = {
-          min: 0, max: sum,
-          width: 100, height: 100,
-          redFrom: 0 , redTo: 0.4 * sum ,
-          yellowFrom: 0.4 * sum, yellowTo: 0.8 * sum,
-          greenFrom: 0.8 * sum, greenTo: sum,
+          width:200, height: 200,
+          min:0, max:sum,
+          redFrom: 0, redTo: 0.3*sum,
+          yellowFrom:0.3*sum, yellowTo: 0.7*sum,
+          greenFrom:0.7*sum, greenTo:sum,
           minorTicks: 5
         };
 
