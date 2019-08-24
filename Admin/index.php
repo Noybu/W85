@@ -67,15 +67,8 @@
         chart2.draw(data2, options2);
 
         <?php
-          $arrprojects=Array();
-          $arrprojects=getAllProjects();
-          $currentPrice=0;
-          $sumOfPrice=0;
-          for($i=0;$i<sizeof($arrprojects);$i++)
-          {
-            $sumOfPrice+=$arrprojects[$i]->projectcost;
-            $currentPrice+=$arrprojects[$i]->projectcurrentprice;
-          }
+          $currentPrice= getAllCurrentPrice();
+          $sumOfPrice=getAllProjectPrice;
         ?>
         var sum= <?php echo $sumOfPrice;?> ;
         var current= <?php echo $currentPrice;?> ;
@@ -87,7 +80,7 @@
        
         
         var options3 = {
-          width:200, height: 200,
+          width:300, height: 300,
           min:0, max:sum,
           redFrom: 0, redTo: 0.3*sum,
           yellowFrom:0.3*sum, yellowTo: 0.7*sum,

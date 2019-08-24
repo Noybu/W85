@@ -57,7 +57,21 @@ function getCountOfUserType($userType){
     return $count;
 }
 
+function getAllCurrentPrice(){
+    $sql="SELECT sum(projectcurrentprice) as total_row FROM projects";
+    $num=get_object($sql)->total_row;
 
+    return $num;
+
+}
+
+function getAllProjectPrice(){
+    $sql="SELECT sum(projectcost) as total_row FROM projects";
+    $num=get_object($sql)->total_row;
+
+    return $num;
+
+}
 
 function checkIfUserRate($userid,$projectid){
         $sql="SELECT count(*) as total_row FROM rates WHERE userid='$userid' AND projectid='$projectid' ";
