@@ -51,7 +51,7 @@
               <?php
               }
             ?>
-            <input required type="text" name="id" class="form-style" pattern="[0-9]+" minlength="9" maxlength="9" />
+            <input required type="text" name="id" class="form-style" pattern="[0-9]+" minlength="9" maxlength="9" oninvalid = "setCustomValidity('יש להכניס ת.ז המכילה 9 ספרות בלבד')" />
           </div>
           <div class="form-item">
             <p class="formLabel">שם פרטי</p>
@@ -111,11 +111,9 @@
     </div>
   </main>
 
-  <script>
-      $(function(){
-        $("input[name=id]")[0].oninvalid = function () {
-            this.setCustomValidity("יש להכניס ת.ז המכילה 9 ספרות בלבד");
-        };
-    });
-    </script>
+
+     
+        
+        
+
   <?php include_once("../footer.php"); ?>
