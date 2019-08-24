@@ -86,7 +86,8 @@
                         "מיקום: "+
                         "<?php echo $arrProjects[$j]->loccity.' '.$arrProjects[$j]->locstreet.' '.$arrProjects[$j]->locnum;?>"+
                         "סטטוס: "+
-                        "<?php echo getProjectStatus($arrProjects[$j]->projectstatus);?>";
+                        "<?php echo getProjectStatus($arrProjects[$j]->projectstatus);?>"+
+                        "<a href='projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid;?>'>לצפייה</a>";
                         
                         var infowindow = new google.maps.InfoWindow();
 
