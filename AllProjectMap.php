@@ -81,9 +81,9 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-                        var content = "Loan Number: " + loan + '</h3>' + "Address: " + add
+                        var content = "Loan Number: " + "Address: " ;
 
-                        var infowindow = new google.maps.InfoWindow()
+                        var infowindow = new google.maps.InfoWindow();
 
                         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
                         return function() {
