@@ -48,7 +48,7 @@
                     
                 <div class="form-item">
                     <p class="formLabel">תעודת זהות</p>
-                    <input required type="text" name="userID" class="form-style" pattern="[0-9]" minlength="9" maxlength="9"/>
+                    <input required type="text" name="userID" class="form-style" pattern="[0-9]+" minlength="9" maxlength="9"/>
                 </div>
                 <div class="form-item">
                     <p class="formLabel">סיסמא</p>
