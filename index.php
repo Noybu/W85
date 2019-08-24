@@ -68,18 +68,20 @@
                     <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                         <div class="pictureCard" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype; ?>.png');"></div>
                         <div class="descCard">
-                            <div><h3 class="projecttitle"><?php echo getProjectType($arrProjects[$i]->projecttype); ?></h3></div>
-                            <div class="<?php echo getStatusColor($arrProjects[$i]->projectstatus); ?> status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
-                            <p>תיאור הפרויקט: <?php echo $arrProjects[$i]->description; ?></p>
-                            <p><?php echo 'עיר: ' .$arrProjects[$i]->loccity; ?><Br>
-                            <?php echo 'רחוב: ' .$arrProjects[$i]->locstreet; ?></p>
-                            <?php $id = $arrProjects[$i]->projectid; ?>
-                            <button class="moreButton" onclick="window.location.assign('projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>')">לצפייה בפרויקט</button>
-                            <div class="bar">
-                                <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost; ?><i class="fas fa-shekel-sign"></i></p>
-                                <div id="mainBar">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; width:<?php echo ($arrProjects[$i]->projectcurrentprice / $arrProjects[$i]->projectcost) * 100; ?>%;border-radius: 20px;">
-                                        <?php echo $arrProjects[$i]->projectcurrentprice ?>
+                                 <div styl="display: flex; justify-content: center;"><h3 class="projecttitle"><?php echo getProjectType($arrProjects[$i]->projecttype); ?></h3></div>
+                            <div>
+                                <div class="<?php echo getStatusColor($arrProjects[$i]->projectstatus); ?> status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
+                                <p>תיאור הפרויקט: <?php echo $arrProjects[$i]->description; ?></p>
+                                <p><?php echo 'עיר: ' .$arrProjects[$i]->loccity; ?><Br>
+                                <?php echo 'רחוב: ' .$arrProjects[$i]->locstreet; ?></p>
+                                <?php $id = $arrProjects[$i]->projectid; ?>
+                                <button class="moreButton" onclick="window.location.assign('projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>')">לצפייה בפרויקט</button>
+                                <div class="bar">
+                                    <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost; ?><i class="fas fa-shekel-sign"></i></p>
+                                    <div id="mainBar">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; width:<?php echo ($arrProjects[$i]->projectcurrentprice / $arrProjects[$i]->projectcost) * 100; ?>%;border-radius: 20px;">
+                                            <?php echo $arrProjects[$i]->projectcurrentprice ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
