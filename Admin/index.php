@@ -1,3 +1,7 @@
+<?php include_once("../include/BLL.php"); 
+  $arrprojects=Array();
+  $arrprojects=getAllProjects();
+?>
 <html>
   <head>
     <title>Admin</title>
@@ -49,12 +53,20 @@
 
 
         var data2 = google.visualization.arrayToDataTable([
-         ['Element', 'Density', { role: 'style' }],
-         ['Copper', 8.94, '#b87333'],            // RGB value
+         ['סטטוס פרויקט', 'כמות', { role: 'style' }],
+        ['ממתין לאישור', <?php echo getCountOfProjectType(0);?> , '#b87333'],
+        ['ממתין למכרז', <?php echo getCountOfProjectType(1);?> , '#b87333'],
+        ['ממתין למימון', <?php echo getCountOfProjectType(2);?> , '#b87333'],
+        ['בביצוע', <?php echo getCountOfProjectType(3);?> , '#b87333'],
+        ['הושלם', <?php echo getCountOfProjectType(4);?> , '#b87333'],
+
+         /*
+         ['ממתין לאישור', , '#b87333'],            // RGB value
          ['Silver', 10.49, 'silver'],            // English color name
          ['Gold', 19.30, 'gold'],
 
        ['Platinum', 21.45, 'color: #e5e4e2' ], // CSS-style declaration
+       */
       ]);
 
               // Set chart options
