@@ -87,18 +87,18 @@
                                 "<?php echo $arrProjects[$i]->loccity.' '.$arrProjects[$i]->locstreet.' '.$arrProjects[$i]->locnum;?>"+
                             "</p>"
                            ;
-    
-                        var infowindow = new google.maps.InfoWindow();
+                           var infowindow = new google.maps.InfoWindow();
 
-                        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-                            return function() {
-                                infowindow.setContent(content);
-                                infowindow.open(map,marker);
-                                setTimeout(function () { infowindow.close(); }, 5000);
-                                });
-                        })(marker,content,infowindow)); 
-                            
+                            google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+                                return function() {
+                                    infowindow.setContent(content);
+                                    infowindow.open(map,marker);
+                                    setTimeout(function () { infowindow.close(); }, 5000);
+                                };
+                            })(marker,content,infowindow));
                     }
+                        
+                    
                     else 
                     {
                         alert('Geocode was not successful for the following reason: ' + status);
@@ -107,6 +107,7 @@
                     <?php
                 }
         ?>
+      }
       
       
     </script>
