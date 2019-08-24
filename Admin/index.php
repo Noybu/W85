@@ -96,7 +96,7 @@
         };
 
         var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
-        chart3.draw(data3, options);
+        chart3.draw(data3, options3);
       }
 
 
