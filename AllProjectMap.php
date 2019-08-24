@@ -81,7 +81,7 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-                        var content = "Address - " + <?php echo getProjectType($arrProjects[$j]->projecttype); ?>;
+                        var content = "Address - " + "<?php echo getProjectType($arrProjects[$j]->projecttype); ?>";
 
                         var infowindow = new google.maps.InfoWindow();
 
