@@ -7,6 +7,8 @@ require_once 'bid.php';
 //session_start();
 
 
+// פונקציות שמטפלות בפרויקטים
+
 
 function addProject($userID, $projectType, $description, $locCity, $locStreet, $locNum)
 {
