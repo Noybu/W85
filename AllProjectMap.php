@@ -89,15 +89,10 @@
                             return function() {
                                 infowindow.setContent(content);
                                 infowindow.open(map,marker);
+                                setTimeout(function () { infowindow.close(); }, 5000);
                                 });
                             };
                         })(marker,content,infowindow)); 
-                        google.maps.event.addListener(marker,'click', (function(marker,infowindow){ 
-                            return function() {
-                                marker.infowindow.close();
-                                });
-                            };
-                        })(marker,infowindow));
 
                     }
                     else 
