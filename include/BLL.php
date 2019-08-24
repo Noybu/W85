@@ -412,14 +412,6 @@ function getServiceApproved($id)
     return get_object($sql)->approved;
 }
 
-//בודק אם משתמש קיים כבר במערכת
-function is_username_exist($userName)
-{
-    $userName = addslashes($userName);
-    $sql = "select count(*) as total_rows from users where userName = '$userName'";
-    $count = get_object($sql)->total_rows;
-    return $count > 0;
-}
 
 
 //מכניס משתמש רגיל למערכת 
@@ -490,6 +482,15 @@ function is_user_exist($userID, $password)
     $password = sha1($password);
 
     $sql = "select count(*) as total_rows from users where id = '$userID' and password = '$password'";
+    $count = get_object($sql)->total_rows;
+    return $count;
+}
+
+//בודק אם יש כבר ת.ז במערכת
+function if_user_exist($userID)
+{
+
+    $sql = "select count(*) as total_rows from users where id = '$userID'";
     $count = get_object($sql)->total_rows;
     return $count;
 }
