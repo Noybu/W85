@@ -79,9 +79,6 @@
         ?>
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          /*['Memory', 80],
-          ['CPU', 55],
-          */
           ['מתוך :'+'<?php echo $sumOfPrice;?>', <?php echo $currentPrice;?>]
         ]);
         
@@ -92,8 +89,8 @@
           min: 0, max: maximum,
           width: 100, height: 100,
           redFrom: 0 , redTo: 0.4 * sum ,
-          yellowFrom: 0.41 * sum, yellowTo: 0.8 * sum,
-          greenFrom: 0.81 * sum, greenTo: sum,
+          yellowFrom: 0.4 * sum, yellowTo: 0.8 * sum,
+          greenFrom: 0.8 * sum, greenTo: sum,
           minorTicks: 5
         };
 
