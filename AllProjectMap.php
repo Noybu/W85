@@ -81,13 +81,13 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-                        var content = "<b>סוג פרויקט: </b>"+
+                        var content = "<p style='font-weight:bold';>סוג פרויקט: </p>"+
                         "<?php echo getProjectType($arrProjects[$j]->projecttype);?> <br>"+
-                        "<b>מיקום: </b>"+
+                        "מיקום: "+
                         "<?php echo $arrProjects[$j]->loccity.' '.$arrProjects[$j]->locstreet.' '.$arrProjects[$j]->locnum;?> <br>"+
-                        "<b>סטטוס: </b>"+
+                        "סטטוס: "+
                         "<?php echo getProjectStatus($arrProjects[$j]->projectstatus);?> <br>"+
-                        "<a href='projectFund.php?projectid=<?php echo $arrProjects[$j]->projectid;?>'><b>לצפייה</b></a>";
+                        "<a href='projectFund.php?projectid=<?php echo $arrProjects[$j]->projectid;?>'>לצפייה</a>";
                         
                         var infowindow = new google.maps.InfoWindow();
 
@@ -95,7 +95,7 @@
                             return function() {
                                 infowindow.setContent(content);
                                 infowindow.open(map,marker);
-                                //setTimeout(function () { infowindow.close(); }, 5000);
+                                setTimeout(function () { infowindow.close(); }, 5000);
                             };
                         })(marker,content,infowindow));
                     }
