@@ -52,11 +52,12 @@
 
         var data2 = google.visualization.arrayToDataTable([
          ['סטטוס פרויקט', 'כמות', { role: 'style' }],
-        ['ממתין לאישור', <?php echo getCountOfProjectStatus(0);?> , '#b87333'],
-        ['ממתין למכרז', <?php echo getCountOfProjectStatus(1);?> , '#b87333'],
-        ['ממתין למימון', <?php echo getCountOfProjectStatus(2);?> , '#b87333'],
-        ['בביצוע', <?php echo getCountOfProjectStatus(3);?> , '#b87333'],
-        ['הושלם', <?php echo getCountOfProjectStatus(4);?> , '#b87333']
+         ['נדחו', <?php echo getCountOfProjectStatus(10);?> , '#ff0000']
+        ['ממתין לאישור', <?php echo getCountOfProjectStatus(0);?> , '#ffff00'],
+        ['ממתין למכרז', <?php echo getCountOfProjectStatus(1);?> , '#999966'],
+        ['ממתין למימון', <?php echo getCountOfProjectStatus(2);?> , '#ffff00'],
+        ['בביצוע', <?php echo getCountOfProjectStatus(3);?> , '#999966'],
+        ['הושלם', <?php echo getCountOfProjectStatus(4);?> , '#66ff33']
       ]);
 
               // Set chart options
