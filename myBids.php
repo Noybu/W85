@@ -1,4 +1,5 @@
 <?php include_once("header.php"); ?>
+<link rel="stylesheet" type="text/css" href="CSS\myProject.css">
 <?php include_once("include/BLL.php"); ?>
 <?php
    if(!isset($_SESSION["userID"])){
@@ -97,13 +98,10 @@
         </section>
         <?php
     }
-    else {
+    
         ?>
-            <p>אין לך הרשאה מתאימה</p>
-        <?php
-    }
-    ?>
-      <link rel="stylesheet" type="text/css" href="CSS\myProject.css">
+    
+      
 
 
 
