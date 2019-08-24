@@ -82,10 +82,10 @@
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
                         var content = 
-                            "<h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>" +
-                           " <p class='loc'>מיקום: רחוב"+
-                                "<?php echo $arrProjects[$i]->loccity.' '.$arrProjects[$i]->locstreet.' '.$arrProjects[$i]->locnum;?>"+
-                            "</p>"
+                            <h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>
+                            <p>מיקום: רחוב+
+                                <?php echo $arrProjects[$i]->loccity.' '.$arrProjects[$i]->locstreet.' '.$arrProjects[$i]->locnum;?>
+                            </p>
                            ;
                            var infowindow = new google.maps.InfoWindow();
 
