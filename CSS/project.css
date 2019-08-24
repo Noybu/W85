@@ -86,9 +86,8 @@ a:hover{
 
 .moreButton{
 	border:2px solid #1AA0BA;
-	background-color:#1AA0BA;
 	border-radius: 50px;
-	color:#fff;
+	color:#1AA0BA;
 	text-align: center;
 	height: 35px;
 	padding-left:21px;
@@ -199,6 +198,11 @@ p{
 
 
 @media only screen and (max-width: 991px) {
+
+	.pictureCard
+	{
+		height: 40%;
+	}
 	.loginMobile2{
 		display:none;
 	}
@@ -211,6 +215,7 @@ p{
 	.card{
 		width:90%;
 		height: 485px;
+		padding: unset;
 	}
 	.status-short{
 	padding-top: 40px;
