@@ -82,8 +82,10 @@
           /*['Memory', 80],
           ['CPU', 55],
           */
-          [' כסף שגויס עד כה', <?php echo $currentPrice;?>]
+          [' כסף שגויס עד כה', <?php echo $sumOfPrice;?>]
         ]);
+        
+        data3.setValue(<?php echo $currentPrice;?>);
 
         var options3 = {
           min: 0, max: <?php echo $sumOfPrice;?>,
@@ -95,10 +97,8 @@
         };
 
         var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
-
-        chart3.draw(data3, options3);
-
-       
+          
+        chart3.draw(data3, options);
       }
 
 
