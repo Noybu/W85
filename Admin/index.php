@@ -89,10 +89,10 @@
 
         var options3 = {
           min: 0, max: <?php echo $sumOfPrice;?>,
-          width: 500, height: 500,
-          redFrom: 0 , redTo: (0.4 * <?php echo $sumOfPrice;?>) ,
-          yellowFrom: (0.41 * <?php echo $sumOfPrice;?>), yellowTo: (0.8 * <?php echo $sumOfPrice;?>),
-          greenFrom: (0.81 * <?php echo $sumOfPrice;?>), greenTo: (<?php echo $sumOfPrice;?>),
+          width: 300, height: 300,
+          redFrom: 0 , redTo: 0.4 * <?php echo $sumOfPrice;?> ,
+          yellowFrom: 0.41 * <?php echo $sumOfPrice;?>, yellowTo: 0.8 * <?php echo $sumOfPrice;?>,
+          greenFrom: 0.81 * <?php echo $sumOfPrice;?>, greenTo: <?php echo $sumOfPrice;?>,
           minorTicks: 5
         };
 
