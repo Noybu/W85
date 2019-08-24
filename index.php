@@ -68,7 +68,7 @@
                     <div class="offset-lg-1 col-lg-3 col-md-4 col-sm-6 col-xs-10 mx-auto card">
                         <div class="pictureCard" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype; ?>.png');"></div>
                         <div class="descCard">
-                                 <div styl="display: flex; justify-content: center;"><h3 class="projecttitle"><?php echo getProjectType($arrProjects[$i]->projecttype); ?></h3></div>
+                                 <div style="display: flex; justify-content: center;"><h3 class="projecttitle"><?php echo getProjectType($arrProjects[$i]->projecttype); ?></h3></div>
                             <div>
                                 <div class="<?php echo getStatusColor($arrProjects[$i]->projectstatus); ?> status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
                                 <p>תיאור הפרויקט: <?php echo $arrProjects[$i]->description; ?></p>
