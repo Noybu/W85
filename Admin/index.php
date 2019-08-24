@@ -92,7 +92,6 @@
           yellowFrom: (0.41 * <?php echo $sumOfPrice;?>), yellowTo: (0.8 * <?php echo $sumOfPrice;?>),
           greenFrom: (0.81 * <?php echo $sumOfPrice;?>), greenTo: (<?php echo $sumOfPrice;?>),
           minorTicks: 5
-          font-size:40px;
         };
 
         var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
