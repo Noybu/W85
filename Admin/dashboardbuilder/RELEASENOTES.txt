@@ -1,0 +1,13 @@
+Dated:2019-06-10#Version 3.4/New Features added: Read data from Google Drive 
+Dated:2019-05-14#Version 3.3/New Features added: Sunburst chart
+Dated:2019-01-14#Version 3.2/Fixed XLSX and uploading issue, 3D Line chart added
+Dated:2018-11-11#Version 3.1/New Features added:Ability to add multiple Y-axis to Combination charts
+Dated:2018-09-01#Version 3.0/Added Combination Charts
+Dated:2018-08-26#Version 2.19/Ability to view chart during chart design in chart setting panel. 
+Dated:2018-07-23#Version 2.1.18/D3.js framework updated. Sankey Graph added as new chart type.
+Dated:2018-06-01#Version 2.1.17/New Feature added. Ability to customize color for charts.
+Dated:2018-05-26#Version 2.1.16/Fixed cross OS file handling issue
+Dated:2018-04-14#Version 2.1.15//Released with new functionalities. ability to add multiple panels and drag/drop/resize panel
+Dated:2018-02-14#Version 2.1.13//Fixed data clear function
+Dated:2018-01-30#Version 2.1.12//Load Sample data function added. handled special character from SQL query submission. 
+Dated:2017-11-30#Version 2.1.10 // User Friendly Error message when invalid Query supplied
