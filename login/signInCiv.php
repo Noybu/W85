@@ -45,9 +45,11 @@
             <p class="formLabel">תעודת זהות</p>
             <?php
               if($Error=="UserExist")
+              {
               ?>
                 <span style="color:red;">תעודת זהות קיימת במערכת</span>
               <?php
+              }
             ?>
             <input required type="text" name="id" class="form-style" minlength="9" pattern="[0-9]" maxlength="9" />
           </div>

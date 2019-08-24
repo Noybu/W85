@@ -57,9 +57,11 @@
                 <input type="hidden" name="type" value="signin" />
                 <?php
                   if($Error=="IncorrectUsernameOrPassword")
+                  {
                   ?>
                     <span style="color:red;">שם משתמש או סיסמא אינם נכונים</span>
                   <?php
+                  }
                 ?>
                 <div class="form-item">
                     <input type="submit" class="login" value="שלח" name="submit">
