@@ -81,11 +81,11 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-                        var content = "<p style='font-weight:bold';>סוג פרויקט: </p>"+
+                        var content = "<span style='font-weight:bold';>סוג פרויקט: </span>"+
                         "<?php echo getProjectType($arrProjects[$j]->projecttype);?> <br>"+
-                        "מיקום: "+
+                        "<span style='font-weight:bold';>מיקום: </span>"+
                         "<?php echo $arrProjects[$j]->loccity.' '.$arrProjects[$j]->locstreet.' '.$arrProjects[$j]->locnum;?> <br>"+
-                        "סטטוס: "+
+                        "<span style='font-weight:bold';>סטטוס: </span>"+
                         "<?php echo getProjectStatus($arrProjects[$j]->projectstatus);?> <br>"+
                         "<a href='projectFund.php?projectid=<?php echo $arrProjects[$j]->projectid;?>'>לצפייה</a>";
                         
