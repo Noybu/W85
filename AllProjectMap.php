@@ -89,12 +89,16 @@
                             return function() {
                                 infowindow.setContent(content);
                                 infowindow.open(map,marker);
-                                google.maps.event.addListener(map,'click', function(){ 
-                                    infowindow.close();
                                 });
                             };
                         })(marker,content,infowindow)); 
-                        
+                        google.maps.event.addListener(marker,'click', (function(marker,infowindow){ 
+                            return function() {
+                                marker.infowindow.close();
+                                });
+                            };
+                        })(marker,infowindow));
+
                     }
                     else 
                     {
