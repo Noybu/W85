@@ -57,6 +57,8 @@ function getCountOfUserType($userType){
     return $count;
 }
 
+
+
 function checkIfUserRate($userid,$projectid){
         $sql="SELECT count(*) as total_row FROM rates WHERE userid='$userid' AND projectid='$projectid' ";
         $count = get_object($sql)->total_row;

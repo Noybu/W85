@@ -1,7 +1,4 @@
-<?php include_once("../include/BLL.php"); 
-  $arrprojects=Array();
-  $arrprojects=getAllProjects();
-?>
+<?php include_once("../include/BLL.php"); ?>
 <html>
   <head>
     <title>Admin</title>
@@ -39,7 +36,7 @@
 
 
         // Set chart options
-        var options = {'title':' סוג המשתמש (עבור משתמשים מאושרים בלבד)',
+        var options = {'title':' סוג המשתמש-עבור משתמשים מאושרים בלבד',
                        'width':600,
                        'height':600};
 
@@ -71,15 +68,17 @@
 
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['Memory', 80],
+          /*['Memory', 80],
           ['CPU', 55],
-          ['Network', 68]
+          */
+          ['אחוז כסף שגויס', ]
         ]);
 
         var options3 = {
           width: 400, height: 120,
-          redFrom: 90, redTo: 100,
-          yellowFrom:75, yellowTo: 90,
+          redFrom: 10, redTo: 40,
+          yellowFrom:41, yellowTo: 80,
+          greenFrom:81, greenTo:100,
           minorTicks: 5
         };
 
