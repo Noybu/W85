@@ -82,11 +82,10 @@
           ['מתוך :'+'<?php echo $sumOfPrice;?>', <?php echo $currentPrice;?>]
         ]);
         
-        var sum=<?php echo $sumOfPrice;?>;
-        var maximum=<?php echo $sumOfPrice;?>;
-
+        var sum= '<?php echo $sumOfPrice;?>';
+  
         var options3 = {
-          min: 0, max: maximum,
+          min: 0, max: sum,
           width: 100, height: 100,
           redFrom: 0 , redTo: 0.4 * sum ,
           yellowFrom: 0.4 * sum, yellowTo: 0.8 * sum,
