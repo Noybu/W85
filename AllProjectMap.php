@@ -95,7 +95,7 @@
                             return function() {
                                 infowindow.setContent(content);
                                 infowindow.open(map,marker);
-                                setTimeout(function () { infowindow.close(); }, 5000);
+                                //setTimeout(function () { infowindow.close(); }, 5000);
                             };
                         })(marker,content,infowindow));
                     }
