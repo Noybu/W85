@@ -81,12 +81,12 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-                        var content = "aaa";
-                          /*   "<h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>" +
+                        var content = 
+                            "<h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>" +
                            " <p class='loc'>מיקום: רחוב"+
                                 "<?php echo $arrProjects[$i]->loccity.' '.$arrProjects[$i]->locstreet.' '.$arrProjects[$i]->locnum;?>"+
                             "</p>"
-                           ; */
+                           ;
     
                         var infowindow = new google.maps.InfoWindow();
 
@@ -96,7 +96,6 @@
                                 infowindow.open(map,marker);
                                 setTimeout(function () { infowindow.close(); }, 5000);
                                 });
-                            };
                         })(marker,content,infowindow)); 
                             
                     }
@@ -106,7 +105,7 @@
                     }
                     });
                     <?php
-                  }
+                }
         ?>
       }
       
