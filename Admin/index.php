@@ -1,13 +1,4 @@
 <?php include_once("../include/BLL.php"); 
-$arrprojects=Array();
-$arrprojects=getAllProjects();
-$currentPrice=0;
-$sumOfPrice=0;
-for($i=0;i<sizeof($arrprojects);$i++)
-{
-  $sumOfPrice+=$arrprojects[$i]->projectcost;
-  $currentPrice+=$arrprojects[$i]->projectcurrentprice;
-}
 ?>
 <html>
   <head>
@@ -75,7 +66,17 @@ for($i=0;i<sizeof($arrprojects);$i++)
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
         chart2.draw(data2, options2);
 
-
+        <?php
+          $arrprojects=Array();
+          $arrprojects=getAllProjects();
+          $currentPrice=0;
+          $sumOfPrice=0;
+          for($i=0;$i<sizeof($arrprojects);$i++)
+          {
+            $sumOfPrice+=$arrprojects[$i]->projectcost;
+            $currentPrice+=$arrprojects[$i]->projectcurrentprice;
+          }
+        ?>
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
           /*['Memory', 80],
