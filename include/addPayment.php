@@ -66,7 +66,7 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
     $mail->Body = "
     <div style='direction:rtl;'><h1>תודה " . $name ."</h1>
     <BR>
-    <p> תרומתך על סך: " . $price . $currency. " התקבלה בהצלחה
+    <p> תרומתך על סך: " . $price . "  ₪ התקבלה בהצלחה!;
     <BR>
     <BR>
     <img src='https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif'>
