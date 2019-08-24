@@ -88,7 +88,7 @@
         var options3 = {
           min: 0, max: <?php echo $sumOfPrice;?>,
           width: 400, height: 120,
-          redFrom: (0.1 * <?php echo $sumOfPrice;?>), redTo: (0.4 * <?php echo $sumOfPrice;?>) ,
+          redFrom: 0 , redTo: (0.4 * <?php echo $sumOfPrice;?>) ,
           yellowFrom: (0.41 * <?php echo $sumOfPrice;?>), yellowTo: (0.8 * <?php echo $sumOfPrice;?>),
           greenFrom: (0.81 * <?php echo $sumOfPrice;?>), greenTo: (<?php echo $sumOfPrice;?>),
           minorTicks: 5
