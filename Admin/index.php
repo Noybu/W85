@@ -82,13 +82,13 @@
           /*['Memory', 80],
           ['CPU', 55],
           */
-          [' כסף שגויס עד כה', <?php echo $currentPrice;?>],
-          [' סך עלות הפרויקטים', <?php echo $sumOfPrice;?>]
+          [' כסף שגויס עד כה', <?php echo $currentPrice;?>]
         ]);
 
         var options3 = {
+          min: 0, max: <?php echo $sumOfPrice;?>,
           width: 400, height: 120,
-          redFrom: 0.1, redTo: 0.4,
+          redFrom: (0.1 * <?php echo $sumOfPrice;?>), redTo: 0.4,
           yellowFrom: 0.41, yellowTo: 0.8,
           greenFrom: 0.81, greenTo: 1,
           minorTicks: 5
