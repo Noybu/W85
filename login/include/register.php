@@ -107,9 +107,9 @@ switch ($command) {
             $_SESSION["userID"]=$_POST["userID"];
             $_SESSION["firstName"]=get_user_name($_POST["userID"]);
             $_SESSION["type"]=get_user_type($_POST["userID"]);
-            header("Location: ../index.php");
+            header("Location: ../../index.php");
         } else
-            header("Location: signIn.php?Error=IncorrectUsernameOrPassword");
+            header("Location: ../signIn.php?Error=IncorrectUsernameOrPassword");
         break;
     }
 

@@ -51,7 +51,7 @@
               <?php
               }
             ?>
-            <input required type="text" name="id" class="form-style" pattern="[0-9]" minlength="9" maxlength="9" />
+            <input required type="text" name="id" class="form-style" pattern="[0-9]+" minlength="9" maxlength="9" />
           </div>
           <div class="form-item">
             <p class="formLabel">שם פרטי</p>
