@@ -82,22 +82,21 @@
           /*['Memory', 80],
           ['CPU', 55],
           */
-          [' כסף שגויס עד כה', <?php echo $sumOfPrice;?>]
+          ['כסף שגויס עד כה מתוך :'+'<?php echo $sumOfPrice;?>', <?php echo $currentPrice;?>]
         ]);
         
-        
+         var sum=<?php echo $sumOfPrice;?>;
 
         var options3 = {
           min: 0, max: <?php echo $sumOfPrice;?>,
           width: 300, height: 300,
-          redFrom: 0 , redTo: 0.4 * <?php echo $sumOfPrice;?> ,
-          yellowFrom: 0.41 * <?php echo $sumOfPrice;?>, yellowTo: 0.8 * <?php echo $sumOfPrice;?>,
-          greenFrom: 0.81 * <?php echo $sumOfPrice;?>, greenTo: <?php echo $sumOfPrice;?>,
+          redFrom: 0 , redTo: 0.4 * sum ,
+          yellowFrom: 0.41 * sum, yellowTo: 0.8 * sum,
+          greenFrom: 0.81 * sum, greenTo: sum,
           minorTicks: 5
         };
 
         var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
-        data3.setValue(0,1,<?php echo $currentPrice;?>);
         chart3.draw(data3, options);
       }
 
