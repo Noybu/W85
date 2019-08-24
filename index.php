@@ -69,7 +69,7 @@
                         <div class="pictureCard" style="background-image:url('images/project_types/<?php echo $arrProjects[$i]->projecttype; ?>.png');"></div>
                         <div class="descCard">
                                  <div style="display: flex; justify-content: center;margin-top: -15px;"><h3 class="projecttitle"><?php echo getProjectType($arrProjects[$i]->projecttype); ?></h3></div>
-                            <div>
+                            <div style="margin-left:15px;margin-right:15px;">
                                 <div class="<?php echo getStatusColor($arrProjects[$i]->projectstatus); ?> status"><?php echo getProjectStatus($arrProjects[$i]->projectstatus); ?></div>
                                 <p>תיאור הפרויקט: <?php echo $arrProjects[$i]->description; ?></p>
                                 <p><?php echo 'עיר: ' .$arrProjects[$i]->loccity; ?><Br>
