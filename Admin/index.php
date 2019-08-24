@@ -81,7 +81,7 @@
         var current= <?php echo $currentPrice;?> ;
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['מתוך :'+ sum, current]
+          ['כסף שגויס עד כה', current]
         ]);
         
        
