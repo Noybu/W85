@@ -81,13 +81,13 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-                        var content = "סוג פרויקט: "+
+                        var content = "<b>סוג פרויקט: </b>"+
                         "<?php echo getProjectType($arrProjects[$j]->projecttype);?> <br>"+
-                        "מיקום: "+
+                        "<b>מיקום: </b>"+
                         "<?php echo $arrProjects[$j]->loccity.' '.$arrProjects[$j]->locstreet.' '.$arrProjects[$j]->locnum;?> <br>"+
-                        "סטטוס: "+
+                        "<b>סטטוס: </b>"+
                         "<?php echo getProjectStatus($arrProjects[$j]->projectstatus);?> <br>"+
-                        "<a href='projectFund.php?projectid=<?php echo $arrProjects[$j]->projectid;?>'>לצפייה</a>";
+                        "<a href='projectFund.php?projectid=<?php echo $arrProjects[$j]->projectid;?>'><b>לצפייה</b></a>";
                         
                         var infowindow = new google.maps.InfoWindow();
 
