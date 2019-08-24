@@ -43,8 +43,15 @@ function getAvgRate($projectid){
     return ceil($avg);
 }
 
-function getCountOfProjectType($projectstatus){
+function getCountOfProjectStatus($projectstatus){
     $sql="SELECT count(*) as total_row FROM projects WHERE projectstatus='$projectstatus'";
+    $count=get_object($sql)->total_row;
+
+    return $count;
+}
+
+function getCountOfUserType($userType){
+    $sql="SELECT count(*) as total_row FROM users WHERE type='$userType'";
     $count=get_object($sql)->total_row;
 
     return $count;

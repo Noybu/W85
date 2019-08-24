@@ -29,19 +29,17 @@
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
+        data.addColumn('string', 'סוג המשתמש');
+        data.addColumn('number', 'כמות');
         data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+          ['יזם/משקיע', <?php echo getCountOfUserType(1);?>],
+          ['נותן שירות', <?php echo getCountOfUserType(2);?>],
+
         ]);
 
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
+        var options = {'title':' סוג המשתמש (עבור משתמשים מאושרים בלבד)',
                        'width':600,
                        'height':600};
 
@@ -54,23 +52,15 @@
 
         var data2 = google.visualization.arrayToDataTable([
          ['סטטוס פרויקט', 'כמות', { role: 'style' }],
-        ['ממתין לאישור', <?php echo getCountOfProjectType(0);?> , '#b87333'],
-        ['ממתין למכרז', <?php echo getCountOfProjectType(1);?> , '#b87333'],
-        ['ממתין למימון', <?php echo getCountOfProjectType(2);?> , '#b87333'],
-        ['בביצוע', <?php echo getCountOfProjectType(3);?> , '#b87333'],
-        ['הושלם', <?php echo getCountOfProjectType(4);?> , '#b87333'],
-
-         /*
-         ['ממתין לאישור', , '#b87333'],            // RGB value
-         ['Silver', 10.49, 'silver'],            // English color name
-         ['Gold', 19.30, 'gold'],
-
-       ['Platinum', 21.45, 'color: #e5e4e2' ], // CSS-style declaration
-       */
+        ['ממתין לאישור', <?php echo getCountOfProjectStatus(0);?> , '#b87333'],
+        ['ממתין למכרז', <?php echo getCountOfProjectStatus(1);?> , '#b87333'],
+        ['ממתין למימון', <?php echo getCountOfProjectStatus(2);?> , '#b87333'],
+        ['בביצוע', <?php echo getCountOfProjectStatus(3);?> , '#b87333'],
+        ['הושלם', <?php echo getCountOfProjectStatus(4);?> , '#b87333']
       ]);
 
               // Set chart options
-              var options2 = {'title':'How Much Pizza I Ate Last Night',
+              var options2 = {'title':'פרויקטים לפי סטטוס',
                        'width':600,
                        'height':600};
 
