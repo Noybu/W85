@@ -34,13 +34,24 @@
         <p>כל שתצטרכו לעשות הוא להזין את הפרטים המופיעים בטופס</p>
       </div>
     </section>
+    <?php
+      $Error=$_GET["Error"];
+    ?>
     <div id="mainDiv">
       <form action="include/register.php" method="post" enctype = "multipart/form-data">
         <div id="form">
 
           <div class="form-item">
             <p class="formLabel">תעודת זהות</p>
-            <input required type="text" name="id" class="form-style" maxlength="9" />
+            <?php
+              if($Error=="UserExist")
+              {
+              ?>
+                <span style="color:red;">תעודת זהות קיימת במערכת</span>
+              <?php
+              }
+            ?>
+            <input required type="text" name="id" class="form-style" minlength="9" pattern="[0-9]+" maxlength="9" oninvalid = "setCustomValidity('יש להכניס ת.ז המכילה 9 ספרות בלבד')"/>
           </div>
           <div class="form-item">
             <p class="formLabel">שם פרטי</p>

@@ -46,7 +46,7 @@ include_once("include/BLL.php");
             {
               $userType=get_user_type($_SESSION["userID"]);
               $userApproves=getServiceApproved($_SESSION["userID"]);
-              if($userType== 2 &&  $userApproves== 1)
+              if($userType== 2)
                 {
               ?> 
                   <li class="nav-item">

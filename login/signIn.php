@@ -11,17 +11,7 @@
     <title>Urban Re-Development</title>
     <?php
     require_once'../include/BLL.php';
-    session_start();
-    if(isset($_POST['submit'])){
-      $count=is_user_exist($_POST["userID"],$_POST["password"]);
-      if($count>0)
-      {
-        $_SESSION["userID"]=$_POST["userID"];
-        $_SESSION["firstName"]=get_user_name($_POST["userID"]);
-        $_SESSION["type"]=get_user_type($_POST["userID"]);
-        header("Location: ../index.php");
-      }     
-    }
+   
   
    ?>
 
@@ -49,18 +39,30 @@
             <a href="signUp.php" class="signUpClass"><p>אתה עוד לא רשום?? לחץ כאן כדי להרשם</p></a>
         </div>
     </section>
+    <?php
+      $Error=$_GET["Error"];
+    ?>
       <div id="mainDiv">
-        <form action="" method="POST">
+        <form  action="include/register.php" method="post">
             <div id="form">
                     
                 <div class="form-item">
                     <p class="formLabel">תעודת זהות</p>
-                    <input required type="text" name="userID" class="form-style" maxlength="9"/>
+                    <input required type="text" name="userID" class="form-style" pattern="[0-9]+" minlength="9" maxlength="9" oninvalid = "setCustomValidity('יש להכניס ת.ז המכילה 9 ספרות בלבד')"/>
                 </div>
                 <div class="form-item">
                     <p class="formLabel">סיסמא</p>
                     <input required type="password" name="password" class="form-style"/>
                 </div>
+                <input type="hidden" name="type" value="signin" />
+                <?php
+                  if($Error=="IncorrectUsernameOrPassword")
+                  {
+                  ?>
+                    <span style="color:red;">שם משתמש או סיסמא אינם נכונים</span>
+                  <?php
+                  }
+                ?>
                 <div class="form-item">
                     <input type="submit" class="login" value="שלח" name="submit">
                 </div>

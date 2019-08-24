@@ -1,4 +1,5 @@
 <?php include_once("header.php"); ?>
+<link rel="stylesheet" type="text/css" href="CSS\myProject.css">
 <?php include_once("include/BLL.php"); ?>
 <?php
    if(!isset($_SESSION["userID"])){
@@ -7,14 +8,21 @@
     session_start();   
     $arrFunds=Array();
     $arrFunds=getFundsByUser( $_SESSION["userID"]);
-    if($arrFunds==null)
+    $userApproves=getServiceApproved($_SESSION["userID"]);
+    if($userApproves != 1)
+    {
+        ?>
+            <p style="color:red;">שים לב! הפרופיל שלך עדיין לא אושר ע"י מנהל המערכת</p>
+            <p style="color:red;"> רק לאחר אישור מתאים תוכל להרשם למכרזים פתוחים</p>
+        <?php
+    }
+    elseif($arrFunds==null)
     {
         ?>
         <p>אין מכרזים שמחכים לביצוע שלך</p>
     <?php
     }
     $userType=get_user_type($_SESSION["userID"]);
-    $userApproves=getServiceApproved($_SESSION["userID"]);
     if($userType== 2 &&  $userApproves== 1)
     {
         ?>
@@ -90,13 +98,10 @@
         </section>
         <?php
     }
-    else {
+    
         ?>
-            <p>אין לך הרשאה מתאימה</p>
-        <?php
-    }
-    ?>
-      <link rel="stylesheet" type="text/css" href="CSS\myProject.css">
+    
+      
 
 
 
