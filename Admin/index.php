@@ -68,7 +68,7 @@
 
         <?php
           $currentPrice= getAllCurrentPrice();
-          $sumOfPrice=getAllProjectPrice;
+          $sumOfPrice=getAllProjectPrice();
         ?>
         var sum= <?php echo $sumOfPrice;?> ;
         var current= <?php echo $currentPrice;?> ;
