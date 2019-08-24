@@ -1,4 +1,14 @@
-<?php include_once("../include/BLL.php"); ?>
+<?php include_once("../include/BLL.php"); 
+$arrprojects=Array();
+$arrprojects=getAllProjects();
+$currentPrice=0;
+$sumOfPrice=0;
+for($i=0;i<sizeof($arrprojects);$i++)
+{
+  $sumOfPrice+=$arrprojects[$i]->projectcost;
+  $currentPrice+=$arrprojects[$i]->projectcurrentprice;
+}
+?>
 <html>
   <head>
     <title>Admin</title>
@@ -71,7 +81,8 @@
           /*['Memory', 80],
           ['CPU', 55],
           */
-          ['אחוז כסף שגויס', ]
+          [' כסף שגויס עד כה', <?php echo $currentPrice;?>],
+          [' סך עלות הפרויקטים', <?php echo $sumOfPrice;?>]
         ]);
 
         var options3 = {
