@@ -185,13 +185,13 @@ p{
 }
 
 .descCard{
-	position: relative;
+	
 	height:100%;
 }
 
 .bar{
-	position:absolute;
-	bottom: 5%;
+
+	bottom: 2%;
 	width: 100%;
 }
 
