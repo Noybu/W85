@@ -97,14 +97,16 @@
 
   </head> 
   <body>
-  <?php //include_once("side-bar.php"); ?>
+  <?php include_once("side-bar.php"); ?>
     <main class="main">
-        <p>ברוך הבא לאתר!!!!!</p>
+        <p>ברוך הבא לפאנל הניהול של המערכת</p>
 
 
     <!--Div that will hold the pie chart-->
+    <div>
     <div id="chart_div"></div>
     <div id="chart_div2"></div>
+    </div>
     <div id="chart_div3"></div>
 
 
