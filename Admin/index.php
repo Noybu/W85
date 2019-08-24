@@ -109,10 +109,11 @@
 
     <!--Div that will hold the pie chart-->
     <div>
-    <div id="chart_div"></div>
-    <div id="chart_div2"></div>
+      <div id="chart_div" style="width:30%; float:right;"></div>
+      <div id="chart_div2" style="width:30%; float:right;"></div>
+      <div id="chart_div3" style="width:30%; float:right;"></div>
     </div>
-    <div id="chart_div3"></div>
+    
 
 
 
