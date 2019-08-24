@@ -81,18 +81,37 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-
+                        var content = "<span style='font-weight:bold';>סוג פרויקט: </span>"+
+                        "<?php echo getProjectType($arrProjects[$j]->projecttype);?> <br>"+
+                        "<span style='font-weight:bold';>מיקום: </span>"+
+                        "<?php echo $arrProjects[$j]->loccity.' '.$arrProjects[$j]->locstreet.' '.$arrProjects[$j]->locnum;?> <br>"+
+                        "<span style='font-weight:bold';>סטטוס: </span>"+
+                        "<?php echo getProjectStatus($arrProjects[$j]->projectstatus);?> <br>"+
+                        "<a href='projectFund.php?projectid=<?php echo $arrProjects[$j]->projectid;?>'>לצפייה</a>";
                         
+                        var infowindow = new google.maps.InfoWindow();
+
+                        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+                            return function() {
+                                infowindow.setContent(content);
+                                infowindow.open(map,marker);
+                                setTimeout(function () { infowindow.close(); }, 5000);
+                            };
+                        })(marker,content,infowindow));
                     }
+                        
+                    
                     else 
                     {
                         alert('Geocode was not successful for the following reason: ' + status);
                     }
                     });
                     <?php
-                  }
+                }
         ?>
       }
+      
+      
     </script>
 
 
