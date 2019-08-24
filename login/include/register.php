@@ -13,7 +13,7 @@ switch ($command) {
 
     case "1":
         // הרשמה יזם משקיע
-        if(if_user_exist($_POST["id"])==0)
+        if(if_user_exist($_POST["id"])>0)
         {
             header("Location: ../signInCiv.php?Error=UserExist");
             break;
@@ -34,7 +34,7 @@ switch ($command) {
 
     case "2":
         // הרשמה נותן שירות
-        if(if_user_exist($_POST["id"])==0)
+        if(if_user_exist($_POST["id"])>0)
         {
             header("Location: ../signInService.php?Error=UserExist");
             break;
