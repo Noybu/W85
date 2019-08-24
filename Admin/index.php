@@ -77,13 +77,15 @@
             $currentPrice+=$arrprojects[$i]->projectcurrentprice;
           }
         ?>
+        var sum= <?php echo $sumOfPrice;?> ;
+        var current= <?php echo $currentPrice;?> ;
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['מתוך :'+'<?php echo $sumOfPrice;?>', <?php echo $currentPrice;?>]
+          ['מתוך :'+'<?php echo $sumOfPrice;?>', current]
         ]);
         
-        var sum= '<?php echo $sumOfPrice;?>';
-  
+       
+        
         var options3 = {
           min: 0, max: sum,
           width: 100, height: 100,
