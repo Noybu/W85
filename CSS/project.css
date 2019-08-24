@@ -95,6 +95,9 @@ a:hover{
 	padding-right:21px;
 	padding-top:4px;
 	padding-bottom: 4px;
+	float: left;
+    margin-top: 16px;
+    margin-bottom: 15px;
 }
 
 .projecttitle
