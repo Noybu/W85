@@ -110,4 +110,12 @@
       </form>
     </div>
   </main>
+
+  <script>
+      $(function(){
+        $("input[name=id]")[0].oninvalid = function () {
+            this.setCustomValidity("יש להכניס ת.ז המכילה 9 ספרות בלבד");
+        };
+    });
+    </script>
   <?php include_once("../footer.php"); ?>
