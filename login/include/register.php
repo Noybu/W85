@@ -13,103 +13,104 @@ switch ($command) {
 
     case "1":
         // הרשמה יזם משקיע
-
-
-        registerUser(
-            $_POST["id"],
-            $_POST["firstName"],
-            $_POST["lastName"],
-            $_POST["password"],
-            $_POST["email"],
-            $_POST["type"]
-        );
-        header("Location: ../../index.php");
-
-        break;
+        if(if_user_exist($_POST["id"])==0)
+        {
+            header("Location: ../signInCiv.php?Error=UserExist");
+            break;
+        }
+        else{
+            registerUser(
+                $_POST["id"],
+                $_POST["firstName"],
+                $_POST["lastName"],
+                $_POST["password"],
+                $_POST["email"],
+                $_POST["type"]
+            );
+            header("Location: ../../index.php");
+            break;
+        }
+       
 
     case "2":
         // הרשמה נותן שירות
-        if(isset($_FILES['idFile'])){
-            $errors= array();
-            $file_name = $_FILES['idFile']['name'];
-            $file_tmp = $_FILES['idFile']['tmp_name'];
-            $file_ext=strtolower(end(explode('.',$_FILES['idFile']['name'])));
-            
-            $extensions= array("jpeg","jpg","png","gif");
-            
-            if(in_array($file_ext,$extensions)=== false){
-               $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-            }
+        if(if_user_exist($_POST["id"])==0)
+        {
+            header("Location: ../signInService.php?Error=UserExist");
+            break;
+        }
+        else{
+            if(isset($_FILES['idFile'])){
+                $errors= array();
+                $file_name = $_FILES['idFile']['name'];
+                $file_tmp = $_FILES['idFile']['tmp_name'];
+                $file_ext=strtolower(end(explode('.',$_FILES['idFile']['name'])));
+                
+                $extensions= array("jpeg","jpg","png","gif");
+                
+                if(in_array($file_ext,$extensions)=== false){
+                   $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+                }
+    
+                
+                if(empty($errors)==true) {
+                   move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_idFile.". $file_ext);
+                   echo "Success";
+                }else{
+                   print_r($errors);
+                }
+             }
+    
+    
+             if(isset($_FILES['profFile'])){
+                $errors= array();
+                $file_name = $_FILES['profFile']['name'];
+                $file_tmp = $_FILES['profFile']['tmp_name'];
+                $file_ext=strtolower(end(explode('.',$_FILES['profFile']['name'])));
+                
+                $extensions= array("jpeg","jpg","png","gif");
+                
+                if(in_array($file_ext,$extensions)=== false){
+                   $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+                }
+    
+                if(empty($errors)==true) {
+                   move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_profFile.". $file_ext);
+                   echo "Success";
+                }else{
+                   print_r($errors);
+                }
+             }
 
-            
-            if(empty($errors)==true) {
-               move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_idFile.". $file_ext);
-               echo "Success";
-            }else{
-               print_r($errors);
-            }
-         }
+            registerServiceMan(
+                $_POST["id"],
+                $_POST["firstName"],
+                $_POST["lastName"],
+                $_POST["password"],
+                $_POST["email"],
+                $_POST["idService"],
+                $_POST["profType"],
+                $_POST["numOfYears"],
+                $_POST["id"]."_idFile.". $file_ext,
+                $_POST["id"]."_profFile.". $file_ext,
+                $_POST["type"]
+            );
+            header("Location: ../../index.php");
+            break;
+        }
+        
 
-
-         if(isset($_FILES['profFile'])){
-            $errors= array();
-            $file_name = $_FILES['profFile']['name'];
-            $file_tmp = $_FILES['profFile']['tmp_name'];
-            $file_ext=strtolower(end(explode('.',$_FILES['profFile']['name'])));
-            
-            $extensions= array("jpeg","jpg","png","gif");
-            
-            if(in_array($file_ext,$extensions)=== false){
-               $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-            }
-
-            
-            if(empty($errors)==true) {
-               move_uploaded_file($file_tmp,"../uploadFiles/".$_POST["id"]."_profFile.". $file_ext);
-               echo "Success";
-            }else{
-               print_r($errors);
-            }
-         }
-
-
-
-
-   
-
-        registerServiceMan(
-            $_POST["id"],
-            $_POST["firstName"],
-            $_POST["lastName"],
-            $_POST["password"],
-            $_POST["email"],
-            $_POST["idService"],
-            $_POST["profType"],
-            $_POST["numOfYears"],
-            $_POST["id"]."_idFile.". $file_ext,
-            $_POST["id"]."_profFile.". $file_ext,
-            $_POST["type"]
-        );
-        header("Location: ../../index.php");
-
-        break;
-
-    case "login":
-        if (!isset($_POST["userName"]) || ($_POST["userName"]) == "") {
-            header("Location: login.php?error=Missing Username.");
-        } elseif (!isset($_POST["password"]) || ($_POST["password"]) == "") {
-            header("Location: login.php?error=Missing Password.");
-        } elseif (is_user_exist($_POST["userName"], $_POST["password"])) {
-            $_SESSION["userID"] = get_user_id($_POST["userName"]);
-            header("Location: index.php");
+    case "signin":
+    {
+        session_start();
+         if (is_user_exist($_POST["userID"],$_POST["password"])>0) {
+            $_SESSION["userID"]=$_POST["userID"];
+            $_SESSION["firstName"]=get_user_name($_POST["userID"]);
+            $_SESSION["type"]=get_user_type($_POST["userID"]);
+            header("Location: ../index.php");
         } else
-            header("Location: login.php?error=Incorrect Username or Password");
+            header("Location: signIn.php?Error=IncorrectUsernameOrPassword");
         break;
+    }
 
-
-
-    case "logout":
-        session_destroy();
-        header("Location: login.php");
-        break;
 }
