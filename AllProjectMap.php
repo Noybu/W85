@@ -81,8 +81,23 @@
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
-                        var content = "Address - " + "<?php echo getProjectType($arrProjects[$j]->projecttype); ?>";
+                        var content = 
+                            "<h3><?php echo getProjectType($arrProjects[$i]->projecttype);?></h3>" +
+                           " <p class='loc'>מיקום: רחוב"+
+                                "<?php echo $arrProjects[$i]->loccity.' '.$arrProjects[$i]->locstreet.' '.$arrProjects[$i]->locnum;?>"+
+                            "</p>"+
+                                    
+                           " <div class='bar2'>
+                                <p style='text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f'><?php echo $arrProjects[$i]->projectcost;?><i class='fas fa-shekel-sign'></i></p>
+                                <div id='mainBar2'>
+                                    <div class='progress-bar progress-bar-striped progress-bar-animated' role='progressbar' style='max-width:100%; width:<?php echo ($arrProjects[$i]->projectcurrentprice/$arrProjects[$i]->projectcost)*100;?>%;border-radius: 20px; '>
+                                        <?php echo $arrProjects[$i]->projectcurrentprice?>
+                                    </div>
+                                </div>
+                            </div>";
 
+                        
+                        
                         var infowindow = new google.maps.InfoWindow();
 
                         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
