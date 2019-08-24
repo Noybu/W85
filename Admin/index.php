@@ -88,9 +88,9 @@
 
         var options3 = {
           width: 400, height: 120,
-          redFrom: 10, redTo: 40,
-          yellowFrom:41, yellowTo: 80,
-          greenFrom:81, greenTo:100,
+          redFrom: 10%, redTo: 40%,
+          yellowFrom:41%, yellowTo: 80%,
+          greenFrom:81%, greenTo:100%,
           minorTicks: 5
         };
 
