@@ -75,7 +75,8 @@
                                 <p><?php echo 'עיר: ' .$arrProjects[$i]->loccity; ?><Br>
                                 <?php echo 'רחוב: ' .$arrProjects[$i]->locstreet; ?></p>
                                 <?php $id = $arrProjects[$i]->projectid; ?>
-                                <button class="moreButton" onclick="window.location.assign('projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>')">לצפייה בפרויקט</button>
+                               
+                                
                                 <div class="bar">
                                     <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[$i]->projectcost; ?><i class="fas fa-shekel-sign"></i></p>
                                     <div id="mainBar">
@@ -84,6 +85,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <button class="moreButton" onclick="window.location.assign('projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>')">לצפייה בפרויקט</button>
                             </div>
                         </div>
                     </div>

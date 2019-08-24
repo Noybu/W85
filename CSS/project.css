@@ -95,6 +95,14 @@ a:hover{
 	padding-right:21px;
 	padding-top:4px;
 	padding-bottom: 4px;
+	float: left;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+
+.moreButton:hover
+{
+	background-color: #fff;
 }
 
 .projecttitle
@@ -129,6 +137,7 @@ p{
 	font-size:18px; 
 	font-weight:bold; 
 	text-align:center;
+	width:30%;
 }
 
 .status-a
@@ -179,18 +188,18 @@ p{
 }
 
 .card:hover{
-	background-color:  rgb(147, 142, 142,0.1);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
 	cursor: pointer;
 }
 
 .descCard{
-	position: relative;
+	
 	height:100%;
 }
 
 .bar{
-	position:absolute;
-	bottom: 5%;
+
+	bottom: 2%;
 	width: 100%;
 }
 
