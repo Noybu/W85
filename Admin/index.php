@@ -36,10 +36,13 @@
 
 
         // Set chart options
-        var options = {
-                       'width':400,
-                       'height':400
-                    };
+        var options = 
+        {
+          pieHole: 0.45,
+          colors: ['#067ab5', '#3aa5dd'],
+              'width':400,
+              'height':400
+          };
 
 
              // Instantiate and draw our chart, passing in some options.
