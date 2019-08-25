@@ -40,8 +40,8 @@
         {
           pieHole: 0.45,
           colors: ['#067ab5', '#3aa5dd'],
-              'width':700,
-              'height':700
+              'width':600,
+              'height':600
           };
 
 
