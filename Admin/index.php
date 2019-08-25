@@ -30,9 +30,8 @@
         data.addColumn('string', 'סוג המשתמש');
         data.addColumn('number', 'כמות');
         data.addRows([
-          ['יזם/משקיע', <?php echo getCountOfUserType(1);?>,'#e0440e'],
-          ['נותן שירות', <?php echo getCountOfUserType(2);?>,'#e6693e'],
-
+          ['יזם/משקיע', <?php echo getCountOfUserType(1);?>],
+          ['נותן שירות', <?php echo getCountOfUserType(2);?>]
         ]);
 
 
