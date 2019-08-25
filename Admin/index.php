@@ -30,8 +30,8 @@
         data.addColumn('string', 'סוג המשתמש');
         data.addColumn('number', 'כמות');
         data.addRows([
-          ['יזם/משקיע', <?php echo getCountOfUserType(1);?>],
-          ['נותן שירות', <?php echo getCountOfUserType(2);?>],
+          ['יזם/משקיע', <?php echo getCountOfUserType(1);?>,'#e0440e'],
+          ['נותן שירות', <?php echo getCountOfUserType(2);?>,'#e6693e'],
 
         ]);
 
@@ -39,8 +39,7 @@
         // Set chart options
         var options = {'title':' סוג המשתמש-עבור משתמשים מאושרים בלבד',
                        'width':600,
-                       'height':600,
-                       colors: ['#e0440e', '#e6693e'];
+                       'height':600]};
 
 
              // Instantiate and draw our chart, passing in some options.
