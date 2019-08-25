@@ -104,17 +104,20 @@
   <?php include_once("side-bar.php"); ?>
     <main class="main">
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
-      
+
       <div class="charts">
-        <div id="chart_div" >סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</div>
+        <p>סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</p>
+        <div id="chart_div" ></div>
       </div>
 
       <div class="charts">
-        <div id="chart_div3" >כסף שגויס עד כה עבור כלל הפרויקטים</div>
+        <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
+        <div id="chart_div3" ></div>
       </div>
 
       <div class="charts">
-        <div id="chart_div2" >כלל הפרויקטים לפי סטטוס</div>
+        <p>כלל הפרויקטים לפי סטטוס</p>
+        <div id="chart_div2" ></div>
       </div>
     
     </main>
