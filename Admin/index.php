@@ -37,8 +37,9 @@
 
         // Set chart options
         var options = {
-                       'width':600,
-                       'height':600};
+                       //'width':600,
+                      // 'height':600
+                    };
 
 
              // Instantiate and draw our chart, passing in some options.
@@ -59,8 +60,9 @@
 
       // Set chart options
       var options2 = {
-                'width':600,
-                'height':600};
+                //'width':600,
+                //'height':600
+              };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
         chart2.draw(data2, options2);
@@ -104,6 +106,19 @@
   <?php include_once("side-bar.php"); ?>
     <main class="main">
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
+   
+   
+      <div class="row">
+
+      <div class="charts">
+        <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
+        <div id="chart_div3" ></div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
 
       <div class="charts">
         <p>סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</p>
@@ -111,14 +126,11 @@
       </div>
 
       <div class="charts">
-        <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
-        <div id="chart_div3" ></div>
-      </div>
-
-      <div class="charts">
         <p>כלל הפרויקטים לפי סטטוס</p>
         <div id="chart_div2" ></div>
       </div>
+
+    </div>
     
     </main>
     
