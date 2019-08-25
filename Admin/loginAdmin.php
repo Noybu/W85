@@ -33,7 +33,6 @@
                         </div>
                         <br>
                         <input type="hidden" name="type" value="signin" />
-                        <div>
                         <?php
                          if($_SESSION["type"] == 3)
                          {
@@ -57,6 +56,7 @@
                             <?php
                         }
                         ?>
+                        <div>
                             <input type="submit" class="login" value="שלח" name="submit">
                         </div>
                     </div>
