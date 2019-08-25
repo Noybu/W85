@@ -113,7 +113,7 @@
 
 <table class="charttable">
   <tr>
-    <td>
+    <td style="vertical-align: baseline">
     <div class="charts">
         <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
         <div id="chart_div3" ></div>
@@ -121,7 +121,9 @@
     </td>
     <td>
     <div class="charts">
-        <p>סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</p>
+        <p>סוגי משתמשים שמאושרים במערכת </p>
+        <br>
+        <br>
         <div id="chart_div" ></div>
       </div>
     </td>
