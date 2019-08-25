@@ -64,12 +64,11 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
     
     $mail->Subject = "תרומך לפרויקט התקבלה בהצלחה";
     $mail->Body = "
-    <div style='direction:rtl;'><h1>תודה " . $name ."</h1>
+    <div style='direction:rtl;'><h2>תודה " . $name ."</h2>
+    <p> תרומתך על סך: " . $price . "  ₪ התקבלה בהצלחה!
     <BR>
-    <p> תרומתך על סך: " . $price . "  ₪ התקבלה בהצלחה!;
     <BR>
-    <BR>
-    <img src='https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif'>
+    <img src='https://media.giphy.com/media/xTiTnqUxyWbsAXq7Ju/giphy.gif'>
     <BR>
     תודה,
     <BR>
