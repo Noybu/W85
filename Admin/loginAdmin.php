@@ -32,28 +32,24 @@
                             <input required type="password" name="password"/>
                         </div>
                         <br>
-                        <input type="hidden" name="type" value="signin" />
+                        <input type="hidden" name="type" value="signinAdmin" />
                         <?php
-                         if($_SESSION["type"] == 3)
-                         {
-                            if($Error=="IncorrectUsernameOrPassword")
-                            {
-                            ?>
-                                <span style="color:red;">שם משתמש או סיסמא אינם נכונים</span>
-                            <?php
-                            }
-                            else{
-                                header("Location:index.php");
-                            }
-                        }
-                         else
-                         {
+                        
+                        if($Error=="IncorrectUsernameOrPassword")
+                        {
                         ?>
-                                <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;position: fixed; top:0; right:0; width:100%;">
-                                    <p style="font-size:18px;font-weight:bold;display: inline;"> אין לך הרשאה להכנס למערכת</p>
-                                    <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור לדף הבית</a>
-                                </div>
-                            <?php
+                            <span style="color:red;">שם משתמש או סיסמא אינם נכונים</span>
+                        <?php
+                        }
+                        
+                        else if($Error=="AccessDenied")
+                        {
+                        ?>
+                            <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;position: fixed; top:0; right:0; width:100%;">
+                                <p style="font-size:18px;font-weight:bold;display: inline;"> אין לך הרשאה להכנס למערכת</p>
+                                <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור לדף הבית</a>
+                            </div>
+                        <?php
                         }
                         ?>
                         <div>

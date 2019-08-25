@@ -113,4 +113,24 @@ switch ($command) {
         break;
     }
 
+    case "signinAdmin":
+    {
+        session_start();
+         if ($_SESSION["type"] == 3) {
+             if(is_user_exist($_POST["userID"],$_POST["password"])>0){
+                $_SESSION["userID"]=$_POST["userID"];
+                $_SESSION["firstName"]=get_user_name($_POST["userID"]);
+                $_SESSION["type"]=get_user_type($_POST["userID"]);
+                header("Location: ../../Admin/index.php");
+             }
+            else{
+            header("Location: ../../Admin/loginAdmin.php?Error=IncorrectUsernameOrPassword");
+            }
+        }
+        else{
+            header("Location: ../../Admin/loginAdmin.php?Error=AccessDenied");
+        }
+        break;
+    }
+
 }
