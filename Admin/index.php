@@ -37,8 +37,8 @@
 
         // Set chart options
         var options = {
-                       'width':400,
-                       'height':400
+                       'width':600,
+                       'height':600
                     };
 
 
@@ -104,7 +104,7 @@
   </head> 
   <body style="background-color:#fff;">
   <?php include_once("side-bar.php"); ?>
-    <main class="main">
+    <main class="main" style="background-color:white;">
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
    
 
