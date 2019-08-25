@@ -37,8 +37,8 @@
 
         // Set chart options
         var options = {
-                       'width':600,
-                       'height':600
+                       'width':400,
+                       'height':400
                     };
 
 
