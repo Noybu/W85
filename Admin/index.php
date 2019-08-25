@@ -37,8 +37,8 @@
 
         // Set chart options
         var options = {
-                       'width':100%,
-                       'height':100%
+                       'width':400,
+                       'height':400
                     };
 
 
@@ -60,8 +60,8 @@
 
       // Set chart options
       var options2 = {
-                'width':100%,
-                'height':100%
+                'width':400,
+                'height':400
               };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
