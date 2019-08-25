@@ -60,8 +60,8 @@
 
       // Set chart options
       var options2 = {
-                'width':400,
-                'height':800
+                'width':800,
+                'height':400
               };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
@@ -108,7 +108,7 @@
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
    
 
-<table style="border:unset;">
+<table class="charttable">
   <tr>
     <td>
     <div class="charts">

@@ -134,3 +134,14 @@ table button{
 
     height:80%;
 }
+
+
+.charttable table{
+    border: 0px solid black;
+
+}
+.charttable table td{
+    border:0px solid black;
+    font-weight: bold;
+    font-size: 18px;
+}
