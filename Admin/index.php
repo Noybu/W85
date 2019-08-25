@@ -103,19 +103,16 @@
   <body>
   <?php include_once("side-bar.php"); ?>
     <main class="main">
-        <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
-
-
-    <!--Div that will hold the pie chart-->
-    <div style="width:30%; float:right; border:1px soilid black;">
-          גרף 1
-    </div>
-    <div style="width:30%; float:right; border:1px soilid black;">
-      גרף 2
-    </div>
-    <div style="width:30%; float:right; border:1px soilid black;">
-        גרף 3
-    </div>
+      <h2>ברוך הבא לפאנל הניהול של המערכת</h2>
+      <div class="charts">
+        <div id="chart_div" ></div>
+      </div>
+      <div class="charts">
+        <div id="chart_div2" ></div>
+      </div>
+      <div class="charts">
+        <div id="chart_div3" ></div>
+      </div>
     
     </main>
     
@@ -123,7 +120,3 @@
   </body>
 </html>
 
-<!-- 
-<div id="chart_div" ></div>
-<div id="chart_div2" ></div>
-<div id="chart_div3" ></div> -->

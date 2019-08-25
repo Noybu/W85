@@ -126,3 +126,10 @@ table button{
     margin-top:10%;
 }
 
+.charts{
+    width:45%;
+    float:right;
+    display: flex;
+    justify-content: center;
+    height:80%;
+}
