@@ -39,7 +39,7 @@
         // Set chart options
         var options = {'title':' סוג המשתמש-עבור משתמשים מאושרים בלבד',
                        'width':600,
-                       'height':600]};
+                       'height':600};
 
 
              // Instantiate and draw our chart, passing in some options.
