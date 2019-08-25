@@ -38,7 +38,7 @@
                         if($Error=="IncorrectUsernameOrPassword")
                         {
                         ?>
-                            <span style="color:red;">שם משתמש או סיסמא אינם נכונים</span>
+                            <span style="color:red;">סיסמא אינה נכונה</span>
                         <?php
                         }
                         
