@@ -81,7 +81,7 @@
        
         
         var options3 = {
-          width:300, height: 300,
+          width:400, height: 400,
           min:0, max:sum,
           redFrom: 0, redTo: 0.3*sum,
           yellowFrom:0.3*sum, yellowTo: 0.7*sum,
