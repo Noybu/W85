@@ -136,11 +136,11 @@ table button{
 }
 
 
-.charttable table{
+.charttable {
     border: 0px !important;
 
 }
-.charttable table td{
+.charttable td{
     border:0px !important;
     font-weight: bold;
     font-size: 18px;
