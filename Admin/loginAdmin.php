@@ -9,19 +9,6 @@
     <?php
         require_once'../include/BLL.php';
         $Error=$_GET["Error"];
-        if($_SESSION["type"] == 3){
-            header("Location:index.php");
-        }
-        else{
-            ?>
-                <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;">
-                    <p style="font-size:18px;font-weight:bold;display: inline;"> אין לך הרשאה להכנס למערכת</p>
-                    <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור לדף הבית</a>
-                </div>
-            <?php
-        }
-        
-    
   
    ?>
     
@@ -34,7 +21,7 @@
             </div>
             <div id="mainDiv">
                 <br>
-                <form action="include/register.php" method="post">
+                <form action="../include/register.php" method="post">
                     <div>
                         <div>
                             <p style="font-size:18px; font-weight:bold;">תעודת זהות</p>
@@ -63,7 +50,7 @@
                          else
                          {
                         ?>
-                                <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;">
+                                <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;position: fixed;">
                                     <p style="font-size:18px;font-weight:bold;display: inline;"> אין לך הרשאה להכנס למערכת</p>
                                     <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור לדף הבית</a>
                                 </div>
