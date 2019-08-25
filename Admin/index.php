@@ -67,38 +67,29 @@
         chart2.draw(data2, options2);
 
         <?php
-          $arrprojects=Array();
-          $arrprojects=getAllProjects();
-          $currentPrice=0;
-          $sumOfPrice=0;
-          for($i=0;$i<sizeof($arrprojects);$i++)
-          {
-            $sumOfPrice+=$arrprojects[$i]->projectcost;
-            $currentPrice+=$arrprojects[$i]->projectcurrentprice;
-          }
+          $currentPrice= getAllCurrentPrice();
+          $sumOfPrice=getAllProjectPrice();
         ?>
+        var sum= <?php echo $sumOfPrice;?> ;
+        var current= <?php echo $currentPrice;?> ;
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          /*['Memory', 80],
-          ['CPU', 55],
-          */
-          [' כסף שגויס עד כה', <?php echo $sumOfPrice;?>]
+          ['כסף שגויס עד כה', current]
         ]);
         
+       
         
-
         var options3 = {
-          min: 0, max: <?php echo $sumOfPrice;?>,
-          width: 300, height: 300,
-          redFrom: 0 , redTo: 0.4 * <?php echo $sumOfPrice;?> ,
-          yellowFrom: 0.41 * <?php echo $sumOfPrice;?>, yellowTo: 0.8 * <?php echo $sumOfPrice;?>,
-          greenFrom: 0.81 * <?php echo $sumOfPrice;?>, greenTo: <?php echo $sumOfPrice;?>,
+          width:300, height: 300,
+          min:0, max:sum,
+          redFrom: 0, redTo: 0.3*sum,
+          yellowFrom:0.3*sum, yellowTo: 0.7*sum,
+          greenFrom:0.7*sum, greenTo:sum,
           minorTicks: 5
         };
 
         var chart3 = new google.visualization.Gauge(document.getElementById('chart_div3'));
-        data3.setValue(0,1,<?php echo $currentPrice;?>);
-        chart3.draw(data3, options);
+        chart3.draw(data3, options3);
       }
 
 
@@ -118,10 +109,11 @@
 
     <!--Div that will hold the pie chart-->
     <div>
-    <div id="chart_div"></div>
-    <div id="chart_div2"></div>
+      <div id="chart_div" ></div>
+      <div id="chart_div2" ></div>
+      <div id="chart_div3" ></div>
     </div>
-    <div id="chart_div3"></div>
+    
 
 
 
