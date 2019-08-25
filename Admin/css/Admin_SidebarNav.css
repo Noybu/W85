@@ -61,7 +61,7 @@ aside #AdminLogin button{
     color:#1AA0BA;
     font-weight: bold;
 }
-main h1,h3{
+main h1,h2,h3{
     color:#1AA0BA;
     padding-top:2%;
     margin-right:5%;
@@ -127,8 +127,7 @@ table button{
 }
 
 .charts{
-    width:45%;
-    float:right;
+    width:80%;
     display: flex;
     justify-content: center;
     height:80%;

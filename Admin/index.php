@@ -37,8 +37,8 @@
 
         // Set chart options
         var options = {'title':' סוג המשתמש-עבור משתמשים מאושרים בלבד',
-                       'width':600,
-                       'height':600};
+                       'width':400,
+                       'height':400};
 
 
              // Instantiate and draw our chart, passing in some options.
@@ -59,8 +59,8 @@
 
               // Set chart options
               var options2 = {'title':'פרויקטים לפי סטטוס',
-                       'width':600,
-                       'height':600};
+                       'width':400,
+                       'height':400};
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
         chart2.draw(data2, options2);
