@@ -116,14 +116,14 @@
     <td style="vertical-align: baseline">
     <div class="charts">
         <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
+        <br>
+        <br>
         <div id="chart_div3" ></div>
       </div>
     </td>
     <td>
     <div class="charts">
-        <p>סוגי משתמשים שמאושרים במערכת </p>
-        <br>
-        <br>
+        <p style="text-align: center;">סוגי משתמשים שמאושרים במערכת </p>
         <div id="chart_div" ></div>
       </div>
     </td>
