@@ -59,8 +59,8 @@
 
               // Set chart options
               var options2 = {'title':'פרויקטים לפי סטטוס',
-                       'width':400,
-                       'height':400};
+                       'width':600,
+                       'height':600};
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
         chart2.draw(data2, options2);
@@ -108,10 +108,10 @@
         <div id="chart_div" ></div>
       </div>
       <div class="charts">
-        <div id="chart_div2" ></div>
+        <div id="chart_div3" ></div>
       </div>
       <div class="charts">
-        <div id="chart_div3" ></div>
+        <div id="chart_div2" ></div>
       </div>
     
     </main>

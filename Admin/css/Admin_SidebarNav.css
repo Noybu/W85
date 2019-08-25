@@ -127,8 +127,9 @@ table button{
 }
 
 .charts{
-    width:80%;
+    width:39%;
     display: flex;
     justify-content: center;
     height:80%;
+    float: right;
 }
