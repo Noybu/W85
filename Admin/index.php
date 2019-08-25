@@ -39,7 +39,8 @@
         // Set chart options
         var options = {'title':' סוג המשתמש-עבור משתמשים מאושרים בלבד',
                        'width':600,
-                       'height':600};
+                       'height':600,
+                       colors: ['#e0440e', '#e6693e'];
 
 
              // Instantiate and draw our chart, passing in some options.
@@ -104,13 +105,17 @@
   <body>
   <?php include_once("side-bar.php"); ?>
     <main class="main">
-        <p>ברוך הבא לפאנל הניהול של המערכת</p>
+        <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
 
 
     <!--Div that will hold the pie chart-->
-    <div>
+    <div style="width:30%; float:right; border:1px soilid black;">
       <div id="chart_div" ></div>
+    </div>
+    <div style="width:30%; float:right; border:1px soilid black;">
       <div id="chart_div2" ></div>
+    </div>
+    <div style="width:30%; float:right; border:1px soilid black;">
       <div id="chart_div3" ></div>
     </div>
     
