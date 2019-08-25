@@ -21,7 +21,7 @@
             </div>
             <div id="mainDiv">
                 <br>
-                <form action="../include/register.php" method="post">
+                <form action="../login/include/register.php" method="post">
                     <div>
                         <div>
                             <p style="font-size:18px; font-weight:bold;">תעודת זהות</p>
