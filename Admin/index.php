@@ -108,7 +108,35 @@
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
    
 
+<table>
+  <tr>
+    <td>
+    <div class="charts">
+        <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
+        <div id="chart_div3" ></div>
+      </div>
+    </td>
+    <td>
 
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <div class="charts">
+        <p>סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</p>
+        <div id="chart_div" ></div>
+      </div>
+
+    </td>
+    <td>
+    <div class="charts">
+        <p>כלל הפרויקטים לפי סטטוס</p>
+        <div id="chart_div2" ></div>
+      </div>
+
+    </td>
+  </tr>
+    </table>
 
 
 
@@ -119,26 +147,15 @@
    
       <div class="row">
 
-      <div class="charts">
-        <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
-        <div id="chart_div3" ></div>
-      </div>
+     
 
     </div>
 
 
     <div class="row">
 
-      <div class="charts">
-        <p>סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</p>
-        <div id="chart_div" ></div>
-      </div>
-
-      <div class="charts">
-        <p>כלל הפרויקטים לפי סטטוס</p>
-        <div id="chart_div2" ></div>
-      </div>
-
+      
+      
     </div>
 
     </main>
