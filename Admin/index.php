@@ -102,7 +102,7 @@
    
 
   </head> 
-  <body>
+  <body style="background-color:#fff;">
   <?php include_once("side-bar.php"); ?>
     <main class="main">
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
