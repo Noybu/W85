@@ -14,7 +14,7 @@ session_start();
   ?>
 <aside>
       <div id="logo">
-        <img src="..\images\logo.png">
+        <a href="index.php"><img src="..\images\logo.png"></a>
       </div>
       <div id="AdminLogin">
         <p>ברוך הבא</p>

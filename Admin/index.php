@@ -36,7 +36,7 @@
 
 
         // Set chart options
-        var options = {'title':' סוג המשתמש-עבור משתמשים מאושרים בלבד',
+        var options = {
                        'width':600,
                        'height':600};
 
@@ -58,7 +58,7 @@
       ]);
 
       // Set chart options
-      var options2 = {'title':'פרויקטים לפי סטטוס',
+      var options2 = {
                 'width':600,
                 'height':600};
 
@@ -73,7 +73,7 @@
         var current= <?php echo $currentPrice;?> ;
         var data3 = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
-          ['כסף שגויס עד כה', current]
+          ['סך הקופה', current]
         ]);
         
        
@@ -103,14 +103,17 @@
   <body>
   <?php include_once("side-bar.php"); ?>
     <main class="main">
-      <h2>ברוך הבא לפאנל הניהול של המערכת</h2>
+      <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
       <div class="charts">
+        <p>סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</p>
         <div id="chart_div" ></div>
       </div>
       <div class="charts">
+        <p>כסף שגויס עד כה עבור כלל הפרויקטים </p>
         <div id="chart_div3" ></div>
       </div>
       <div class="charts">
+        <p>כלל הפרויקטים לפי סטטוס</p>
         <div id="chart_div2" ></div>
       </div>
     
