@@ -7,20 +7,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php
-    require_once'../include/BLL.php';
-    session_start();
-    if(isset($_POST['submit']))
-    {
-      $count=is_user_exist($_POST["userID"],$_POST["password"]);
-      if($count>0)
-      {
-        $_SESSION["userID"]=$_POST["userID"];
-        $_SESSION["firstName"]=get_user_name($_POST["userID"]);
-        $_SESSION["type"]=get_user_type($_POST["userID"]);
+        require_once'../include/BLL.php';
+        $Error=$_GET["Error"];
         if($_SESSION["type"] == 3){
             header("Location:index.php");
         }
-            
         else{
             ?>
                 <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;">
@@ -28,10 +19,9 @@
                     <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור לדף הבית</a>
                 </div>
             <?php
-
         }
-      }     
-    }
+        
+    
   
    ?>
     
@@ -44,7 +34,7 @@
             </div>
             <div id="mainDiv">
                 <br>
-                <form action="" method="POST">
+                <form action="include/register.php" method="post">
                     <div>
                         <div>
                             <p style="font-size:18px; font-weight:bold;">תעודת זהות</p>
@@ -55,7 +45,31 @@
                             <input required type="password" name="password"/>
                         </div>
                         <br>
+                        <input type="hidden" name="type" value="signin" />
                         <div>
+                        <?php
+                         if($_SESSION["type"] == 3)
+                         {
+                            if($Error=="IncorrectUsernameOrPassword")
+                            {
+                            ?>
+                                <span style="color:red;">שם משתמש או סיסמא אינם נכונים</span>
+                            <?php
+                            }
+                            else{
+                                header("Location:index.php");
+                            }
+                        }
+                         else
+                         {
+                        ?>
+                                <div style="text-align:right;background-color: #fff;border-top: 5px solid red;text-align: center;">
+                                    <p style="font-size:18px;font-weight:bold;display: inline;"> אין לך הרשאה להכנס למערכת</p>
+                                    <a href="http://noybu.mtacloud.co.il/W85/" style="direction:rtl;">לחץ כאן לחזור לדף הבית</a>
+                                </div>
+                            <?php
+                        }
+                        ?>
                             <input type="submit" class="login" value="שלח" name="submit">
                         </div>
                     </div>
