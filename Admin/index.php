@@ -37,8 +37,8 @@
 
         // Set chart options
         var options = {
-                       //'width':600,
-                      // 'height':600
+                       'width':100%,
+                       'height':100%
                     };
 
 
@@ -60,8 +60,8 @@
 
       // Set chart options
       var options2 = {
-                //'width':600,
-                //'height':600
+                'width':100%,
+                'height':100%
               };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
@@ -107,6 +107,15 @@
     <main class="main">
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
    
+
+
+
+
+
+
+
+
+
    
       <div class="row">
 
@@ -131,7 +140,7 @@
       </div>
 
     </div>
-    
+
     </main>
     
 
