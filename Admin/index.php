@@ -61,7 +61,7 @@
       // Set chart options
       var options2 = {
                 'width':400,
-                'height':400
+                'height':800
               };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
@@ -108,7 +108,7 @@
       <h1>ברוך הבא לפאנל הניהול של המערכת</h1>
    
 
-<table>
+<table style="border:unset;">
   <tr>
     <td>
     <div class="charts">
@@ -117,18 +117,15 @@
       </div>
     </td>
     <td>
-
-    </td>
-  </tr>
-  <tr>
-    <td>
     <div class="charts">
         <p>סוגי המשתמשים במערכת - עבור משתמשים מאושרים בלבד</p>
         <div id="chart_div" ></div>
       </div>
-
     </td>
-    <td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
     <div class="charts">
         <p>כלל הפרויקטים לפי סטטוס</p>
         <div id="chart_div2" ></div>
