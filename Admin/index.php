@@ -108,23 +108,22 @@
 
     <!--Div that will hold the pie chart-->
     <div style="width:30%; float:right; border:1px soilid black;">
-      <div id="chart_div" ></div>
+          גרף 1
     </div>
     <div style="width:30%; float:right; border:1px soilid black;">
-      <div id="chart_div2" ></div>
+      גרף 2
     </div>
     <div style="width:30%; float:right; border:1px soilid black;">
-      <div id="chart_div3" ></div>
+        גרף 3
     </div>
     
-
-
-
-
-
-
     </main>
     
 
   </body>
 </html>
+
+<!-- 
+<div id="chart_div" ></div>
+<div id="chart_div2" ></div>
+<div id="chart_div3" ></div> -->
