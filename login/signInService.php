@@ -95,28 +95,15 @@
           <p class="formLabel">ותק</p>
           <input required type="text" name="numOfYears" class="form-style" maxlength="2" />
         </div>
-        <div class="form-item">
+        <div class="form-item file-upload" >
           <p class="formLabel formTop">העלאת תעודת זהות</p>
           <input required type="file" name="idFile" class="form-style fileStyle" />
-          <?php
-            if ($_FILES['idFile']['name']==""){
-                echo "file not uploaded";
-              ?>
-                <span style="color:green;"><i class="fas fa-check-circle"></i></span>
-              <?php
-            }
-          ?>
+          <div id="file-upload-filename"></div>
         </div>
-        <div class="form-item">
+        <div class="form-item file-upload">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
           <input required type="file" name="profFile" class="form-style fileStyle" />
-          <?php
-            if (!isset($_FILES['profFile'])){
-              ?>
-                <span style="color:green;"><i class="fas fa-check-circle"></i></span>
-              <?php
-            }
-          ?>
+          <div id="file-upload-filename"></div>
         </div>
         <div>
           <input type="submit" class="login" value="שלח">
