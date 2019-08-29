@@ -115,8 +115,8 @@
 
   <script>
     //הוספת שם קובץ
-	var input = document.getElementByclassName( 'file-upload' );
-	var infoArea = document.getElementByClassName( 'file-upload-filename' );
+	var input = document.getElementByClassName("file-upload");
+	var infoArea = document.getElementByClassName("file-upload-filename");
 
 	input.addEventListener( 'change', showFileName );
 
@@ -129,7 +129,7 @@
       var fileName = input.files[0].name;
       
       // use fileName however fits your app best, i.e. add it into a div
-      infoArea.textContent = 'File name: ' + fileName;
+      infoArea.textContent =  fileName;
 	}
   </script>
      
