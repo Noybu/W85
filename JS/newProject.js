@@ -11,10 +11,11 @@ $(document).ready(function(){
 	$('.formLabel').click(function(){
 		 $(this).parent().children('.form-style').focus();
 	});
-	var input = document.getElementById( 'file-upload' );
 	
-	
+});
+
 	//הוספת שם קובץ
+	var input = document.getElementById( 'file-upload' );
 	var infoArea = document.getElementById( 'file-upload-filename' );
 
 	input.addEventListener( 'change', showFileName );
@@ -30,4 +31,3 @@ $(document).ready(function(){
 	// use fileName however fits your app best, i.e. add it into a div
 	infoArea.textContent = 'File name: ' + fileName;
 	}
-});
