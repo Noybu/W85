@@ -50,6 +50,14 @@
                 <span style="color:red;">תעודת זהות קיימת במערכת</span>
               <?php
               }
+              if($Error=="Success")
+              {
+                ?>
+                  <script>
+                      alert("הרשמה בוצעה בהצלחה!!");
+                    </script>
+                <?php
+              }
             ?>
             <input required type="text" name="id" class="form-style" minlength="9" pattern="[0-9]+" maxlength="9" oninvalid = "setCustomValidity('יש להכניס ת.ז המכילה 9 ספרות בלבד')"/>
           </div>

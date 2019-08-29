@@ -27,7 +27,7 @@ switch ($command) {
                 $_POST["email"],
                 $_POST["type"]
             );
-            header("Location: ../../index.php");
+            header("Location: ../../index.php?Error=Success");
             break;
         }
        
@@ -95,7 +95,7 @@ switch ($command) {
                 $_POST["id"]."_profFile.". $file_ext,
                 $_POST["type"]
             );
-            header("Location: ../../index.php");
+            header("Location: ../../index.php?Error=Success");
             break;
         }
         
