@@ -3,9 +3,8 @@ $Error=$_GET["Error"];
 if($Error=="Success")
 {
   ?>
-    <script>
-        alert("הרשמה בוצעה בהצלחה!!");
-      </script>
+    <p style="color:green; text-align:center; font-weight:bold; font-size:28px;">ההרשמה בוצעה בהצלחה! ברוך הבא למערכת!</p>
+    <p style="color:green; text-align:center; font-weight:bold; font-size:28px;">כדי להתחיל להשפיע יש להתחבר למערכת</p>  
   <?php
 }
 ?>
