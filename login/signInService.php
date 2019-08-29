@@ -97,12 +97,12 @@
         </div>
         <div class="form-item" >
           <p class="formLabel formTop">העלאת תעודת זהות</p>
-          <input required type="file" name="idFile" class="form-style fileStyle" id="file-upload1" />
+          <input required type="file" mutiple name="idFile" class="form-style fileStyle" id="file-upload1" />
           <span id="file-upload-filename1" style="font-size: 12px; color: #3b5e7;"></span>
         </div>
         <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
-          <input required type="file" name="profFile" class="form-style fileStyle" id="file-upload2" />
+          <input required type="file" mutiple name="profFile" class="form-style fileStyle" id="file-upload2" />
           <span id="file-upload-filename2" style="font-size: 12px; color: #3b5e7;"></span>
         </div>
         <div>
