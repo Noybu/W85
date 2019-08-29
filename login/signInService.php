@@ -98,10 +98,24 @@
         <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת זהות</p>
           <input required type="file" name="idFile" class="form-style fileStyle" />
+          <?php
+            if (!empty($_FILES['idFile'])){
+              ?>
+                <span style="color:green;"><i class="fas fa-check-circle"></i></span>
+              <?php
+            }
+          ?>
         </div>
         <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
           <input required type="file" name="profFile" class="form-style fileStyle" />
+          <?php
+            if (!empty($_FILES['profFile'])){
+              ?>
+                <span style="color:green;"><i class="fas fa-check-circle"></i></span>
+              <?php
+            }
+          ?>
         </div>
         <div>
           <input type="submit" class="login" value="שלח">
