@@ -8,7 +8,7 @@ if(!isset($_SESSION["userID"])){
     header("Location:login/signIn.php");
 }
 if (isset($_POST['submit'])) {
-    addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
+    addProject($_SESSION["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
     ?>
         <p style="color:green; text-align:center;"> הפרויקט עלה בהצלחה</p>
         <p style="text-align:center;">הפרויקט ממתין לאישור ממנהל המערכת</p>

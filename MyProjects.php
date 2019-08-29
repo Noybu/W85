@@ -7,7 +7,7 @@
 }
     session_start();   
     $arrProjects=Array();
-    $arrProjects=getProjectByUser( $_SESSION["userID"]);
+    $arrProjects=getProjectByUser($_SESSION["userID"]);
     if($arrProjects==null)
     {
         ?>
