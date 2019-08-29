@@ -99,7 +99,7 @@
           <p class="formLabel formTop">העלאת תעודת זהות</p>
           <input required type="file" name="idFile" class="form-style fileStyle" />
           <?php
-            if (!empty($_FILES['idFile'])){
+            if (isset($_FILES['idFile'])){
               ?>
                 <span style="color:green;"><i class="fas fa-check-circle"></i></span>
               <?php
@@ -110,7 +110,7 @@
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
           <input required type="file" name="profFile" class="form-style fileStyle" />
           <?php
-            if (!empty($_FILES['profFile'])){
+            if (isset($_FILES['profFile'])){
               ?>
                 <span style="color:green;"><i class="fas fa-check-circle"></i></span>
               <?php
