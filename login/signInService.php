@@ -97,13 +97,13 @@
         </div>
         <div class="form-item" >
           <p class="formLabel formTop">העלאת תעודת זהות</p>
-          <input required type="file" name="idFile" class="form-style fileStyle file-upload" />
-          <div class="file-upload-filename"></div>
+          <input required type="file" name="idFile" class="form-style fileStyle" id="file-upload1" />
+          <div class="file-upload-filename1"></div>
         </div>
         <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
-          <input required type="file" name="profFile" class="form-style fileStyle file-upload" />
-          <div class="file-upload-filename"></div>
+          <input required type="file" name="profFile" class="form-style fileStyle" id="file-upload2" />
+          <div class="file-upload-filename2"></div>
         </div>
         <div>
           <input type="submit" class="login" value="שלח">
@@ -115,8 +115,10 @@
 
   <script>
     //הוספת שם קובץ
-	var input = document.getElementByClassName("file-upload");
-	var infoArea = document.getElementByClassName("file-upload-filename");
+  var input = document.getElementByID("file-upload1");
+  var input2 = document.getElementByID("file-upload2");
+	var infoArea = document.getElementByID("file-upload-filename1");
+  var infoArea2 = document.getElementByID("file-upload-filename2");
 
 	input.addEventListener( 'change', showFileName );
 
