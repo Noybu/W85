@@ -166,29 +166,46 @@ include_once("header.php"); ?>
                          }
                          ?>
                 <?php
-                        if($approved==1 && $arrProjects[0]->projectstatus == 1)
-                        {
-                            ?>
-                            <div class="tab-pane fade <?php if($flag==2){ echo 'show active';} ?>" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
-                            <form action="include/register-bid.php" method="POST">
-                                <div>
-                                    <p>הצעת מחיר</p>
-                                    <input type="text" required name="offerprice"/>
-                                </div>
-                                <div>
-                                    <p>תארין אחרון לביצוע</p>
-                                    <input type="date" required name="offerdate"/>
-                                </div>
-                                <div>
-                                    <input type="submit"  name="submit" value="שלח">
-                                </div>
-                                <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
-                                <input type="hidden" name="service" value=<?php echo $_SESSION["userID"];?>>
-                            </form>
-                        </div>
-                        <?php
+                        //אם פרויקט מחכה למכרז
+                        if($arrProjects[0]->projectstatus == 1)
+                        {   //וגם נותן שירות מאושר במערכת
+                            if($approved==1)
+                            {
+                                ?>
+                                <div class="tab-pane fade <?php if($flag==2){ echo 'show active';} ?>" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                                <form action="include/register-bid.php" method="POST">
+                                    <div>
+                                        <p>הצעת מחיר</p>
+                                        <input type="text" required name="offerprice"/>
+                                    </div>
+                                    <div>
+                                        <p>תארין אחרון לביצוע</p>
+                                        <input type="date" required name="offerdate"/>
+                                    </div>
+                                    <div>
+                                        <input type="submit"  name="submit" value="שלח">
+                                    </div>
+                                    <input type="hidden" name="projectid" value=<?php echo $projectid;?>>
+                                    <input type="hidden" name="service" value=<?php echo $_SESSION["userID"];?>>
+                                </form>
+                            </div>
+                            <?php
                         }
-                   
+                        //נותן שירות לא מאושר במערכת
+                        else{
+                            //עדין מחכה לאישור
+                            if($approved==0)
+                            ?>
+                                <p>מנהל מערכת טרם אישר את הפרופיל שלך</p>
+                            <?php
+                            //מנהל מערכת דחה את הפרופיל שלך
+                            else{
+                                ?>
+                                <p>מנהל מערכת לא אישר את הפרופיל שלך</p>
+                                <?php
+                            }
+                        }
+                    }
                      if($arrProjects[0]->projectstatus == 4)
                      {
                         
@@ -275,6 +292,16 @@ include_once("header.php"); ?>
 
                     </div>
                     <?php
+                        }
+                        //אם יוזר לא מחובר במערכת
+                        else{
+                            //וגם סטטוס הפרויקט מחכה למימון
+                            if($arrProjects[0]->projectstatus == 2)
+                            ?>
+                            {
+                                <p>כדי לתרום הינך חייב להכנס למערכת <a href="login/signIn.php"></a></p>
+                            }
+                            <?php
                         }
                     ?>
                 </div>
