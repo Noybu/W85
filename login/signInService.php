@@ -95,15 +95,15 @@
           <p class="formLabel">ותק</p>
           <input required type="text" name="numOfYears" class="form-style" maxlength="2" />
         </div>
-        <div class="form-item file-upload" >
+        <div class="form-item" >
           <p class="formLabel formTop">העלאת תעודת זהות</p>
-          <input required type="file" name="idFile" class="form-style fileStyle" />
-          <div id="file-upload-filename"></div>
+          <input required type="file" name="idFile" class="form-style fileStyle file-upload" />
+          <div class="file-upload-filename"></div>
         </div>
-        <div class="form-item file-upload">
+        <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
-          <input required type="file" name="profFile" class="form-style fileStyle" />
-          <div id="file-upload-filename"></div>
+          <input required type="file" name="profFile" class="form-style fileStyle file-upload" />
+          <div class="file-upload-filename"></div>
         </div>
         <div>
           <input type="submit" class="login" value="שלח">
@@ -113,7 +113,25 @@
     </div>
   </main>
 
+  <script>
+    //הוספת שם קובץ
+	var input = document.getElementByclassName( 'file-upload' );
+	var infoArea = document.getElementByClassName( 'file-upload-filename' );
 
+	input.addEventListener( 'change', showFileName );
+
+	function showFileName( event ) {
+			
+      // the change event gives us the input it occurred in 
+      var input = event.srcElement;
+      
+      // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+      var fileName = input.files[0].name;
+      
+      // use fileName however fits your app best, i.e. add it into a div
+      infoArea.textContent = 'File name: ' + fileName;
+	}
+  </script>
      
         
         
