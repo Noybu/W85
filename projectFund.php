@@ -196,13 +196,13 @@ include_once("header.php"); ?>
                             //עדין מחכה לאישור
                             if($approved==0){
                             ?>
-                                <p>מנהל מערכת טרם אישר את הפרופיל שלך</p>
+                                <p style="color:red; font-weight:bold;">מנהל מערכת טרם אישר את הפרופיל שלך</p>
                             <?php
                             }
                             //מנהל מערכת דחה את הפרופיל שלך
                             else{
                                 ?>
-                                <p>מנהל מערכת לא אישר את הפרופיל שלך</p>
+                                <p style="color:red; font-weight:bold;">מנהל מערכת לא אישר את הפרופיל שלך</p>
                                 <?php
                             }
                         }
@@ -298,11 +298,11 @@ include_once("header.php"); ?>
                         else{
                             //וגם סטטוס הפרויקט מחכה למימון
                             if($arrProjects[0]->projectstatus == 2)
-                            ?>
                             {
-                                <p>כדי לתרום הינך חייב להכנס למערכת <a href="login/signIn.php"></a></p>
-                            }
+                            ?>
+                                <p style="color:red; font-weight:bold;">כדי לתרום הינך חייב להכנס למערכת <a href="login/signIn.php"></a></p>
                             <?php
+                            }
                         }
                     ?>
                 </div>
