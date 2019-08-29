@@ -98,12 +98,12 @@
         <div class="form-item" >
           <p class="formLabel formTop">העלאת תעודת זהות</p>
           <input required type="file" name="idFile" class="form-style fileStyle" id="file-upload1" />
-          <span id="file-upload-filename1"></span>
+          <span id="file-upload-filename1" style="font-size: 12px; color: #3b5e7;"></span>
         </div>
         <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
           <input required type="file" name="profFile" class="form-style fileStyle" id="file-upload2" />
-          <div id="file-upload-filename2"></div>
+          <span id="file-upload-filename2" style="font-size: 12px; color: #3b5e7;"></span>
         </div>
         <div>
           <input type="submit" class="login" value="שלח">
@@ -114,9 +114,9 @@
   </main>
 
   <script>
-    //הוספת שם קובץ
+    //הוספת שם קובץ ראשון
   var input = document.getElementById('file-upload1'); 
-	var infoArea = document.getElementById('file-upload-filename1');
+  var infoArea = document.getElementById('file-upload-filename1');
 
 	input.addEventListener( 'change', showFileName1 );
 
@@ -127,10 +127,28 @@
       
       // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
       var fileName = input.files[0].name;
-      alert(fileName);
       
       // use fileName however fits your app best, i.e. add it into a div
       infoArea.innerHTML =  fileName;
+  }
+  
+
+  //הוספת שם קובץ שני 
+  var input2 = document.getElementById('file-upload2'); 
+  var infoArea2 = document.getElementById('file-upload-filename2');
+
+	input2.addEventListener( 'change', showFileName2 );
+
+	function showFileName2( event ) {
+			
+      // the change event gives us the input it occurred in 
+      var input2 = event.srcElement;
+      
+      // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+      var fileName2 = input.files[1].name;
+      
+      // use fileName however fits your app best, i.e. add it into a div
+      infoArea2.innerHTML =  fileName2;
 	}
   </script>
      
