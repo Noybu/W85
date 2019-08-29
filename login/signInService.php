@@ -99,7 +99,8 @@
           <p class="formLabel formTop">העלאת תעודת זהות</p>
           <input required type="file" name="idFile" class="form-style fileStyle" />
           <?php
-            if (!isset($_FILES['idFile']['name'])){
+            if ($_FILES['idFile']['name']==""){
+                echo "file not uploaded";
               ?>
                 <span style="color:green;"><i class="fas fa-check-circle"></i></span>
               <?php
