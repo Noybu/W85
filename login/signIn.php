@@ -1,3 +1,14 @@
+<?php
+$Error=$_GET["Error"];
+if($Error=="Success")
+{
+  ?>
+    <script>
+        alert("הרשמה בוצעה בהצלחה!!");
+      </script>
+  <?php
+}
+?>
 <!DOCTYPE html>
 <html dir="rtl" lang="en">
 <head>

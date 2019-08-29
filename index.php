@@ -1,14 +1,4 @@
-<?php include_once("header.php"); 
-$Error=$_GET["Error"];
-if($Error=="Success")
-{
-  ?>
-    <script>
-        alert("הרשמה בוצעה בהצלחה!!");
-      </script>
-  <?php
-}
-?>
+<?php include_once("header.php"); ?>
 
 
 <main>
