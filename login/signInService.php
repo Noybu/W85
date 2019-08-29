@@ -98,7 +98,7 @@
         <div class="form-item" >
           <p class="formLabel formTop">העלאת תעודת זהות</p>
           <input required type="file" name="idFile" class="form-style fileStyle" id="file-upload1" />
-          <div class="file-upload-filename1"></div>
+          <span class="file-upload-filename1"></span>
         </div>
         <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
@@ -118,9 +118,9 @@
   var input = document.getElementById('file-upload1'); 
 	var infoArea = document.getElementById('file-upload-filename1');
 
-	input.addEventListener( 'change', showFileName );
+	input.addEventListener( 'change', showFileName1 );
 
-	function showFileName( event ) {
+	function showFileName1( event ) {
 			
       // the change event gives us the input it occurred in 
       var input = event.srcElement;
