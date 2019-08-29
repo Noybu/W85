@@ -98,12 +98,12 @@
         <div class="form-item" >
           <p class="formLabel formTop">העלאת תעודת זהות</p>
           <input required type="file" name="idFile" class="form-style fileStyle" id="file-upload1" />
-          <span class="file-upload-filename1"></span>
+          <span id="file-upload-filename1"></span>
         </div>
         <div class="form-item">
           <p class="formLabel formTop">העלאת תעודת עוסק</p>
           <input required type="file" name="profFile" class="form-style fileStyle" id="file-upload2" />
-          <div class="file-upload-filename2"></div>
+          <div id="file-upload-filename2"></div>
         </div>
         <div>
           <input type="submit" class="login" value="שלח">
