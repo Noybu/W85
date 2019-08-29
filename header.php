@@ -8,7 +8,7 @@ include_once("include/BLL.php");
     if($_GET['logout']=='yes')
     {
       session_destroy();
-      header("Location: index.php");
+      header("Location: login/signIn.php");
     } 
   }
 ?>
