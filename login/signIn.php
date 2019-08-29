@@ -3,8 +3,8 @@ $Error=$_GET["Error"];
 if($Error=="Success")
 {
   ?>
-    <p style="color:green; text-align:center; font-weight:bold; font-size:28px;">ההרשמה בוצעה בהצלחה! ברוך הבא למערכת!</p>
-    <p style="color:green; text-align:center; font-weight:bold; font-size:28px;">כדי להתחיל להשפיע יש להתחבר למערכת</p>  
+    <p style="color:green; text-align:center; font-weight:bold; font-size:22px;">ההרשמה בוצעה בהצלחה! ברוך הבא למערכת!</p>
+    <p style="color:green; text-align:center; font-weight:bold; font-size:22px;">כדי להתחיל להשפיע יש להתחבר למערכת</p>  
   <?php
 }
 ?>
