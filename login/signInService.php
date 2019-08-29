@@ -130,7 +130,7 @@
       alert(fileName);
       
       // use fileName however fits your app best, i.e. add it into a div
-      infoArea.textContent =  fileName;
+      infoArea.innerHTML =  fileName;
 	}
   </script>
      
