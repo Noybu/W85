@@ -115,7 +115,7 @@
 
   <script>
     //הוספת שם קובץ ראשון
-  var input = document.getElementById('file-upload'); 
+  var input = document.getElementById('file-upload1'); 
   var infoArea = document.getElementById('file-upload-filename1');
 
 	input.addEventListener( 'change', showFileName1 );
@@ -134,7 +134,7 @@
   
 
   //הוספת שם קובץ שני 
-  var input2 = document.getElementById('file-upload'); 
+  var input2 = document.getElementById('file-upload2'); 
   var infoArea2 = document.getElementById('file-upload-filename2');
 
 	input2.addEventListener( 'change', showFileName2 );
@@ -145,7 +145,7 @@
       var input2 = event.srcElement;
       
       // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
-      var fileName2 = input.files[1].name;
+      var fileName2 = input2.files[1].name;
       
       // use fileName however fits your app best, i.e. add it into a div
       infoArea2.innerHTML =  fileName2;
