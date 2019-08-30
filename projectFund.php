@@ -303,10 +303,10 @@ include_once("header.php"); ?>
                                 <p style="color:red; font-weight:bold;">כדי לתרום הינך חייב להכנס למערכת <a href="login/signIn.php">כניסה למערכת</a></p>
                             <?php
                             }
-                            //סטטוס פרויקט מחכה למכרז, ונותן שירות מאושר
-                            else if($arrProjects[0]->projectstatus == 1 && $approved==1){
+                            //סטטוס פרויקט מחכה למכרז
+                            else if($arrProjects[0]->projectstatus == 1){
                                 ?>
-                                    <p style="color:red; font-weight:bold;">כדי להרשם למכרז הינך חייב להכנס למערכת <a href="login/signIn.php">כניסה למערכת</a></p>
+                                    <p style="color:red; font-weight:bold;">נותן שירות? כדי להרשם למכרז, היכנס למערכת <a href="login/signIn.php">כניסה למערכת</a></p>
                                 <?php
                             }
                             //וגם סטטוס הפרויקט הושלם

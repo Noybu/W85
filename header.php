@@ -33,6 +33,9 @@ include_once("include/BLL.php");
           <a class="nav-link navA" href="index.php">דף הבית</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link navA" href="aboutUs.php">על המערכת</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link navA" href="AllProjectList.php">כל הפרויקטים</a>
         </li>
         <li class="nav-item">
