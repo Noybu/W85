@@ -93,7 +93,7 @@ include_once("include/BLL.php");
               <a class="nav-link navButtons"><?php echo "שלום ".$_SESSION["firstName"]; ?></a>
           </div>
             <button class="loginMobile2">
-              <a class="nav-link navButtons" href="index.php?logout=yes">התנתקות</a>
+              <a class="nav-link navButtons" href="login\signIn.php?logout=yes">התנתקות</a>
             </button>
            <?php
           }
