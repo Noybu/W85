@@ -300,8 +300,20 @@ include_once("header.php"); ?>
                             if($arrProjects[0]->projectstatus == 2)
                             {
                             ?>
-                                <p style="color:red; font-weight:bold;">כדי לתרום הינך חייב להכנס למערכת <a href="login/signIn.php"></a></p>
+                                <p style="color:red; font-weight:bold;">כדי לתרום הינך חייב להכנס למערכת <a href="login/signIn.php">כניסה למערכת</a></p>
                             <?php
+                            }
+                            //סטטוס פרויקט מחכה למכרז, ונותן שירות מאושר
+                            else if($arrProjects[0]->projectstatus == 1 && $approved==1){
+                                ?>
+                                    <p style="color:red; font-weight:bold;">כדי להרשם למכרז הינך חייב להכנס למערכת <a href="login/signIn.php">כניסה למערכת</a></p>
+                                <?php
+                            }
+                            //וגם סטטוס הפרויקט הושלם
+                            else if($arrProjects[0]->projectstatus == 4){
+                                ?>
+                                    <p style="color:red; font-weight:bold;">כדי לדרג הינך חייב להכנס למערכת <a href="login/signIn.php">כניסה למערכת</a></p>
+                                <?php
                             }
                         }
                     ?>
