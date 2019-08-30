@@ -145,7 +145,7 @@
       var input2 = event.srcElement;
       
       // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
-      var fileName2 = input2.files[1].name;
+      var fileName2 = input2.files[0].name;
       
       // use fileName however fits your app best, i.e. add it into a div
       infoArea2.innerHTML =  fileName2;
