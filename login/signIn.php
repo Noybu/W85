@@ -7,6 +7,15 @@ if($Error=="Success")
     <p style="color:green; text-align:center; font-weight:bold; font-size:22px;">כדי להתחיל להשפיע יש להתחבר למערכת</p>  
   <?php
 }
+session_start();
+if(isset($_GET['logout']))
+{
+  if($_GET['logout']=='yes')
+  {
+    session_destroy();
+    header("Location: login/signIn.php");
+  } 
+}
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="en">
