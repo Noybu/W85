@@ -13,7 +13,7 @@ if(isset($_GET['logout']))
   if($_GET['logout']=='yes')
   {
     session_destroy();
-    header("Location: login/signIn.php");
+    header("Location: signIn.php");
   } 
 }
 ?>
