@@ -8,7 +8,7 @@ if(!isset($_SESSION["userID"])){
     header("Location:login/signIn.php");
 }
 if (isset($_POST['submit'])) {
-    addProject($_SESSION["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
+    addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
     ?>
         <p style="color:green; text-align:center; font-size: 24px; font-weight: bold"> הפרויקט עלה בהצלחה</p>
     <?php
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
                     <input required type="hidden" name="locNum" class="form-style" id="street_number" />
                 </div>
                 <div class="form-item">
-                    <input type="hidden" name="userID" value="1111" />
+                    <input type="hidden" name="userID" value="<?php echo $_SESSION['userID'];?>" />
                 </div>
                 <div class="form-item">
                     <input type="submit" class="loginoff" id="send" name="submit" value="שלח" disabled>
