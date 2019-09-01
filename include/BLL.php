@@ -7,13 +7,14 @@ require_once 'bid.php';
 
 // פונקציות שמטפלות בפרויקטים
 
-
+//הוספת פרויקט חדש ע"י יזם למערכת
 function addProject($userID, $projectType, $description, $locCity, $locStreet, $locNum)
 {
     $sql = "INSERT INTO projects (projecttype, description , loccity, locstreet , locnum, projectstatus, projectcurrentprice, userid) VALUES ('$projectType', '$description', '$locCity','$locStreet','$locNum','0','0','$userID')";
     insert($sql);
 }
 
+//הוספת דירוג לפרויקט שהושלם רק במידה ויוזר לא דירג את הפרויקט קודם לכן
 function insertRate($projectid, $userid,$rate)
 {
     $ifUserRate=checkIfUserRate($userid,$projectid);
@@ -21,10 +22,9 @@ function insertRate($projectid, $userid,$rate)
         $sql = "INSERT INTO rates (rate, projectid, userid) VALUES ('$rate', '$projectid','$userid')";
         insert($sql);
     }
-
-    
 }
 
+//קבלת ממוצע הדירוגים עבור פרויקט- עיגול הממוצע כלפי מעלה
 function getAvgRate($projectid){
     $sql = "SELECT count(*) as total_row FROM rates WHERE projectid='$projectid'";
     $countPeoples= get_object($sql)->total_row;
@@ -41,6 +41,7 @@ function getAvgRate($projectid){
     return ceil($avg);
 }
 
+//קבלת מספר הפרויקטים שנמצאים בסטטוס מסוים-עבור דשבורד
 function getCountOfProjectStatus($projectstatus){
     $sql="SELECT count(*) as total_row FROM projects WHERE projectstatus='$projectstatus'";
     $count=get_object($sql)->total_row;
@@ -48,6 +49,7 @@ function getCountOfProjectStatus($projectstatus){
     return $count;
 }
 
+//קבלת מספר המשתמשים לפי סוג משתמש -עבור דשבורד
 function getCountOfUserType($userType){
     $sql="SELECT count(*) as total_row FROM users WHERE type='$userType'";
     $count=get_object($sql)->total_row;
@@ -55,6 +57,7 @@ function getCountOfUserType($userType){
     return $count;
 }
 
+//קבלת הכסף שנאסף עד כה - עבור דשבורד
 function getAllCurrentPrice(){
     $sql="SELECT sum(projectcurrentprice) as total_row FROM projects";
     $num=get_object($sql)->total_row;
@@ -63,6 +66,7 @@ function getAllCurrentPrice(){
 
 }
 
+//קבלת הכסף הכללי שצריך לאסוף לכל הפרויקטים -עבור דשבורד
 function getAllProjectPrice(){
     $sql="SELECT sum(projectcost) as total_row FROM projects";
     $num=get_object($sql)->total_row;
@@ -71,6 +75,7 @@ function getAllProjectPrice(){
 
 }
 
+//בדיקה האם יוזר כבר דירג פרויקט מסוים
 function checkIfUserRate($userid,$projectid){
         $sql="SELECT count(*) as total_row FROM rates WHERE userid='$userid' AND projectid='$projectid' ";
         $count = get_object($sql)->total_row;
@@ -79,6 +84,7 @@ function checkIfUserRate($userid,$projectid){
 
     }
 
+//קבלת דירוג של משתמש מסוים לפרויקט
 function getUserRate($userid,$projectid){
     $sql="SELECT rate FROM rates WHERE userid='$userid' AND projectid='$projectid'";
     $rate=select($sql);
@@ -87,10 +93,9 @@ function getUserRate($userid,$projectid){
 
 }
 
-
+//קבלת כל הפרויקטים במערכת - חוץ מאלה שנדחו ע"י מנהל מערכת
 function getAllProjects()
 {
-   
     $sql = "SELECT * FROM projects WHERE projectstatus<>'10'";
     $dbProjects = select($sql);
 
@@ -101,6 +106,7 @@ function getAllProjects()
     return $oopProjects;
 }
 
+//קבלת כלל הפרויקטים שעדין לא אושרו ע"י מנהל המערכת -לטובת מערכת הניהול
 function getAllNewProjects()
 {
    
@@ -119,9 +125,9 @@ function getAllNewProjects()
     return $oopProjects;
 }
 
+//קבלת כל הפרויקטים שממתינים למכרז
 function getAllBidProjects()
 {
-   
     $sql = "SELECT * FROM projects WHERE projectstatus=1";
     $dbProjects = select($sql);
 
@@ -137,6 +143,7 @@ function getAllBidProjects()
     return $oopProjects;
 }
 
+//המרת סוג הפרויקט מקוד למלל
 function getProjectType($num)
 {
     switch($num)
@@ -164,6 +171,7 @@ function getProjectType($num)
     }
 }
 
+//המרת תפקיד נותן השירות מקוד למלל
 function getProfType($num)
 {
     switch($num)
@@ -191,6 +199,7 @@ function getProfType($num)
     }
 }
 
+//המרת סטטוס פרויקט מקוד למלל
 function getProjectStatus($num)
 {
     switch($num)
@@ -218,6 +227,7 @@ function getProjectStatus($num)
     }
 }
 
+//קבלת עיצוב אחר לסטטוס
 function getStatusColor($num){
     if($num==4)
         return "status-c";
@@ -226,6 +236,7 @@ function getStatusColor($num){
     }
 }
 
+//קבלת פרויקט לפי המזהה שלו
 function getProjectById($id)
 {
     $sql = "SELECT * FROM projects WHERE projectid='$id'";
@@ -237,6 +248,7 @@ function getProjectById($id)
    return $oopProject;
 }
 
+//קבלת פרויקטים לפי משתמש שפתח אותם - עבור "הפרויקטים שלי"
 function getProjectByUser($id)
 {
     $sql = "SELECT * FROM projects WHERE userid='$id'";
@@ -250,6 +262,7 @@ function getProjectByUser($id)
    return $oopProject;
 }
 
+//קבלת המכרזים שנותן שירות זכה בהם לטובת "המכרזים שלי"
 function getFundsByUser($id){
     $sql= "SELECT * FROM projects as p INNER JOIN bids as b WHERE p.projectid=b.projectid AND b.serviceid='$id' AND b.win='1'";
     $dbFunds = select($sql);
@@ -263,17 +276,21 @@ function getFundsByUser($id){
     return $oopProject;
 }
 
+//בדיקה האם פרויקט סיים את המימון שלו
 function checkIfFundDone($projectId)
 {
     $sql = "SELECT * FROM projects WHERE projectid='$projectId'";
     $dbProjects = select($sql);
 
-    $left = $dbProjects[0]->projectcost-$dbProjects[0]->projectcurrentprice;
+    $left = ($dbProjects[0]->projectcost) - ($dbProjects[0]->projectcurrentprice);
 
-    return $left;
-
+    if($left<=0)
+        return 1;  //true
+    else 
+         0;        //false 
 }
 
+//קבלת זוכה במכרז עבור פרויקט מסוים
 function getWinnerOfProject($projectId){
     $sql="SELECT * FROM projects as p INNER JOIN bids as b INNER JOIN users as u WHERE b.projectid='$projectId' AND b.projectid=p.projectid AND b.win='1'AND b.serviceid=u.id";
     $winner = select($sql);
@@ -282,6 +299,7 @@ function getWinnerOfProject($projectId){
 }
 
 
+//קבלת הסטטוסים לפי צבעים, וסטטוס נוכחי
 function getStatusBarColors($status , $num){
     switch($status){
         case 0:
@@ -328,21 +346,13 @@ function getStatusBarColors($status , $num){
 }
 
 
-// Delete Video:
-function deleteVideo($videoID)
-{
-
-
-    $sql = "delete from videos where videoID = " . "$videoID";
-    delete($sql);
-}
-
-
+//הוספת הגשה חדשה למכרז עבור פרויקט מסוים
 function addNewBidOffer($price,$date, $projectID, $servicemanID){
     $sql="INSERT INTO bids (projectid, serviceid, offerprice, offerdate) VALUES ('$projectID','$servicemanID','$price','$date')";
     update($sql);
 }
 
+//עדכון אישור נותן שירות במערכת - לטובת פאנל הניהול
 function updateServiceManApproved($serviceID, $status)
 {
 
@@ -350,6 +360,7 @@ function updateServiceManApproved($serviceID, $status)
     update($sql);
 }
 
+//עדכון זוכה המכרז בפרויקט מסוים -לטובת פאנל הניהול
 function updateServiceManBid($serviceID, $status, $projectID)
 {
 
@@ -357,6 +368,7 @@ function updateServiceManBid($serviceID, $status, $projectID)
     update($sql);
 }
 
+//עדכון סטטוס פרויקט
 function updateProjectStatus($projectID, $status)
 {
 
@@ -364,6 +376,7 @@ function updateProjectStatus($projectID, $status)
     update($sql);
 }
 
+//עדכון מספר תורמים עבור פרויקט מסוים
 function updateNumOfFundPeople($projectId)
 {
     $sql = "SELECT peoples FROM projects WHERE projectid='$projectId'";
@@ -378,6 +391,7 @@ function updateNumOfFundPeople($projectId)
 
 }
 
+//עדכון סכום כסף נוכחי שנאסף עבור פרויקט
 function updateCurrentPrice($projectID, $price)
 {
     $sqlSel="SELECT projectcurrentprice FROM projects WHERE projectid='$projectID'";
@@ -391,10 +405,9 @@ function updateCurrentPrice($projectID, $price)
 }
 
 
+//קבלת כל הצעות המכרז עבור פרויקט מסוים - עבור פאנל הניהול
 function getAllBids($projectId)
-{
-    //$id, $projectid, $serviceid, $offerprice, $offerdate, $win,$proftype,$numofyears,$firstname,$lastname
-   
+{  
     $sql = "SELECT * FROM bids AS b inner join users As u WHERE b.serviceid=u.id AND b.projectid=$projectId";
     $dbBids = select($sql);
 
@@ -408,7 +421,7 @@ function getAllBids($projectId)
     return $oopBids;
 }
 
-//מקבל את ה ID של המשתמש 
+//קבלת מספר מזהה משתמש לפי שם
 function get_user_id($userName)
 {
     $userName = addslashes($userName);
@@ -416,7 +429,7 @@ function get_user_id($userName)
     return get_object($sql)->id;
 }
 
-//מקבל את שם משתמש של המשתמש
+//מקבל את שם משתמש לפי מספר מזהה
 function get_user_name($id)
 {
     $sql = "select firstname from users where id = '$id'";
@@ -489,6 +502,7 @@ function registerServiceMan($id, $firstName, $lastName,  $password, $email, $ids
     insert($sql);
 }
 
+//קבלת כל נותני השירות שטרם אושרו במערכת -עבור פאנל הניהול
 function getAllServiceManNotApproved()
 {
    
