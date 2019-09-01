@@ -290,12 +290,12 @@ function checkIfFundDone($projectId)
          0;        //false 
 }
 
-//קבלת תז של זוכה במכרז עבור פרויקט מסוים
+//קבלת זוכה במכרז עבור פרויקט מסוים
 function getWinnerOfProject($projectId){
     $sql="SELECT * FROM projects as p INNER JOIN bids as b INNER JOIN users as u WHERE b.projectid='$projectId' AND b.projectid=p.projectid AND b.win='1'AND b.serviceid=u.id";
     $winner = select($sql);
 
-    return $winner[0]->serviceid;
+    return $winner;
 }
 
 
