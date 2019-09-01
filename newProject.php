@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
                 <div id="locationField">
                     <div class="form-item">
                         <p class="formLabel formTop">כתובת מלאה</p>
-                        <input required type="text" name="longloc" class="form-style" id="autocomplete" onchange="geolocate()" onfocus="geolocate()"  />
+                        <input required type="text" name="longloc" class="form-style" id="autocomplete" onChange="geolocate()" onFocus="geolocate()"  />
                     </div>
                 </div>
                 <div class="form-item">
