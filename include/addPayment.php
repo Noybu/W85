@@ -61,9 +61,9 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
     {
         
         //עדכון סטטוס הפרויקט ל"בביצוע" ושליחת מייל לנותן השירות שמבצע
-        updateProjectStatus($projectId, '3');
+        updateProjectStatus($projectid, 3);
 
-        $winner=getWinnerOfProject($projectId);
+        $winner=getWinnerOfProject($projectid);
         $email1=get_user_email($winner[0]->serviceid);
         $name1=get_user_name($winner[0]->serviceid);
         file_put_contents("log.txt", "\r\n"."service id:" . $winner[0]->serviceid ."email1" . $email1 ."name" .$name1 , FILE_APPEND);
