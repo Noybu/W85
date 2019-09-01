@@ -63,9 +63,10 @@
 
       // Set chart options
       var options2 = {
+                'legend':'none',
                 'width':800,
-                'height':400,
-                'legend': false
+                'height':400
+               
               };
 
       var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
