@@ -83,6 +83,7 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
                 <p> מיקום: " . $winner[0]->loccity . "," . $winner[0]->locstreet . "," . $winner[0]->locnum . " </p>
                 <p> תאריך לביצוע: " . $winner[0]->offerdate  . " </p>
                 <p> כסף שנאסף: " . $winner[0]->projectcurrentprice  . " </p>
+                <p> קישור לפרויקטים שמחכים לביצוע: <a href='http://noybu.mtacloud.co.il/W85/myBids.php'>מעבר לעמוד</a></p>
                 <BR>
             
             צא לדרך!! בהצלחה! 
