@@ -50,15 +50,15 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">עיר</p>
-                    <input required type="text" name="locCity" class="form-style" id="locality" readonly/></p>
+                    <input required type="text" name="locCity" class="form-style" id="locality" disabled="true"/></p>
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">רחוב</p>
-                    <input required type="text" name="locNum" class="form-style" id="street_number" readonly/></p>
+                    <input required type="text" name="locNum" class="form-style" id="street_number" disabled="true"/></p>
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">מספר</p>
-                    <input required type="text" name="locStreet" class="form-style" id="route" readonly/></p>
+                    <input required type="text" name="locStreet" class="form-style" id="route" disabled="true"/></p>
                 </div>
      
                 <div class="form-item">
@@ -136,6 +136,11 @@ if (isset($_POST['submit'])) {
     function fillInAddress() {
         // Get the place details from the autocomplete object.
         var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+    document.getElementById(component).value = '';
+    document.getElementById(component).disabled = false;
+  }
 
 
 
