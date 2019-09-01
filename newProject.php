@@ -153,8 +153,6 @@ if (isset($_POST['submit'])) {
         var place = autocomplete.getPlace();
 
 
-   
-  }
 
 
 
