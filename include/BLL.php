@@ -35,7 +35,7 @@ function getAvgRate($projectid){
     $dbRates=select($sql2);
     $sum=0;
     for($i=0; $i<$countPeoples; $i++){
-       $sum =+ $dbRates[$i]->rate;
+       $sum =$sum+ $dbRates[$i]->rate;
     }
     $avg=$sum/$countPeoples;
     return ceil($avg);

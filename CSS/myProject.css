@@ -169,10 +169,10 @@
         height:40%;
     }
     #allStatus{
-        width:90%;
         float: right;
         margin-right: -113px;
         position: absolute;
+        max-width: 88%;
     }
     .bar2{
         width:134%;
