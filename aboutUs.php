@@ -77,12 +77,6 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                                 </p>
                         </div>
                         </div>
-                        <div class="accordion-item">
-                        <a>איך בתור נותן שירות אני יודע אם זכיתי במכרז?</a>
-                        <div class="content">
-                            <p>בלשונית "המכרזים שלי" (רק עבור משתמש מסוג נותן שירות) ניתן לעקוב אחר כל הפרויקטים שמחכים לביצוע של אותו משתמש
-                            </p>
-                        </div>
                         </div>
                         <div class="accordion-item">
                         <a>איך בתור נותן שירות אני יודע אם זכיתי במכרז?</a>
