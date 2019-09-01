@@ -40,7 +40,7 @@ button:focus {
 	
 .aupPic {
     border-radius: 200px;
-    width: 23%;
+    width: 65%;
 }
 
 .loginMobile2{
@@ -53,6 +53,7 @@ button:focus {
 {
 	width:50%;
 	float:right;
+	text-align: center;
 }
 
 .title
@@ -326,6 +327,11 @@ p{
 
 
 @media only screen and (max-width: 991px) {
+
+	.devpic
+{
+	width:100%;
+}
 
 	.pictureCard
 	{
