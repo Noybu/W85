@@ -52,7 +52,7 @@
 
 
         var data2 = google.visualization.arrayToDataTable([
-         ['סטטוס פרויקט', 'כמות פרויקטים'],
+         ['', '', { role: 'style' }],
          ['נדחו', <?php echo getCountOfProjectStatus(10);?> , '#ff0000'],
         ['ממתין לאישור', <?php echo getCountOfProjectStatus(0);?> , '#ffff00'],
         ['ממתין למכרז', <?php echo getCountOfProjectStatus(1);?> , '#999966'],
