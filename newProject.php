@@ -152,10 +152,7 @@ if (isset($_POST['submit'])) {
         // Get the place details from the autocomplete object.
         var place = autocomplete.getPlace();
 
-        for (var component in componentForm) {
-    if (!document.getElementById(component).value = ''){
-        document.getElementById(component).disabled = false;
-    }
+
    
   }
 
