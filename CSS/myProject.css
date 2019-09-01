@@ -30,7 +30,6 @@
 .card2{
 
 	height:300px;
-	
     margin: 0 auto;
     width:50%;
     margin-bottom: 39px;
@@ -68,6 +67,7 @@
     position: absolute;
     background-color: #6d6767;
     opacity: 0.6;
+    border-radius: 20px;
 }
 .pictureCard2{
 	background-size: contain;
@@ -108,6 +108,7 @@
 }
 .loc{
     margin-top:10px;
+    max-height:8%
 }
 
 #cardFooter{
@@ -184,6 +185,13 @@
     }
     #headerLogin h3{
         font-size:24px;
+    }
+    .notapprovedcard{
+        width:90%;
+    }
+    .notapprovedtext{
+        width:90%;
+        font-size:60px;
     }
 }
 
