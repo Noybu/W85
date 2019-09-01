@@ -59,14 +59,14 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
     //אם מימון הפרויקט הסתיים
     if ($ifProjectFundDone == '1')
     {
-        file_put_contents("log.txt", "ifProjectFundDone:" . $ifProjectFundDone , FILE_APPEND);
+        
         //עדכון סטטוס הפרויקט ל"בביצוע" ושליחת מייל לנותן השירות שמבצע
-        updateProjectStatus($projectId,3);
+        updateProjectStatus($projectId, '3');
 
         $winner=getWinnerOfProject($projectId);
         $email1=get_user_email($winner[0]->serviceid);
         $name1=get_user_name($winner[0]->serviceid);
-
+        file_put_contents("log.txt", "\r\n"."service id:" . $winner[0]->serviceid ."email1" . $email1 ."name" .$name1 , FILE_APPEND);
         $mail1 = new PHPMailer();
         $mail1->setFrom("urbanfund85@gmail.com","URBAN FUND");
         $mail1->addAddress($email1, $name1);
