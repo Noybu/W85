@@ -81,16 +81,16 @@
                         else if($arrFunds[$i]->projectstatus==2)
                         {
                             ?>
-                            <p>ממתין למימון</p>
+                            <p style="width:50%;">ממתין למימון</p>
                         <?php
                         }
                         else{
                             ?>
-                                <p>הפרויקט הושלם</p>
+                                <p style="width:50%;>הפרויקט הושלם</p>
                             <?php
                         }
                        ?>
-                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;"><p>לצפייה<i class="far fa-eye"></i></p></a>
+                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;width:50%;"><p>לצפייה<i class="far fa-eye"></i></p></a>
                     </div>
                 </div>
             </div>
