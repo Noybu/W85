@@ -71,7 +71,7 @@
                         if($arrFunds[$i]->projectstatus==3)
                         {
                         ?>
-                            <a href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'><p style="color:black;width:50%; border-radius: 0px 0px 20px 0px;">לאישור ביצוע<i class="far fa-thumbs-up"></i></p></a>
+                            <a href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'><p style="color:green;width:50%; border-radius: 0px 0px 20px 0px;">לאישור ביצוע<i class="far fa-thumbs-up"></i></p></a>
                         <?php
                         }
                         else if($arrFunds[$i]->projectstatus==2)
