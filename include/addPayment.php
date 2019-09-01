@@ -55,10 +55,11 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
     updateNumOfFundPeople($projectid);
     $ifProjectFundDone=checkIfFundDone($projectid);
 
-    file_put_contents("log.txt", "ifProjectFundDone:" . $ifProjectFundDone , FILE_APPEND);
+    
     //אם מימון הפרויקט הסתיים
-    if ($ifProjectFundDone == 1)
+    if ($ifProjectFundDone == '1')
     {
+        file_put_contents("log.txt", "ifProjectFundDone:" . $ifProjectFundDone , FILE_APPEND);
         //עדכון סטטוס הפרויקט ל"בביצוע" ושליחת מייל לנותן השירות שמבצע
         updateProjectStatus($projectId,3);
 
