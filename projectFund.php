@@ -106,7 +106,9 @@ include_once("header.php"); ?>
         </section>
 
         <?php
-        if(isset($_SESSION["userID"])){
+        //אם קיים יוזר מחובר למערכת
+        if(isset($_SESSION["userID"]))
+        {
 
             $flag=0;
 
@@ -116,6 +118,7 @@ include_once("header.php"); ?>
                 <nav>
                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
                      <?php
+                     //אם פרויקט מחכה למימון
                  if($arrProjects[0]->projectstatus == 2)
                          {
                             $flag=1;
@@ -126,9 +129,11 @@ include_once("header.php"); ?>
                     ?>
                    <?php
                      $type=get_user_type($_SESSION["userID"]);
+                     //בדיקה האם היוזר שמחובר הוא נותן שירות
                      if($type==2)
                      {
                          $approved=getServiceApproved($_SESSION["userID"]);
+                         //אם סטטוס פרויקט מחכה למימון, וגם היוזר שמחובר הוא נותן שירות שמאושר
                          if($approved==1 && $arrProjects[0]->projectstatus == 1)
                          {
                             $flag=2;
@@ -137,14 +142,10 @@ include_once("header.php"); ?>
                         <?php
                          }
                      }
+                     //אם סטטוס פרויקט = הושלם
                      if($arrProjects[0]->projectstatus == 4){
                          ?>
-                         
-                         
                             <a class="nav-item nav-link active" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="true">דירוג הפרויקט</a>
-                 
-                        
-                       
                         <?php
                         }
                          ?>
@@ -154,6 +155,7 @@ include_once("header.php"); ?>
                 <div class="tab-content" id="nav-tabContent">
 
                 <?php
+                //אם פרויקט מחכה למימון-כרטיסיה של פייפאל
                  if($arrProjects[0]->projectstatus == 2)
                          {
                              ?>
@@ -237,12 +239,14 @@ include_once("header.php"); ?>
                         <p>דרגו את הפרויקט לפי שביעות רצונכם</p>
                             <?php
                                 $avg=getAvgRate($projectid);
+                                //אם לא קיים עדין דירוג לפרויקט
                                 if($avg==null)
                                 {
                                     ?>
                                     <p>עדין מחכים לדירוג שלך!! </p>
                                     <?php
                                 }
+                                //הצגת הדירוג הממוצע עד כה
                                 else
                                 {
                                     ?>
@@ -264,10 +268,11 @@ include_once("header.php"); ?>
                                     <p>הדירוג שלך לפרויקט זה הוא : <span style="font-size:40px;color:green; "><?php echo getUserRate($userid,$projectid);?></span></p>
                                 <?php
                                 }
+                                //אם משתמש עדין לא דירג 
                                 else
                                 {
                                 ?>
-                                <p>
+                                <div>
                                     <form class="rating" method="GET" action="projectFund.php">
                                         <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
                                         <label>
@@ -301,7 +306,7 @@ include_once("header.php"); ?>
                                             <span class="icon">★</span>
                                         </label>
                                     </form>
-                                </p>
+                                </div>
                                 
                                     <?php
                                 }
@@ -310,10 +315,6 @@ include_once("header.php"); ?>
                             <?php
                             }
                             ?>
-
-                       
-                    
-                    
                     <?php
                         }
                         //אם יוזר לא מחובר במערכת
