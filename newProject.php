@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-item">
                     <p class="formLabel">תאור הדרישה</p>
-                    <textarea required name="description" class="form-style"></textarea>
+                    <textarea required name="description" class="form-style" maxlength="250"></textarea>
                 </div>
                 <div id="locationField">
                     <div class="form-item">
@@ -49,17 +49,18 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="form-item">
-                    
-                    <input required type="hidden" name="locCity" class="form-style" id="locality" />
+                <p class="formLabel formTop">עיר</p>
+                    <input required type="text" name="locCity" class="form-style" id="locality" /></p>
                 </div>
                 <div class="form-item">
-                    
-                    <input required type="hidden" name="locStreet" class="form-style" id="route" />
+                <p class="formLabel formTop">רחוב</p>
+                    <input required type="text" name="locNum" class="form-style" id="street_number" /></p>
                 </div>
                 <div class="form-item">
-                    
-                    <input required type="hidden" name="locNum" class="form-style" id="street_number" />
+                <p class="formLabel formTop">מספר</p>
+                    <input required type="text" name="locStreet" class="form-style" id="route" /></p>
                 </div>
+     
                 <div class="form-item">
                     <input type="hidden" name="userID" value="<?php echo $_SESSION['userID'];?>" />
                 </div>
