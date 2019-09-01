@@ -56,8 +56,8 @@
          ['נדחו', <?php echo getCountOfProjectStatus(10);?> , '#ff0000'],
         ['ממתין לאישור', <?php echo getCountOfProjectStatus(0);?> , '#ffff00'],
         ['ממתין למכרז', <?php echo getCountOfProjectStatus(1);?> , '#999966'],
-        ['ממתין למימון', <?php echo getCountOfProjectStatus(2);?> , '#ffff00'],
-        ['בביצוע', <?php echo getCountOfProjectStatus(3);?> , '#999966'],
+        ['ממתין למימון', <?php echo getCountOfProjectStatus(2);?> , '#f5e451'],
+        ['בביצוע', <?php echo getCountOfProjectStatus(3);?> , '#bfbeb8'],
         ['הושלם', <?php echo getCountOfProjectStatus(4);?> , '#66ff33']
       ]);
 
