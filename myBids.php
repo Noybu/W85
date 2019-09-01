@@ -71,9 +71,11 @@
                         if($arrFunds[$i]->projectstatus==3)
                         {
                         ?>
-                            <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'" style="color:green; width:50%; height:10%;float:right"><i class="far fa-thumbs-up"></i>
-                                לאישור ביצוע
-                            </button>
+                            <p>
+                                <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'" style="color:green; width:50%; height:100%;float:right"><i class="far fa-thumbs-up"></i>
+                                    לאישור ביצוע
+                                </button>
+                            </p>
                         <?php
                         }
                         else if($arrFunds[$i]->projectstatus==2)
@@ -88,7 +90,7 @@
                             <?php
                         }
                        ?>
-                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;width:50%;"><p>לצפייה<i class="far fa-eye"></i></p></a>
+                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>" style="color:black;"><p>לצפייה<i class="far fa-eye"></i></p></a>
                     </div>
                 </div>
             </div>
