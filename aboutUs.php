@@ -77,7 +77,7 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                                 </p>
                         </div>
                         </div>
-                        </div>
+
                         <div class="accordion-item">
                         <a>איך בתור נותן שירות אני יודע אם זכיתי במכרז?</a>
                         <div class="content">
