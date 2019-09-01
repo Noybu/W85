@@ -57,7 +57,7 @@
             </div>
             </div>
             <div id="cardFooter">
-                <p id="share">שיתוף:</p>
+                <p style="border-radius: 0px 0px 20px 0px;" id="share">שיתוף:</p>
                 <a href="https://api.whatsapp.com/send?text=https://noybu.mtacloud.co.il/W85/projectFund.php%3Fprojectid%3D<?php echo $arrProjects[$i]->projectid; ?>">
                     <p class="icon" id="whatsapp" style="padding-top: 4px">
                     <i class="fab fa-whatsapp"></i>
@@ -68,7 +68,7 @@
                     <i class="fab fa-facebook-square"></i>
                     </p>
                 </a>
-                <a href="projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>" style="color:black;"><p id="view">לצפייה<i class="far fa-eye"></i></p></a>
+                <a href="projectFund.php?projectid=<?php echo $arrProjects[$i]->projectid; ?>" style="color:black;"><p style="border-radius: 0px 0px 0px 20px;" id="view">לצפייה<i class="far fa-eye"></i></p></a>
             </div>
         </div>
     </div>
