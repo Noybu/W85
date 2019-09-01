@@ -272,7 +272,7 @@ include_once("header.php"); ?>
                                 else
                                 {
                                 ?>
-                                <div>
+                                <div style="max-width: 100%;">
                                     <form class="rating" method="GET" action="projectFund.php">
                                         <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
                                         <label>
