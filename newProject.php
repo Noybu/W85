@@ -8,7 +8,22 @@ if(!isset($_SESSION["userID"])){
     header("Location:login/signIn.php");
 }
 if (isset($_POST['submit'])) {
-    addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
+    if($_POST["locCity"] && $_POST["locStreet"] && $_POST["locNum"])
+    {
+        addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
+
+    }
+    else
+    {
+        ?>
+        <script>alert("כדי להשלים את הפעולה יש להזין כתובת תקינה ומלאה");</script>
+
+        <?php
+   }
+
+
+    
+
     ?>
         <p style="color:green; text-align:center; font-size: 24px; font-weight: bold"> הפרויקט עלה בהצלחה</p>
     <?php
@@ -45,7 +60,7 @@ if (isset($_POST['submit'])) {
                 <div id="locationField">
                     <div class="form-item">
                         <p class="formLabel formTop">כתובת מלאה</p>
-                        <input required type="text" name="longloc" class="form-style" id="autocomplete" onFocus="geolocate()" onfocusout="check()" />
+                        <input required type="text" name="longloc" class="form-style" id="autocomplete" onchange="geolocate()"  />
                     </div>
                 </div>
                 <div class="form-item">
@@ -65,7 +80,7 @@ if (isset($_POST['submit'])) {
                     <input type="hidden" name="userID" value="<?php echo $_SESSION['userID'];?>" />
                 </div>
                 <div class="form-item">
-                    <input type="submit" class="loginoff" id="send" name="submit" value="שלח" disabled>
+                    <input type="submit" class="loginoff" id="send" name="submit" value="שלח" onsubmit="check()" disabled>
                 </div>
             </div>
         </form>
@@ -138,8 +153,10 @@ if (isset($_POST['submit'])) {
         var place = autocomplete.getPlace();
 
         for (var component in componentForm) {
-    document.getElementById(component).value = '';
-    document.getElementById(component).disabled = false;
+    if (!document.getElementById(component).value = ''){
+        document.getElementById(component).disabled = false;
+    }
+   
   }
 
 
