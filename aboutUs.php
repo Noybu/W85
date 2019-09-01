@@ -1,5 +1,6 @@
 <?php
 include_once("header.php"); ?>
+<link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     $( document ).ready(function() {
@@ -113,20 +114,20 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                 <h1 class="title">מאחורי המערכת</h1>
 
-                <div><figure>
+                <div class="devpic">
 				<img src="images/ido.jpg" class="aupPic">
-			    <figcaption><p>עידו נברו</p></figcaption>
-                </figure></div>
+			    <p>עידו נברו</p>
+                </div>
                 
-                <div><figure>
+                <div class="devpic">
 				<img src="images/noy.jpg" class="aupPic">
-			    <figcaption><p>נוי בוכמן</p></figcaption>
-                </figure></div>
+			   <p>נוי בוכמן</p>
+               </div>
                 
-               <div> <figure>
+               <div class="devpic">
 				<img src="images/asaf.jpg" class="aupPic">
-			    <figcaption><p>אסף פייביש</p></figcaption>
-				</figure></div>
+			   <p>אסף פייביש</p>
+			    </div>
 
                 </div>
             </div>

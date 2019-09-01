@@ -49,6 +49,11 @@ button:focus {
 	border-radius: 10px;
 }
 
+.devpic
+{
+	width:50%;
+	float:right;
+}
 
 .title
 {
