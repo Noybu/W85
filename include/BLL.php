@@ -360,6 +360,14 @@ function updateServiceManApproved($serviceID, $status)
     update($sql);
 }
 
+
+//עדכון תאריך סיום ביצוע בפועל
+function updateProjectFinalDate($projectId){
+    $date=date("Y/m/d");
+    $sql = "UPDATE projects SET projectfinaldate='$date' WHERE projectid='$projectId'";
+    update($sql);
+}
+
 //עדכון זוכה המכרז בפרויקט מסוים -לטובת פאנל הניהול
 function updateServiceManBid($serviceID, $status, $projectID)
 {
@@ -540,3 +548,4 @@ function if_user_exist($userID)
     $count = get_object($sql)->total_rows;
     return $count;
 }
+
