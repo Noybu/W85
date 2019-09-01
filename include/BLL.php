@@ -93,6 +93,23 @@ function getUserRate($userid,$projectid){
 
 }
 
+//קבלת תאריך מתוכנן לביצוע -מהמכרז
+function getScheduleDate($projectId){
+    $sql="SELECT offerdate FROM bids WHERE projectid='$projectId' AND win='1'";
+    $offerDate=select($sql);
+
+    return $offerDate[0]->offerdate;
+}
+
+//קבלת תאריך אחרון לאחר ביצוע- מהפרויקט
+function getFinalDate($projectId){
+    $sql="SELECT projectfinaldate FROM projects WHERE projectid='$projectId'";
+    $finalDate=select($sql);
+
+    return $finalDate[0]->projectfinaldate;
+}
+
+
 //קבלת כל הפרויקטים במערכת - חוץ מאלה שנדחו ע"י מנהל מערכת
 function getAllProjects()
 {
@@ -367,6 +384,7 @@ function updateProjectFinalDate($projectId){
     $sql = "UPDATE projects SET projectfinaldate='$date' WHERE projectid='$projectId' " ;
     update($sql);
 }
+
 
 //עדכון זוכה המכרז בפרויקט מסוים -לטובת פאנל הניהול
 function updateServiceManBid($serviceID, $status, $projectID)
