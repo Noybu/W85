@@ -9,7 +9,6 @@ if(!isset($_SESSION["userID"])){
 }
 if (isset($_POST['submit'])) {
 
-    echo $_POST["locCity"] ." ". $_POST["locStreet"]  ." ". $_POST["locNum"];
 
     if($_POST["locCity"] && $_POST["locStreet"] && $_POST["locNum"])
         {
@@ -22,7 +21,7 @@ if (isset($_POST['submit'])) {
     else
         {
             ?>
-            <script>alert("מגיע כבר לשליחה אבל ELSE ");</script>
+            <script>alert("יש למלא כתובת מלאה");</script>
 
             <?php
          }
