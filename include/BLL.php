@@ -4,11 +4,6 @@ require_once 'DAL.php';
 require_once 'project.php';
 require_once 'serviceMan.php';
 require_once 'bid.php';
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-require "mailer/PHPMailer.php";
-require "mailer/Exception.php";
-
 
 // פונקציות שמטפלות בפרויקטים
 
@@ -275,53 +270,17 @@ function checkIfFundDone($projectId)
 
     $left = $dbProjects[0]->projectcost-$dbProjects[0]->projectcurrentprice;
 
-    if($left<=0)
-    {
-        updateProjectStatus($projectId,3);
-        sendMailToServiceMan($projectId);
-
-    }
+    return $left;
 
 }
 
 function getWinnerOfProject($projectId){
     $sql="SELECT * FROM projects as p INNER JOIN bids as b INNER JOIN users as u WHERE b.projectid='$projectId' AND b.projectid=p.projectid AND b.win='1'AND b.serviceid=u.id";
-    $winner=select($sql);
+    $winner = select($sql);
 
     return $winner;
 }
 
-function sendMailToServiceMan($projectId){
-
-    $winner=getWinnerOfProject($projectId);
-    $email=get_user_email($winner[0]->serviceid);
-    $name=get_user_name($winner[0]->serviceid);
-
-    $mail = new PHPMailer();
-    $mail->setFrom("urbanfund85@gmail.com","URBAN FUND");
-    $mail->addAddress($email, $name);
-    $mail->isHTML(true);
-    
-    $mail->Subject = "מימון הפרויקט הסתיים בהצלחה";
-    $mail->Body = "
-    <div style='display: flex;justify-content: center;text-align: center;'>
-        <div style='direction:rtl;'>
-            <h2>שלום " . $name ."</h2>
-            <p> הפרויקט שלך יוצא לדרך! </p>
-            <p> פרטי הפרויקט :  </p>
-            <p> תאור" . $winner[0]->description . " </p>
-            <p> מיקום" . $winner[0]->loccity . $winner[0]->locstreet . $winner[0]->locnum . " </p>
-            <p> תאריך לביצוע" . $winner[0]->offerdate  . " </p>
-            <p> כסף שנאסף" . $winner[0]->projectcurrentprice  . " </p>
-            <BR>
-           
-           צא לדרך!! בהצלחה! 
-            <BR>
-            URBAN FUND
-        </div>
-    </div>";
-    $mail->send();
-}
 
 function getStatusBarColors($status , $num){
     switch($status){

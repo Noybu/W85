@@ -29,7 +29,7 @@ curl_setopt ($ch, CURLOPT_POSTFIELDS, $postdata);
 $response = curl_exec($ch);
 
 if($response == 'VERIFIED') {
-    file_put_contents("log.txt", "----------------NEW PAYMENT----------------"  ."\r\n\r\n", FILE_APPEND);
+    file_put_contents("log.txt", "\r\n" . "----------------NEW PAYMENT----------------"  ."\r\n\r\n", FILE_APPEND);
     file_put_contents('log.txt', $response. "\n", FILE_APPEND);
 
     foreach($_POST as $key => $value)
@@ -37,12 +37,10 @@ if($response == 'VERIFIED') {
 }
 
 
-
-
 curl_close($ch);
 
 
-if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
+if(/*$response == 'VERIFIED' && */$_POST['payment_status'] == 'Completed')
 {
 
     $price = $_POST['mc_gross'];
@@ -54,9 +52,45 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
 
     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price  ."\r\n\r\n", FILE_APPEND);
     updateCurrentPrice($projectid,$price);
-    checkIfFundDone($projectid);
     updateNumOfFundPeople($projectid);
+    
+    //אם מימון הפרויקט הסתיים
+    if (checkIfFundDone($projectid) <=0)
+    {
+        //עדכון סטטוס הפרויקט ל"בביצוע" ושליחת מייל לנותן השירות שמבצע
+        updateProjectStatus($projectId,3);
 
+        $winner=getWinnerOfProject($projectId);
+        $email1=get_user_email($winner[0]->serviceid);
+        $name1=get_user_name($winner[0]->serviceid);
+
+        $mail1 = new PHPMailer();
+        $mail1->setFrom("urbanfund85@gmail.com","URBAN FUND");
+        $mail1->addAddress($email1, $name1);
+        $mail1->isHTML(true);
+        
+        $mail1->Subject = "מימון הפרויקט הסתיים בהצלחה";
+        $mail1->Body = "
+        <div style='display: flex;justify-content: center;text-align: center;'>
+            <div style='direction:rtl;'>
+                <h2>שלום " . $name1 ."</h2>
+                <p> הפרויקט שלך יוצא לדרך! </p>
+                <p> פרטי הפרויקט :  </p>
+                <p> תאור" . $winner[0]->description . " </p>
+                <p> מיקום" . $winner[0]->loccity . $winner[0]->locstreet . $winner[0]->locnum . " </p>
+                <p> תאריך לביצוע" . $winner[0]->offerdate  . " </p>
+                <p> כסף שנאסף" . $winner[0]->projectcurrentprice  . " </p>
+                <BR>
+            
+            צא לדרך!! בהצלחה! 
+                <BR>
+                URBAN FUND
+            </div>
+        </div>";
+        $mail1->send();
+    }
+    
+    //בכל מצב, שליחת מייל תודה לתורם
     $mail = new PHPMailer();
     $mail->setFrom("urbanfund85@gmail.com","URBAN FUND");
     $mail->addAddress($email, $name);
@@ -79,9 +113,7 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
     </div>";
     $mail->send();
    
-    file_put_contents('log.txt', '*****Message has been sent*****' . '\r\n', FILE_APPEND);
-
- 
+    file_put_contents('log.txt', '*****Message has been sent*****' . "\r\n", FILE_APPEND);
 
 }
 
