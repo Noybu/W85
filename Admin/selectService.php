@@ -54,7 +54,7 @@
                  <td><?php echo getProfType($arrBids[$i]->proftype);?></td>
                  <td><?php echo $arrBids[$i]->numofyears;?></td>
                  <td style="text-align:center;">  
-                 <button onclick="window.location.href='../include/update.php?type=winbid&projectid=<?php echo $projectid; ?>&serviceid=<?php echo $arrBids[$i]->serviceid; ?>&status=1'" style="color:green;"><i class="far fa-thumbs-up"></i></button>
+                 <button onclick="window.location.href='../include/update.php?type=winbid&projectid=<?php echo $projectid; ?>&serviceid=<?php echo $arrBids[$i]->serviceid; ?>&status=1&price=<?php echo $arrBids[$i]->offerprice;?>'" style="color:green;"><i class="far fa-thumbs-up"></i></button>
                  </td>
              </tr>
              <?php
