@@ -239,7 +239,7 @@ include_once("header.php"); ?>
                                 if($avg==null)
                                 {
                                     ?>
-                                    <p>עדין מחכים לדירוג !! מהרו להצביע</p>
+                                    <p>עדין מחכים לדירוג שלך!! </p>
                                     <?php
                                 }
                                 else
@@ -248,8 +248,6 @@ include_once("header.php"); ?>
                                     <p>הדירוג הממוצע עד כה : <br>
                                     <?php
                                     for($i=0; $i<$avg;$i++){
-
-                                    
                                 ?>
                                     <span class="icon" style="color:yellow;font-size:50px;">★</span>  
                                 <?php
