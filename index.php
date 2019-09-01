@@ -18,7 +18,11 @@
                 </div>
             </div>
         </section>
-
+        <div class="row center sm">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto center">
+                    <a href="newProject.php"><button class="actionButton">התחילו עכשיו</button><a>
+                </div>
+            </div>
         <section>
             <div class="row">
                 <h1>איך זה עובד?</h1>
@@ -46,10 +50,9 @@
                 </div>
             </div>
             <div class="row center sm">
-                <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10 mx-auto center">
-                    <a href="newProject.php"><button class="actionButton">התחילו עכשיו</button><a>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mx-auto center">
+                    <a href="aboutUs.php"><button class="actionButton">לפרטים נוספים</button><a>
                 </div>
-
             </div>
         </section>
     </div>
