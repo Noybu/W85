@@ -71,8 +71,8 @@
                         if($arrFunds[$i]->projectstatus==3)
                         {
                         ?>
-                            <p>
-                                <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'" style="color:green; width:50%; height:100%;float:right"><i class="far fa-thumbs-up"></i>
+                            <p style="width:50%;">
+                                <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'" style="color:green; width:1000%; height:100%;float:right"><i class="far fa-thumbs-up"></i>
                                     לאישור ביצוע
                                 </button>
                             </p>
@@ -86,7 +86,7 @@
                         }
                         else{
                             ?>
-                                <p style="width:50%;>הפרויקט הושלם</p>
+                                <p style="width:50%;">הפרויקט הושלם</p>
                             <?php
                         }
                        ?>
