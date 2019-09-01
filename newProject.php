@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
                 <div id="locationField">
                     <div class="form-item">
                         <p class="formLabel formTop">כתובת מלאה</p>
-                        <input required type="text" name="longloc" class="form-style" id="autocomplete" onChange="geolocate()" onFocus="geolocate()"  />
+                        <input required type="text" name="longloc" class="form-style" id="autocomplete" onChange="geolocate()" onFocus="geolocate()" onfocusout="check()" />
                     </div>
                 </div>
                 <div class="form-item">
@@ -96,6 +96,7 @@ if (isset($_POST['submit'])) {
         var send = document.getElementById("send");
 
         if (street_num || street || city) {
+            alert("כדי להשלים את הפעולה יש להזין כתובת תקינה ומלאה");
           
             return false;
         }
