@@ -32,14 +32,14 @@ include_once("header.php"); ?>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                     <h3><?php echo getProjectType($arrProjects[0]->projecttype);?></h3>
-                    <p>מיקום: <?php echo $arrProjects[0]->loccity.','.$arrProjects[0]->locstreet . ','.$arrProjects[0]->locnum; ?></p>
+                    <p><b> מיקום: </b><?php echo $arrProjects[0]->loccity.','.$arrProjects[0]->locstreet . ','.$arrProjects[0]->locnum; ?></p>
                     <p class="descriptionproject"><?php echo $arrProjects[0]->description; ?></p>
 
                     <?php
                     if($arrProjects[0]->projectstatus >= 3)
                     {
                         ?>
-                        <p>תאריך מתוכנן לביצוע: <?php echo getScheduleDate($projectid); ?></p>
+                        <b><p>תאריך מתוכנן לביצוע: </b><?php echo getScheduleDate($projectid); ?></p>
 
                         <?php
                     }
@@ -49,7 +49,7 @@ include_once("header.php"); ?>
                     if($arrProjects[0]->projectstatus >= 4)
                     {
                         ?>
-                        <p>תאריך סיום הפרויקט בפועל: <?php echo getFinalDate($projectid); ?></p>
+                        <b><p>תאריך סיום הפרויקט בפועל:</b> <?php echo getFinalDate($projectid); ?></p>
 
                         <?php
                     }
