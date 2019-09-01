@@ -224,7 +224,7 @@ include_once("header.php"); ?>
                                 else
                                 {
                                     ?>
-                                    <p>הדירוג הממוצע עד כה :
+                                    <p>הדירוג הממוצע עד כה : <br>
                                     <?php
                                     for($i=0; $i<$avg;$i++){
 
@@ -241,7 +241,7 @@ include_once("header.php"); ?>
                                 if($user==1)
                                 {
                                 ?>
-                                    <p>הדירוג שלך לפרויקט זה הוא : <span style="font-size:50px;color:green; "><?php echo getUserRate($userid,$projectid);?></span></p>
+                                    <p>הדירוג שלך לפרויקט זה הוא : <span style="font-size:40px;color:green; "><?php echo getUserRate($userid,$projectid);?></span></p>
                                 <?php
                                 }
                                 else
