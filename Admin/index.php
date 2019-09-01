@@ -52,7 +52,7 @@
 
 
         var data2 = google.visualization.arrayToDataTable([
-         ['סטטוס פרויקט', 'כמות', { role: 'style' }],
+         ['סטטוס פרויקט', 'כמות פרויקטים', { role: 'style' }],
          ['נדחו', <?php echo getCountOfProjectStatus(10);?> , '#ff0000'],
         ['ממתין לאישור', <?php echo getCountOfProjectStatus(0);?> , '#ffff00'],
         ['ממתין למכרז', <?php echo getCountOfProjectStatus(1);?> , '#999966'],
@@ -116,6 +116,8 @@
     <td style="vertical-align: baseline">
     <div class="charts">
         <p>כסף שגויס עד כה עבור כלל הפרויקטים</p>
+        <br>
+        <br>
         <br>
         <br>
         <br>

@@ -18,7 +18,7 @@
     </div>
     <div class="row">
         <?php
-        for($i=0;$i<sizeof($arrProjects);$i++)
+        for($i=sizeof($arrProjects) -1 ;$i>=0; $i--)
         {
             ?>
         <div class="card2">

@@ -22,7 +22,7 @@
                  if($arrServiceMan==null)
                  {
                    ?>
-                   <p>אין נותני שירות שמחכים לאישור</p>
+                   <p class="errors">אין נותני שירות שמחכים לאישור</p>
                   <?php
                  }
                  else{

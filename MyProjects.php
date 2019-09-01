@@ -11,7 +11,7 @@
     if($arrProjects==null)
     {
         ?>
-            <p>עדין לא פתחת פרויקט</p>
+            <p class="errors">עדין לא פתחת פרויקט</p>
         <?php
     }
     else{

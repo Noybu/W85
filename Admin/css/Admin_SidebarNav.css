@@ -145,3 +145,10 @@ table button{
     font-weight: bold;
     font-size: 18px;
 }
+
+.errors{
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+}

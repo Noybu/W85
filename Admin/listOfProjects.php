@@ -21,7 +21,7 @@
             <?php
             if($arrProjects==null){
               ?>
-              <p>אין פרויקטים שמחכים לאישור</p>
+              <p class="errors">אין פרויקטים שמחכים לאישור</p>
               <?php
             }
             else{

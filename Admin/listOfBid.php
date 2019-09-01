@@ -20,7 +20,7 @@
                 if($arrProjects== null)
                 {
                   ?>
-                    <p>אין מכרזים פתוחים</p>
+                    <p class="errors">אין מכרזים פתוחים</p>
                   <?php
                 }
                 else{

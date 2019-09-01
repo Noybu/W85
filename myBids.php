@@ -19,7 +19,7 @@
     elseif($arrFunds==null)
     {
         ?>
-        <p>אין מכרזים שמחכים לביצוע שלך</p>
+        <p class="errors">אין מכרזים שמחכים לביצוע שלך</p>
     <?php
     }
     $userType=get_user_type($_SESSION["userID"]);

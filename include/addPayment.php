@@ -74,20 +74,20 @@ if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
         
         $mail1->Subject = "מימון הפרויקט הסתיים בהצלחה";
         $mail1->Body = "
-        <div style='display: flex;justify-content: center;text-align: center;'>
+        <div style='display: flex;justify-content: center;text-align: right;'>
             <div style='direction:rtl;'>
                 <h2>שלום " . $name1 ."</h2>
                 <p> הפרויקט שלך יוצא לדרך! </p>
-                <p> פרטי הפרויקט :  </p>
-                <p> תאור" . $winner[0]->description . " </p>
-                <p> מיקום" . $winner[0]->loccity . $winner[0]->locstreet . $winner[0]->locnum . " </p>
-                <p> תאריך לביצוע" . $winner[0]->offerdate  . " </p>
-                <p> כסף שנאסף" . $winner[0]->projectcurrentprice  . " </p>
+                <p style='font-weight:bold;'> פרטי הפרויקט :  </p>
+                <p> תאור: " . $winner[0]->description . " </p>
+                <p> מיקום: " . $winner[0]->loccity . "," . $winner[0]->locstreet . "," . $winner[0]->locnum . " </p>
+                <p> תאריך לביצוע: " . $winner[0]->offerdate  . " </p>
+                <p> כסף שנאסף: " . $winner[0]->projectcurrentprice  . " </p>
                 <BR>
             
             צא לדרך!! בהצלחה! 
                 <BR>
-                URBAN FUND
+                <b>URBAN FUND
             </div>
         </div>";
         $mail1->send();

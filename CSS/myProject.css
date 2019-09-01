@@ -190,20 +190,27 @@
 
 @media only screen and (max-width: 370px)
 {
-.bar2 {
-    width: 134%;
-    margin: 0 auto;
-    position: relative;
-    top: 89px;
-	right: -100px;
+    .bar2 {
+        width: 134%;
+        margin: 0 auto;
+        position: relative;
+        top: 89px;
+        right: -100px;
+    }
+
+    #allStatus {
+        width: 88%;
+        float: right;
+        margin-right: -105px;
+        position: absolute;
+        margin-top: -12px;
+    }
+
 }
 
-#allStatus {
-    width: 88%;
-    float: right;
-    margin-right: -105px;
-	position: absolute;
-	margin-top: -12px;
-}
-
+.errors{
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
 }
