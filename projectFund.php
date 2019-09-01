@@ -266,6 +266,7 @@ include_once("header.php"); ?>
                                 else
                                 {
                                 ?>
+                            <p>
                             <form class="rating" method="GET" action="projectFund.php">
                             <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
                             <label>
@@ -299,6 +300,7 @@ include_once("header.php"); ?>
                                 <span class="icon">★</span>
                             </label>
                             </form>
+                                </p>
                                     <?php
                                 }
                             }
