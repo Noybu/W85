@@ -1,7 +1,7 @@
 <?php
 include_once("header.php"); ?>
 <script>
-    $( document ).ready(function() {
+    jQuery( document ).ready(function() {
         const items = document.querySelectorAll(".accordion a");
 
 function toggleAccordion(){
