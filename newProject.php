@@ -11,7 +11,9 @@ if (isset($_POST['submit'])) {
     if($_POST["locCity"] && $_POST["locStreet"] && $_POST["locNum"])
     {
         addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
-
+        ?>
+        <p style="color:green; text-align:center; font-size: 24px; font-weight: bold"> הפרויקט עלה בהצלחה</p>
+        <?php
     }
     else
     {
@@ -21,12 +23,6 @@ if (isset($_POST['submit'])) {
         <?php
    }
 
-
-    
-
-    ?>
-        <p style="color:green; text-align:center; font-size: 24px; font-weight: bold"> הפרויקט עלה בהצלחה</p>
-    <?php
 }
 ?>
 
@@ -69,11 +65,11 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">רחוב</p>
-                    <input required type="text" name="locNum" class="form-style" id="street_number" disabled="true"/></p>
+                    <input required type="text" name="locStreet" class="form-style" id="route" disabled="true"/></p>
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">מספר</p>
-                    <input required type="text" name="locStreet" class="form-style" id="route" disabled="true"/></p>
+                    <input required type="text" name="locNum" class="form-style" id="street_number"  disabled="true"/></p>
                 </div>
      
                 <div class="form-item">
