@@ -124,6 +124,7 @@
     font-size: 20px;
     font-weight: bold;
     background-color:  rgb(147, 142, 142,0.2);
+    height:100%;
 }
 #share{
     width: 20%;
@@ -133,7 +134,8 @@
 }
 .icon{
     width:10%;
-    font-size: 40px;
+    font-size: 25px !important;
+    
 }
 
 #whatsapp{
