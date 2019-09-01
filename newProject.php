@@ -9,8 +9,11 @@ if(!isset($_SESSION["userID"])){
 }
 if (isset($_POST['submit'])) {
 
+    echo $_POST["locCity"] ." ". $_POST["locStreet"]  ." ". $_POST["locNum"];
+
     if($_POST["locCity"] && $_POST["locStreet"] && $_POST["locNum"])
         {
+
             addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
             ?>
             <p style="color:green; text-align:center; font-size: 24px; font-weight: bold"> הפרויקט עלה בהצלחה</p>
@@ -62,15 +65,15 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">עיר</p>
-                    <input required type="text" name="locCity" class="form-style" id="locality" disabled="true"/></p>
+                    <input required type="text" name="locCity" class="form-style" id="locality" /></p>
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">רחוב</p>
-                    <input required type="text" name="locStreet" class="form-style" id="route" disabled="true"/></p>
+                    <input required type="text" name="locStreet" class="form-style" id="route"/></p>
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">מספר</p>
-                    <input required type="text" name="locNum" class="form-style" id="street_number"  disabled="true"/></p>
+                    <input required type="text" name="locNum" class="form-style" id="street_number" /></p>
                 </div>
      
                 <div class="form-item">
@@ -126,7 +129,7 @@ if (isset($_POST['submit'])) {
         locality: 'long_name',
         administrative_area_level_1: 'short_name',
         country: 'long_name',
-        postal_code: 'short_name'
+      //  postal_code: 'short_name'
     };
 
     function initAutocomplete() {
