@@ -24,6 +24,7 @@ switch ($type) {
     {
         updateServiceManBid($_GET['serviceid'],$_GET['status'],$_GET['projectid']);
         updateProjectStatus($_GET['projectid'],2);
+        updateProjectCost($_GET['projectid'],$_GET['price']);
         header("Location: ../Admin/listOfBid.php");
         break;
     }

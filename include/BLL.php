@@ -372,11 +372,16 @@ function addNewBidOffer($price,$date, $projectID, $servicemanID){
 //עדכון אישור נותן שירות במערכת - לטובת פאנל הניהול
 function updateServiceManApproved($serviceID, $status)
 {
-
     $sql = "UPDATE users SET approved='$status' where id ='$serviceID'";
     update($sql);
 }
 
+
+//עדכון מחיר פרויקט אחרי בחירת נותן שירות במכרז
+function updateProjectCost($projectId,$price){
+    $sql="UPDATE projects SET projectcost='$price' WHERE projectid='$projectId'";
+    update($sql);
+}
 
 //עדכון תאריך סיום ביצוע בפועל
 function updateProjectFinalDate($projectId){
