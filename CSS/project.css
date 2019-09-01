@@ -84,6 +84,11 @@ a:hover{
 	padding-bottom: 30px;
 }
 
+.actionButton:active{
+	border-radius: 50px;
+	border:2px solid #1AA0BA;
+}
+
 .moreButton{
 	border:2px solid #1AA0BA;
 	background-color: #fff;
