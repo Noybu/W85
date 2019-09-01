@@ -363,7 +363,7 @@ function updateServiceManApproved($serviceID, $status)
 
 //עדכון תאריך סיום ביצוע בפועל
 function updateProjectFinalDate($projectId){
-    $date=date("Y/m/d");
+    $date=date("Y-m-d");
     $sql = "UPDATE projects SET projectfinaldate='$date' WHERE projectid='$projectId'";
     update($sql);
 }
