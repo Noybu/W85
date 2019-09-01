@@ -112,20 +112,20 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                 <h1 class="title">מאחורי המערכת</h1>
 
-                <figure>
+                <div><figure>
 				<img src="images/ido.jpg" class="aupPic">
 			    <figcaption><p>עידו נברו</p></figcaption>
-                </figure>
+                </figure></div>
                 
-                <figure>
+                <div><figure>
 				<img src="images/noy.jpg" class="aupPic">
 			    <figcaption><p>נוי בוכמן</p></figcaption>
-                </figure>
+                </figure></div>
                 
-                <figure>
+               <div> <figure>
 				<img src="images/asaf.jpg" class="aupPic">
 			    <figcaption><p>אסף פייביש</p></figcaption>
-				</figure>
+				</figure></div>
 
                 </div>
             </div>
