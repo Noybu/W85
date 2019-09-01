@@ -34,6 +34,27 @@ include_once("header.php"); ?>
                     <h3><?php echo getProjectType($arrProjects[0]->projecttype);?></h3>
                     <p>מיקום: <?php echo $arrProjects[0]->loccity.','.$arrProjects[0]->locstreet . ','.$arrProjects[0]->locnum; ?></p>
                     <p class="descriptionproject"><?php echo $arrProjects[0]->description; ?></p>
+
+                    <?php
+                    if($arrProjects[0]->projectstatus >= 3)
+                    {
+                        ?>
+                        <p>תאריך מתוכנן לביצוע: <?php echo getScheduleDate($projectid); ?></p>
+
+                        <?php
+                    }
+                      ?>
+
+                    <?php
+                    if($arrProjects[0]->projectstatus >= 4)
+                    {
+                        ?>
+                        <p>תאריך סיום הפרויקט בפועל: <?php echo getFinalDate($projectid); ?></p>
+
+                        <?php
+                    }
+                      ?>
+
                     <div class="bar2">
                         <p style="text-align:right; font-size:14px; margin-bottom:0px; color:#36ba2f"><?php echo $arrProjects[0]->projectcost;?><i class="fas fa-shekel-sign"></i></p>
                         <div id="mainBar2">
@@ -123,7 +144,7 @@ include_once("header.php"); ?>
                             <a class="nav-item nav-link active" id="nav-contact-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="true">דירוג הפרויקט</a>
                  
                         
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-pic" role="tab" aria-controls="nav-pic" aria-selected="false">תמונות מהשטח</a>
+                       
                         <?php
                         }
                          ?>
@@ -287,11 +308,7 @@ include_once("header.php"); ?>
 
                        
                     </div>
-                    <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
-                        <p>צילמתם תמונות של הפרויקט ? מוזמנים לשתף </p>
-                        
-
-                    </div>
+                    
                     <?php
                         }
                         //אם יוזר לא מחובר במערכת
