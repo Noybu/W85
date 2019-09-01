@@ -228,6 +228,7 @@ include_once("header.php"); ?>
                             }
                         }
                     }
+                    //סטטוס פרויקט = הושלם
                      if($arrProjects[0]->projectstatus == 4)
                      {
                         
@@ -266,48 +267,52 @@ include_once("header.php"); ?>
                                 else
                                 {
                                 ?>
-                            <p>
-                            <form class="rating" method="GET" action="projectFund.php">
-                            <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
-                            <label>
-                                <input type="radio" name="stars" value="1" onchange="this.form.submit()"/>
-                                <span class="icon">★</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="stars" value="2" onchange="this.form.submit()"/>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="stars" value="3" onchange="this.form.submit()"/>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                            </label>
-                            <label>
-                                <input type="radio" name="stars" value="4" onchange="this.form.submit()"/>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="stars" value="5" onchange="this.form.submit()"/>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                            </label>
-                            </form>
+                                <p>
+                                    <form class="rating" method="GET" action="projectFund.php">
+                                        <input type="hidden" name="projectid" value="<?php echo $projectid;?>"/>
+                                        <label>
+                                            <input type="radio" name="stars" value="1" onchange="this.form.submit()"/>
+                                            <span class="icon">★</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="stars" value="2" onchange="this.form.submit()"/>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="stars" value="3" onchange="this.form.submit()"/>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>   
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="stars" value="4" onchange="this.form.submit()"/>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="stars" value="5" onchange="this.form.submit()"/>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                        </label>
+                                    </form>
                                 </p>
+                                
                                     <?php
                                 }
+                                ?>
+                                </div>
+                            <?php
                             }
                             ?>
 
                        
-                    </div>
+                    
                     
                     <?php
                         }
