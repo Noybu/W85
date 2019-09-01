@@ -40,7 +40,7 @@ if($response == 'VERIFIED') {
 curl_close($ch);
 
 
-if(/*$response == 'VERIFIED' && */$_POST['payment_status'] == 'Completed')
+if($response == 'VERIFIED' && $_POST['payment_status'] == 'Completed')
 {
 
     $price = $_POST['mc_gross'];
@@ -53,9 +53,9 @@ if(/*$response == 'VERIFIED' && */$_POST['payment_status'] == 'Completed')
     file_put_contents("log.txt", "userid:" . $userid . " project:" . $projectid . " price:" . $price  ."\r\n\r\n", FILE_APPEND);
     updateCurrentPrice($projectid,$price);
     updateNumOfFundPeople($projectid);
-    
+    $ifProjectFundDone=checkIfFundDone($projectid);
     //אם מימון הפרויקט הסתיים
-    if (checkIfFundDone($projectid) <=0)
+    if ($ifProjectFundDone <=0)
     {
         //עדכון סטטוס הפרויקט ל"בביצוע" ושליחת מייל לנותן השירות שמבצע
         updateProjectStatus($projectId,3);
