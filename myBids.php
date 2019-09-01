@@ -71,27 +71,23 @@
                         if($arrFunds[$i]->projectstatus==3)
                         {
                         ?>
-                            <p style="width:50%;">
-                                <button onclick="window.location.href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'" style="color:green; width:100%; height:100%;float:right"><i class="far fa-thumbs-up"></i>
-                                    לאישור ביצוע
-                                </button>
-                            </p>
+                            <a href='include/update.php?type=doneProject&id=<?php echo $arrFunds[$i]->projectid; ?>'><p style="color:black;width:50%; border-radius: 0px 0px 20px 0px;">לאישור ביצוע<i class="far fa-thumbs-up"></i></p></a>
                         <?php
                         }
                         else if($arrFunds[$i]->projectstatus==2)
                         {
                             ?>
-                            <p style="width:50%;">ממתין למימון</p>
+                            <p style="width:50%; border-radius: 0px 0px 20px 0px;">ממתין למימון</p>
                         <?php
                         }
                         else{
                             ?>
-                                <p style="width:50%;">הפרויקט הושלם</p>
+                                <p style="width:50%;border-radius: 0px 0px 20px 0px;">הפרויקט הושלם</p>
                             <?php
                         }
                        ?>
                        
-                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>"><p style="color:black;width:50%;">לצפייה<i class="far fa-eye"></i></p></a>
+                        <a href="projectFund.php?projectid=<?php echo $arrFunds[$i]->projectid; ?>"><p style="color:black;width:50%; border-radius: 0px 0px 0px 20px">לצפייה<i class="far fa-eye"></i></p></a>
                     </div>
                 </div>
             </div>
