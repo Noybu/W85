@@ -32,7 +32,7 @@ include_once("header.php"); ?>
             <div class="row sm">
                 <div class="col-lg-6 col-md-6 col-sm-10 col-xs-10 mx-auto">
                     <h3><?php echo getProjectType($arrProjects[0]->projecttype);?></h3>
-                    <p><b> מיקום: </b><?php echo $arrProjects[0]->loccity.','.$arrProjects[0]->locstreet . ','.$arrProjects[0]->locnum; ?></p>
+                    <p><b> מיקום: </b><?php echo $arrProjects[0]->loccity.', '.$arrProjects[0]->locstreet . ', '.$arrProjects[0]->locnum; ?></p>
                     <p class="descriptionproject"><?php echo $arrProjects[0]->description; ?></p>
 
                     <?php

@@ -567,3 +567,10 @@ function if_user_exist($userID)
     return $count;
 }
 
+//מחליף סימנים במיוחדים בטקסט
+function clean($string) {
+    $string1 = str_replace('"', '', $string); 
+ 
+    return  $string1; 
+ }
+
