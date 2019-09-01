@@ -50,15 +50,15 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">עיר</p>
-                    <input required type="text" name="locCity" class="form-style" id="locality" /></p>
+                    <input required type="text" name="locCity" class="form-style" id="locality" readonly/></p>
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">רחוב</p>
-                    <input required type="text" name="locNum" class="form-style" id="street_number" /></p>
+                    <input required type="text" name="locNum" class="form-style" id="street_number" readonly/></p>
                 </div>
                 <div class="form-item">
                 <p class="formLabel formTop">מספר</p>
-                    <input required type="text" name="locStreet" class="form-style" id="route" /></p>
+                    <input required type="text" name="locStreet" class="form-style" id="route" readonly/></p>
                 </div>
      
                 <div class="form-item">
