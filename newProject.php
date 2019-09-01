@@ -8,20 +8,21 @@ if(!isset($_SESSION["userID"])){
     header("Location:login/signIn.php");
 }
 if (isset($_POST['submit'])) {
-    if($_POST["locCity"] && $_POST["locStreet"] && $_POST["locNum"])
-    {
-        addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
-        ?>
-        <p style="color:green; text-align:center; font-size: 24px; font-weight: bold"> הפרויקט עלה בהצלחה</p>
-        <?php
-    }
-    else
-    {
-        ?>
-        <script>alert("כדי להשלים את הפעולה יש להזין כתובת תקינה ומלאה");</script>
 
-        <?php
-   }
+    if($_POST["locCity"] && $_POST["locStreet"] && $_POST["locNum"])
+        {
+            addProject($_POST["userID"], $_POST["projectType"], $_POST["description"], $_POST["locCity"], $_POST["locStreet"], $_POST["locNum"]);
+            ?>
+            <p style="color:green; text-align:center; font-size: 24px; font-weight: bold"> הפרויקט עלה בהצלחה</p>
+            <?php
+        }
+    else
+        {
+            ?>
+            <script>alert("מגיע כבר לשליחה אבל ELSE ");</script>
+
+            <?php
+         }
 
 }
 ?>
