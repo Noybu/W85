@@ -5,6 +5,7 @@ include_once("include/BLL.php");
   session_start();
   $_SESSION['page'] = $_SERVER["REQUEST_URI"];
   echo $_SESSION['page'];
+  echo $_SERVER['SERVER_NAME'];
   if(isset($_GET['logout']))
   {
     if($_GET['logout']=='yes')
