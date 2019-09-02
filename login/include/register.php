@@ -103,12 +103,25 @@ switch ($command) {
     case "signin":
     {
         session_start();
+        //אם יוזר קיים, והסיסמא נכונה - מתחבר
          if (is_user_exist($_POST["userID"],$_POST["password"])>0) {
             $_SESSION["userID"]=$_POST["userID"];
             $_SESSION["firstName"]=get_user_name($_POST["userID"]);
             $_SESSION["type"]=get_user_type($_POST["userID"]);
-            header("Location: ../../index.php");
-        } else
+            //חזרה לדף האחרון
+            $page = $_SERVER["REQUEST_URI"];
+            $serverName=$_SERVER['SERVER_NAME'];
+            $curPage=$_SESSION['page'];
+            if($page) //אם לא קיים דף אחרו- להחזיר לדף הביתה
+            {
+              header("Location: index.php");
+            }
+            else{
+              header("Location:'http://'.$serverName.$curPage");
+            }
+        }
+        //אם סיסמא לא נכונה 
+        else
             header("Location: ../signIn.php?Error=IncorrectUsernameOrPassword");
         break;
     }

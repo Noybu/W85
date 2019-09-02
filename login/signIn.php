@@ -8,6 +8,10 @@ if($Error=="Success")
   <?php
 }
 session_start();
+if($page)
+  {
+    header("Location: index.php");
+  }
 if(isset($_GET['logout']))
 {
   if($_GET['logout']=='yes')

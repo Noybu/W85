@@ -3,7 +3,8 @@
 <?php
 include_once("include/BLL.php");
   session_start();
-
+  $_SESSION['page'] = $page;
+  echo $page;
   if(isset($_GET['logout']))
   {
     if($_GET['logout']=='yes')
