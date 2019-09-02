@@ -175,7 +175,7 @@ include_once("header.php"); ?>
                 <input type="hidden" name="os0" value="<?php echo $projectid;?>">
                 <input type="hidden" name="on1" value="userid">
                 <input type="hidden" name="os1" value="<?php echo $_SESSION["userID"];?>">
-                <input type="hidden" name="return" value="https://noybu.mtacloud.co.il/W85/AllProjectList.php">
+                <input type="hidden" name="return" value="https://noybu.mtacloud.co.il<?php echo $_SESSION['page'];?>">
                 <input type="hidden" name="cancel_return" value="https://noybu.mtacloud.co.il/W85/AllProjectList.php">
                 <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynowCC_LG.gif:NonHosted">
                 <input type="hidden" name="notify_url" value="https://noybu.mtacloud.co.il/W85/include/addPayment.php">
