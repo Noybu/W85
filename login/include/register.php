@@ -111,7 +111,7 @@ switch ($command) {
            
             //חזרה לדף האחרון
             $curPage=$_SESSION['page'];
-            header("Location:'http://'.$curPage");
+            header("Location: $curPage");
                 
             }
         //אם סיסמא לא נכונה 
