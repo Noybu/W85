@@ -3,17 +3,6 @@
 <?php
 include_once("include/BLL.php");
   session_start();
-  $page = $_SERVER["REQUEST_URI"];
-  $serverName=$_SERVER['SERVER_NAME'];
-  $curPage=$_SESSION['page'];
-  if($page || $page=='login/signIn.php')
-  {
-    header("Location: index.php");
-  }
-  else{
-    $_SESSION['page'] = $page;
-    header("Location:'http://'.$serverName.$curPage");
-  }
 
   if(isset($_GET['logout']))
   {
