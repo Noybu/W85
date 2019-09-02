@@ -3,9 +3,8 @@
 <?php
 include_once("include/BLL.php");
   session_start();
-  $_SESSION['page'] = $_SERVER["REQUEST_URI"];
+  $_SESSION['page'] = $_SERVER["REQUEST_URI"].$_SERVER['SERVER_NAME'];
   echo $_SESSION['page'];
-  echo $_SERVER['SERVER_NAME'];
   if(isset($_GET['logout']))
   {
     if($_GET['logout']=='yes')

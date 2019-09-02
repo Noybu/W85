@@ -110,9 +110,8 @@ switch ($command) {
             $_SESSION["type"]=get_user_type($_POST["userID"]);
            
             //חזרה לדף האחרון
-            $serverName=$_SERVER['SERVER_NAME'];
             $curPage=$_SESSION['page'];
-            header("Location:'http://'.$serverName.$curPage");
+            header("Location:'http://'.$curPage");
                 
             }
         //אם סיסמא לא נכונה 
