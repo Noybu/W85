@@ -115,7 +115,7 @@ switch ($command) {
         //    $curPage=$_SESSION['page'];
         //    if($page) //אם לא קיים דף אחרו- להחזיר לדף הביתה
         //    {
-              header("Location: index.php");
+              header("Location: ../../index.php");
          //   }
          //   else{
           //    header("Location:'http://'.$serverName.$curPage");
