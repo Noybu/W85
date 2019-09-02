@@ -67,7 +67,7 @@ if(isset($_GET['logout']))
                     
                 <div class="form-item">
                     <p class="formLabel">תעודת זהות</p>
-                    <input required type="text" name="userID" class="form-style" pattern="[0-9]+" minlength="9" maxlength="9" />
+                    <input required type="text" name="userID" class="form-style" pattern="[0-9]+" minlength="9" maxlength="9" oninvalid = "setCustomValidity('יש להכניס ת.ז המכילה 9 ספרות בלבד')"/>
                 </div>
                 <div class="form-item">
                     <p class="formLabel">סיסמא</p>
@@ -83,7 +83,7 @@ if(isset($_GET['logout']))
                   }
                 ?>
                 <div class="form-item">
-                    <input type="submit" class="login" value="שלח" name="submit" onsubmit = "setCustomValidity('יש להכניס ת.ז המכילה 9 ספרות בלבד')">
+                    <input type="submit" class="login" value="שלח" name="submit">
                 </div>
             </div>
           </form>
