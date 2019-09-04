@@ -31,7 +31,7 @@ include_once("include/BLL.php");
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ">
-        <li class="nav-item active">
+        <li class="nav-item ">
           <a class="nav-link navA" href="index.php">דף הבית</a>
         </li>
         <li class="nav-item">
