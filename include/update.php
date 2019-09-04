@@ -1,5 +1,5 @@
 <?php
-require_once 'DAL.php';
+//require_once 'DAL.php';
 require_once 'BLL.php';
 
 
