@@ -7,8 +7,9 @@ include_once("header.php"); ?>
 
 if($_GET['return']=="yes")
 {
-   
-    header("Refresh:0; url=https://noybu.mtacloud.co.il". $_SESSION['page']);
+    $_SESSION['page'] = "/W85/projectFund.php?projectid=" . $_GET['projectid'] ."&return=no";
+
+    header("Refresh:1; url=https://noybu.mtacloud.co.il". $_SESSION['page']);
 }
     if($_GET['projectid'])
     {
