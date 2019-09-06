@@ -9,7 +9,7 @@ if($_GET['return']=="yes")
 {
     $_SESSION['page'] = "/W85/projectFund.php?projectid=" . $_GET['projectid'] ."&return=no";
 
-    header("Refresh:1; url=https://noybu.mtacloud.co.il". $_SESSION['page']);
+    header("Refresh:5; url=https://noybu.mtacloud.co.il". $_SESSION['page']);
 }
     if($_GET['projectid'])
     {
