@@ -15,11 +15,6 @@
     }
 
 
-
-
-
-
-    
 ?>
 
 <main >
@@ -46,7 +41,7 @@
           geocodeAddress(geocoder, map);
      
     }
-
+// סוגי נעצים
       function geocodeAddress(geocoder, resultsMap) {
         var icons={
           t1 : {
@@ -65,8 +60,7 @@
               icon:'https://img.icons8.com/ios/48/000000/street-lamp.png'
           }
         };
-        //document.getElementById('address').value;
-        //var address = ["תל אביב, רוטשילד 5", "חיפה, 2 בנובמבר 7"];
+
             <?php
                 for($j=0;$j<sizeof($address);$j++)
                 {
@@ -75,12 +69,14 @@
                     geocoder.geocode({'address': x}, function(results, status) {
                     if (status === 'OK') {
                         resultsMap.setCenter(results[0].geometry.location);
+                        // הגדרת מאפייני הנקודה
                         var marker = new google.maps.Marker({
                         map: resultsMap,
-                        position: results[0].geometry.location,
+                        position: results[0].geometry.location, 
                         icon: icons["t<?php echo $arrProjects[$j]->projecttype;?>"].icon,
                         title: '<?php echo getProjectType($arrProjects[$j]->projecttype); ?>'
                         });
+                        //ייצירת כרטיסיה עבור כל פרויקט
                         var content = "<span style='font-weight:bold';>סוג פרויקט: </span>"+
                         "<?php echo getProjectType($arrProjects[$j]->projecttype);?> <br>"+
                         "<span style='font-weight:bold';>מיקום: </span>"+
@@ -91,6 +87,7 @@
                         
                         var infowindow = new google.maps.InfoWindow();
 
+                        // פתיחת כרטיסיה בלחיצה על נעץ
                         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
                             return function() {
                                 infowindow.setContent(content);
