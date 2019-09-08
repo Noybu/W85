@@ -111,9 +111,13 @@ switch ($command) {
            
             //חזרה לדף האחרון
             $curPage=$_SESSION['page'];
-            header("Location: $curPage");
-                
+            if($curPage==null){
+                header("Location: ../../index.php"); 
             }
+            else{
+                header("Location: $curPage");
+            }        
+        }
         //אם סיסמא לא נכונה 
         else
             header("Location: ../signIn.php?Error=IncorrectUsernameOrPassword");
