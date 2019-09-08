@@ -58,7 +58,7 @@
                                     $projectCost=$arrProjects[$i]->projectcost;
                                 }
                             ?>
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; width:<?php echo ($arrProjects[$i]->projectcurrentprice/$projectCost)*100;?>%;border-radius: 20px; ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; min-width:2%; width:<?php echo ($arrProjects[$i]->projectcurrentprice/$projectCost)*100;?>%;border-radius: 20px; ">
                                 <?php echo $arrProjects[$i]->projectcurrentprice?>
                             </div>
                         </div>

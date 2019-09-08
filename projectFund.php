@@ -60,14 +60,14 @@ include_once("header.php"); ?>
                         <div id="mainBar2">
                         <?php
                             //להמנע מחלוקה ב-0
-                                if($arrProjects[$i]->projectcost==0){
+                                if($arrProjects[0]->projectcost==0){
                                     $projectCost=1;
                                 }
                                 else{
-                                    $projectCost=$arrProjects[$i]->projectcost;
+                                    $projectCost=$arrProjects[0]->projectcost;
                                 }
                             ?>
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; width:<?php echo ($arrProjects[0]->projectcurrentprice/$projectCost)*100;?>%;border-radius: 20px; ">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="max-width:100%; min-width:2%; width:<?php echo ($arrProjects[0]->projectcurrentprice/$projectCost)*100;?>%;border-radius: 20px; ">
                                 <?php echo $arrProjects[0]->projectcurrentprice?>
                             </div>
                         </div>
