@@ -1,6 +1,4 @@
 <?php
-
-//require_once 'DAL.php';
 require_once '../../include/BLL.php';
 
 session_start();
